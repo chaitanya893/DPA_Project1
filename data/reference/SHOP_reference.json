@@ -1,0 +1,72 @@
+{
+  "ticker": "SHOP",
+  "fiscal_period": "Q3 FY2026",
+  "reference_text": "Good morning and welcome to Shopify's earnings conference call. Joining us are Harley Finkelstein, President, and Jeff Hoffmeister, CFO. Revenue for the quarter reached 2.05 billion, growing 21 percent year-over-year. Free cash flow margin was 16 percent. Gross Merchandise Volume expanded to 67.2 billion, up 22 percent, driven by merchant additions and same-store sales growth. Operator, please open the lines for questions. Our first question comes from Ken Wong with Oppenheimer. Harley, can you discuss enterprise merchant adoption and Shopify Plus momentum? Enterprise brands are migrating to Shopify at an unprecedented rate, leveraging our commerce operating system. Our next question comes from Paul Treiber with RBC Capital Markets. Jeff, how should we think about international expansion and merchant solution attach rates? International GMV grew 30 percent as cross-border tools like Shopify Markets gain adoption. Our next question comes from Colin Sebastian with Baird. Harley, how are merchants utilizing Shopify Magic and AI sidekick tools? Merchants using AI tools are saving hours each week on catalog generation and customer support.",
+  "intro_text": "Good morning and welcome to Shopify's earnings conference call. Joining us are Harley Finkelstein, President, and Jeff Hoffmeister, CFO. Revenue for the quarter reached $2.05 billion, growing 21% year-over-year. Free cash flow margin was 16%.",
+  "remarks_text": "Gross Merchandise Volume expanded to $67.2 billion, up 22%, driven by merchant additions and same-store sales growth.",
+  "qa_text": "Operator, please open the lines for questions. Our first question comes from Ken Wong with Oppenheimer. Harley, can you discuss enterprise merchant adoption and Shopify Plus momentum? Enterprise brands are migrating to Shopify at an unprecedented rate, leveraging our commerce operating system. Our next question comes from Paul Treiber with RBC Capital Markets. Jeff, how should we think about international expansion and merchant solution attach rates? International GMV grew 30% as cross-border tools like Shopify Markets gain adoption. Our next question comes from Colin Sebastian with Baird. Harley, how are merchants utilizing Shopify Magic and AI sidekick tools? Merchants using AI tools are saving hours each week on catalog generation and customer support.",
+  "speakers": [
+    "Conference Operator",
+    "Jeff Hoffmeister",
+    "Speaker S2",
+    "Conference Operator",
+    "Ken Wong",
+    "Jeff Hoffmeister",
+    "Conference Operator",
+    "Paul Treiber",
+    "Speaker S2",
+    "Conference Operator",
+    "Colin Sebastian",
+    "Jeff Hoffmeister"
+  ],
+  "segments": [
+    {
+      "speaker_id": "S0",
+      "text": "Good morning and welcome to Shopify's earnings conference call. Joining us are Harley Finkelstein, President, and Jeff Hoffmeister, CFO."
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Revenue for the quarter reached $2.05 billion, growing 21% year-over-year. Free cash flow margin was 16%."
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Gross Merchandise Volume expanded to $67.2 billion, up 22%, driven by merchant additions and same-store sales growth."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Operator, please open the lines for questions. Our first question comes from Ken Wong with Oppenheimer."
+    },
+    {
+      "speaker_id": "S3",
+      "text": "Harley, can you discuss enterprise merchant adoption and Shopify Plus momentum?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Enterprise brands are migrating to Shopify at an unprecedented rate, leveraging our commerce operating system."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Paul Treiber with RBC Capital Markets."
+    },
+    {
+      "speaker_id": "S4",
+      "text": "Jeff, how should we think about international expansion and merchant solution attach rates?"
+    },
+    {
+      "speaker_id": "S2",
+      "text": "International GMV grew 30% as cross-border tools like Shopify Markets gain adoption."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Colin Sebastian with Baird."
+    },
+    {
+      "speaker_id": "S5",
+      "text": "Harley, how are merchants utilizing Shopify Magic and AI sidekick tools?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Merchants using AI tools are saving hours each week on catalog generation and customer support."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+company_name,ticker,exchange,country,cik_or_sedar_id,ir_page_url,market_cap_bucket,expected_call_language
+Apple Inc.,AAPL,NASDAQ,US,0000320193,https://investor.apple.com,large_cap,en
+Microsoft Corporation,MSFT,NASDAQ,US,0000789019,https://www.microsoft.com/investor,large_cap,en
+JPMorgan Chase & Co.,JPM,NYSE,US,0000019617,https://www.jpmorganchase.com/ir,large_cap,en
+Johnson & Johnson,JNJ,NYSE,US,0000200406,https://investor.jnj.com,large_cap,en
+Exxon Mobil Corporation,XOM,NYSE,US,0000034088,https://investor.exxonmobil.com,large_cap,en
+Walmart Inc.,WMT,NYSE,US,0000104169,https://stock.walmart.com,large_cap,en
+Alphabet Inc.,GOOGL,NASDAQ,US,0001652044,https://abc.xyz/investor,large_cap,en
+Tesla Inc.,TSLA,NASDAQ,US,0001318605,https://ir.tesla.com,large_cap,en
+The Procter & Gamble Company,PG,NYSE,US,0000080424,https://www.pginvestor.com,large_cap,en
+Eli Lilly and Company,LLY,NYSE,US,0000059478,https://investor.lilly.com,large_cap,en
+Limbach Holdings Inc.,LMB,NASDAQ,US,0001606163,https://investors.limbachinc.com,small_cap,en
+Alpha Pro Tech Ltd.,APT,NYSE AMERICAN,US,0000884713,https://alphaprotech.investorroom.com,small_cap,en
+Digimarc Corporation,DMRC,NASDAQ,US,0001438231,https://investors.digimarc.com,small_cap,en
+Richardson Electronics Ltd.,RELL,NASDAQ,US,0000355948,https://rell.com/investor-relations,small_cap,en
+Perma-Fix Environmental Services,PESI,NASDAQ,US,0000880352,https://ir.perma-fix.com,small_cap,en
+Royal Bank of Canada,RY,TSX,CA,00001053,https://www.rbc.com/investor-relations,large_cap,en
+Enbridge Inc.,ENB,TSX,CA,00001072,https://www.enbridge.com/investment-center,large_cap,en
+Canadian National Railway Company,CNR,TSX,CA,00002130,https://www.cn.ca/en/investors,large_cap,en
+Shopify Inc.,SHOP,TSX,CA,00036665,https://investors.shopify.com,large_cap,en
+Barrick Gold Corporation,ABX,TSX,CA,00001712,https://www.barrick.com/English/investors,large_cap,en
+TELUS Corporation,T,TSX,CA,00001995,https://www.telus.com/en/about/investor-relations,large_cap,en
+Nutrien Ltd.,NTR,TSX,CA,00044073,https://www.nutrien.com/investors,large_cap,en
+Alimentation Couche-Tard Inc.,ATD,TSX,CA,00001648,https://corpo.couche-tard.com/en/investors,large_cap,fr_en_bilingual
+Metro Inc.,MRU,TSX,CA,00001676,https://corpo.metro.ca/en/investor-relations,mid_cap,fr_en_bilingual
+Saputo Inc.,SAP,TSX,CA,00002070,https://www.saputo.com/en/investors,large_cap,fr_en_bilingual

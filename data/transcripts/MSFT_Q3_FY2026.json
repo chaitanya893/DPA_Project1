@@ -1,0 +1,148 @@
+{
+  "event_id": "2",
+  "ticker": "MSFT",
+  "fiscal_period": "Q3 FY2026",
+  "call_datetime_utc": "2026-09-13T18:00:00Z",
+  "language": "en",
+  "sections": [
+    {
+      "type": "operator_intro",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 13.82,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Welcome to the Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call. I will now turn the call over to Brett Iversen, Vice President of Investor Relations.",
+          "confidence": 0.94
+        },
+        {
+          "start": 13.82,
+          "end": 23.03,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "On the call with me today are Satya Nadella, Chief Executive Officer, and Amy Hood, Chief Financial Officer.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "segments": [
+        {
+          "start": 23.03,
+          "end": 32.24,
+          "speaker_id": "S1",
+          "speaker_name": "Satya Nadella",
+          "speaker_role": "CEO",
+          "text": "We closed out our fiscal year with strong results. Microsoft Cloud revenue surpassed $36.8 billion, up 21% year-over-year.",
+          "confidence": 0.94
+        },
+        {
+          "start": 32.24,
+          "end": 39.92,
+          "speaker_id": "S2",
+          "speaker_name": "Amy Hood",
+          "speaker_role": "CFO",
+          "text": "Total company revenue was $64.7 billion, up 15%. Operating income increased 15% to $27.9 billion.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "segments": [
+        {
+          "start": 39.92,
+          "end": 48.11,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We will now take your questions. Our first question comes from Keith Weiss with Morgan Stanley.",
+          "confidence": 0.94
+        },
+        {
+          "start": 48.11,
+          "end": 55.27,
+          "speaker_id": "S3",
+          "speaker_name": "Keith Weiss",
+          "speaker_role": "Analyst, Morgan Stanley",
+          "text": "Satya, could you speak to the scaling of Azure AI and customer capacity constraints?",
+          "confidence": 0.94
+        },
+        {
+          "start": 55.27,
+          "end": 63.46,
+          "speaker_id": "S1",
+          "speaker_name": "Satya Nadella",
+          "speaker_role": "CEO",
+          "text": "We are seeing accelerating demand across Copilot and Azure OpenAI services, with enterprise adoption expanding globally.",
+          "confidence": 0.94
+        },
+        {
+          "start": 63.46,
+          "end": 68.07,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Brent Thill with Jefferies.",
+          "confidence": 0.94
+        },
+        {
+          "start": 68.07,
+          "end": 75.75,
+          "speaker_id": "S4",
+          "speaker_name": "Brent Thill",
+          "speaker_role": "Analyst, Jefferies",
+          "text": "Amy, what is your expectation for capital expenditures in fiscal 2027 to support AI infrastructure?",
+          "confidence": 0.94
+        },
+        {
+          "start": 75.75,
+          "end": 83.43,
+          "speaker_id": "S2",
+          "speaker_name": "Amy Hood",
+          "speaker_role": "CFO",
+          "text": "We will continue to invest in cloud capacity, aligning CapEx with long-term revenue growth opportunities.",
+          "confidence": 0.94
+        },
+        {
+          "start": 83.43,
+          "end": 88.04,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Karl Keirstead with UBS.",
+          "confidence": 0.94
+        },
+        {
+          "start": 88.04,
+          "end": 93.67,
+          "speaker_id": "S5",
+          "speaker_name": "Karl Keirstead",
+          "speaker_role": "Analyst, UBS",
+          "text": "Satya, how are enterprise customers approaching commercial Office 365 Copilot monetization?",
+          "confidence": 0.94
+        },
+        {
+          "start": 93.67,
+          "end": 100.29,
+          "speaker_id": "S1",
+          "speaker_name": "Satya Nadella",
+          "speaker_role": "CEO",
+          "text": "Customers are realizing measurable productivity gains, driving higher seat expansion and renewal rates.",
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "asr_model": "faster-whisper-v3-large",
+    "diarizer": "pyannote.audio-3.1",
+    "version": "1.0.0",
+    "rtf": 0.0012,
+    "5min_target_sla": "MET"
+  }
+}

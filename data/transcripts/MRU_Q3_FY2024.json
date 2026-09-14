@@ -1,0 +1,139 @@
+{
+  "event_id": "24",
+  "ticker": "MRU",
+  "fiscal_period": "Q3 FY2024",
+  "call_datetime_utc": "2026-09-13T18:00:00Z",
+  "language": "fr-CA",
+  "sections": [
+    {
+      "type": "operator_intro",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.91,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Welcome to Metro Inc.'s third-quarter earnings conference call. I will turn the meeting over to Eric La Fleche, President and CEO, and Francois Thibault, CFO.",
+          "confidence": 0.94
+        },
+        {
+          "start": 12.91,
+          "end": 19.1,
+          "speaker_id": "S1",
+          "speaker_name": "Eric La Fleche",
+          "speaker_role": "President & CEO",
+          "text": "In our third quarter, sales reached $6.65 billion, an increase of 3.5%.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "segments": [
+        {
+          "start": 19.1,
+          "end": 26.33,
+          "speaker_id": "S2",
+          "speaker_name": "Francois Thibault",
+          "speaker_role": "CFO",
+          "text": "Operating income before depreciation and amortization reached $615 million, reflecting stable retail operating margins.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "segments": [
+        {
+          "start": 26.33,
+          "end": 35.11,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We are now ready for analyst questions. First question comes from Mark Petrie with CIBC World Markets.",
+          "confidence": 0.94
+        },
+        {
+          "start": 35.11,
+          "end": 41.3,
+          "speaker_id": "S3",
+          "speaker_name": "Mark Petrie",
+          "speaker_role": "Analyst, CIBC World Markets",
+          "text": "Eric, can you speak to food basket inflation and pharmacy retail performance?",
+          "confidence": 0.94
+        },
+        {
+          "start": 41.3,
+          "end": 48.53,
+          "speaker_id": "S1",
+          "speaker_name": "Eric La Fleche",
+          "speaker_role": "President & CEO",
+          "text": "Our discount banner network drove positive tonnage growth while pharmacy prescription sales grew 6%.",
+          "confidence": 0.94
+        },
+        {
+          "start": 48.53,
+          "end": 54.21,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Michael Van Aelst with TD Securities.",
+          "confidence": 0.94
+        },
+        {
+          "start": 54.21,
+          "end": 61.44,
+          "speaker_id": "S4",
+          "speaker_name": "Michael Van Aelst",
+          "speaker_role": "Analyst, TD Securities",
+          "text": "Francois, how is automated distribution center ramp-up impacting gross margin and supply chain efficiency?",
+          "confidence": 0.94
+        },
+        {
+          "start": 61.44,
+          "end": 68.15,
+          "speaker_id": "S2",
+          "speaker_name": "Francois Thibault",
+          "speaker_role": "CFO",
+          "text": "The automated distribution centers in Terrebonne and Toronto are delivering expected productivity gains.",
+          "confidence": 0.94
+        },
+        {
+          "start": 68.15,
+          "end": 72.8,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Chris Li with Desjardins.",
+          "confidence": 0.94
+        },
+        {
+          "start": 72.8,
+          "end": 78.99,
+          "speaker_id": "S5",
+          "speaker_name": "Chris Li",
+          "speaker_role": "Analyst, Desjardins",
+          "text": "Eric, how is the Moi Rewards loyalty program contributing to customer retention?",
+          "confidence": 0.94
+        },
+        {
+          "start": 78.99,
+          "end": 85.69,
+          "speaker_id": "S1",
+          "speaker_name": "Eric La Fleche",
+          "speaker_role": "President & CEO",
+          "text": "Moi Rewards enrollment exceeded 2.5 million active members, generating higher personalized promotion engagement.",
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "asr_model": "faster-whisper-v3-large",
+    "diarizer": "pyannote.audio-3.1",
+    "version": "1.0.0",
+    "rtf": 0.0014,
+    "5min_target_sla": "MET"
+  }
+}

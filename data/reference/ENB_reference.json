@@ -1,0 +1,72 @@
+{
+  "ticker": "ENB",
+  "fiscal_period": "Q3 FY2026",
+  "reference_text": "Welcome to Enbridge's quarterly earnings conference call. Speaking today are Greg Ebel, President and CEO, and Patrick Murray, CFO. Enbridge delivered solid results with adjusted EBITDA of 4.3 billion, supported by record Mainline throughput. Distributable cash flow was 2.8 billion, keeping us fully on track to achieve our full-year financial guidance. We will now take questions. Our first question comes from Robert Kwan with RBC Capital Markets. Greg, could you comment on gas utility acquisitions integration and organic expansion capital? The gas distribution acquisitions are performing exceptionally well, providing stable regulated cash flows. Our next question comes from Linda Ezergailis with TD Cowen. Patrick, how is debt leverage progressing toward your target range of 4.5 to 5.0 times? Our balance sheet remains in great shape, supported by predictable utility cash flows. Our next question comes from Robert Catellier with CIBC World Markets. Greg, what are the growth opportunities in offshore Gulf Coast crude export terminals? Our Ingleside terminal achieved record loadings, solidifying our competitive advantage in energy infrastructure.",
+  "intro_text": "Welcome to Enbridge's quarterly earnings conference call. Speaking today are Greg Ebel, President and CEO, and Patrick Murray, CFO. Enbridge delivered solid results with adjusted EBITDA of $4.3 billion, supported by record Mainline throughput.",
+  "remarks_text": "Distributable cash flow was $2.8 billion, keeping us fully on track to achieve our full-year financial guidance.",
+  "qa_text": "We will now take questions. Our first question comes from Robert Kwan with RBC Capital Markets. Greg, could you comment on gas utility acquisitions integration and organic expansion capital? The gas distribution acquisitions are performing exceptionally well, providing stable regulated cash flows. Our next question comes from Linda Ezergailis with TD Cowen. Patrick, how is debt leverage progressing toward your target range of 4.5 to 5.0 times? Our balance sheet remains in great shape, supported by predictable utility cash flows. Our next question comes from Robert Catellier with CIBC World Markets. Greg, what are the growth opportunities in offshore Gulf Coast crude export terminals? Our Ingleside terminal achieved record loadings, solidifying our competitive advantage in energy infrastructure.",
+  "speakers": [
+    "Conference Operator",
+    "Greg Ebel",
+    "Patrick Murray",
+    "Conference Operator",
+    "Robert Kwan",
+    "Greg Ebel",
+    "Conference Operator",
+    "Linda Ezergailis",
+    "Patrick Murray",
+    "Conference Operator",
+    "Robert Catellier",
+    "Greg Ebel"
+  ],
+  "segments": [
+    {
+      "speaker_id": "S0",
+      "text": "Welcome to Enbridge's quarterly earnings conference call. Speaking today are Greg Ebel, President and CEO, and Patrick Murray, CFO."
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Enbridge delivered solid results with adjusted EBITDA of $4.3 billion, supported by record Mainline throughput."
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Distributable cash flow was $2.8 billion, keeping us fully on track to achieve our full-year financial guidance."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "We will now take questions. Our first question comes from Robert Kwan with RBC Capital Markets."
+    },
+    {
+      "speaker_id": "S3",
+      "text": "Greg, could you comment on gas utility acquisitions integration and organic expansion capital?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "The gas distribution acquisitions are performing exceptionally well, providing stable regulated cash flows."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Linda Ezergailis with TD Cowen."
+    },
+    {
+      "speaker_id": "S4",
+      "text": "Patrick, how is debt leverage progressing toward your target range of 4.5 to 5.0 times?"
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Our balance sheet remains in great shape, supported by predictable utility cash flows."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Robert Catellier with CIBC World Markets."
+    },
+    {
+      "speaker_id": "S5",
+      "text": "Greg, what are the growth opportunities in offshore Gulf Coast crude export terminals?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Our Ingleside terminal achieved record loadings, solidifying our competitive advantage in energy infrastructure."
+    }
+  ]
+}

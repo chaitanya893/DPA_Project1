@@ -1,0 +1,139 @@
+{
+  "event_id": "12",
+  "ticker": "APT",
+  "fiscal_period": "Q4 FY2024",
+  "call_datetime_utc": "2026-09-13T18:00:00Z",
+  "language": "en",
+  "sections": [
+    {
+      "type": "operator_intro",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 10.15,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Good day and welcome to Alpha Pro Tech's earnings conference call. Speaking today are CEO Lloyd Hoffman and CFO Colleen McDonald.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "segments": [
+        {
+          "start": 10.15,
+          "end": 17.4,
+          "speaker_id": "S1",
+          "speaker_name": "Lloyd Hoffman",
+          "speaker_role": "CEO",
+          "text": "Total consolidated sales for the quarter were $16.4 million, with gross profit margin of 37.8%.",
+          "confidence": 0.94
+        },
+        {
+          "start": 17.4,
+          "end": 23.2,
+          "speaker_id": "S2",
+          "speaker_name": "Colleen McDonald",
+          "speaker_role": "CFO",
+          "text": "Cash and cash equivalents grew to $18.2 million with zero long-term debt.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "segments": [
+        {
+          "start": 23.2,
+          "end": 30.93,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We will now begin the question-and-answer session. First question comes from Kevin Smith with Equity Research.",
+          "confidence": 0.94
+        },
+        {
+          "start": 30.93,
+          "end": 37.21,
+          "speaker_id": "S3",
+          "speaker_name": "Kevin Smith",
+          "speaker_role": "Analyst, Equity Research",
+          "text": "Lloyd, can you talk about order trends in building supply synthetic roof underlayment?",
+          "confidence": 0.94
+        },
+        {
+          "start": 37.21,
+          "end": 42.04,
+          "speaker_id": "S1",
+          "speaker_name": "Lloyd Hoffman",
+          "speaker_role": "CEO",
+          "text": "Building supply revenue increased 12% due to residential re-roofing demand.",
+          "confidence": 0.94
+        },
+        {
+          "start": 42.04,
+          "end": 46.87,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from David Johnson with MicroCap Advisors.",
+          "confidence": 0.94
+        },
+        {
+          "start": 46.87,
+          "end": 52.19,
+          "speaker_id": "S4",
+          "speaker_name": "David Johnson",
+          "speaker_role": "Analyst, MicroCap Advisors",
+          "text": "Colleen, how are input raw material costs and freight expenses trending?",
+          "confidence": 0.94
+        },
+        {
+          "start": 52.19,
+          "end": 57.99,
+          "speaker_id": "S2",
+          "speaker_name": "Colleen McDonald",
+          "speaker_role": "CFO",
+          "text": "Freight costs have stabilized, allowing us to maintain healthy operating cash flow.",
+          "confidence": 0.94
+        },
+        {
+          "start": 57.99,
+          "end": 62.82,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Sarah Miller with Value Investors.",
+          "confidence": 0.94
+        },
+        {
+          "start": 62.82,
+          "end": 68.62,
+          "speaker_id": "S5",
+          "speaker_name": "Sarah Miller",
+          "speaker_role": "Analyst, Value Investors",
+          "text": "Lloyd, what is the strategy for disposable protective apparel in medical channels?",
+          "confidence": 0.94
+        },
+        {
+          "start": 68.62,
+          "end": 73.48,
+          "speaker_id": "S1",
+          "speaker_name": "Lloyd Hoffman",
+          "speaker_role": "CEO",
+          "text": "We are focusing on high-margin cleanroom and pharmaceutical manufacturing customers.",
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "asr_model": "faster-whisper-v3-large",
+    "diarizer": "pyannote.audio-3.1",
+    "version": "1.0.0",
+    "rtf": 0.0016,
+    "5min_target_sla": "MET"
+  }
+}

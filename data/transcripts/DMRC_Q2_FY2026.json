@@ -1,0 +1,139 @@
+{
+  "event_id": "13",
+  "ticker": "DMRC",
+  "fiscal_period": "Q2 FY2026",
+  "call_datetime_utc": "2026-09-13T18:00:00Z",
+  "language": "en",
+  "sections": [
+    {
+      "type": "operator_intro",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 8.6,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Welcome to Digimarc's quarterly earnings conference call. Speaking today are CEO Riley McCormack and CFO Charles Beck.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "segments": [
+        {
+          "start": 8.6,
+          "end": 16.7,
+          "speaker_id": "S1",
+          "speaker_name": "Riley McCormack",
+          "speaker_role": "CEO",
+          "text": "Total revenue for the quarter was $9.8 million, driven by 18% growth in commercial subscription revenue.",
+          "confidence": 0.94
+        },
+        {
+          "start": 16.7,
+          "end": 22.77,
+          "speaker_id": "S2",
+          "speaker_name": "Charles Beck",
+          "speaker_role": "CFO",
+          "text": "Operating cash burn decreased 24% year-over-year as subscription annual recurring revenue expanded.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "segments": [
+        {
+          "start": 22.77,
+          "end": 29.85,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We will now take questions. Our first question comes from George Sutton with Craig-Hallum.",
+          "confidence": 0.94
+        },
+        {
+          "start": 29.85,
+          "end": 36.43,
+          "speaker_id": "S3",
+          "speaker_name": "Speaker S3",
+          "speaker_role": "Participant",
+          "text": "Riley, could you update us on Digimarc Validate adoption with European retail consortiums?",
+          "confidence": 0.94
+        },
+        {
+          "start": 36.43,
+          "end": 43.51,
+          "speaker_id": "S1",
+          "speaker_name": "Riley McCormack",
+          "speaker_role": "CEO",
+          "text": "We are seeing strong momentum as retailers seek product authentication to reduce counterfeit goods.",
+          "confidence": 0.94
+        },
+        {
+          "start": 43.51,
+          "end": 48.57,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Matthew Galinko with Maxim Group.",
+          "confidence": 0.94
+        },
+        {
+          "start": 48.57,
+          "end": 55.15,
+          "speaker_id": "S4",
+          "speaker_name": "Matthew Galinko",
+          "speaker_role": "Analyst, Maxim Group",
+          "text": "Charles, what is your guidance for cash burn reduction and path to profitability?",
+          "confidence": 0.94
+        },
+        {
+          "start": 55.15,
+          "end": 60.21,
+          "speaker_id": "S2",
+          "speaker_name": "Charles Beck",
+          "speaker_role": "CFO",
+          "text": "Annualized operating expenses decreased 15%, extending our cash runway significantly.",
+          "confidence": 0.94
+        },
+        {
+          "start": 60.21,
+          "end": 65.78,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from James Mitchell with Tech Growth Research.",
+          "confidence": 0.94
+        },
+        {
+          "start": 65.78,
+          "end": 70.84,
+          "speaker_id": "S5",
+          "speaker_name": "James Mitchell",
+          "speaker_role": "Analyst, Tech Growth Research",
+          "text": "Riley, how are industrial packaging converters integrating digital watermark technology?",
+          "confidence": 0.94
+        },
+        {
+          "start": 70.84,
+          "end": 77.41,
+          "speaker_id": "S1",
+          "speaker_name": "Riley McCormack",
+          "speaker_role": "CEO",
+          "text": "Top global packaging converters are embedding our digital identifiers directly on manufacturing lines.",
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "asr_model": "faster-whisper-v3-large",
+    "diarizer": "pyannote.audio-3.1",
+    "version": "1.0.0",
+    "rtf": 0.0016,
+    "5min_target_sla": "MET"
+  }
+}

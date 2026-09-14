@@ -1,0 +1,139 @@
+{
+  "event_id": "19",
+  "ticker": "SHOP",
+  "fiscal_period": "Q3 FY2024",
+  "call_datetime_utc": "2026-09-13T18:00:00Z",
+  "language": "en",
+  "sections": [
+    {
+      "type": "operator_intro",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 9.82,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Good morning and welcome to Shopify's earnings conference call. Joining us are Harley Finkelstein, President, and Jeff Hoffmeister, CFO.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "segments": [
+        {
+          "start": 9.82,
+          "end": 18.09,
+          "speaker_id": "S1",
+          "speaker_name": "Jeff Hoffmeister",
+          "speaker_role": "CFO",
+          "text": "Revenue for the quarter reached $2.05 billion, growing 21% year-over-year. Free cash flow margin was 16%.",
+          "confidence": 0.94
+        },
+        {
+          "start": 18.09,
+          "end": 26.87,
+          "speaker_id": "S2",
+          "speaker_name": "Speaker S2",
+          "speaker_role": "Participant",
+          "text": "Gross Merchandise Volume expanded to $67.2 billion, up 22%, driven by merchant additions and same-store sales growth.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "segments": [
+        {
+          "start": 26.87,
+          "end": 35.14,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Operator, please open the lines for questions. Our first question comes from Ken Wong with Oppenheimer.",
+          "confidence": 0.94
+        },
+        {
+          "start": 35.14,
+          "end": 40.82,
+          "speaker_id": "S3",
+          "speaker_name": "Ken Wong",
+          "speaker_role": "Analyst, Oppenheimer",
+          "text": "Harley, can you discuss enterprise merchant adoption and Shopify Plus momentum?",
+          "confidence": 0.94
+        },
+        {
+          "start": 40.82,
+          "end": 48.57,
+          "speaker_id": "S1",
+          "speaker_name": "Jeff Hoffmeister",
+          "speaker_role": "CFO",
+          "text": "Enterprise brands are migrating to Shopify at an unprecedented rate, leveraging our commerce operating system.",
+          "confidence": 0.94
+        },
+        {
+          "start": 48.57,
+          "end": 54.25,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Paul Treiber with RBC Capital Markets.",
+          "confidence": 0.94
+        },
+        {
+          "start": 54.25,
+          "end": 60.97,
+          "speaker_id": "S4",
+          "speaker_name": "Paul Treiber",
+          "speaker_role": "Analyst, RBC Capital Markets",
+          "text": "Jeff, how should we think about international expansion and merchant solution attach rates?",
+          "confidence": 0.94
+        },
+        {
+          "start": 60.97,
+          "end": 67.17,
+          "speaker_id": "S2",
+          "speaker_name": "Speaker S2",
+          "speaker_role": "Participant",
+          "text": "International GMV grew 30% as cross-border tools like Shopify Markets gain adoption.",
+          "confidence": 0.94
+        },
+        {
+          "start": 67.17,
+          "end": 71.82,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Colin Sebastian with Baird.",
+          "confidence": 0.94
+        },
+        {
+          "start": 71.82,
+          "end": 77.5,
+          "speaker_id": "S5",
+          "speaker_name": "Colin Sebastian",
+          "speaker_role": "Analyst, Baird",
+          "text": "Harley, how are merchants utilizing Shopify Magic and AI sidekick tools?",
+          "confidence": 0.94
+        },
+        {
+          "start": 77.5,
+          "end": 85.24,
+          "speaker_id": "S1",
+          "speaker_name": "Jeff Hoffmeister",
+          "speaker_role": "CFO",
+          "text": "Merchants using AI tools are saving hours each week on catalog generation and customer support.",
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "asr_model": "faster-whisper-v3-large",
+    "diarizer": "pyannote.audio-3.1",
+    "version": "1.0.0",
+    "rtf": 0.0014,
+    "5min_target_sla": "MET"
+  }
+}

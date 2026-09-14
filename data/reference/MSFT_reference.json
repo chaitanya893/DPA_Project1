@@ -1,0 +1,77 @@
+{
+  "ticker": "MSFT",
+  "fiscal_period": "Q3 FY2026",
+  "reference_text": "Welcome to the Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call. I will now turn the call over to Brett Iversen, Vice President of Investor Relations. On the call with me today are Satya Nadella, Chief Executive Officer, and Amy Hood, Chief Financial Officer. We closed out our fiscal year with strong results. Microsoft Cloud revenue surpassed 36.8 billion, up 21 percent year-over-year. Total company revenue was 64.7 billion, up 15 percent. Operating income increased 15 percent to 27.9 billion. We will now take your questions. Our first question comes from Keith Weiss with Morgan Stanley. Satya, could you speak to the scaling of Azure AI and customer capacity constraints? We are seeing accelerating demand across Copilot and Azure OpenAI services, with enterprise adoption expanding globally. Our next question comes from Brent Thill with Jefferies. Amy, what is your expectation for capital expenditures in fiscal 2027 to support AI infrastructure? We will continue to invest in cloud capacity, aligning CapEx with long-term revenue growth opportunities. Our next question comes from Karl Keirstead with UBS. Satya, how are enterprise customers approaching commercial Office 365 Copilot monetization? Customers are realizing measurable productivity gains, driving higher seat expansion and renewal rates.",
+  "intro_text": "Welcome to the Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call. I will now turn the call over to Brett Iversen, Vice President of Investor Relations. On the call with me today are Satya Nadella, Chief Executive Officer, and Amy Hood, Chief Financial Officer.",
+  "remarks_text": "We closed out our fiscal year with strong results. Microsoft Cloud revenue surpassed $36.8 billion, up 21% year-over-year. Total company revenue was $64.7 billion, up 15%. Operating income increased 15% to $27.9 billion.",
+  "qa_text": "We will now take your questions. Our first question comes from Keith Weiss with Morgan Stanley. Satya, could you speak to the scaling of Azure AI and customer capacity constraints? We are seeing accelerating demand across Copilot and Azure OpenAI services, with enterprise adoption expanding globally. Our next question comes from Brent Thill with Jefferies. Amy, what is your expectation for capital expenditures in fiscal 2027 to support AI infrastructure? We will continue to invest in cloud capacity, aligning CapEx with long-term revenue growth opportunities. Our next question comes from Karl Keirstead with UBS. Satya, how are enterprise customers approaching commercial Office 365 Copilot monetization? Customers are realizing measurable productivity gains, driving higher seat expansion and renewal rates.",
+  "speakers": [
+    "Conference Operator",
+    "Conference Operator",
+    "Satya Nadella",
+    "Amy Hood",
+    "Conference Operator",
+    "Keith Weiss",
+    "Satya Nadella",
+    "Conference Operator",
+    "Brent Thill",
+    "Amy Hood",
+    "Conference Operator",
+    "Karl Keirstead",
+    "Satya Nadella"
+  ],
+  "segments": [
+    {
+      "speaker_id": "S0",
+      "text": "Welcome to the Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call. I will now turn the call over to Brett Iversen, Vice President of Investor Relations."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "On the call with me today are Satya Nadella, Chief Executive Officer, and Amy Hood, Chief Financial Officer."
+    },
+    {
+      "speaker_id": "S1",
+      "text": "We closed out our fiscal year with strong results. Microsoft Cloud revenue surpassed $36.8 billion, up 21% year-over-year."
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Total company revenue was $64.7 billion, up 15%. Operating income increased 15% to $27.9 billion."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "We will now take your questions. Our first question comes from Keith Weiss with Morgan Stanley."
+    },
+    {
+      "speaker_id": "S3",
+      "text": "Satya, could you speak to the scaling of Azure AI and customer capacity constraints?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "We are seeing accelerating demand across Copilot and Azure OpenAI services, with enterprise adoption expanding globally."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Brent Thill with Jefferies."
+    },
+    {
+      "speaker_id": "S4",
+      "text": "Amy, what is your expectation for capital expenditures in fiscal 2027 to support AI infrastructure?"
+    },
+    {
+      "speaker_id": "S2",
+      "text": "We will continue to invest in cloud capacity, aligning CapEx with long-term revenue growth opportunities."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Karl Keirstead with UBS."
+    },
+    {
+      "speaker_id": "S5",
+      "text": "Satya, how are enterprise customers approaching commercial Office 365 Copilot monetization?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Customers are realizing measurable productivity gains, driving higher seat expansion and renewal rates."
+    }
+  ]
+}

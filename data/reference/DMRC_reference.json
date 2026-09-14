@@ -1,0 +1,72 @@
+{
+  "ticker": "DMRC",
+  "fiscal_period": "Q3 FY2026",
+  "reference_text": "Welcome to Digimarc's quarterly earnings conference call. Speaking today are CEO Riley McCormack and CFO Charles Beck. Total revenue for the quarter was 9.8 million, driven by 18 percent growth in commercial subscription revenue. Operating cash burn decreased 24 percent year-over-year as subscription annual recurring revenue expanded. We will now take questions. Our first question comes from George Sutton with Craig-Hallum. Riley, could you update us on Digimarc Validate adoption with European retail consortiums? We are seeing strong momentum as retailers seek product authentication to reduce counterfeit goods. Our next question comes from Matthew Galinko with Maxim Group. Charles, what is your guidance for cash burn reduction and path to profitability? Annualized operating expenses decreased 15 percent, extending our cash runway significantly. Our next question comes from James Mitchell with Tech Growth Research. Riley, how are industrial packaging converters integrating digital watermark technology? Top global packaging converters are embedding our digital identifiers directly on manufacturing lines.",
+  "intro_text": "Welcome to Digimarc's quarterly earnings conference call. Speaking today are CEO Riley McCormack and CFO Charles Beck. Total revenue for the quarter was $9.8 million, driven by 18% growth in commercial subscription revenue.",
+  "remarks_text": "Operating cash burn decreased 24% year-over-year as subscription annual recurring revenue expanded.",
+  "qa_text": "We will now take questions. Our first question comes from George Sutton with Craig-Hallum. Riley, could you update us on Digimarc Validate adoption with European retail consortiums? We are seeing strong momentum as retailers seek product authentication to reduce counterfeit goods. Our next question comes from Matthew Galinko with Maxim Group. Charles, what is your guidance for cash burn reduction and path to profitability? Annualized operating expenses decreased 15%, extending our cash runway significantly. Our next question comes from James Mitchell with Tech Growth Research. Riley, how are industrial packaging converters integrating digital watermark technology? Top global packaging converters are embedding our digital identifiers directly on manufacturing lines.",
+  "speakers": [
+    "Conference Operator",
+    "Riley McCormack",
+    "Charles Beck",
+    "Conference Operator",
+    "Speaker S3",
+    "Riley McCormack",
+    "Conference Operator",
+    "Matthew Galinko",
+    "Charles Beck",
+    "Conference Operator",
+    "James Mitchell",
+    "Riley McCormack"
+  ],
+  "segments": [
+    {
+      "speaker_id": "S0",
+      "text": "Welcome to Digimarc's quarterly earnings conference call. Speaking today are CEO Riley McCormack and CFO Charles Beck."
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Total revenue for the quarter was $9.8 million, driven by 18% growth in commercial subscription revenue."
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Operating cash burn decreased 24% year-over-year as subscription annual recurring revenue expanded."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "We will now take questions. Our first question comes from George Sutton with Craig-Hallum."
+    },
+    {
+      "speaker_id": "S3",
+      "text": "Riley, could you update us on Digimarc Validate adoption with European retail consortiums?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "We are seeing strong momentum as retailers seek product authentication to reduce counterfeit goods."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Matthew Galinko with Maxim Group."
+    },
+    {
+      "speaker_id": "S4",
+      "text": "Charles, what is your guidance for cash burn reduction and path to profitability?"
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Annualized operating expenses decreased 15%, extending our cash runway significantly."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from James Mitchell with Tech Growth Research."
+    },
+    {
+      "speaker_id": "S5",
+      "text": "Riley, how are industrial packaging converters integrating digital watermark technology?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Top global packaging converters are embedding our digital identifiers directly on manufacturing lines."
+    }
+  ]
+}

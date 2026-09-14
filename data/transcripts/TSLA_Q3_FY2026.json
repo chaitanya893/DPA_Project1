@@ -1,0 +1,139 @@
+{
+  "event_id": "8",
+  "ticker": "TSLA",
+  "fiscal_period": "Q3 FY2026",
+  "call_datetime_utc": "2026-09-13T18:00:00Z",
+  "language": "en",
+  "sections": [
+    {
+      "type": "operator_intro",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 12.37,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Good day and welcome to the Tesla Q3 earnings conference call. Joining us today are Elon Musk, Chief Executive Officer, and Vaibhav Taneja, Chief Financial Officer.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "segments": [
+        {
+          "start": 12.37,
+          "end": 23.79,
+          "speaker_id": "S1",
+          "speaker_name": "Elon Musk",
+          "speaker_role": "CEO",
+          "text": "In the quarter, we achieved total revenue of $25.1 billion, up 8% year-over-year. Our energy storage business had record deployment of 6.9 gigawatt hours.",
+          "confidence": 0.94
+        },
+        {
+          "start": 23.79,
+          "end": 32.36,
+          "speaker_id": "S2",
+          "speaker_name": "Vaibhav Taneja",
+          "speaker_role": "CFO",
+          "text": "Free cash flow reached $2.74 billion, supporting our ongoing expansion of AI compute clusters and vehicle manufacturing lines.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "segments": [
+        {
+          "start": 32.36,
+          "end": 41.4,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We will now begin the question and answer session. Our first question comes from Adam Jonas with Morgan Stanley.",
+          "confidence": 0.94
+        },
+        {
+          "start": 41.4,
+          "end": 47.59,
+          "speaker_id": "S3",
+          "speaker_name": "Adam Jonas",
+          "speaker_role": "Analyst, Morgan Stanley",
+          "text": "Elon, what is the roadmap for autonomous Cybercab production and Full Self-Driving deployment?",
+          "confidence": 0.94
+        },
+        {
+          "start": 47.59,
+          "end": 55.21,
+          "speaker_id": "S1",
+          "speaker_name": "Elon Musk",
+          "speaker_role": "CEO",
+          "text": "We are on track to begin volume production in 2026 with unmatched cost per passenger mile.",
+          "confidence": 0.94
+        },
+        {
+          "start": 55.21,
+          "end": 59.49,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Dan Levy with Barclays.",
+          "confidence": 0.94
+        },
+        {
+          "start": 59.49,
+          "end": 66.15,
+          "speaker_id": "S4",
+          "speaker_name": "Dan Levy",
+          "speaker_role": "Analyst, Barclays",
+          "text": "Vaibhav, how should we model automotive gross margin excluding regulatory credits into next year?",
+          "confidence": 0.94
+        },
+        {
+          "start": 66.15,
+          "end": 72.34,
+          "speaker_id": "S2",
+          "speaker_name": "Vaibhav Taneja",
+          "speaker_role": "CFO",
+          "text": "Cost reductions in raw materials and manufacturing efficiency continue to improve unit margins.",
+          "confidence": 0.94
+        },
+        {
+          "start": 72.34,
+          "end": 77.58,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Pierre Ferragu with New Street Research.",
+          "confidence": 0.94
+        },
+        {
+          "start": 77.58,
+          "end": 84.24,
+          "speaker_id": "S5",
+          "speaker_name": "Pierre Ferragu",
+          "speaker_role": "Analyst, New Street Research",
+          "text": "Elon, how is Megapack demand scaling relative to manufacturing capacity in Lathrop and Shanghai?",
+          "confidence": 0.94
+        },
+        {
+          "start": 84.24,
+          "end": 89.48,
+          "speaker_id": "S1",
+          "speaker_name": "Elon Musk",
+          "speaker_role": "CEO",
+          "text": "Energy storage demand remains exceptionally robust, outpacing our automotive growth rate.",
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "asr_model": "faster-whisper-v3-large",
+    "diarizer": "pyannote.audio-3.1",
+    "version": "1.0.0",
+    "rtf": 0.0014,
+    "5min_target_sla": "MET"
+  }
+}

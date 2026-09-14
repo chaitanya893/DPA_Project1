@@ -1,0 +1,77 @@
+{
+  "ticker": "AAPL",
+  "fiscal_period": "Q3 FY2026",
+  "reference_text": "Good day and welcome to the Apple Q3 FY2026 earnings conference call. At this time, I would like to turn the call over to Suhasini Chandramouli, Director of Investor Relations. Speaking first today is Apple's CEO, Tim Cook, and he will be followed by CFO, Luca Maestri. Today, Apple is reporting a new June quarter revenue record of 85.8 billion, up 5 percent from a year ago. Services set an all-time revenue record of 24.2 billion, up 14 percent year-over-year. Gross margin was 46.3 percent, near the high end of our guidance. Diluted EPS was 1.40. We returned over 32 billion to shareholders through dividends and share repurchases. We will now begin the question-and-answer session. Our first question comes from Shannon Cross with AllianceBernstein. Thank you. Tim, could you expand on customer reception to Apple Intelligence across Greater China and Europe? We are seeing very strong enthusiasm from developers and consumers alike. The integration of generative AI into iOS 18 is driving accelerated upgrade cycles. Our next question comes from Toni Sacconaghi with Bernstein. Luca, how should we think about gross margin trajectory and Services mix heading into the September quarter? We expect gross margins between 46.0 percent and 47.0 percent, benefiting from favorable Services mix and ongoing cost efficiencies. Our next question comes from Amit Daryanani with Evercore ISI. Tim, are you seeing higher subscriber retention and engagement across iCloud and Apple Pay? Yes, Amit. Paid subscriptions grew double digits, surpassing 1 billion active paid subscriptions across our platform.",
+  "intro_text": "Good day and welcome to the Apple Q3 FY2026 earnings conference call. At this time, I would like to turn the call over to Suhasini Chandramouli, Director of Investor Relations. Speaking first today is Apple's CEO, Tim Cook, and he will be followed by CFO, Luca Maestri.",
+  "remarks_text": "Today, Apple is reporting a new June quarter revenue record of $85.8 billion, up 5% from a year ago. Services set an all-time revenue record of $24.2 billion, up 14% year-over-year. Gross margin was 46.3%, near the high end of our guidance. Diluted EPS was $1.40. We returned over $32 billion to shareholders through dividends and share repurchases.",
+  "qa_text": "We will now begin the question-and-answer session. Our first question comes from Shannon Cross with AllianceBernstein. Thank you. Tim, could you expand on customer reception to Apple Intelligence across Greater China and Europe? We are seeing very strong enthusiasm from developers and consumers alike. The integration of generative AI into iOS 18 is driving accelerated upgrade cycles. Our next question comes from Toni Sacconaghi with Bernstein. Luca, how should we think about gross margin trajectory and Services mix heading into the September quarter? We expect gross margins between 46.0% and 47.0%, benefiting from favorable Services mix and ongoing cost efficiencies. Our next question comes from Amit Daryanani with Evercore ISI. Tim, are you seeing higher subscriber retention and engagement across iCloud and Apple Pay? Yes, Amit. Paid subscriptions grew double digits, surpassing 1 billion active paid subscriptions across our platform.",
+  "speakers": [
+    "Conference Operator",
+    "Conference Operator",
+    "Tim Cook",
+    "Luca Maestri",
+    "Conference Operator",
+    "Shannon Cross",
+    "Tim Cook",
+    "Conference Operator",
+    "Toni Sacconaghi",
+    "Luca Maestri",
+    "Conference Operator",
+    "Amit Daryanani",
+    "Tim Cook"
+  ],
+  "segments": [
+    {
+      "speaker_id": "S0",
+      "text": "Good day and welcome to the Apple Q3 FY2026 earnings conference call. At this time, I would like to turn the call over to Suhasini Chandramouli, Director of Investor Relations."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Speaking first today is Apple's CEO, Tim Cook, and he will be followed by CFO, Luca Maestri."
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Today, Apple is reporting a new June quarter revenue record of $85.8 billion, up 5% from a year ago. Services set an all-time revenue record of $24.2 billion, up 14% year-over-year."
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Gross margin was 46.3%, near the high end of our guidance. Diluted EPS was $1.40. We returned over $32 billion to shareholders through dividends and share repurchases."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "We will now begin the question-and-answer session. Our first question comes from Shannon Cross with AllianceBernstein."
+    },
+    {
+      "speaker_id": "S3",
+      "text": "Thank you. Tim, could you expand on customer reception to Apple Intelligence across Greater China and Europe?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "We are seeing very strong enthusiasm from developers and consumers alike. The integration of generative AI into iOS 18 is driving accelerated upgrade cycles."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Toni Sacconaghi with Bernstein."
+    },
+    {
+      "speaker_id": "S4",
+      "text": "Luca, how should we think about gross margin trajectory and Services mix heading into the September quarter?"
+    },
+    {
+      "speaker_id": "S2",
+      "text": "We expect gross margins between 46.0% and 47.0%, benefiting from favorable Services mix and ongoing cost efficiencies."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Amit Daryanani with Evercore ISI."
+    },
+    {
+      "speaker_id": "S5",
+      "text": "Tim, are you seeing higher subscriber retention and engagement across iCloud and Apple Pay?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Yes, Amit. Paid subscriptions grew double digits, surpassing 1 billion active paid subscriptions across our platform."
+    }
+  ]
+}

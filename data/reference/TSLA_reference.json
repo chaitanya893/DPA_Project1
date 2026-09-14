@@ -1,0 +1,72 @@
+{
+  "ticker": "TSLA",
+  "fiscal_period": "Q3 FY2026",
+  "reference_text": "Good day and welcome to the Tesla Q3 earnings conference call. Joining us today are Elon Musk, Chief Executive Officer, and Vaibhav Taneja, Chief Financial Officer. In the quarter, we achieved total revenue of 25.1 billion, up 8 percent year-over-year. Our energy storage business had record deployment of 6.9 gigawatt hours. Free cash flow reached 2.74 billion, supporting our ongoing expansion of AI compute clusters and vehicle manufacturing lines. We will now begin the question and answer session. Our first question comes from Adam Jonas with Morgan Stanley. Elon, what is the roadmap for autonomous Cybercab production and Full Self-Driving deployment? We are on track to begin volume production in 2026 with unmatched cost per passenger mile. Our next question comes from Dan Levy with Barclays. Vaibhav, how should we model automotive gross margin excluding regulatory credits into next year? Cost reductions in raw materials and manufacturing efficiency continue to improve unit margins. Our next question comes from Pierre Ferragu with New Street Research. Elon, how is Megapack demand scaling relative to manufacturing capacity in Lathrop and Shanghai? Energy storage demand remains exceptionally robust, outpacing our automotive growth rate.",
+  "intro_text": "Good day and welcome to the Tesla Q3 earnings conference call. Joining us today are Elon Musk, Chief Executive Officer, and Vaibhav Taneja, Chief Financial Officer. In the quarter, we achieved total revenue of $25.1 billion, up 8% year-over-year. Our energy storage business had record deployment of 6.9 gigawatt hours.",
+  "remarks_text": "Free cash flow reached $2.74 billion, supporting our ongoing expansion of AI compute clusters and vehicle manufacturing lines.",
+  "qa_text": "We will now begin the question and answer session. Our first question comes from Adam Jonas with Morgan Stanley. Elon, what is the roadmap for autonomous Cybercab production and Full Self-Driving deployment? We are on track to begin volume production in 2026 with unmatched cost per passenger mile. Our next question comes from Dan Levy with Barclays. Vaibhav, how should we model automotive gross margin excluding regulatory credits into next year? Cost reductions in raw materials and manufacturing efficiency continue to improve unit margins. Our next question comes from Pierre Ferragu with New Street Research. Elon, how is Megapack demand scaling relative to manufacturing capacity in Lathrop and Shanghai? Energy storage demand remains exceptionally robust, outpacing our automotive growth rate.",
+  "speakers": [
+    "Conference Operator",
+    "Elon Musk",
+    "Vaibhav Taneja",
+    "Conference Operator",
+    "Adam Jonas",
+    "Elon Musk",
+    "Conference Operator",
+    "Dan Levy",
+    "Vaibhav Taneja",
+    "Conference Operator",
+    "Pierre Ferragu",
+    "Elon Musk"
+  ],
+  "segments": [
+    {
+      "speaker_id": "S0",
+      "text": "Good day and welcome to the Tesla Q3 earnings conference call. Joining us today are Elon Musk, Chief Executive Officer, and Vaibhav Taneja, Chief Financial Officer."
+    },
+    {
+      "speaker_id": "S1",
+      "text": "In the quarter, we achieved total revenue of $25.1 billion, up 8% year-over-year. Our energy storage business had record deployment of 6.9 gigawatt hours."
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Free cash flow reached $2.74 billion, supporting our ongoing expansion of AI compute clusters and vehicle manufacturing lines."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "We will now begin the question and answer session. Our first question comes from Adam Jonas with Morgan Stanley."
+    },
+    {
+      "speaker_id": "S3",
+      "text": "Elon, what is the roadmap for autonomous Cybercab production and Full Self-Driving deployment?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "We are on track to begin volume production in 2026 with unmatched cost per passenger mile."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Dan Levy with Barclays."
+    },
+    {
+      "speaker_id": "S4",
+      "text": "Vaibhav, how should we model automotive gross margin excluding regulatory credits into next year?"
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Cost reductions in raw materials and manufacturing efficiency continue to improve unit margins."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Pierre Ferragu with New Street Research."
+    },
+    {
+      "speaker_id": "S5",
+      "text": "Elon, how is Megapack demand scaling relative to manufacturing capacity in Lathrop and Shanghai?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Energy storage demand remains exceptionally robust, outpacing our automotive growth rate."
+    }
+  ]
+}

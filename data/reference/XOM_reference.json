@@ -1,0 +1,72 @@
+{
+  "ticker": "XOM",
+  "fiscal_period": "Q3 FY2026",
+  "reference_text": "Welcome to the ExxonMobil second-quarter earnings call. Speaking today are Chairman and CEO Darren Woods and CFO Kathryn Mikells. Today, ExxonMobil reported solid second-quarter earnings of 9.2 billion, driven by advantaged growth in Guyana and the Permian Basin. Cash flow from operations was 10.6 billion, enabling 4.3 billion in dividend distributions and 5.2 billion in share repurchases. We will now begin the question-and-answer session. Our first question comes from Neil Mehta with Goldman Sachs. Darren, could you discuss Pioneer Natural Resources integration synergies and production volume targets? The integration is progressing ahead of plan, allowing us to capture higher recovery rates across our Permian acreage. Our next question comes from Devin McDermott with Morgan Stanley. Kathryn, how should we think about cash distribution pace via dividends and buybacks? Our strong balance sheet allows us to maintain competitive dividend growth while repurchasing shares. Our next question comes from Biraj Borkhataria with RBC Capital Markets. Darren, what is the latest status on Low Carbon Solutions commercial contracts? We are seeing growing customer interest in carbon capture and storage agreements across the US Gulf Coast.",
+  "intro_text": "Welcome to the ExxonMobil second-quarter earnings call. Speaking today are Chairman and CEO Darren Woods and CFO Kathryn Mikells. Today, ExxonMobil reported solid second-quarter earnings of $9.2 billion, driven by advantaged growth in Guyana and the Permian Basin.",
+  "remarks_text": "Cash flow from operations was $10.6 billion, enabling $4.3 billion in dividend distributions and $5.2 billion in share repurchases.",
+  "qa_text": "We will now begin the question-and-answer session. Our first question comes from Neil Mehta with Goldman Sachs. Darren, could you discuss Pioneer Natural Resources integration synergies and production volume targets? The integration is progressing ahead of plan, allowing us to capture higher recovery rates across our Permian acreage. Our next question comes from Devin McDermott with Morgan Stanley. Kathryn, how should we think about cash distribution pace via dividends and buybacks? Our strong balance sheet allows us to maintain competitive dividend growth while repurchasing shares. Our next question comes from Biraj Borkhataria with RBC Capital Markets. Darren, what is the latest status on Low Carbon Solutions commercial contracts? We are seeing growing customer interest in carbon capture and storage agreements across the US Gulf Coast.",
+  "speakers": [
+    "Conference Operator",
+    "Darren Woods",
+    "Kathryn Mikells",
+    "Conference Operator",
+    "Neil Mehta",
+    "Darren Woods",
+    "Conference Operator",
+    "Devin McDermott",
+    "Kathryn Mikells",
+    "Conference Operator",
+    "Biraj Borkhataria",
+    "Darren Woods"
+  ],
+  "segments": [
+    {
+      "speaker_id": "S0",
+      "text": "Welcome to the ExxonMobil second-quarter earnings call. Speaking today are Chairman and CEO Darren Woods and CFO Kathryn Mikells."
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Today, ExxonMobil reported solid second-quarter earnings of $9.2 billion, driven by advantaged growth in Guyana and the Permian Basin."
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Cash flow from operations was $10.6 billion, enabling $4.3 billion in dividend distributions and $5.2 billion in share repurchases."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "We will now begin the question-and-answer session. Our first question comes from Neil Mehta with Goldman Sachs."
+    },
+    {
+      "speaker_id": "S3",
+      "text": "Darren, could you discuss Pioneer Natural Resources integration synergies and production volume targets?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "The integration is progressing ahead of plan, allowing us to capture higher recovery rates across our Permian acreage."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Devin McDermott with Morgan Stanley."
+    },
+    {
+      "speaker_id": "S4",
+      "text": "Kathryn, how should we think about cash distribution pace via dividends and buybacks?"
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Our strong balance sheet allows us to maintain competitive dividend growth while repurchasing shares."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Biraj Borkhataria with RBC Capital Markets."
+    },
+    {
+      "speaker_id": "S5",
+      "text": "Darren, what is the latest status on Low Carbon Solutions commercial contracts?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "We are seeing growing customer interest in carbon capture and storage agreements across the US Gulf Coast."
+    }
+  ]
+}

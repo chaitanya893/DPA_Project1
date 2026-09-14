@@ -1,0 +1,139 @@
+{
+  "event_id": "16",
+  "ticker": "RY",
+  "fiscal_period": "Q3 FY2024",
+  "call_datetime_utc": "2026-09-13T18:00:00Z",
+  "language": "en",
+  "sections": [
+    {
+      "type": "operator_intro",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 11.63,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Welcome to Royal Bank of Canada's third-quarter earnings conference call. Joining us today are Dave McKay, President and CEO, and Katherine Gibson, CFO.",
+          "confidence": 0.94
+        },
+        {
+          "start": 11.63,
+          "end": 19.21,
+          "speaker_id": "S1",
+          "speaker_name": "Dave McKay",
+          "speaker_role": "President & CEO",
+          "text": "RBC reported solid third-quarter net income of $4.5 billion, with return on equity of 15.7%.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "segments": [
+        {
+          "start": 19.21,
+          "end": 27.81,
+          "speaker_id": "S2",
+          "speaker_name": "Katherine Gibson",
+          "speaker_role": "CFO",
+          "text": "Common Equity Tier 1 ratio was 13.0%, reflecting strong internal capital generation following the HSBC Canada acquisition.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "segments": [
+        {
+          "start": 27.81,
+          "end": 35.9,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We are now ready for analyst questions. First question comes from Mario Mendonca with TD Securities.",
+          "confidence": 0.94
+        },
+        {
+          "start": 35.9,
+          "end": 42.98,
+          "speaker_id": "S3",
+          "speaker_name": "Mario Mendonca",
+          "speaker_role": "Analyst, TD Securities",
+          "text": "Dave, how is HSBC Canada integration progressing in terms of cost and revenue synergies?",
+          "confidence": 0.94
+        },
+        {
+          "start": 42.98,
+          "end": 48.54,
+          "speaker_id": "S1",
+          "speaker_name": "Dave McKay",
+          "speaker_role": "President & CEO",
+          "text": "HSBC integration is ahead of schedule with client retention exceeding 95%.",
+          "confidence": 0.94
+        },
+        {
+          "start": 48.54,
+          "end": 54.1,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Gabriel Dechaine with National Bank Financial.",
+          "confidence": 0.94
+        },
+        {
+          "start": 54.1,
+          "end": 61.18,
+          "speaker_id": "S4",
+          "speaker_name": "Gabriel Dechaine",
+          "speaker_role": "Analyst, National Bank Financial",
+          "text": "Katherine, what is your outlook on provisions for credit losses in commercial real estate?",
+          "confidence": 0.94
+        },
+        {
+          "start": 61.18,
+          "end": 66.74,
+          "speaker_id": "S2",
+          "speaker_name": "Katherine Gibson",
+          "speaker_role": "CFO",
+          "text": "Our credit quality remains sound with prudent allowances reflecting conservative underwriting.",
+          "confidence": 0.94
+        },
+        {
+          "start": 66.74,
+          "end": 71.29,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Meny Grauman with Scotiabank.",
+          "confidence": 0.94
+        },
+        {
+          "start": 71.29,
+          "end": 78.37,
+          "speaker_id": "S5",
+          "speaker_name": "Meny Grauman",
+          "speaker_role": "Analyst, Scotiabank",
+          "text": "Dave, how are personal and commercial deposit margins performing in the current rate environment?",
+          "confidence": 0.94
+        },
+        {
+          "start": 78.37,
+          "end": 84.44,
+          "speaker_id": "S1",
+          "speaker_name": "Dave McKay",
+          "speaker_role": "President & CEO",
+          "text": "Deposit balances grew 8%, benefiting from our leading Canadian retail banking franchise.",
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "asr_model": "faster-whisper-v3-large",
+    "diarizer": "pyannote.audio-3.1",
+    "version": "1.0.0",
+    "rtf": 0.0014,
+    "5min_target_sla": "MET"
+  }
+}

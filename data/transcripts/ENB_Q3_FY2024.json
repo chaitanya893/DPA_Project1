@@ -1,0 +1,139 @@
+{
+  "event_id": "17",
+  "ticker": "ENB",
+  "fiscal_period": "Q3 FY2024",
+  "call_datetime_utc": "2026-09-13T18:00:00Z",
+  "language": "en",
+  "sections": [
+    {
+      "type": "operator_intro",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 9.57,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Welcome to Enbridge's quarterly earnings conference call. Speaking today are Greg Ebel, President and CEO, and Patrick Murray, CFO.",
+          "confidence": 0.94
+        },
+        {
+          "start": 9.57,
+          "end": 17.12,
+          "speaker_id": "S1",
+          "speaker_name": "Greg Ebel",
+          "speaker_role": "President & CEO",
+          "text": "Enbridge delivered solid results with adjusted EBITDA of $4.3 billion, supported by record Mainline throughput.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "segments": [
+        {
+          "start": 17.12,
+          "end": 25.68,
+          "speaker_id": "S2",
+          "speaker_name": "Patrick Murray",
+          "speaker_role": "CFO",
+          "text": "Distributable cash flow was $2.8 billion, keeping us fully on track to achieve our full-year financial guidance.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "segments": [
+        {
+          "start": 25.68,
+          "end": 33.74,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We will now take questions. Our first question comes from Robert Kwan with RBC Capital Markets.",
+          "confidence": 0.94
+        },
+        {
+          "start": 33.74,
+          "end": 40.29,
+          "speaker_id": "S3",
+          "speaker_name": "Robert Kwan",
+          "speaker_role": "Analyst, RBC Capital Markets",
+          "text": "Greg, could you comment on gas utility acquisitions integration and organic expansion capital?",
+          "confidence": 0.94
+        },
+        {
+          "start": 40.29,
+          "end": 46.84,
+          "speaker_id": "S1",
+          "speaker_name": "Greg Ebel",
+          "speaker_role": "President & CEO",
+          "text": "The gas distribution acquisitions are performing exceptionally well, providing stable regulated cash flows.",
+          "confidence": 0.94
+        },
+        {
+          "start": 46.84,
+          "end": 51.88,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Linda Ezergailis with TD Cowen.",
+          "confidence": 0.94
+        },
+        {
+          "start": 51.88,
+          "end": 59.43,
+          "speaker_id": "S4",
+          "speaker_name": "Linda Ezergailis",
+          "speaker_role": "Analyst, TD Cowen",
+          "text": "Patrick, how is debt leverage progressing toward your target range of 4.5 to 5.0 times?",
+          "confidence": 0.94
+        },
+        {
+          "start": 59.43,
+          "end": 65.98,
+          "speaker_id": "S2",
+          "speaker_name": "Patrick Murray",
+          "speaker_role": "CFO",
+          "text": "Our balance sheet remains in great shape, supported by predictable utility cash flows.",
+          "confidence": 0.94
+        },
+        {
+          "start": 65.98,
+          "end": 71.52,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Robert Catellier with CIBC World Markets.",
+          "confidence": 0.94
+        },
+        {
+          "start": 71.52,
+          "end": 78.07,
+          "speaker_id": "S5",
+          "speaker_name": "Robert Catellier",
+          "speaker_role": "Analyst, CIBC World Markets",
+          "text": "Greg, what are the growth opportunities in offshore Gulf Coast crude export terminals?",
+          "confidence": 0.94
+        },
+        {
+          "start": 78.07,
+          "end": 84.6,
+          "speaker_id": "S1",
+          "speaker_name": "Greg Ebel",
+          "speaker_role": "President & CEO",
+          "text": "Our Ingleside terminal achieved record loadings, solidifying our competitive advantage in energy infrastructure.",
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "asr_model": "faster-whisper-v3-large",
+    "diarizer": "pyannote.audio-3.1",
+    "version": "1.0.0",
+    "rtf": 0.0014,
+    "5min_target_sla": "MET"
+  }
+}

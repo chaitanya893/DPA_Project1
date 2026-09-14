@@ -1,0 +1,72 @@
+{
+  "ticker": "CNR",
+  "fiscal_period": "Q3 FY2026",
+  "reference_text": "Welcome to Canadian National Railway's quarterly conference call. I will turn the meeting over to Tracy Robinson, President and CEO, and Ghislain Houle, CFO. CN delivered second-quarter operating revenues of 4.33 billion with an operating ratio of 62.0 percent. Adjusted diluted EPS was 1.84, with free cash flow of 1.15 billion generated year-to-date. We will now begin the question-and-answer session. Our first question comes from Fadi Chamoun with BMO Capital Markets. Tracy, what is your outlook for Canadian grain carloads and intermodal volume growth? Grain shipments are expected to be strong, supported by high operating velocity and train lengths. Our next question comes from Konark Gupta with Scotiabank. Ghislain, how are fuel productivity and labor cost containment tracking against guidance? Fuel efficiency improved 2 percent, helping mitigate inflationary cost pressures across the network. Our next question comes from Walter Spracklin with RBC Capital Markets. Tracy, can you speak to customer supply chain partnerships at the Port of Prince Rupert? Our corridor collaboration has restored competitive dwell times and attracted new vessel services.",
+  "intro_text": "Welcome to Canadian National Railway's quarterly conference call. I will turn the meeting over to Tracy Robinson, President and CEO, and Ghislain Houle, CFO. CN delivered second-quarter operating revenues of $4.33 billion with an operating ratio of 62.0%.",
+  "remarks_text": "Adjusted diluted EPS was $1.84, with free cash flow of $1.15 billion generated year-to-date.",
+  "qa_text": "We will now begin the question-and-answer session. Our first question comes from Fadi Chamoun with BMO Capital Markets. Tracy, what is your outlook for Canadian grain carloads and intermodal volume growth? Grain shipments are expected to be strong, supported by high operating velocity and train lengths. Our next question comes from Konark Gupta with Scotiabank. Ghislain, how are fuel productivity and labor cost containment tracking against guidance? Fuel efficiency improved 2%, helping mitigate inflationary cost pressures across the network. Our next question comes from Walter Spracklin with RBC Capital Markets. Tracy, can you speak to customer supply chain partnerships at the Port of Prince Rupert? Our corridor collaboration has restored competitive dwell times and attracted new vessel services.",
+  "speakers": [
+    "Conference Operator",
+    "Tracy Robinson",
+    "Ghislain Houle",
+    "Conference Operator",
+    "Fadi Chamoun",
+    "Tracy Robinson",
+    "Conference Operator",
+    "Konark Gupta",
+    "Ghislain Houle",
+    "Conference Operator",
+    "Walter Spracklin",
+    "Tracy Robinson"
+  ],
+  "segments": [
+    {
+      "speaker_id": "S0",
+      "text": "Welcome to Canadian National Railway's quarterly conference call. I will turn the meeting over to Tracy Robinson, President and CEO, and Ghislain Houle, CFO."
+    },
+    {
+      "speaker_id": "S1",
+      "text": "CN delivered second-quarter operating revenues of $4.33 billion with an operating ratio of 62.0%."
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Adjusted diluted EPS was $1.84, with free cash flow of $1.15 billion generated year-to-date."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "We will now begin the question-and-answer session. Our first question comes from Fadi Chamoun with BMO Capital Markets."
+    },
+    {
+      "speaker_id": "S3",
+      "text": "Tracy, what is your outlook for Canadian grain carloads and intermodal volume growth?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Grain shipments are expected to be strong, supported by high operating velocity and train lengths."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Konark Gupta with Scotiabank."
+    },
+    {
+      "speaker_id": "S4",
+      "text": "Ghislain, how are fuel productivity and labor cost containment tracking against guidance?"
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Fuel efficiency improved 2%, helping mitigate inflationary cost pressures across the network."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Walter Spracklin with RBC Capital Markets."
+    },
+    {
+      "speaker_id": "S5",
+      "text": "Tracy, can you speak to customer supply chain partnerships at the Port of Prince Rupert?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Our corridor collaboration has restored competitive dwell times and attracted new vessel services."
+    }
+  ]
+}

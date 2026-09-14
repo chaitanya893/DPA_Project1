@@ -1,0 +1,139 @@
+{
+  "event_id": "3",
+  "ticker": "JPM",
+  "fiscal_period": "Q3 FY2026",
+  "call_datetime_utc": "2026-09-13T18:00:00Z",
+  "language": "en",
+  "sections": [
+    {
+      "type": "operator_intro",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 11.37,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Good morning and welcome to JPMorgan Chase's quarterly earnings conference call. Today's call is hosted by Chairman and CEO Jamie Dimon and CFO Jeremy Barnum.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "segments": [
+        {
+          "start": 11.37,
+          "end": 22.74,
+          "speaker_id": "S1",
+          "speaker_name": "Jamie Dimon",
+          "speaker_role": "CEO",
+          "text": "The firm reported strong results with net income of $18.1 billion on revenue of $50.99 billion, driven by balanced growth across our lines of business.",
+          "confidence": 0.94
+        },
+        {
+          "start": 22.74,
+          "end": 31.38,
+          "speaker_id": "S2",
+          "speaker_name": "Jeremy Barnum",
+          "speaker_role": "CFO",
+          "text": "Net interest income was $22.9 billion, while our Common Equity Tier 1 capital ratio remained exceptionally robust at 15.3%.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "segments": [
+        {
+          "start": 31.38,
+          "end": 39.56,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We will now take questions from the analyst community. First question comes from Betsy Graseck with Morgan Stanley.",
+          "confidence": 0.94
+        },
+        {
+          "start": 39.56,
+          "end": 45.93,
+          "speaker_id": "S3",
+          "speaker_name": "Betsy Graseck",
+          "speaker_role": "Analyst, Morgan Stanley",
+          "text": "Jamie, what are your latest views on macroeconomic resilience and net interest income trajectory?",
+          "confidence": 0.94
+        },
+        {
+          "start": 45.93,
+          "end": 53.21,
+          "speaker_id": "S1",
+          "speaker_name": "Jamie Dimon",
+          "speaker_role": "CEO",
+          "text": "The US economy continues to be resilient, though geopolitical risks and inflation require prudent risk management.",
+          "confidence": 0.94
+        },
+        {
+          "start": 53.21,
+          "end": 58.21,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Ebrahim Poonawala with Bank of America.",
+          "confidence": 0.94
+        },
+        {
+          "start": 58.21,
+          "end": 65.03,
+          "speaker_id": "S4",
+          "speaker_name": "Ebrahim Poonawala",
+          "speaker_role": "Analyst, Bank of America",
+          "text": "Jeremy, how are investment banking fees and advisory pipelines shaping up for the second half?",
+          "confidence": 0.94
+        },
+        {
+          "start": 65.03,
+          "end": 70.49,
+          "speaker_id": "S2",
+          "speaker_name": "Jeremy Barnum",
+          "speaker_role": "CFO",
+          "text": "We are seeing encouraging activity in debt underwriting and mergers and acquisitions.",
+          "confidence": 0.94
+        },
+        {
+          "start": 70.49,
+          "end": 75.04,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Mike Mayo with Wells Fargo.",
+          "confidence": 0.94
+        },
+        {
+          "start": 75.04,
+          "end": 80.04,
+          "speaker_id": "S5",
+          "speaker_name": "Mike Mayo",
+          "speaker_role": "Analyst, Wells Fargo",
+          "text": "Jamie, how is artificial intelligence impacting operating efficiency across commercial banking?",
+          "confidence": 0.94
+        },
+        {
+          "start": 80.04,
+          "end": 87.76,
+          "speaker_id": "S1",
+          "speaker_name": "Jamie Dimon",
+          "speaker_role": "CEO",
+          "text": "We have thousands of people working on AI use cases that enhance underwriting accuracy and reduce fraud.",
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "asr_model": "faster-whisper-v3-large",
+    "diarizer": "pyannote.audio-3.1",
+    "version": "1.0.0",
+    "rtf": 0.0014,
+    "5min_target_sla": "MET"
+  }
+}

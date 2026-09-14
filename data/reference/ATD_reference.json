@@ -1,0 +1,72 @@
+{
+  "ticker": "ATD",
+  "fiscal_period": "Q3 FY2026",
+  "reference_text": "Welcome to the Alimentation Couche-Tard quarterly conference call. I will turn the floor over to Alex Miller, President and CEO, and Filipe Da Silva, Chief Financial Officer. Our total merchandise and service revenues reached 4.1 billion. Cash flow from operations reached 450 million, supporting our dividend distribution. Adjusted net earnings were 725 million, with return on capital employed maintaining a strong 15.2 percent. We are now ready for analyst questions. First question comes from Mark Petrie with CIBC World Markets. Alex, can you give an update on same-store merchandise sales and fresh food category growth? Fresh food initiatives expanded nicely with fresh bakery and beverage driving customer basket sizes. Our next question comes from Irene Nattel with RBC Capital Markets. Filipe, how are fuel gross margins behaving across US and European retail networks? Fuel margins remained resilient, reflecting disciplined pricing and localized supply optimization. Our next question comes from Vishal Shreedhar with National Bank Financial. Alex, what is the strategy regarding European convenience store network expansion? We are successfully rebranding acquired retail stations while introducing our Circle K loyalty program.",
+  "intro_text": "Welcome to the Alimentation Couche-Tard quarterly conference call. I will turn the floor over to Alex Miller, President and CEO, and Filipe Da Silva, Chief Financial Officer. Our total merchandise and service revenues reached $4.1 billion. Cash flow from operations reached $450 million, supporting our dividend distribution.",
+  "remarks_text": "Adjusted net earnings were $725 million, with return on capital employed maintaining a strong 15.2%.",
+  "qa_text": "We are now ready for analyst questions. First question comes from Mark Petrie with CIBC World Markets. Alex, can you give an update on same-store merchandise sales and fresh food category growth? Fresh food initiatives expanded nicely with fresh bakery and beverage driving customer basket sizes. Our next question comes from Irene Nattel with RBC Capital Markets. Filipe, how are fuel gross margins behaving across US and European retail networks? Fuel margins remained resilient, reflecting disciplined pricing and localized supply optimization. Our next question comes from Vishal Shreedhar with National Bank Financial. Alex, what is the strategy regarding European convenience store network expansion? We are successfully rebranding acquired retail stations while introducing our Circle K loyalty program.",
+  "speakers": [
+    "Conference Operator",
+    "Alex Miller",
+    "Filipe Da Silva",
+    "Conference Operator",
+    "Mark Petrie",
+    "Alex Miller",
+    "Conference Operator",
+    "Irene Nattel",
+    "Filipe Da Silva",
+    "Conference Operator",
+    "Vishal Shreedhar",
+    "Alex Miller"
+  ],
+  "segments": [
+    {
+      "speaker_id": "S0",
+      "text": "Welcome to the Alimentation Couche-Tard quarterly conference call. I will turn the floor over to Alex Miller, President and CEO, and Filipe Da Silva, Chief Financial Officer."
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Our total merchandise and service revenues reached $4.1 billion. Cash flow from operations reached $450 million, supporting our dividend distribution."
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Adjusted net earnings were $725 million, with return on capital employed maintaining a strong 15.2%."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "We are now ready for analyst questions. First question comes from Mark Petrie with CIBC World Markets."
+    },
+    {
+      "speaker_id": "S3",
+      "text": "Alex, can you give an update on same-store merchandise sales and fresh food category growth?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Fresh food initiatives expanded nicely with fresh bakery and beverage driving customer basket sizes."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Irene Nattel with RBC Capital Markets."
+    },
+    {
+      "speaker_id": "S4",
+      "text": "Filipe, how are fuel gross margins behaving across US and European retail networks?"
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Fuel margins remained resilient, reflecting disciplined pricing and localized supply optimization."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Vishal Shreedhar with National Bank Financial."
+    },
+    {
+      "speaker_id": "S5",
+      "text": "Alex, what is the strategy regarding European convenience store network expansion?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "We are successfully rebranding acquired retail stations while introducing our Circle K loyalty program."
+    }
+  ]
+}

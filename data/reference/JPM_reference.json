@@ -1,0 +1,72 @@
+{
+  "ticker": "JPM",
+  "fiscal_period": "Q3 FY2026",
+  "reference_text": "Good morning and welcome to JPMorgan Chase's quarterly earnings conference call. Today's call is hosted by Chairman and CEO Jamie Dimon and CFO Jeremy Barnum. The firm reported strong results with net income of 18.1 billion on revenue of 50.99 billion, driven by balanced growth across our lines of business. Net interest income was 22.9 billion, while our Common Equity Tier 1 capital ratio remained exceptionally robust at 15.3 percent. We will now take questions from the analyst community. First question comes from Betsy Graseck with Morgan Stanley. Jamie, what are your latest views on macroeconomic resilience and net interest income trajectory? The US economy continues to be resilient, though geopolitical risks and inflation require prudent risk management. Our next question comes from Ebrahim Poonawala with Bank of America. Jeremy, how are investment banking fees and advisory pipelines shaping up for the second half? We are seeing encouraging activity in debt underwriting and mergers and acquisitions. Our next question comes from Mike Mayo with Wells Fargo. Jamie, how is artificial intelligence impacting operating efficiency across commercial banking? We have thousands of people working on AI use cases that enhance underwriting accuracy and reduce fraud.",
+  "intro_text": "Good morning and welcome to JPMorgan Chase's quarterly earnings conference call. Today's call is hosted by Chairman and CEO Jamie Dimon and CFO Jeremy Barnum. The firm reported strong results with net income of $18.1 billion on revenue of $50.99 billion, driven by balanced growth across our lines of business.",
+  "remarks_text": "Net interest income was $22.9 billion, while our Common Equity Tier 1 capital ratio remained exceptionally robust at 15.3%.",
+  "qa_text": "We will now take questions from the analyst community. First question comes from Betsy Graseck with Morgan Stanley. Jamie, what are your latest views on macroeconomic resilience and net interest income trajectory? The US economy continues to be resilient, though geopolitical risks and inflation require prudent risk management. Our next question comes from Ebrahim Poonawala with Bank of America. Jeremy, how are investment banking fees and advisory pipelines shaping up for the second half? We are seeing encouraging activity in debt underwriting and mergers and acquisitions. Our next question comes from Mike Mayo with Wells Fargo. Jamie, how is artificial intelligence impacting operating efficiency across commercial banking? We have thousands of people working on AI use cases that enhance underwriting accuracy and reduce fraud.",
+  "speakers": [
+    "Conference Operator",
+    "Jamie Dimon",
+    "Jeremy Barnum",
+    "Conference Operator",
+    "Betsy Graseck",
+    "Jamie Dimon",
+    "Conference Operator",
+    "Ebrahim Poonawala",
+    "Jeremy Barnum",
+    "Conference Operator",
+    "Mike Mayo",
+    "Jamie Dimon"
+  ],
+  "segments": [
+    {
+      "speaker_id": "S0",
+      "text": "Good morning and welcome to JPMorgan Chase's quarterly earnings conference call. Today's call is hosted by Chairman and CEO Jamie Dimon and CFO Jeremy Barnum."
+    },
+    {
+      "speaker_id": "S1",
+      "text": "The firm reported strong results with net income of $18.1 billion on revenue of $50.99 billion, driven by balanced growth across our lines of business."
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Net interest income was $22.9 billion, while our Common Equity Tier 1 capital ratio remained exceptionally robust at 15.3%."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "We will now take questions from the analyst community. First question comes from Betsy Graseck with Morgan Stanley."
+    },
+    {
+      "speaker_id": "S3",
+      "text": "Jamie, what are your latest views on macroeconomic resilience and net interest income trajectory?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "The US economy continues to be resilient, though geopolitical risks and inflation require prudent risk management."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Ebrahim Poonawala with Bank of America."
+    },
+    {
+      "speaker_id": "S4",
+      "text": "Jeremy, how are investment banking fees and advisory pipelines shaping up for the second half?"
+    },
+    {
+      "speaker_id": "S2",
+      "text": "We are seeing encouraging activity in debt underwriting and mergers and acquisitions."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Mike Mayo with Wells Fargo."
+    },
+    {
+      "speaker_id": "S5",
+      "text": "Jamie, how is artificial intelligence impacting operating efficiency across commercial banking?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "We have thousands of people working on AI use cases that enhance underwriting accuracy and reduce fraud."
+    }
+  ]
+}

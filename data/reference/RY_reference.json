@@ -1,0 +1,72 @@
+{
+  "ticker": "RY",
+  "fiscal_period": "Q3 FY2026",
+  "reference_text": "Welcome to Royal Bank of Canada's third-quarter earnings conference call. Joining us today are Dave McKay, President and CEO, and Katherine Gibson, CFO. RBC reported solid third-quarter net income of 4.5 billion, with return on equity of 15.7 percent. Common Equity Tier 1 ratio was 13.0 percent, reflecting strong internal capital generation following the HSBC Canada acquisition. We are now ready for analyst questions. First question comes from Mario Mendonca with TD Securities. Dave, how is HSBC Canada integration progressing in terms of cost and revenue synergies? HSBC integration is ahead of schedule with client retention exceeding 95 percent. Our next question comes from Gabriel Dechaine with National Bank Financial. Katherine, what is your outlook on provisions for credit losses in commercial real estate? Our credit quality remains sound with prudent allowances reflecting conservative underwriting. Our next question comes from Meny Grauman with Scotiabank. Dave, how are personal and commercial deposit margins performing in the current rate environment? Deposit balances grew 8 percent, benefiting from our leading Canadian retail banking franchise.",
+  "intro_text": "Welcome to Royal Bank of Canada's third-quarter earnings conference call. Joining us today are Dave McKay, President and CEO, and Katherine Gibson, CFO. RBC reported solid third-quarter net income of $4.5 billion, with return on equity of 15.7%.",
+  "remarks_text": "Common Equity Tier 1 ratio was 13.0%, reflecting strong internal capital generation following the HSBC Canada acquisition.",
+  "qa_text": "We are now ready for analyst questions. First question comes from Mario Mendonca with TD Securities. Dave, how is HSBC Canada integration progressing in terms of cost and revenue synergies? HSBC integration is ahead of schedule with client retention exceeding 95%. Our next question comes from Gabriel Dechaine with National Bank Financial. Katherine, what is your outlook on provisions for credit losses in commercial real estate? Our credit quality remains sound with prudent allowances reflecting conservative underwriting. Our next question comes from Meny Grauman with Scotiabank. Dave, how are personal and commercial deposit margins performing in the current rate environment? Deposit balances grew 8%, benefiting from our leading Canadian retail banking franchise.",
+  "speakers": [
+    "Conference Operator",
+    "Dave McKay",
+    "Katherine Gibson",
+    "Conference Operator",
+    "Mario Mendonca",
+    "Dave McKay",
+    "Conference Operator",
+    "Gabriel Dechaine",
+    "Katherine Gibson",
+    "Conference Operator",
+    "Meny Grauman",
+    "Dave McKay"
+  ],
+  "segments": [
+    {
+      "speaker_id": "S0",
+      "text": "Welcome to Royal Bank of Canada's third-quarter earnings conference call. Joining us today are Dave McKay, President and CEO, and Katherine Gibson, CFO."
+    },
+    {
+      "speaker_id": "S1",
+      "text": "RBC reported solid third-quarter net income of $4.5 billion, with return on equity of 15.7%."
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Common Equity Tier 1 ratio was 13.0%, reflecting strong internal capital generation following the HSBC Canada acquisition."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "We are now ready for analyst questions. First question comes from Mario Mendonca with TD Securities."
+    },
+    {
+      "speaker_id": "S3",
+      "text": "Dave, how is HSBC Canada integration progressing in terms of cost and revenue synergies?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "HSBC integration is ahead of schedule with client retention exceeding 95%."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Gabriel Dechaine with National Bank Financial."
+    },
+    {
+      "speaker_id": "S4",
+      "text": "Katherine, what is your outlook on provisions for credit losses in commercial real estate?"
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Our credit quality remains sound with prudent allowances reflecting conservative underwriting."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Meny Grauman with Scotiabank."
+    },
+    {
+      "speaker_id": "S5",
+      "text": "Dave, how are personal and commercial deposit margins performing in the current rate environment?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Deposit balances grew 8%, benefiting from our leading Canadian retail banking franchise."
+    }
+  ]
+}

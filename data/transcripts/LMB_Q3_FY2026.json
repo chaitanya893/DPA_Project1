@@ -1,0 +1,139 @@
+{
+  "event_id": "11",
+  "ticker": "LMB",
+  "fiscal_period": "Q3 FY2026",
+  "call_datetime_utc": "2026-09-13T18:00:00Z",
+  "language": "en",
+  "sections": [
+    {
+      "type": "operator_intro",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 9.79,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Good morning and welcome to Limbach Holdings earnings conference call. Speaking today is CEO Mike McCann and CFO Jay Sharp.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "segments": [
+        {
+          "start": 9.79,
+          "end": 17.62,
+          "speaker_id": "S1",
+          "speaker_name": "Charlie Bacon",
+          "speaker_role": "CEO",
+          "text": "We are pleased to announce quarterly revenue of $135.2 million, expanding our gross margin to 24.5%.",
+          "confidence": 0.94
+        },
+        {
+          "start": 17.62,
+          "end": 24.47,
+          "speaker_id": "S2",
+          "speaker_name": "Mike McCann",
+          "speaker_role": "CEO",
+          "text": "Owner-direct revenue reached 62% of total revenue, generating free cash flow of $14.1 million.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "segments": [
+        {
+          "start": 24.47,
+          "end": 34.26,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We will now open the line for analyst questions. First question comes from Rob Brown with Lake Street Capital Markets.",
+          "confidence": 0.94
+        },
+        {
+          "start": 34.26,
+          "end": 40.62,
+          "speaker_id": "S3",
+          "speaker_name": "Rob Brown",
+          "speaker_role": "Analyst, Lake Street Capital Markets",
+          "text": "Mike, could you provide more detail on owner-direct revenue growth and customer retention?",
+          "confidence": 0.94
+        },
+        {
+          "start": 40.62,
+          "end": 46.49,
+          "speaker_id": "S1",
+          "speaker_name": "Charlie Bacon",
+          "speaker_role": "CEO",
+          "text": "Owner-direct relationships expanded to 62% of total revenue, driving higher gross margins.",
+          "confidence": 0.94
+        },
+        {
+          "start": 46.49,
+          "end": 51.39,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Gerry Sweeney with ROTH MKM.",
+          "confidence": 0.94
+        },
+        {
+          "start": 51.39,
+          "end": 56.78,
+          "speaker_id": "S4",
+          "speaker_name": "Gerry Sweeney",
+          "speaker_role": "Analyst, ROTH MKM",
+          "text": "How does the acquisition pipeline look for expanding specialized mechanical services?",
+          "confidence": 0.94
+        },
+        {
+          "start": 56.78,
+          "end": 63.14,
+          "speaker_id": "S1",
+          "speaker_name": "Charlie Bacon",
+          "speaker_role": "CEO",
+          "text": "We continue to evaluate accretive tuck-in acquisitions that enhance our recurring maintenance profile.",
+          "confidence": 0.94
+        },
+        {
+          "start": 63.14,
+          "end": 68.04,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Brent Thielman with D.A. Davidson.",
+          "confidence": 0.94
+        },
+        {
+          "start": 68.04,
+          "end": 73.43,
+          "speaker_id": "S5",
+          "speaker_name": "Jay Sharp",
+          "speaker_role": "CFO",
+          "text": "What is your outlook for data center and industrial project demand?",
+          "confidence": 0.94
+        },
+        {
+          "start": 73.43,
+          "end": 78.82,
+          "speaker_id": "S1",
+          "speaker_name": "Charlie Bacon",
+          "speaker_role": "CEO",
+          "text": "from mission-critical facilities remains very healthy across our primary geographies.",
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "asr_model": "faster-whisper-v3-large",
+    "diarizer": "pyannote.audio-3.1",
+    "version": "1.0.0",
+    "rtf": 0.0015,
+    "5min_target_sla": "MET"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "ticker": "MRU",
+  "fiscal_period": "Q3 FY2026",
+  "reference_text": "Welcome to Metro Inc.'s third-quarter earnings conference call. I will turn the meeting over to Eric La Fleche, President and CEO, and Francois Thibault, CFO. In our third quarter, sales reached 6.65 billion, an increase of 3.5 percent. Operating income before depreciation and amortization reached 615 million, reflecting stable retail operating margins. We are now ready for analyst questions. First question comes from Mark Petrie with CIBC World Markets. Eric, can you speak to food basket inflation and pharmacy retail performance? Our discount banner network drove positive tonnage growth while pharmacy prescription sales grew 6 percent. Our next question comes from Michael Van Aelst with TD Securities. Francois, how is automated distribution center ramp-up impacting gross margin and supply chain efficiency? The automated distribution centers in Terrebonne and Toronto are delivering expected productivity gains. Our next question comes from Chris Li with Desjardins. Eric, how is the Moi Rewards loyalty program contributing to customer retention? Moi Rewards enrollment exceeded 2.5 million active members, generating higher personalized promotion engagement.",
+  "intro_text": "Welcome to Metro Inc.'s third-quarter earnings conference call. I will turn the meeting over to Eric La Fleche, President and CEO, and Francois Thibault, CFO. In our third quarter, sales reached $6.65 billion, an increase of 3.5%.",
+  "remarks_text": "Operating income before depreciation and amortization reached $615 million, reflecting stable retail operating margins.",
+  "qa_text": "We are now ready for analyst questions. First question comes from Mark Petrie with CIBC World Markets. Eric, can you speak to food basket inflation and pharmacy retail performance? Our discount banner network drove positive tonnage growth while pharmacy prescription sales grew 6%. Our next question comes from Michael Van Aelst with TD Securities. Francois, how is automated distribution center ramp-up impacting gross margin and supply chain efficiency? The automated distribution centers in Terrebonne and Toronto are delivering expected productivity gains. Our next question comes from Chris Li with Desjardins. Eric, how is the Moi Rewards loyalty program contributing to customer retention? Moi Rewards enrollment exceeded 2.5 million active members, generating higher personalized promotion engagement.",
+  "speakers": [
+    "Conference Operator",
+    "Eric La Fleche",
+    "Francois Thibault",
+    "Conference Operator",
+    "Mark Petrie",
+    "Eric La Fleche",
+    "Conference Operator",
+    "Michael Van Aelst",
+    "Francois Thibault",
+    "Conference Operator",
+    "Chris Li",
+    "Eric La Fleche"
+  ],
+  "segments": [
+    {
+      "speaker_id": "S0",
+      "text": "Welcome to Metro Inc.'s third-quarter earnings conference call. I will turn the meeting over to Eric La Fleche, President and CEO, and Francois Thibault, CFO."
+    },
+    {
+      "speaker_id": "S1",
+      "text": "In our third quarter, sales reached $6.65 billion, an increase of 3.5%."
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Operating income before depreciation and amortization reached $615 million, reflecting stable retail operating margins."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "We are now ready for analyst questions. First question comes from Mark Petrie with CIBC World Markets."
+    },
+    {
+      "speaker_id": "S3",
+      "text": "Eric, can you speak to food basket inflation and pharmacy retail performance?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Our discount banner network drove positive tonnage growth while pharmacy prescription sales grew 6%."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Michael Van Aelst with TD Securities."
+    },
+    {
+      "speaker_id": "S4",
+      "text": "Francois, how is automated distribution center ramp-up impacting gross margin and supply chain efficiency?"
+    },
+    {
+      "speaker_id": "S2",
+      "text": "The automated distribution centers in Terrebonne and Toronto are delivering expected productivity gains."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Chris Li with Desjardins."
+    },
+    {
+      "speaker_id": "S5",
+      "text": "Eric, how is the Moi Rewards loyalty program contributing to customer retention?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Moi Rewards enrollment exceeded 2.5 million active members, generating higher personalized promotion engagement."
+    }
+  ]
+}

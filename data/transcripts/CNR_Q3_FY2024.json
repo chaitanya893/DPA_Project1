@@ -1,0 +1,139 @@
+{
+  "event_id": "18",
+  "ticker": "CNR",
+  "fiscal_period": "Q3 FY2024",
+  "call_datetime_utc": "2026-09-13T18:00:00Z",
+  "language": "en",
+  "sections": [
+    {
+      "type": "operator_intro",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 11.82,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Welcome to Canadian National Railway's quarterly conference call. I will turn the meeting over to Tracy Robinson, President and CEO, and Ghislain Houle, CFO.",
+          "confidence": 0.94
+        },
+        {
+          "start": 11.82,
+          "end": 18.72,
+          "speaker_id": "S1",
+          "speaker_name": "Tracy Robinson",
+          "speaker_role": "President & CEO",
+          "text": "CN delivered second-quarter operating revenues of $4.33 billion with an operating ratio of 62.0%.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "segments": [
+        {
+          "start": 18.72,
+          "end": 25.62,
+          "speaker_id": "S2",
+          "speaker_name": "Ghislain Houle",
+          "speaker_role": "CFO",
+          "text": "Adjusted diluted EPS was $1.84, with free cash flow of $1.15 billion generated year-to-date.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "segments": [
+        {
+          "start": 25.62,
+          "end": 34.49,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We will now begin the question-and-answer session. Our first question comes from Fadi Chamoun with BMO Capital Markets.",
+          "confidence": 0.94
+        },
+        {
+          "start": 34.49,
+          "end": 40.9,
+          "speaker_id": "S3",
+          "speaker_name": "Fadi Chamoun",
+          "speaker_role": "Analyst, BMO Capital Markets",
+          "text": "Tracy, what is your outlook for Canadian grain carloads and intermodal volume growth?",
+          "confidence": 0.94
+        },
+        {
+          "start": 40.9,
+          "end": 48.29,
+          "speaker_id": "S1",
+          "speaker_name": "Tracy Robinson",
+          "speaker_role": "President & CEO",
+          "text": "Grain shipments are expected to be strong, supported by high operating velocity and train lengths.",
+          "confidence": 0.94
+        },
+        {
+          "start": 48.29,
+          "end": 52.72,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Konark Gupta with Scotiabank.",
+          "confidence": 0.94
+        },
+        {
+          "start": 52.72,
+          "end": 58.63,
+          "speaker_id": "S4",
+          "speaker_name": "Konark Gupta",
+          "speaker_role": "Analyst, Scotiabank",
+          "text": "Ghislain, how are fuel productivity and labor cost containment tracking against guidance?",
+          "confidence": 0.94
+        },
+        {
+          "start": 58.63,
+          "end": 64.54,
+          "speaker_id": "S2",
+          "speaker_name": "Ghislain Houle",
+          "speaker_role": "CFO",
+          "text": "Fuel efficiency improved 2%, helping mitigate inflationary cost pressures across the network.",
+          "confidence": 0.94
+        },
+        {
+          "start": 64.54,
+          "end": 69.96,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Walter Spracklin with RBC Capital Markets.",
+          "confidence": 0.94
+        },
+        {
+          "start": 69.96,
+          "end": 77.35,
+          "speaker_id": "S5",
+          "speaker_name": "Walter Spracklin",
+          "speaker_role": "Analyst, RBC Capital Markets",
+          "text": "Tracy, can you speak to customer supply chain partnerships at the Port of Prince Rupert?",
+          "confidence": 0.94
+        },
+        {
+          "start": 77.35,
+          "end": 83.76,
+          "speaker_id": "S1",
+          "speaker_name": "Tracy Robinson",
+          "speaker_role": "President & CEO",
+          "text": "Our corridor collaboration has restored competitive dwell times and attracted new vessel services.",
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "asr_model": "faster-whisper-v3-large",
+    "diarizer": "pyannote.audio-3.1",
+    "version": "1.0.0",
+    "rtf": 0.0014,
+    "5min_target_sla": "MET"
+  }
+}

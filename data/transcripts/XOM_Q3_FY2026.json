@@ -1,0 +1,139 @@
+{
+  "event_id": "5",
+  "ticker": "XOM",
+  "fiscal_period": "Q3 FY2026",
+  "call_datetime_utc": "2026-09-13T18:00:00Z",
+  "language": "en",
+  "sections": [
+    {
+      "type": "operator_intro",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 8.97,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Welcome to the ExxonMobil second-quarter earnings call. Speaking today are Chairman and CEO Darren Woods and CFO Kathryn Mikells.",
+          "confidence": 0.94
+        },
+        {
+          "start": 8.97,
+          "end": 17.94,
+          "speaker_id": "S1",
+          "speaker_name": "Darren Woods",
+          "speaker_role": "Chairman & CEO",
+          "text": "Today, ExxonMobil reported solid second-quarter earnings of $9.2 billion, driven by advantaged growth in Guyana and the Permian Basin.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "segments": [
+        {
+          "start": 17.94,
+          "end": 26.91,
+          "speaker_id": "S2",
+          "speaker_name": "Kathryn Mikells",
+          "speaker_role": "CFO",
+          "text": "Cash flow from operations was $10.6 billion, enabling $4.3 billion in dividend distributions and $5.2 billion in share repurchases.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "segments": [
+        {
+          "start": 26.91,
+          "end": 34.93,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We will now begin the question-and-answer session. Our first question comes from Neil Mehta with Goldman Sachs.",
+          "confidence": 0.94
+        },
+        {
+          "start": 34.93,
+          "end": 41.07,
+          "speaker_id": "S3",
+          "speaker_name": "Neil Mehta",
+          "speaker_role": "Analyst, Goldman Sachs",
+          "text": "Darren, could you discuss Pioneer Natural Resources integration synergies and production volume targets?",
+          "confidence": 0.94
+        },
+        {
+          "start": 41.07,
+          "end": 49.57,
+          "speaker_id": "S1",
+          "speaker_name": "Darren Woods",
+          "speaker_role": "Chairman & CEO",
+          "text": "The integration is progressing ahead of plan, allowing us to capture higher recovery rates across our Permian acreage.",
+          "confidence": 0.94
+        },
+        {
+          "start": 49.57,
+          "end": 54.29,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Devin McDermott with Morgan Stanley.",
+          "confidence": 0.94
+        },
+        {
+          "start": 54.29,
+          "end": 60.43,
+          "speaker_id": "S4",
+          "speaker_name": "Devin McDermott",
+          "speaker_role": "Analyst, Morgan Stanley",
+          "text": "Kathryn, how should we think about cash distribution pace via dividends and buybacks?",
+          "confidence": 0.94
+        },
+        {
+          "start": 60.43,
+          "end": 67.04,
+          "speaker_id": "S2",
+          "speaker_name": "Kathryn Mikells",
+          "speaker_role": "CFO",
+          "text": "Our strong balance sheet allows us to maintain competitive dividend growth while repurchasing shares.",
+          "confidence": 0.94
+        },
+        {
+          "start": 67.04,
+          "end": 72.23,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Biraj Borkhataria with RBC Capital Markets.",
+          "confidence": 0.94
+        },
+        {
+          "start": 72.23,
+          "end": 77.89,
+          "speaker_id": "S5",
+          "speaker_name": "Biraj Borkhataria",
+          "speaker_role": "Analyst, RBC Capital Markets",
+          "text": "Darren, what is the latest status on Low Carbon Solutions commercial contracts?",
+          "confidence": 0.94
+        },
+        {
+          "start": 77.89,
+          "end": 85.9,
+          "speaker_id": "S1",
+          "speaker_name": "Darren Woods",
+          "speaker_role": "Chairman & CEO",
+          "text": "We are seeing growing customer interest in carbon capture and storage agreements across the US Gulf Coast.",
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "asr_model": "faster-whisper-v3-large",
+    "diarizer": "pyannote.audio-3.1",
+    "version": "1.0.0",
+    "rtf": 0.0014,
+    "5min_target_sla": "MET"
+  }
+}

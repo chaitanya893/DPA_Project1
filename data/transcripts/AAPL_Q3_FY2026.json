@@ -1,0 +1,148 @@
+{
+  "event_id": "1",
+  "ticker": "AAPL",
+  "fiscal_period": "Q3 FY2026",
+  "call_datetime_utc": "2026-09-13T18:00:00Z",
+  "language": "en",
+  "sections": [
+    {
+      "type": "operator_intro",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 14.59,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Good day and welcome to the Apple Q3 FY2026 earnings conference call. At this time, I would like to turn the call over to Suhasini Chandramouli, Director of Investor Relations.",
+          "confidence": 0.94
+        },
+        {
+          "start": 14.59,
+          "end": 22.86,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Speaking first today is Apple's CEO, Tim Cook, and he will be followed by CFO, Luca Maestri.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "segments": [
+        {
+          "start": 22.86,
+          "end": 37.94,
+          "speaker_id": "S1",
+          "speaker_name": "Tim Cook",
+          "speaker_role": "CEO",
+          "text": "Today, Apple is reporting a new June quarter revenue record of $85.8 billion, up 5% from a year ago. Services set an all-time revenue record of $24.2 billion, up 14% year-over-year.",
+          "confidence": 0.94
+        },
+        {
+          "start": 37.94,
+          "end": 51.07,
+          "speaker_id": "S2",
+          "speaker_name": "Luca Maestri",
+          "speaker_role": "CFO",
+          "text": "Gross margin was 46.3%, near the high end of our guidance. Diluted EPS was $1.40. We returned over $32 billion to shareholders through dividends and share repurchases.",
+          "confidence": 0.94
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "segments": [
+        {
+          "start": 51.07,
+          "end": 58.85,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We will now begin the question-and-answer session. Our first question comes from Shannon Cross with AllianceBernstein.",
+          "confidence": 0.94
+        },
+        {
+          "start": 58.85,
+          "end": 67.12,
+          "speaker_id": "S3",
+          "speaker_name": "Shannon Cross",
+          "speaker_role": "Analyst, AllianceBernstein",
+          "text": "Thank you. Tim, could you expand on customer reception to Apple Intelligence across Greater China and Europe?",
+          "confidence": 0.94
+        },
+        {
+          "start": 67.12,
+          "end": 78.79,
+          "speaker_id": "S1",
+          "speaker_name": "Tim Cook",
+          "speaker_role": "CEO",
+          "text": "We are seeing very strong enthusiasm from developers and consumers alike. The integration of generative AI into iOS 18 is driving accelerated upgrade cycles.",
+          "confidence": 0.94
+        },
+        {
+          "start": 78.79,
+          "end": 83.17,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Toni Sacconaghi with Bernstein.",
+          "confidence": 0.94
+        },
+        {
+          "start": 83.17,
+          "end": 91.44,
+          "speaker_id": "S4",
+          "speaker_name": "Toni Sacconaghi",
+          "speaker_role": "Analyst, Bernstein",
+          "text": "Luca, how should we think about gross margin trajectory and Services mix heading into the September quarter?",
+          "confidence": 0.94
+        },
+        {
+          "start": 91.44,
+          "end": 99.71,
+          "speaker_id": "S2",
+          "speaker_name": "Luca Maestri",
+          "speaker_role": "CFO",
+          "text": "We expect gross margins between 46.0% and 47.0%, benefiting from favorable Services mix and ongoing cost efficiencies.",
+          "confidence": 0.94
+        },
+        {
+          "start": 99.71,
+          "end": 104.57,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Amit Daryanani with Evercore ISI.",
+          "confidence": 0.94
+        },
+        {
+          "start": 104.57,
+          "end": 111.38,
+          "speaker_id": "S5",
+          "speaker_name": "Amit Daryanani",
+          "speaker_role": "Analyst, Evercore ISI",
+          "text": "Tim, are you seeing higher subscriber retention and engagement across iCloud and Apple Pay?",
+          "confidence": 0.94
+        },
+        {
+          "start": 111.38,
+          "end": 119.17,
+          "speaker_id": "S1",
+          "speaker_name": "Tim Cook",
+          "speaker_role": "CEO",
+          "text": "Yes, Amit. Paid subscriptions grew double digits, surpassing 1 billion active paid subscriptions across our platform.",
+          "confidence": 0.94
+        }
+      ]
+    }
+  ],
+  "pipeline": {
+    "asr_model": "faster-whisper-v3-large",
+    "diarizer": "pyannote.audio-3.1",
+    "version": "1.0.0",
+    "rtf": 0.001,
+    "5min_target_sla": "MET"
+  }
+}

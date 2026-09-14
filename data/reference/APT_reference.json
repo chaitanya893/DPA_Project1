@@ -1,0 +1,72 @@
+{
+  "ticker": "APT",
+  "fiscal_period": "Q3 FY2026",
+  "reference_text": "Good day and welcome to Alpha Pro Tech's earnings conference call. Speaking today are CEO Lloyd Hoffman and CFO Colleen McDonald. Total consolidated sales for the quarter were 16.4 million, with gross profit margin of 37.8 percent. Cash and cash equivalents grew to 18.2 million with zero long-term debt. We will now begin the question-and-answer session. First question comes from Kevin Smith with Equity Research. Lloyd, can you talk about order trends in building supply synthetic roof underlayment? Building supply revenue increased 12 percent due to residential re-roofing demand. Our next question comes from David Johnson with MicroCap Advisors. Colleen, how are input raw material costs and freight expenses trending? Freight costs have stabilized, allowing us to maintain healthy operating cash flow. Our next question comes from Sarah Miller with Value Investors. Lloyd, what is the strategy for disposable protective apparel in medical channels? We are focusing on high-margin cleanroom and pharmaceutical manufacturing customers.",
+  "intro_text": "Good day and welcome to Alpha Pro Tech's earnings conference call. Speaking today are CEO Lloyd Hoffman and CFO Colleen McDonald. Total consolidated sales for the quarter were $16.4 million, with gross profit margin of 37.8%.",
+  "remarks_text": "Cash and cash equivalents grew to $18.2 million with zero long-term debt.",
+  "qa_text": "We will now begin the question-and-answer session. First question comes from Kevin Smith with Equity Research. Lloyd, can you talk about order trends in building supply synthetic roof underlayment? Building supply revenue increased 12% due to residential re-roofing demand. Our next question comes from David Johnson with MicroCap Advisors. Colleen, how are input raw material costs and freight expenses trending? Freight costs have stabilized, allowing us to maintain healthy operating cash flow. Our next question comes from Sarah Miller with Value Investors. Lloyd, what is the strategy for disposable protective apparel in medical channels? We are focusing on high-margin cleanroom and pharmaceutical manufacturing customers.",
+  "speakers": [
+    "Conference Operator",
+    "Lloyd Hoffman",
+    "Colleen McDonald",
+    "Conference Operator",
+    "Kevin Smith",
+    "Lloyd Hoffman",
+    "Conference Operator",
+    "David Johnson",
+    "Colleen McDonald",
+    "Conference Operator",
+    "Sarah Miller",
+    "Lloyd Hoffman"
+  ],
+  "segments": [
+    {
+      "speaker_id": "S0",
+      "text": "Good day and welcome to Alpha Pro Tech's earnings conference call. Speaking today are CEO Lloyd Hoffman and CFO Colleen McDonald."
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Total consolidated sales for the quarter were $16.4 million, with gross profit margin of 37.8%."
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Cash and cash equivalents grew to $18.2 million with zero long-term debt."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "We will now begin the question-and-answer session. First question comes from Kevin Smith with Equity Research."
+    },
+    {
+      "speaker_id": "S3",
+      "text": "Lloyd, can you talk about order trends in building supply synthetic roof underlayment?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "Building supply revenue increased 12% due to residential re-roofing demand."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from David Johnson with MicroCap Advisors."
+    },
+    {
+      "speaker_id": "S4",
+      "text": "Colleen, how are input raw material costs and freight expenses trending?"
+    },
+    {
+      "speaker_id": "S2",
+      "text": "Freight costs have stabilized, allowing us to maintain healthy operating cash flow."
+    },
+    {
+      "speaker_id": "S0",
+      "text": "Our next question comes from Sarah Miller with Value Investors."
+    },
+    {
+      "speaker_id": "S5",
+      "text": "Lloyd, what is the strategy for disposable protective apparel in medical channels?"
+    },
+    {
+      "speaker_id": "S1",
+      "text": "We are focusing on high-margin cleanroom and pharmaceutical manufacturing customers."
+    }
+  ]
+}
