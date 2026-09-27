@@ -73,8 +73,19 @@ DPA_Project1/
 
 ## ⚡ Quickstart Guide
 
+### Environment Setup (Python 3.11+ Virtual Environment)
+The pipeline is optimized for CPU execution using CTranslate2 and PyTorch CPU wheels in a Python 3.11 virtual environment:
+```bash
+# Create and activate Python 3.11 virtual environment
+py -3.11 -m venv .venv
+.\.venv\Scripts\activate
+
+# Install pinned dependencies
+pip install -r requirements.txt
+```
+
 ### 1. Run All Tests
-Verify all 10 unit tests across all components:
+Verify unit tests across all pipeline components:
 ```bash
 python run_tests.py
 ```

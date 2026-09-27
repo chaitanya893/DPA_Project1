@@ -1,0 +1,75 @@
+{
+  "ticker": "SHOP",
+  "fiscal_period": "Q2 FY2026",
+  "audio_duration_sec": 300.0,
+  "total_pipeline_time_sec": 318.46,
+  "post_call_latency_sec": 258.426,
+  "rtf": 1.0615,
+  "chunk_count": 6,
+  "chunk_metrics": [
+    {
+      "chunk_idx": 0,
+      "start_sec": 0.0,
+      "end_sec": 60.0,
+      "duration_sec": 60.0,
+      "proc_time_sec": 9.077,
+      "rtf": 0.1513,
+      "num_segments": 14
+    },
+    {
+      "chunk_idx": 1,
+      "start_sec": 57.0,
+      "end_sec": 117.0,
+      "duration_sec": 60.0,
+      "proc_time_sec": 11.426,
+      "rtf": 0.1904,
+      "num_segments": 17
+    },
+    {
+      "chunk_idx": 2,
+      "start_sec": 114.0,
+      "end_sec": 174.0,
+      "duration_sec": 60.0,
+      "proc_time_sec": 12.225,
+      "rtf": 0.2037,
+      "num_segments": 26
+    },
+    {
+      "chunk_idx": 3,
+      "start_sec": 171.0,
+      "end_sec": 231.0,
+      "duration_sec": 60.0,
+      "proc_time_sec": 11.998,
+      "rtf": 0.2,
+      "num_segments": 25
+    },
+    {
+      "chunk_idx": 4,
+      "start_sec": 228.0,
+      "end_sec": 288.0,
+      "duration_sec": 60.0,
+      "proc_time_sec": 11.256,
+      "rtf": 0.1876,
+      "num_segments": 17
+    },
+    {
+      "chunk_idx": 5,
+      "start_sec": 285.0,
+      "end_sec": 300.0,
+      "duration_sec": 15.0,
+      "proc_time_sec": 3.503,
+      "rtf": 0.2335,
+      "num_segments": 5
+    }
+  ],
+  "pyannote_speaker_count": 2,
+  "pyannote_speakers": [
+    "SPEAKER_00",
+    "SPEAKER_01"
+  ],
+  "section_counts": {
+    "operator_intro": 2,
+    "prepared_remarks": 102,
+    "qa": 0
+  }
+}

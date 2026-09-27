@@ -1,115 +1,125 @@
 import os
+import math
 import wave
-import struct
-from typing import List, Dict, Any
-from src.utils.logger import setup_logger
+import time
+from typing import List, Dict, Any, Tuple
+import numpy as np
+import soundfile as sf
+import torch
 
-logger = setup_logger("vad_chunker")
+_SILERO_MODEL = None
+_SILERO_UTILS = None
 
 
-def chunk_audio_stream(
+def get_silero_vad_model():
+    """Loads and caches the official Silero VAD model."""
+    global _SILERO_MODEL, _SILERO_UTILS
+    if _SILERO_MODEL is None:
+        model, utils = torch.hub.load(
+            repo_or_dir='snakers4/silero-vad',
+            model='silero_vad',
+            force_reload=False,
+            onnx=False,
+            trust_repo=True
+        )
+        _SILERO_MODEL = model
+        _SILERO_UTILS = utils
+    return _SILERO_MODEL, _SILERO_UTILS
+
+
+def split_audio_into_overlapping_chunks(
     wav_path: str,
-    chunk_length_sec: float = 60.0,
+    chunk_len_sec: float = 60.0,
     overlap_sec: float = 3.0,
+    max_duration_sec: float = None
 ) -> List[Dict[str, Any]]:
-    """Splits a 16kHz Mono 16-bit WAV file into 60s segments with 3s overlap."""
-    if not os.path.exists(wav_path):
-        raise FileNotFoundError(f"Audio file not found: {wav_path}")
-
-    with wave.open(wav_path, "rb") as wf:
+    """Splits a WAV file into 60s windows with 3s overlap for live-call streaming simulation.
+    
+    Windows: [0, 60], [57, 117], [114, 174], ...
+    Returns chunk descriptors with exact sample boundaries.
+    """
+    with wave.open(wav_path, 'rb') as wf:
         sample_rate = wf.getframerate()
-        channels = wf.getnchannels()
-        sampwidth = wf.getsampwidth()
-        total_frames = wf.getnframes()
-        duration_sec = total_frames / float(sample_rate)
+        n_frames = wf.getnframes()
+        total_duration = n_frames / float(sample_rate)
 
-    step_sec = chunk_length_sec - overlap_sec
-    chunks: List[Dict[str, Any]] = []
+    if max_duration_sec:
+        total_duration = min(total_duration, max_duration_sec)
 
-    current_start = 0.0
+    step_sec = chunk_len_sec - overlap_sec
+    chunks = []
     chunk_idx = 0
+    start_sec = 0.0
 
-    if duration_sec <= chunk_length_sec:
-        chunks.append({
-            "chunk_idx": 0,
-            "start_sec": 0.0,
-            "end_sec": round(duration_sec, 2),
-            "duration_sec": round(duration_sec, 2),
-            "is_last": True,
-            "overlap_start_sec": 0.0,
-        })
-        return chunks
-
-    while current_start < duration_sec:
-        current_end = min(current_start + chunk_length_sec, duration_sec)
-        is_last = current_end >= duration_sec
+    while start_sec < total_duration:
+        end_sec = min(start_sec + chunk_len_sec, total_duration)
+        duration = end_sec - start_sec
 
         chunks.append({
             "chunk_idx": chunk_idx,
-            "start_sec": round(current_start, 2),
-            "end_sec": round(current_end, 2),
-            "duration_sec": round(current_end - current_start, 2),
-            "is_last": is_last,
-            "overlap_start_sec": round(max(0.0, current_start - overlap_sec), 2) if chunk_idx > 0 else 0.0,
+            "start_sec": round(start_sec, 3),
+            "end_sec": round(end_sec, 3),
+            "duration_sec": round(duration, 3),
+            "is_final": (end_sec >= total_duration)
         })
 
-        if is_last:
+        if end_sec >= total_duration:
             break
 
-        current_start += step_sec
+        start_sec += step_sec
         chunk_idx += 1
 
-    logger.info(f"Chunked {os.path.basename(wav_path)} ({duration_sec:.1f}s) into {len(chunks)} streaming segments (60s chunks, {overlap_sec}s overlap).")
     return chunks
 
 
-def deduplicate_overlap_text(prev_text: str, current_text: str) -> str:
-    """Stitches consecutive chunk transcripts by removing duplicate words in the overlap window."""
+def apply_vad_filter(audio_array: np.ndarray, sample_rate: int = 16000) -> List[Dict[str, float]]:
+    """Applies Silero VAD to detect speech timestamps within an audio segment."""
+    try:
+        model, utils = get_silero_vad_model()
+        (get_speech_timestamps, save_audio, read_audio, VADIterator, collect_chunks) = utils
+
+        tensor_audio = torch.from_numpy(audio_array).float()
+        if tensor_audio.ndim > 1:
+            tensor_audio = tensor_audio.mean(dim=-1)
+
+        speech_timestamps = get_speech_timestamps(
+            tensor_audio,
+            model,
+            sampling_rate=sample_rate,
+            threshold=0.5,
+            min_speech_duration_ms=250,
+            min_silence_duration_ms=100
+        )
+        return speech_timestamps
+    except Exception as e:
+        # Fallback to full segment if VAD hub load is unavailable
+        return [{"start": 0, "end": len(audio_array)}]
+
+
+def deduplicate_overlap_words(prev_text: str, current_text: str) -> str:
+    """Stitches consecutive chunk transcripts by removing duplicate words in the 3s overlap window."""
     if not prev_text or not current_text:
-        return current_text
+        return current_text.strip()
 
     prev_words = prev_text.strip().split()
     curr_words = current_text.strip().split()
 
-    max_overlap = min(8, len(prev_words), len(curr_words))
-    best_overlap_len = 0
+    if not prev_words or not curr_words:
+        return current_text.strip()
 
-    for l in range(1, max_overlap + 1):
-        prev_suffix = [w.lower().strip(".,?!") for w in prev_words[-l:]]
-        curr_prefix = [w.lower().strip(".,?!") for w in curr_words[:l]]
-        if prev_suffix == curr_prefix:
-            best_overlap_len = l
+    # Search for overlapping word suffixes/prefixes up to 15 words
+    max_k = min(15, len(prev_words), len(curr_words))
+    best_overlap = 0
 
-    if best_overlap_len > 0:
-        return " ".join(curr_words[best_overlap_len:])
-    
-    return current_text
+    prev_clean = [w.lower().strip(".,!?:;\"'") for w in prev_words]
+    curr_clean = [w.lower().strip(".,!?:;\"'") for w in curr_words]
 
+    for k in range(max_k, 0, -1):
+        if prev_clean[-k:] == curr_clean[:k]:
+            best_overlap = k
+            break
 
-def stitch_overlapping_segments(
-    prev_segments: List[Dict[str, Any]],
-    current_segments: List[Dict[str, Any]],
-    overlap_sec: float = 3.0
-) -> List[Dict[str, Any]]:
-    """Stitches two lists of consecutive chunk segments, deduplicating overlapping utterances."""
-    if not prev_segments:
-        return list(current_segments)
-    if not current_segments:
-        return list(prev_segments)
+    if best_overlap > 0:
+        return " ".join(curr_words[best_overlap:]).strip()
 
-    result = list(prev_segments)
-    prev_last_text = prev_segments[-1].get("text", "").strip().lower()
-
-    for seg in current_segments:
-        seg_text = seg.get("text", "").strip().lower()
-        # If identical text occurs within overlap boundary, skip duplicate
-        if seg_text == prev_last_text:
-            continue
-        # Also check if part of text overlaps with previous last
-        deduped = deduplicate_overlap_text(prev_last_text, seg.get("text", ""))
-        if deduped.strip():
-            new_seg = dict(seg)
-            new_seg["text"] = deduped
-            result.append(new_seg)
-
-    return result
+    return current_text.strip()

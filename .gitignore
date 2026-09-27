@@ -36,6 +36,7 @@ data/audio/*.wav
 *.mp4
 *.webm
 *.bin
+*.zip
 *.db
 *.sqlite3
 

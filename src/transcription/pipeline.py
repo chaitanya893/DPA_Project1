@@ -126,7 +126,7 @@ def run_transcription_pipeline() -> List[str]:
                 "sections": final_sections,
                 "pipeline": {
                     "asr_model": asr_res["model_name"],
-                    "diarizer": "energy-vad-diarizer-v1",
+                    "diarizer": "pyannote/speaker-diarization-3.1",
                     "version": "1.0.0",
                     "rtf": rtf,
                     "5min_target_sla": "MET" if sla_met else "EXCEEDED",

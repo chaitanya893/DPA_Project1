@@ -20,3 +20,14 @@ pytest-mock>=3.12.0
 # Media Capture & Browser Automation
 playwright==1.63.0
 yt-dlp==2026.8.19
+
+# Phase 3 Audio Processing, ASR & Diarization (Python 3.11 .venv, CPU torch)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu
+torchaudio==2.5.1+cpu
+faster-whisper==1.1.1
+pyannote.audio==3.3.2
+huggingface-hub==0.28.1
+silero-vad==5.1.2
+soundfile==0.12.1
+matplotlib==3.11.2
