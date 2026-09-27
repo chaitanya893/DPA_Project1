@@ -26,8 +26,16 @@
 | **SEC EDGAR API** (`sec.gov`) | 2026-09-11 | **Allowed** | SEC Public Dissemination Policy permits public automated access provided User-Agent conforms to `Sample Company Name AdminContact@<sample company domain>.com` and request frequency is under 10 requests/second. | Rate-limited to 1 request / 2.5s (far below 10 req/s threshold). |
 | **SEDAR+ Canada** (`sedarplus.ca`) | 2026-09-11 | **Allowed (Public Metadata)** | Canadian Securities Administrators (CSA) public record disclosure. Automated metadata verification permitted for educational & research purposes without automated bulk extraction of copyrighted software components. | Use cached filings indices; 3s delay. |
 | **Business Wire / PR Newswire / GlobeNewswire** | 2026-09-11 | **Allowed (Public Press Releases)** | Press releases are distributed publicly for open editorial & investor consumption. ToS restricts unauthorized redistribution of the platform code, not reading publicly disseminated investor advisory notices. | Scrape only public announcement title & dates; rate limited. |
-| **Company IR Portals (Apple, Microsoft, RBC, etc.)** | 2026-09-11 | **Allowed** | Investor Relations events pages are publicly available under Fair Use for investor dissemination without requiring login. | Fetch only event schedule HTML metadata. |
-| **Webcast CDNs (Q4 Inc, Notified, Nasdaq IR, Zoom)** | 2026-09-11 | **Allowed (Public Streams)** | Public webcasts without DRM or required registration fees. Streams are recorded for academic evaluation and transcript generation. | Captured directly via standard progressive media or HLS URLs without bypassing DRM. |
+| **Company IR Portals (Apple, Alphabet, Digimarc, etc.)** | 2026-09-27 | **Allowed** | Investor Relations events pages are publicly available under Fair Use for investor dissemination without requiring login. | Fetch only event schedule HTML metadata. |
+| **Microsoft Event Stream (`stream.event.microsoft.com`, `medius.microsoft.com`, `mediastream.microsoft.com`)** | 2026-09-27 | **Allowed (Public Webcast HLS)** | Publicly broadcasted investor earnings webcasts hosted on Microsoft Azure Event CDN without authentication, registration, or paywalls. | Streamed via yt-dlp/ffmpeg with rate limits; User-Agent identified. |
+| **Shopify Mux Video CDN (`stream.mux.com`)** | 2026-09-27 | **Allowed (Public Webcast HLS)** | Publicly accessible HLS media stream embedded on official Shopify IR portal. No registration or DRM. | Captured directly via standard HLS m3u8 without DRM bypass. |
+| **GlobalMeet / Webcasts.com (`event.webcasts.com`)** | 2026-09-27 | **Gated (Registration Required)** | Terms of Service require attendee registration with accurate identification. Gated behind registration form. | **Compliant - No submission**: Script halted at registration form and logged evidence without entering fake credentials. |
+| **Chorus Call (`event.choruscall.com`)** | 2026-09-27 | **Gated (Registration Required)** | Webcast portal requires user registration (name, company, email). | **Compliant - No submission**: Registration form detected; audited, screenshotted, and bypassed without automated form filling. |
+| **Webinar.net (`app.webinar.net`)** | 2026-09-27 | **Gated (Registration Required)** | Interactive investor portal requiring attendee registration. | **Compliant - No submission**: Registration form detected and classified; no automated submissions made. |
+| **GoWebcasting (`www.gowebcasting.com`)** | 2026-09-27 | **Gated (Registration Required)** | Proprietary Canadian investor webcast platform requiring attendee details. | **Compliant - No submission**: Form logged and screenshotted; no synthetic profile injected. |
+| **Q4 Inc (`events.q4inc.com`)** | 2026-09-27 | **Allowed (Public Landing)** | Q4 IR platform public event landing page. | Inspected for direct streams; no auth bypass attempted. |
+| **Webcaster5 / MultiVu (`www.webcaster5.com`)** | 2026-09-27 | **Restricted (Access Denied / WAF)** | Platform returned access restrictions / expired session. | Evaluated and logged without evasive rotation. |
+| **Cloudflare / WAF Protected Portals (`ir.tesla.com`, `investor.lilly.com`, `www.telus.com`)** | 2026-09-27 | **Restricted (HTTP 403 / Bot Challenge)** | Automated scrapers challenged by edge protection. | Logged strictly as access denied; no evasion or proxy techniques deployed. |
 
 ---
 
@@ -35,4 +43,7 @@
 
 | Timestamp (UTC) | Domain | Status Code | Action Taken | Resolution / Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| *None* | - | - | - | System initialised without incidents. |
+| 2026-09-27T17:50:40Z | `ir.tesla.com` | 403 | Logged to `webcast_status.csv` and halted | Edge WAF challenge encountered. Logged cleanly without bypass attempts. |
+| 2026-09-27T17:50:51Z | `investor.lilly.com` | 403 | Logged to `webcast_status.csv` and halted | Cloudflare bot protection encountered. Logged cleanly without bypass attempts. |
+| 2026-09-27T17:52:09Z | `www.telus.com` | 403 | Logged to `webcast_status.csv` and halted | Edge protection challenge encountered. Logged cleanly without bypass attempts. |
+

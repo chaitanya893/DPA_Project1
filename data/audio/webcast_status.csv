@@ -1,0 +1,26 @@
+ticker,webcast_url,url_source,status,http_status,screenshot_path,checked_at
+AAPL,https://www.apple.com/investor/earnings-call/,press_release,no webcast link found,200,docs/evidence/AAPL_no_webcast_link_found.png,2026-09-27T18:24:12Z
+MSFT,https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4,ir_page_link,media found,200,docs/evidence/MSFT_media_found.png,2026-09-27T18:24:12Z
+JPM,https://event.webcasts.com/starthere.jsp?ei=1767182&tp_key=dd05e5b127&tp_special=8,press_release,registration form,200,docs/evidence/JPM_registration_form.png,2026-09-27T18:24:12Z
+JNJ,https://investor.jnj.com,ir_page_link,blocked – bot protection (HTTP 403),403,docs/evidence/JNJ_blocked_bot_protection_HTTP_403.png,2026-09-27T18:24:12Z
+XOM,https://event.webcasts.com/starthere.jsp?ei=1770134&tp_key=90907396e5,ir_page_link,registration form,200,docs/evidence/XOM_registration_form.png,2026-09-27T18:24:12Z
+WMT,https://corporate.walmart.com/news/2026/08/13/walmart-to-host-second-quarter-earnings-conference-call-august-20-2026,ir_page_link,no webcast link found,200,docs/evidence/WMT_no_webcast_link_found.png,2026-09-27T18:24:12Z
+GOOGL,https://www.youtube.com/watch?v=LzExSq9DU9w,press_release,media only on YouTube – not usable (YouTube ToS forbids downloading),200,docs/evidence/GOOGL_media_only_on_YouTube.png,2026-09-27T18:24:12Z
+TSLA,https://ir.tesla.com,press_release,blocked – bot protection (HTTP 403),403,docs/evidence/TSLA_blocked_bot_protection_HTTP_403.png,2026-09-27T18:24:12Z
+PG,https://www.pginvestor.com/news/news-details/2026/PG-to-Webcast-Discussion-of-First-Quarter-2627-Earnings-Results-on-October-22/default.aspx,ir_page_link,registration form,200,docs/evidence/PG_registration_form.png,2026-09-27T18:24:12Z
+LLY,https://investor.lilly.com/webcasts-and-presentations,press_release,blocked – bot protection (HTTP 403),403,docs/evidence/LLY_blocked_bot_protection_HTTP_403.png,2026-09-27T18:24:12Z
+LMB,https://event.choruscall.com/mediaframe/webcast.html?webcastid=LYkmLAUY,press_release,registration form,200,docs/evidence/LMB_registration_form.png,2026-09-27T18:24:12Z
+APT,https://www.alphaprotech.com/investors,ir_page_link,no webcast link found,200,docs/evidence/APT_no_webcast_link_found.png,2026-09-27T18:24:12Z
+DMRC,https://edge.media-server.com/mmc/p/mmdzxsei/,press_release,registration form,200,docs/evidence/DMRC_registration_form.png,2026-09-27T18:24:12Z
+RELL,https://www.rell.com/press-room/events,ir_page_link,no webcast link found,200,docs/evidence/RELL_no_webcast_link_found.png,2026-09-27T18:24:12Z
+PESI,https://www.webcaster5.com/Webcast/Page/2243/54338,press_release,registration form,200,docs/evidence/PESI_registration_form.png,2026-09-27T18:24:12Z
+RY,https://www.rbc.com/investorrelations/quarterly-financial-statements.html,press_release,404,404,docs/evidence/RY_404.png,2026-09-27T18:24:12Z
+ENB,https://events.q4inc.com/attendee/193728984,press_release,registration form,200,docs/evidence/ENB_registration_form.png,2026-09-27T18:24:12Z
+CNR,https://event.webcasts.com/starthere.jsp?ei=1774946&tp_key=06654de884&tp_special=8,press_release,registration form,200,docs/evidence/CNR_registration_form.png,2026-09-27T18:24:12Z
+SHOP,https://www.shopify.com/investors/quarterly-results/webcast/q2-2026,ir_page_link,media found,200,docs/evidence/SHOP_media_found.png,2026-09-27T18:24:12Z
+ABX,https://www.barrick.com/English/investors/default.aspx,ir_page_link,blocked – bot protection (HTTP 403),403,docs/evidence/ABX_blocked_bot_protection_HTTP_403.png,2026-09-27T18:24:12Z
+T,https://www.telus.com/en/about/investor-relations,ir_page_link,blocked – bot protection (HTTP 403),403,docs/evidence/T_blocked_bot_protection_HTTP_403.png,2026-09-27T18:24:12Z
+NTR,https://www.nutrien.com/news/events/2026-q2-earnings-conference-call,ir_page_link,no webcast link found,200,docs/evidence/NTR_no_webcast_link_found.png,2026-09-27T18:24:12Z
+ATD,https://app.webinar.net/6YK41Lp1oz2,press_release,registration form,200,docs/evidence/ATD_registration_form.png,2026-09-27T18:24:12Z
+MRU,https://corpo.metro.ca/en/investor-relations.html,ir_page_link,no webcast link found,200,docs/evidence/MRU_no_webcast_link_found.png,2026-09-27T18:24:12Z
+SAP,https://www.gowebcasting.com/13127,press_release,registration form,200,docs/evidence/SAP_registration_form.png,2026-09-27T18:24:12Z
