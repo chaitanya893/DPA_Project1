@@ -1,9 +1,9 @@
 # Corporate Earnings Call Pipeline – Event Discovery Memo
 
-**Generated:** 2026-09-27 06:21:32 UTC  
+**Generated:** 2026-09-27 06:26:11 UTC  
 **Evaluation Scope:** 25 Universe Companies (US Large Cap, US Small Cap, Canadian TSX, Canadian Bilingual)  
-**Total Discovered Events:** 25/25  
-**Total Real HTTP Requests Logged in DB:** 212  
+**Total Discovered Events:** 13/25 with verified date and time (12/25 unannounced / time omitted)  
+**Total Real HTTP Requests Logged in DB:** 316  
 
 ---
 
@@ -34,6 +34,7 @@
 | **SEC_EDGAR_8-K** | 11 events | **1.5 hours (0.1 days)** |
 | **SEC_EDGAR_6-K** | 1 events | **2.2 hours (0.1 days)** |
 
+- **Earliest route**: SEC_EDGAR_6-K (2.2 hours / 0.1 days median lead time)
 - **Primary Route**: SEC EDGAR Form 8-K / 6-K Press Release Exhibits.
 - **Most Reliable Route**: SEC EDGAR submissions combined with direct company IR page scrapers.
 
@@ -69,6 +70,6 @@
 
 ## 5. Crawl Logs & Compliance Summary
 
-- **Total Requests Executed**: 212
-- **HTTP 200 Successes**: 200
+- **Total Requests Executed**: 316
+- **HTTP 200 Successes**: 300
 - **Rate Limit Adherence**: Enforced 2.5s per domain delay with compliant User-Agent

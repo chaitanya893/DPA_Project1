@@ -90,11 +90,18 @@ def generate_event_discovery_memo(db: Session) -> str:
                     lead_times_by_route[s] = []
                 lead_times_by_route[s].append(delta_h)
 
+    verified_events_count = sum(1 for ev in events if ev.call_datetime_utc and ev.timezone_as_published and ev.fiscal_period)
+
     # Lead times per route
     lead_time_summary = []
+    earliest_route = "None"
+    largest_median = -1.0
     for r, lts in lead_times_by_route.items():
         med = sorted(lts)[len(lts) // 2]
         lead_time_summary.append(f"| **{r}** | {len(lts)} events | **{med:.1f} hours ({med/24:.1f} days)** |")
+        if med > largest_median:
+            largest_median = med
+            earliest_route = f"{r} ({med:.1f} hours / {med/24:.1f} days median lead time)"
     lead_time_table = "\n".join(lead_time_summary) if lead_time_summary else "| None | 0 | 0.0 hours |"
 
     vendor_rows = "\n".join([
@@ -113,7 +120,7 @@ def generate_event_discovery_memo(db: Session) -> str:
 
 **Generated:** {datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}  
 **Evaluation Scope:** 25 Universe Companies (US Large Cap, US Small Cap, Canadian TSX, Canadian Bilingual)  
-**Total Discovered Events:** {total_events}/25  
+**Total Discovered Events:** {verified_events_count}/25 with verified date and time ({total_events - verified_events_count}/25 unannounced / time omitted)  
 **Total Real HTTP Requests Logged in DB:** {len(crawl_logs)}  
 
 ---
@@ -142,6 +149,7 @@ def generate_event_discovery_memo(db: Session) -> str:
 | :--- | :---: | :---: |
 {lead_time_table}
 
+- **Earliest route**: {earliest_route}
 - **Primary Route**: SEC EDGAR Form 8-K / 6-K Press Release Exhibits.
 - **Most Reliable Route**: SEC EDGAR submissions combined with direct company IR page scrapers.
 
@@ -187,9 +195,6 @@ def run_discovery_pipeline() -> List[EventRegistry]:
 
         discovered_events = []
         table_rows = []
-
-        # List of companies already 100% verified from prior compliant runs
-        verified_tickers = {"AAPL", "JNJ", "GOOGL", "TSLA", "LLY", "LMB", "RY", "ENB"}
 
         for comp in companies:
             ticker = comp["ticker"]
