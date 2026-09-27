@@ -7,142 +7,174 @@
   "sections": [
     {
       "type": "operator_intro",
+      "start": 0.0,
+      "end": 35.14,
       "segments": [
         {
           "start": 0.0,
-          "end": 13.82,
+          "end": 5.2,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "Welcome to the Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call. I will now turn the call over to Brett Iversen, Vice President of Investor Relations.",
-          "confidence": 0.94
+          "text": "Welcome to the Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call.",
+          "confidence": 0.882
         },
         {
-          "start": 13.82,
-          "end": 23.03,
+          "start": 6.3,
+          "end": 11.12,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "On the call with me today are Satya Nadella, Chief Executive Officer, and Amy Hood, Chief Financial Officer.",
-          "confidence": 0.94
+          "text": "I will now turn the call over to Brett Iverson, Vice President of Investor Relations.",
+          "confidence": 0.882
+        },
+        {
+          "start": 12.28,
+          "end": 18.34,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "On the call with me today are Satya Nadella, Chief Executive Officer, and Amy Hood, Chief",
+          "confidence": 0.882
+        },
+        {
+          "start": 18.34,
+          "end": 25.38,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Financial Officer. We closed out our fiscal year with strong results. Microsoft Cloud Revenue",
+          "confidence": 0.882
+        },
+        {
+          "start": 25.38,
+          "end": 35.14,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "surpassed 36.8 billion, up 21% year over year. Total company revenue was 64.7 billion, up 15%.",
+          "confidence": 0.913
         }
       ]
     },
     {
       "type": "prepared_remarks",
-      "segments": [
-        {
-          "start": 23.03,
-          "end": 32.24,
-          "speaker_id": "S1",
-          "speaker_name": "Satya Nadella",
-          "speaker_role": "CEO",
-          "text": "We closed out our fiscal year with strong results. Microsoft Cloud revenue surpassed $36.8 billion, up 21% year-over-year.",
-          "confidence": 0.94
-        },
-        {
-          "start": 32.24,
-          "end": 39.92,
-          "speaker_id": "S2",
-          "speaker_name": "Amy Hood",
-          "speaker_role": "CFO",
-          "text": "Total company revenue was $64.7 billion, up 15%. Operating income increased 15% to $27.9 billion.",
-          "confidence": 0.94
-        }
-      ]
+      "start": 0.0,
+      "end": 0.0,
+      "segments": []
     },
     {
       "type": "qa",
+      "start": 36.42,
+      "end": 99.34,
       "segments": [
         {
-          "start": 39.92,
-          "end": 48.11,
+          "start": 36.42,
+          "end": 43.26,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "We will now take your questions. Our first question comes from Keith Weiss with Morgan Stanley.",
-          "confidence": 0.94
+          "text": "Operating income increased 15% to 27.9 billion. We will now take your questions.",
+          "confidence": 0.913
         },
         {
-          "start": 48.11,
-          "end": 55.27,
-          "speaker_id": "S3",
-          "speaker_name": "Keith Weiss",
-          "speaker_role": "Analyst, Morgan Stanley",
+          "start": 44.34,
+          "end": 47.5,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our first question comes from Keith Weiss with Morgan Stanley.",
+          "confidence": 0.913
+        },
+        {
+          "start": 48.64,
+          "end": 53.44,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
           "text": "Satya, could you speak to the scaling of Azure AI and customer capacity constraints?",
-          "confidence": 0.94
+          "confidence": 0.913
         },
         {
-          "start": 55.27,
-          "end": 63.46,
-          "speaker_id": "S1",
-          "speaker_name": "Satya Nadella",
-          "speaker_role": "CEO",
-          "text": "We are seeing accelerating demand across Copilot and Azure OpenAI services, with enterprise adoption expanding globally.",
-          "confidence": 0.94
-        },
-        {
-          "start": 63.46,
-          "end": 68.07,
+          "start": 54.4,
+          "end": 58.9,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "Our next question comes from Brent Thill with Jefferies.",
-          "confidence": 0.94
+          "text": "We are seeing accelerating demand across Copilot and Azure Open AI services,",
+          "confidence": 0.872
         },
         {
-          "start": 68.07,
-          "end": 75.75,
-          "speaker_id": "S4",
-          "speaker_name": "Brent Thill",
-          "speaker_role": "Analyst, Jefferies",
-          "text": "Amy, what is your expectation for capital expenditures in fiscal 2027 to support AI infrastructure?",
-          "confidence": 0.94
-        },
-        {
-          "start": 75.75,
-          "end": 83.43,
-          "speaker_id": "S2",
-          "speaker_name": "Amy Hood",
-          "speaker_role": "CFO",
-          "text": "We will continue to invest in cloud capacity, aligning CapEx with long-term revenue growth opportunities.",
-          "confidence": 0.94
-        },
-        {
-          "start": 83.43,
-          "end": 88.04,
+          "start": 59.56,
+          "end": 65.08,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "Our next question comes from Karl Keirstead with UBS.",
-          "confidence": 0.94
+          "text": "with enterprise adoption expanding globally. Our next question comes from Brent Thill with",
+          "confidence": 0.872
         },
         {
-          "start": 88.04,
-          "end": 93.67,
-          "speaker_id": "S5",
-          "speaker_name": "Karl Keirstead",
-          "speaker_role": "Analyst, UBS",
+          "start": 65.08,
+          "end": 72.44,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Jeffries. Amy, what is your expectation for capital expenditures in fiscal 2027 to support",
+          "confidence": 0.872
+        },
+        {
+          "start": 72.44,
+          "end": 79.18,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "AI infrastructure? We will continue to invest in cloud capacity, aligning CapEx with long-term",
+          "confidence": 0.872
+        },
+        {
+          "start": 79.18,
+          "end": 84.82,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "revenue growth opportunities. Our next question comes from Carl Kierstedt with UBS.",
+          "confidence": 0.835
+        },
+        {
+          "start": 86.14,
+          "end": 92.3,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
           "text": "Satya, how are enterprise customers approaching commercial Office 365 Copilot monetization?",
-          "confidence": 0.94
+          "confidence": 0.835
         },
         {
-          "start": 93.67,
-          "end": 100.29,
-          "speaker_id": "S1",
-          "speaker_name": "Satya Nadella",
-          "speaker_role": "CEO",
-          "text": "Customers are realizing measurable productivity gains, driving higher seat expansion and renewal rates.",
-          "confidence": 0.94
+          "start": 93.42,
+          "end": 98.96,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Customers are realizing measurable productivity gains, driving higher seat expansion and renewal",
+          "confidence": 0.835
+        },
+        {
+          "start": 98.96,
+          "end": 99.34,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "rates.",
+          "confidence": 0.835
         }
       ]
     }
   ],
   "pipeline": {
-    "asr_model": "faster-whisper-v3-large",
-    "diarizer": "pyannote.audio-3.1",
+    "asr_model": "faster-whisper-small.en (CTranslate2 int8)",
+    "diarizer": "energy-vad-diarizer-v1",
     "version": "1.0.0",
-    "rtf": 0.0012,
-    "5min_target_sla": "MET"
+    "rtf": 0.1141,
+    "5min_target_sla": "EXCEEDED"
   }
 }

@@ -7,133 +7,201 @@
   "sections": [
     {
       "type": "operator_intro",
+      "start": 6.32,
+      "end": 19.97,
       "segments": [
         {
-          "start": 0.0,
-          "end": 8.6,
+          "start": 6.32,
+          "end": 9.96,
           "speaker_id": "S0",
-          "speaker_name": "Conference Operator",
-          "speaker_role": "Operator",
-          "text": "Welcome to Digimarc's quarterly earnings conference call. Speaking today are CEO Riley McCormack and CFO Charles Beck.",
-          "confidence": 0.94
+          "speaker_name": "Paul Glynn and",
+          "speaker_role": "Executive",
+          "text": "My name is Paul Glynn and I'm an account director for Digimark.",
+          "confidence": 0.871
+        },
+        {
+          "start": 15.57,
+          "end": 19.97,
+          "speaker_id": "S1",
+          "speaker_name": "Speaker S1",
+          "speaker_role": "Participant",
+          "text": "We provide an anti-counterfeit solution for the pharmaceutical industry.",
+          "confidence": 0.871
         }
       ]
     },
     {
       "type": "prepared_remarks",
+      "start": 20.33,
+      "end": 141.33,
       "segments": [
         {
-          "start": 8.6,
-          "end": 16.7,
+          "start": 20.33,
+          "end": 26.83,
           "speaker_id": "S1",
-          "speaker_name": "Riley McCormack",
-          "speaker_role": "CEO",
-          "text": "Total revenue for the quarter was $9.8 million, driven by 18% growth in commercial subscription revenue.",
-          "confidence": 0.94
+          "speaker_name": "Speaker S1",
+          "speaker_role": "Participant",
+          "text": "We work directly with pharma companies and brands and also print packaging and label companies.",
+          "confidence": 0.871
         },
         {
-          "start": 16.7,
-          "end": 22.77,
+          "start": 27.81,
+          "end": 35.67,
+          "speaker_id": "S1",
+          "speaker_name": "Speaker S1",
+          "speaker_role": "Participant",
+          "text": "And our solution is a digital defense for packaging primary and secondary packaging authentication rapidly in the field.",
+          "confidence": 0.871
+        },
+        {
+          "start": 35.67,
+          "end": 42.63,
+          "speaker_id": "S1",
+          "speaker_name": "Speaker S1",
+          "speaker_role": "Participant",
+          "text": "It's easy to implement because it blends seamlessly into the artwork of the packaging itself.",
+          "confidence": 0.926
+        },
+        {
+          "start": 43.99,
+          "end": 46.67,
+          "speaker_id": "S1",
+          "speaker_name": "Speaker S1",
+          "speaker_role": "Participant",
+          "text": "And in order to authenticate, you don't need an internet connection.",
+          "confidence": 0.926
+        },
+        {
+          "start": 47.77,
+          "end": 54.43,
+          "speaker_id": "S1",
+          "speaker_name": "Speaker S1",
+          "speaker_role": "Participant",
+          "text": "So it's really a rapid response to test whether there's counterfeit activity in a given market.",
+          "confidence": 0.926
+        },
+        {
+          "start": 54.43,
+          "end": 66.58,
+          "speaker_id": "S1",
+          "speaker_name": "Speaker S1",
+          "speaker_role": "Participant",
+          "text": "At Pharmap this year, we're here to talk about our Illuminate platform for anti-counterfeit,",
+          "confidence": 0.905
+        },
+        {
+          "start": 66.94,
+          "end": 79.08,
+          "speaker_id": "S1",
+          "speaker_name": "Speaker S1",
+          "speaker_role": "Participant",
+          "text": "which has a covert digital watermark at its heart, which allows brand inspectors in the field to rapidly authenticate packaging",
+          "confidence": 0.905
+        },
+        {
+          "start": 79.08,
+          "end": 85.68,
+          "speaker_id": "S1",
+          "speaker_name": "Speaker S1",
+          "speaker_role": "Participant",
+          "text": "in order to see whether it's authentic or not and therefore to take action against counterfeit drugs.",
+          "confidence": 0.905
+        },
+        {
+          "start": 91.45,
+          "end": 95.93,
           "speaker_id": "S2",
-          "speaker_name": "Charles Beck",
-          "speaker_role": "CFO",
-          "text": "Operating cash burn decreased 24% year-over-year as subscription annual recurring revenue expanded.",
-          "confidence": 0.94
+          "speaker_name": "Speaker S2",
+          "speaker_role": "Executive",
+          "text": "Pharmap event has been very well organized. Our personal manager has been very attentive.",
+          "confidence": 0.902
+        },
+        {
+          "start": 96.75,
+          "end": 102.39,
+          "speaker_id": "S2",
+          "speaker_name": "Speaker S2",
+          "speaker_role": "Executive",
+          "text": "And we've had some really good conversations, both with pharmaceutical companies directly,",
+          "confidence": 0.902
+        },
+        {
+          "start": 102.63,
+          "end": 105.81,
+          "speaker_id": "S2",
+          "speaker_name": "Speaker S2",
+          "speaker_role": "Executive",
+          "text": "but also some printing packaging and label companies.",
+          "confidence": 0.902
+        },
+        {
+          "start": 111.19,
+          "end": 116.35,
+          "speaker_id": "S3",
+          "speaker_name": "Speaker S3",
+          "speaker_role": "Executive",
+          "text": "The main reason we attended this event is that we're not lost in a sea of competitors.",
+          "confidence": 0.902
+        },
+        {
+          "start": 117.61,
+          "end": 121.17,
+          "speaker_id": "S3",
+          "speaker_name": "Speaker S3",
+          "speaker_role": "Executive",
+          "text": "There's quite a nice different range of segments.",
+          "confidence": 0.902
+        },
+        {
+          "start": 121.93,
+          "end": 127.75,
+          "speaker_id": "S3",
+          "speaker_name": "Speaker S3",
+          "speaker_role": "Executive",
+          "text": "So I think there was one other competitor that we noticed at the event, which is good,",
+          "confidence": 0.893
+        },
+        {
+          "start": 128.79,
+          "end": 132.03,
+          "speaker_id": "S3",
+          "speaker_name": "Speaker S3",
+          "speaker_role": "Executive",
+          "text": "because sometimes you can get lost when there's lots of competition.",
+          "confidence": 0.893
+        },
+        {
+          "start": 133.29,
+          "end": 138.91,
+          "speaker_id": "S3",
+          "speaker_name": "Speaker S3",
+          "speaker_role": "Executive",
+          "text": "And there's a good representation from both pharma companies, but also from potential partners for us,",
+          "confidence": 0.893
+        },
+        {
+          "start": 139.21,
+          "end": 141.33,
+          "speaker_id": "S3",
+          "speaker_name": "Speaker S3",
+          "speaker_role": "Executive",
+          "text": "which would be printing, packaging and label companies.",
+          "confidence": 0.893
         }
       ]
     },
     {
       "type": "qa",
-      "segments": [
-        {
-          "start": 22.77,
-          "end": 29.85,
-          "speaker_id": "S0",
-          "speaker_name": "Conference Operator",
-          "speaker_role": "Operator",
-          "text": "We will now take questions. Our first question comes from George Sutton with Craig-Hallum.",
-          "confidence": 0.94
-        },
-        {
-          "start": 29.85,
-          "end": 36.43,
-          "speaker_id": "S3",
-          "speaker_name": "Speaker S3",
-          "speaker_role": "Participant",
-          "text": "Riley, could you update us on Digimarc Validate adoption with European retail consortiums?",
-          "confidence": 0.94
-        },
-        {
-          "start": 36.43,
-          "end": 43.51,
-          "speaker_id": "S1",
-          "speaker_name": "Riley McCormack",
-          "speaker_role": "CEO",
-          "text": "We are seeing strong momentum as retailers seek product authentication to reduce counterfeit goods.",
-          "confidence": 0.94
-        },
-        {
-          "start": 43.51,
-          "end": 48.57,
-          "speaker_id": "S0",
-          "speaker_name": "Conference Operator",
-          "speaker_role": "Operator",
-          "text": "Our next question comes from Matthew Galinko with Maxim Group.",
-          "confidence": 0.94
-        },
-        {
-          "start": 48.57,
-          "end": 55.15,
-          "speaker_id": "S4",
-          "speaker_name": "Matthew Galinko",
-          "speaker_role": "Analyst, Maxim Group",
-          "text": "Charles, what is your guidance for cash burn reduction and path to profitability?",
-          "confidence": 0.94
-        },
-        {
-          "start": 55.15,
-          "end": 60.21,
-          "speaker_id": "S2",
-          "speaker_name": "Charles Beck",
-          "speaker_role": "CFO",
-          "text": "Annualized operating expenses decreased 15%, extending our cash runway significantly.",
-          "confidence": 0.94
-        },
-        {
-          "start": 60.21,
-          "end": 65.78,
-          "speaker_id": "S0",
-          "speaker_name": "Conference Operator",
-          "speaker_role": "Operator",
-          "text": "Our next question comes from James Mitchell with Tech Growth Research.",
-          "confidence": 0.94
-        },
-        {
-          "start": 65.78,
-          "end": 70.84,
-          "speaker_id": "S5",
-          "speaker_name": "James Mitchell",
-          "speaker_role": "Analyst, Tech Growth Research",
-          "text": "Riley, how are industrial packaging converters integrating digital watermark technology?",
-          "confidence": 0.94
-        },
-        {
-          "start": 70.84,
-          "end": 77.41,
-          "speaker_id": "S1",
-          "speaker_name": "Riley McCormack",
-          "speaker_role": "CEO",
-          "text": "Top global packaging converters are embedding our digital identifiers directly on manufacturing lines.",
-          "confidence": 0.94
-        }
-      ]
+      "start": 0.0,
+      "end": 0.0,
+      "segments": []
     }
   ],
   "pipeline": {
-    "asr_model": "faster-whisper-v3-large",
-    "diarizer": "pyannote.audio-3.1",
+    "asr_model": "faster-whisper-small.en (CTranslate2 int8)",
+    "diarizer": "energy-vad-diarizer-v1",
     "version": "1.0.0",
-    "rtf": 0.0016,
-    "5min_target_sla": "MET"
+    "rtf": 0.0956,
+    "5min_target_sla": "EXCEEDED"
   }
 }

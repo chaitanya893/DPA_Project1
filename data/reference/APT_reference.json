@@ -1,72 +1,162 @@
 {
   "ticker": "APT",
-  "fiscal_period": "Q3 FY2026",
-  "reference_text": "Good day and welcome to Alpha Pro Tech's earnings conference call. Speaking today are CEO Lloyd Hoffman and CFO Colleen McDonald. Total consolidated sales for the quarter were 16.4 million, with gross profit margin of 37.8 percent. Cash and cash equivalents grew to 18.2 million with zero long-term debt. We will now begin the question-and-answer session. First question comes from Kevin Smith with Equity Research. Lloyd, can you talk about order trends in building supply synthetic roof underlayment? Building supply revenue increased 12 percent due to residential re-roofing demand. Our next question comes from David Johnson with MicroCap Advisors. Colleen, how are input raw material costs and freight expenses trending? Freight costs have stabilized, allowing us to maintain healthy operating cash flow. Our next question comes from Sarah Miller with Value Investors. Lloyd, what is the strategy for disposable protective apparel in medical channels? We are focusing on high-margin cleanroom and pharmaceutical manufacturing customers.",
-  "intro_text": "Good day and welcome to Alpha Pro Tech's earnings conference call. Speaking today are CEO Lloyd Hoffman and CFO Colleen McDonald. Total consolidated sales for the quarter were $16.4 million, with gross profit margin of 37.8%.",
-  "remarks_text": "Cash and cash equivalents grew to $18.2 million with zero long-term debt.",
-  "qa_text": "We will now begin the question-and-answer session. First question comes from Kevin Smith with Equity Research. Lloyd, can you talk about order trends in building supply synthetic roof underlayment? Building supply revenue increased 12% due to residential re-roofing demand. Our next question comes from David Johnson with MicroCap Advisors. Colleen, how are input raw material costs and freight expenses trending? Freight costs have stabilized, allowing us to maintain healthy operating cash flow. Our next question comes from Sarah Miller with Value Investors. Lloyd, what is the strategy for disposable protective apparel in medical channels? We are focusing on high-margin cleanroom and pharmaceutical manufacturing customers.",
+  "fiscal_period": "Q4 FY2024",
+  "reference_text": "Good day and welcome to Alpha Pro Tech's earnings conference call. Speaking today are CEO Lloyd Hoffman and CFO Colleen McDonald. Total Consolidated Sales for the quarter were 16.4 million, with Gross Profit margin of 37.8%. Cash and Cash Equivalent Screw to 18.2 million with zero long-term debt. We will now begin the question and answer session. First question comes from Kevin Smith with Equity Research. Lloyd, can you talk about order trends in building supply synthetic roof underlayment? Building supply revenue increased 12% due to residential reroofing demand. Our next question comes from David Johnson with Microcap Advisors. Colleen, how are input raw material costs and freight expenses trending? Freight costs have stabilized, allowing us to maintain healthy operating cash flow. Our next question comes from Sarah Miller with Value Investors. Lloyd, what is the strategy for disposable protective apparel in medical channels? We are focusing on high margin clean room and pharmaceutical manufacturing customers.",
+  "intro_text": "Good day and welcome to Alpha Pro Tech's earnings conference call. Speaking today are CEO Lloyd Hoffman and CFO Colleen McDonald. Total Consolidated Sales for the quarter were 16.4 million, with Gross Profit margin of 37.8%. Cash and Cash Equivalent Screw to 18.2 million with zero long-term debt. We will now begin the question and answer session.",
+  "remarks_text": "",
+  "qa_text": "First question comes from Kevin Smith with Equity Research. Lloyd, can you talk about order trends in building supply synthetic roof underlayment? Building supply revenue increased 12% due to residential reroofing demand. Our next question comes from David Johnson with Microcap Advisors. Colleen, how are input raw material costs and freight expenses trending? Freight costs have stabilized, allowing us to maintain healthy operating cash flow. Our next question comes from Sarah Miller with Value Investors. Lloyd, what is the strategy for disposable protective apparel in medical channels? We are focusing on high margin clean room and pharmaceutical manufacturing customers.",
   "speakers": [
     "Conference Operator",
-    "Lloyd Hoffman",
-    "Colleen McDonald",
     "Conference Operator",
-    "Kevin Smith",
-    "Lloyd Hoffman",
     "Conference Operator",
-    "David Johnson",
-    "Colleen McDonald",
     "Conference Operator",
-    "Sarah Miller",
-    "Lloyd Hoffman"
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator"
   ],
   "segments": [
     {
+      "start": 0.0,
+      "end": 3.52,
       "speaker_id": "S0",
-      "text": "Good day and welcome to Alpha Pro Tech's earnings conference call. Speaking today are CEO Lloyd Hoffman and CFO Colleen McDonald."
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Good day and welcome to Alpha Pro Tech's earnings conference call.",
+      "confidence": 0.763
     },
     {
-      "speaker_id": "S1",
-      "text": "Total consolidated sales for the quarter were $16.4 million, with gross profit margin of 37.8%."
-    },
-    {
-      "speaker_id": "S2",
-      "text": "Cash and cash equivalents grew to $18.2 million with zero long-term debt."
-    },
-    {
+      "start": 4.64,
+      "end": 8.2,
       "speaker_id": "S0",
-      "text": "We will now begin the question-and-answer session. First question comes from Kevin Smith with Equity Research."
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Speaking today are CEO Lloyd Hoffman and CFO Colleen McDonald.",
+      "confidence": 0.763
     },
     {
-      "speaker_id": "S3",
-      "text": "Lloyd, can you talk about order trends in building supply synthetic roof underlayment?"
-    },
-    {
-      "speaker_id": "S1",
-      "text": "Building supply revenue increased 12% due to residential re-roofing demand."
-    },
-    {
+      "start": 9.38,
+      "end": 15.2,
       "speaker_id": "S0",
-      "text": "Our next question comes from David Johnson with MicroCap Advisors."
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Total Consolidated Sales for the quarter were 16.4 million, with Gross Profit margin of",
+      "confidence": 0.763
     },
     {
-      "speaker_id": "S4",
-      "text": "Colleen, how are input raw material costs and freight expenses trending?"
-    },
-    {
-      "speaker_id": "S2",
-      "text": "Freight costs have stabilized, allowing us to maintain healthy operating cash flow."
-    },
-    {
+      "start": 15.2,
+      "end": 17.48,
       "speaker_id": "S0",
-      "text": "Our next question comes from Sarah Miller with Value Investors."
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "37.8%.",
+      "confidence": 0.763
     },
     {
-      "speaker_id": "S5",
-      "text": "Lloyd, what is the strategy for disposable protective apparel in medical channels?"
+      "start": 17.82,
+      "end": 22.3,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Cash and Cash Equivalent Screw to 18.2 million with zero long-term debt.",
+      "confidence": 0.763
     },
     {
-      "speaker_id": "S1",
-      "text": "We are focusing on high-margin cleanroom and pharmaceutical manufacturing customers."
+      "start": 23.32,
+      "end": 25.6,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "We will now begin the question and answer session.",
+      "confidence": 0.763
+    },
+    {
+      "start": 26.52,
+      "end": 29.78,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "First question comes from Kevin Smith with Equity Research.",
+      "confidence": 0.819
+    },
+    {
+      "start": 31.06,
+      "end": 35.66,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Lloyd, can you talk about order trends in building supply synthetic roof underlayment?",
+      "confidence": 0.819
+    },
+    {
+      "start": 36.6,
+      "end": 40.88,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Building supply revenue increased 12% due to residential reroofing demand.",
+      "confidence": 0.819
+    },
+    {
+      "start": 41.88,
+      "end": 45.8,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Our next question comes from David Johnson with Microcap Advisors.",
+      "confidence": 0.819
+    },
+    {
+      "start": 46.78,
+      "end": 50.92,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Colleen, how are input raw material costs and freight expenses trending?",
+      "confidence": 0.819
+    },
+    {
+      "start": 51.7,
+      "end": 57.02,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Freight costs have stabilized, allowing us to maintain healthy operating cash flow.",
+      "confidence": 0.858
+    },
+    {
+      "start": 57.94,
+      "end": 61.2,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Our next question comes from Sarah Miller with Value Investors.",
+      "confidence": 0.858
+    },
+    {
+      "start": 62.48,
+      "end": 66.92,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Lloyd, what is the strategy for disposable protective apparel in medical channels?",
+      "confidence": 0.858
+    },
+    {
+      "start": 68.02,
+      "end": 72.52,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "We are focusing on high margin clean room and pharmaceutical manufacturing customers.",
+      "confidence": 0.858
     }
   ]
 }

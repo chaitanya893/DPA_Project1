@@ -74,11 +74,17 @@ def classify_transcript_sections(segments: List[Dict[str, Any]]) -> List[Dict[st
 
         sections[current_section].append(seg)
 
-    result_sections = [
-        {"type": "operator_intro", "segments": sections["operator_intro"]},
-        {"type": "prepared_remarks", "segments": sections["prepared_remarks"]},
-        {"type": "qa", "segments": sections["qa"]},
-    ]
+    result_sections = []
+    for sec_type in ["operator_intro", "prepared_remarks", "qa"]:
+        segs = sections[sec_type]
+        start_t = segs[0].get("start", segs[0].get("start_time", 0.0)) if segs else 0.0
+        end_t = segs[-1].get("end", segs[-1].get("end_time", 0.0)) if segs else 0.0
+        result_sections.append({
+            "type": sec_type,
+            "start": start_t,
+            "end": end_t,
+            "segments": segs,
+        })
 
     logger.info(
         f"Partitioned {len(segments)} segments: "
@@ -88,3 +94,4 @@ def classify_transcript_sections(segments: List[Dict[str, Any]]) -> List[Dict[st
     )
 
     return result_sections
+

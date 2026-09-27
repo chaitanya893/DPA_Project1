@@ -7,133 +7,192 @@
   "sections": [
     {
       "type": "operator_intro",
+      "start": 0.0,
+      "end": 35.16,
       "segments": [
         {
           "start": 0.0,
-          "end": 11.75,
+          "end": 4.04,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "Good afternoon and welcome to Alphabet's quarterly earnings conference call. With us today are Sundar Pichai, CEO, and Anat Ashkenazi, Chief Financial Officer.",
-          "confidence": 0.94
+          "text": "Good afternoon and welcome to Alphabet's quarterly earnings conference call.",
+          "confidence": 0.875
+        },
+        {
+          "start": 5.0,
+          "end": 10.72,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "With us today are Sundar Pichai, CEO and Anat Ashkenazi, Chief Financial Officer.",
+          "confidence": 0.875
+        },
+        {
+          "start": 11.58,
+          "end": 17.88,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our consolidated revenues were $84.7 billion, an increase of 14% year over year.",
+          "confidence": 0.875
+        },
+        {
+          "start": 18.86,
+          "end": 22.56,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Google Cloud revenue grew 29% to $10.3 billion.",
+          "confidence": 0.875
+        },
+        {
+          "start": 24.08,
+          "end": 29.82,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Operating margin expanded to 32%, reflecting disciplined operational execution alongside",
+          "confidence": 0.875
+        },
+        {
+          "start": 29.82,
+          "end": 31.6,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "AI infrastructure investments.",
+          "confidence": 0.82
+        },
+        {
+          "start": 32.78,
+          "end": 35.16,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We will now open the floor for analyst questions.",
+          "confidence": 0.82
         }
       ]
     },
     {
       "type": "prepared_remarks",
-      "segments": [
-        {
-          "start": 11.75,
-          "end": 21.45,
-          "speaker_id": "S1",
-          "speaker_name": "Sundar Pichai",
-          "speaker_role": "CEO",
-          "text": "Our consolidated revenues were $84.7 billion, an increase of 14% year-over-year. Google Cloud revenue grew 29% to $10.3 billion.",
-          "confidence": 0.94
-        },
-        {
-          "start": 21.45,
-          "end": 28.09,
-          "speaker_id": "S2",
-          "speaker_name": "Anat Ashkenazi",
-          "speaker_role": "CFO",
-          "text": "Operating margin expanded to 32%, reflecting disciplined operational execution alongside AI infrastructure investments.",
-          "confidence": 0.94
-        }
-      ]
+      "start": 0.0,
+      "end": 0.0,
+      "segments": []
     },
     {
       "type": "qa",
+      "start": 36.38,
+      "end": 87.34,
       "segments": [
         {
-          "start": 28.09,
-          "end": 37.28,
+          "start": 36.38,
+          "end": 39.48,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "We will now open the floor for analyst questions. First question comes from Brian Nowak with Morgan Stanley.",
-          "confidence": 0.94
+          "text": "First question comes from Brian Nowak with Morgan Stanley.",
+          "confidence": 0.82
         },
         {
-          "start": 37.28,
-          "end": 44.43,
-          "speaker_id": "S3",
-          "speaker_name": "Brian Nowak",
-          "speaker_role": "Analyst, Morgan Stanley",
-          "text": "Sundar, how is AI Overviews in Search impacting user search frequency and query monetization?",
-          "confidence": 0.94
-        },
-        {
-          "start": 44.43,
-          "end": 52.6,
-          "speaker_id": "S1",
-          "speaker_name": "Sundar Pichai",
-          "speaker_role": "CEO",
-          "text": "AI Overviews are driving positive query volume growth and higher user satisfaction across mobile and desktop.",
-          "confidence": 0.94
-        },
-        {
-          "start": 52.6,
-          "end": 57.2,
+          "start": 40.6,
+          "end": 46.2,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "Our next question comes from Doug Anmuth with JPMorgan.",
-          "confidence": 0.94
+          "text": "Sundar, how is AI overviews in search impacting user search frequency and query monetization?",
+          "confidence": 0.82
         },
         {
-          "start": 57.2,
-          "end": 63.84,
-          "speaker_id": "S4",
-          "speaker_name": "Doug Anmuth",
-          "speaker_role": "Analyst, JPMorgan",
+          "start": 47.24,
+          "end": 52.3,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "AI overviews are driving positive query volume growth and higher user satisfaction across",
+          "confidence": 0.82
+        },
+        {
+          "start": 52.3,
+          "end": 53.4,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "mobile and desktop.",
+          "confidence": 0.82
+        },
+        {
+          "start": 54.5,
+          "end": 57.4,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Doug Anmuth with JP Morgan.",
+          "confidence": 0.82
+        },
+        {
+          "start": 58.4,
+          "end": 63.78,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
           "text": "Anat, can you provide an update on technical infrastructure efficiency and margin improvement?",
-          "confidence": 0.94
+          "confidence": 0.859
         },
         {
-          "start": 63.84,
-          "end": 70.99,
-          "speaker_id": "S2",
-          "speaker_name": "Anat Ashkenazi",
-          "speaker_role": "CFO",
-          "text": "We remain disciplined on our cost structure while maintaining strong investment in compute infrastructure.",
-          "confidence": 0.94
+          "start": 64.78,
+          "end": 69.5,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We remain disciplined on our cost structure while maintaining strong investment in compute",
+          "confidence": 0.859
         },
         {
-          "start": 70.99,
-          "end": 75.59,
+          "start": 69.5,
+          "end": 70.32,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "infrastructure.",
+          "confidence": 0.859
+        },
+        {
+          "start": 71.3,
+          "end": 74.1,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
           "text": "Our next question comes from Ross Sandler with Barclays.",
-          "confidence": 0.94
+          "confidence": 0.859
         },
         {
-          "start": 75.59,
-          "end": 81.72,
-          "speaker_id": "S5",
-          "speaker_name": "Ross Sandler",
-          "speaker_role": "Analyst, Barclays",
-          "text": "Sundar, how is YouTube advertising demand evolving across Connected TV and Shorts?",
-          "confidence": 0.94
+          "start": 75.28,
+          "end": 80.34,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Sundar, how is YouTube advertising demand evolving across connected TV and shorts?",
+          "confidence": 0.859
         },
         {
-          "start": 81.72,
-          "end": 88.36,
-          "speaker_id": "S1",
-          "speaker_name": "Sundar Pichai",
-          "speaker_role": "CEO",
-          "text": "YouTube continues to demonstrate strong engagement, particularly in Connected TV living room viewing.",
-          "confidence": 0.94
+          "start": 81.52,
+          "end": 87.34,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "YouTube continues to demonstrate strong engagement, particularly in connected TV living room view",
+          "confidence": 0.859
         }
       ]
     }
   ],
   "pipeline": {
-    "asr_model": "faster-whisper-v3-large",
-    "diarizer": "pyannote.audio-3.1",
+    "asr_model": "faster-whisper-small.en (CTranslate2 int8)",
+    "diarizer": "energy-vad-diarizer-v1",
     "version": "1.0.0",
-    "rtf": 0.0014,
-    "5min_target_sla": "MET"
+    "rtf": 0.1325,
+    "5min_target_sla": "EXCEEDED"
   }
 }

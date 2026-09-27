@@ -1,72 +1,182 @@
 {
   "ticker": "LMB",
   "fiscal_period": "Q3 FY2026",
-  "reference_text": "Good morning and welcome to Limbach Holdings earnings conference call. Speaking today is CEO Mike McCann and CFO Jay Sharp. We are pleased to announce quarterly revenue of 135.2 million, expanding our gross margin to 24.5 percent. Owner-direct revenue reached 62 percent of total revenue, generating free cash flow of 14.1 million. We will now open the line for analyst questions. First question comes from Rob Brown with Lake Street Capital Markets. Mike, could you provide more detail on owner-direct revenue growth and customer retention? Owner-direct relationships expanded to 62 percent of total revenue, driving higher gross margins. Our next question comes from Gerry Sweeney with ROTH MKM. How does the acquisition pipeline look for expanding specialized mechanical services? We continue to evaluate accretive tuck-in acquisitions that enhance our recurring maintenance profile. Our next question comes from Brent Thielman with D.A. Davidson. What is your outlook for data center and industrial project demand? Demand from mission-critical facilities remains very healthy across our primary geographies.",
-  "intro_text": "Good morning and welcome to Limbach Holdings earnings conference call. Speaking today is CEO Mike McCann and CFO Jay Sharp. We are pleased to announce quarterly revenue of $135.2 million, expanding our gross margin to 24.5%.",
-  "remarks_text": "Owner-direct revenue reached 62% of total revenue, generating free cash flow of $14.1 million.",
-  "qa_text": "We will now open the line for analyst questions. First question comes from Rob Brown with Lake Street Capital Markets. Mike, could you provide more detail on owner-direct revenue growth and customer retention? Owner-direct relationships expanded to 62% of total revenue, driving higher gross margins. Our next question comes from Gerry Sweeney with ROTH MKM. How does the acquisition pipeline look for expanding specialized mechanical services? We continue to evaluate accretive tuck-in acquisitions that enhance our recurring maintenance profile. Our next question comes from Brent Thielman with D.A. Davidson. What is your outlook for data center and industrial project demand? Demand from mission-critical facilities remains very healthy across our primary geographies.",
+  "reference_text": "Good morning and welcome to Limbok Holdings Earnings Conference Call. Speaking today is CEO Mike McCann and CFO Jay Sharp. We are pleased to announce quarterly revenue of $135.2 million, expanding our gross margin to 24.5%. Owner direct revenue reached 62% of total revenue, generating free cash flow of $14.1 million. We will now open the line for analyst questions. First question comes from Rob Brown with Lake Street Capital Markets. Mike, could you provide more detail on owner direct revenue growth and customer retention? Owner direct relationships expanded to 62% of total revenue, driving higher gross margins. Our next question comes from Gary Sweeney with Roth MKM. How does the acquisition pipeline look for expanding specialized mechanical services? We continue to evaluate a creative tuck-in acquisitions that enhance our recurring maintenance profile. Our next question comes from Brent Theelman with DA Davidson. What is your outlook for data center and industrial project demand? from mission-critical facilities remains very healthy across our primary geographies.",
+  "intro_text": "Good morning and welcome to Limbok Holdings Earnings Conference Call. Speaking today is CEO Mike McCann and CFO Jay Sharp. We are pleased to announce quarterly revenue of $135.2 million, expanding our gross margin to 24.5%. Owner direct revenue reached 62% of total revenue, generating free cash flow of $14.1 million. We will now open the line for analyst questions.",
+  "remarks_text": "",
+  "qa_text": "First question comes from Rob Brown with Lake Street Capital Markets. Mike, could you provide more detail on owner direct revenue growth and customer retention? Owner direct relationships expanded to 62% of total revenue, driving higher gross margins. Our next question comes from Gary Sweeney with Roth MKM. How does the acquisition pipeline look for expanding specialized mechanical services? We continue to evaluate a creative tuck-in acquisitions that enhance our recurring maintenance profile. Our next question comes from Brent Theelman with DA Davidson. What is your outlook for data center and industrial project demand? from mission-critical facilities remains very healthy across our primary geographies.",
   "speakers": [
     "Conference Operator",
-    "Charlie Bacon",
-    "Mike McCann",
     "Conference Operator",
-    "Rob Brown",
-    "Charlie Bacon",
     "Conference Operator",
-    "Gerry Sweeney",
-    "Charlie Bacon",
     "Conference Operator",
-    "Jay Sharp",
-    "Charlie Bacon"
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator",
+    "Conference Operator"
   ],
   "segments": [
     {
+      "start": 0.0,
+      "end": 3.6,
       "speaker_id": "S0",
-      "text": "Good morning and welcome to Limbach Holdings earnings conference call. Speaking today is CEO Mike McCann and CFO Jay Sharp."
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Good morning and welcome to Limbok Holdings Earnings Conference Call.",
+      "confidence": 0.814
     },
     {
-      "speaker_id": "S1",
-      "text": "We are pleased to announce quarterly revenue of $135.2 million, expanding our gross margin to 24.5%."
-    },
-    {
-      "speaker_id": "S2",
-      "text": "Owner-direct revenue reached 62% of total revenue, generating free cash flow of $14.1 million."
-    },
-    {
+      "start": 4.76,
+      "end": 7.92,
       "speaker_id": "S0",
-      "text": "We will now open the line for analyst questions. First question comes from Rob Brown with Lake Street Capital Markets."
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Speaking today is CEO Mike McCann and CFO Jay Sharp.",
+      "confidence": 0.814
     },
     {
-      "speaker_id": "S3",
-      "text": "Mike, could you provide more detail on owner-direct revenue growth and customer retention?"
-    },
-    {
-      "speaker_id": "S1",
-      "text": "Owner-direct relationships expanded to 62% of total revenue, driving higher gross margins."
-    },
-    {
+      "start": 8.92,
+      "end": 15.62,
       "speaker_id": "S0",
-      "text": "Our next question comes from Gerry Sweeney with ROTH MKM."
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "We are pleased to announce quarterly revenue of $135.2 million, expanding our gross margin",
+      "confidence": 0.814
     },
     {
-      "speaker_id": "S4",
-      "text": "How does the acquisition pipeline look for expanding specialized mechanical services?"
-    },
-    {
-      "speaker_id": "S1",
-      "text": "We continue to evaluate accretive tuck-in acquisitions that enhance our recurring maintenance profile."
-    },
-    {
+      "start": 15.62,
+      "end": 18.24,
       "speaker_id": "S0",
-      "text": "Our next question comes from Brent Thielman with D.A. Davidson."
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "to 24.5%.",
+      "confidence": 0.814
     },
     {
-      "speaker_id": "S5",
-      "text": "What is your outlook for data center and industrial project demand?"
+      "start": 18.49,
+      "end": 25.12,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Owner direct revenue reached 62% of total revenue, generating free cash flow of $14.1",
+      "confidence": 0.814
     },
     {
-      "speaker_id": "S1",
-      "text": "Demand from mission-critical facilities remains very healthy across our primary geographies."
+      "start": 25.12,
+      "end": 25.38,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "million.",
+      "confidence": 0.814
+    },
+    {
+      "start": 26.3,
+      "end": 28.82,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "We will now open the line for analyst questions.",
+      "confidence": 0.814
+    },
+    {
+      "start": 29.82,
+      "end": 33.72,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "First question comes from Rob Brown with Lake Street Capital Markets.",
+      "confidence": 0.87
+    },
+    {
+      "start": 34.86,
+      "end": 39.78,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Mike, could you provide more detail on owner direct revenue growth and customer retention?",
+      "confidence": 0.87
+    },
+    {
+      "start": 40.82,
+      "end": 46.86,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Owner direct relationships expanded to 62% of total revenue, driving higher gross margins.",
+      "confidence": 0.87
+    },
+    {
+      "start": 47.96,
+      "end": 51.36,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Our next question comes from Gary Sweeney with Roth MKM.",
+      "confidence": 0.87
+    },
+    {
+      "start": 52.36,
+      "end": 56.9,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "How does the acquisition pipeline look for expanding specialized mechanical services?",
+      "confidence": 0.87
+    },
+    {
+      "start": 57.72,
+      "end": 62.56,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "We continue to evaluate a creative tuck-in acquisitions that enhance our recurring maintenance",
+      "confidence": 0.824
+    },
+    {
+      "start": 62.56,
+      "end": 63.14,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "profile.",
+      "confidence": 0.824
+    },
+    {
+      "start": 64.24,
+      "end": 67.32,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Our next question comes from Brent Theelman with DA Davidson.",
+      "confidence": 0.824
+    },
+    {
+      "start": 68.56,
+      "end": 71.94,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "What is your outlook for data center and industrial project demand?",
+      "confidence": 0.824
+    },
+    {
+      "start": 73.2,
+      "end": 77.74,
+      "speaker_id": "S0",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "from mission-critical facilities remains very healthy across our primary geographies.",
+      "confidence": 0.824
     }
   ]
 }

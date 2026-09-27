@@ -1,72 +1,852 @@
 {
   "ticker": "SHOP",
-  "fiscal_period": "Q3 FY2026",
-  "reference_text": "Good morning and welcome to Shopify's earnings conference call. Joining us are Harley Finkelstein, President, and Jeff Hoffmeister, CFO. Revenue for the quarter reached 2.05 billion, growing 21 percent year-over-year. Free cash flow margin was 16 percent. Gross Merchandise Volume expanded to 67.2 billion, up 22 percent, driven by merchant additions and same-store sales growth. Operator, please open the lines for questions. Our first question comes from Ken Wong with Oppenheimer. Harley, can you discuss enterprise merchant adoption and Shopify Plus momentum? Enterprise brands are migrating to Shopify at an unprecedented rate, leveraging our commerce operating system. Our next question comes from Paul Treiber with RBC Capital Markets. Jeff, how should we think about international expansion and merchant solution attach rates? International GMV grew 30 percent as cross-border tools like Shopify Markets gain adoption. Our next question comes from Colin Sebastian with Baird. Harley, how are merchants utilizing Shopify Magic and AI sidekick tools? Merchants using AI tools are saving hours each week on catalog generation and customer support.",
-  "intro_text": "Good morning and welcome to Shopify's earnings conference call. Joining us are Harley Finkelstein, President, and Jeff Hoffmeister, CFO. Revenue for the quarter reached $2.05 billion, growing 21% year-over-year. Free cash flow margin was 16%.",
-  "remarks_text": "Gross Merchandise Volume expanded to $67.2 billion, up 22%, driven by merchant additions and same-store sales growth.",
-  "qa_text": "Operator, please open the lines for questions. Our first question comes from Ken Wong with Oppenheimer. Harley, can you discuss enterprise merchant adoption and Shopify Plus momentum? Enterprise brands are migrating to Shopify at an unprecedented rate, leveraging our commerce operating system. Our next question comes from Paul Treiber with RBC Capital Markets. Jeff, how should we think about international expansion and merchant solution attach rates? International GMV grew 30% as cross-border tools like Shopify Markets gain adoption. Our next question comes from Colin Sebastian with Baird. Harley, how are merchants utilizing Shopify Magic and AI sidekick tools? Merchants using AI tools are saving hours each week on catalog generation and customer support.",
+  "fiscal_period": "Q3 FY2024",
+  "reference_text": "Good morning, and thank you for joining Shopify's third quarter 2024 conference call. I am Kerry Gillard, Director of Investor Relations, and joining us today are Harley Finkelstein, Shopify's President, and Jeff Hofmeister, our CFO. After their prepared remarks, we will open it up for your questions. We will make forward-looking statements on our call today that are based on assumptions and therefore subject to risks and uncertainties that could cause actual results to differ materially from those projected. Undo reliance should not be placed on these forward-looking statements. We undertake no obligation to update or revise these statements, except as required by law. You can read about these assumptions, risks, and uncertainties in our press release this morning, as well as in our filings with the U.S. and Canadian regulators. We will also speak to adjusted financial measures, which are non-GAAP and not a substitute for GAAP financial measures. Reconciliations between the two are in the tables at the end of our press release. And finally, we report in U.S. dollars, so all amounts discussed today are in U.S. dollars unless otherwise indicated. With that, I will turn the call over to Harley. Thanks, Kerry, and thank you all for joining us today. As we say each quarter, Shopify is building for the long term. Our consistent results, quarter after quarter, confirm that our strategy is working incredibly well. Q3 was another amazing quarter across the board. GMD was up 24%, marking our fifth consecutive quarter where GMD growth was greater than 20%. Revenue was up 26%, operating income more than doubled from last year, and free cash flow margin expanded to 19%. These are not just numbers. They reinforce that Shopify is an industry leader, delivering on both growth and margins, all while simultaneously creating and leaning into opportunities that bolster our growth. So before we dive in, let me start by saying this. If you walk away from this call with anything, it should be these three things. One, entrepreneurship and commerce are growing, and Shopify is capturing an increasing share of this vast and expanding market. Two, Shopify is increasingly the go-to platform of choice, not just for entrepreneurship, but for all of commerce. We are well positioned for extensive growth across different merchant segments, size, geographies, channels, and products. And three, as our merchants do better, Shopify does better. Our business model prioritizes merchant first, fueled by a high-velocity product innovation engine that makes the hard things easy and everything else possible. Now let's quickly dive into some of the key accomplishments in the quarter. Starting off with product. We build outstanding tools that work seamlessly together, creating a platform that is packed with value and, quite frankly, just works really, really well. This is why we invest so heavily in building the most integrated platform on the planet. And it's also why merchants come to Shopify and why they don't leave Shopify. We are shipping products and enhancements on a literal daily basis. So rather than give you a laundry list, I'd like to spend a few minutes now walking through some of the highlights from the quarter. First, let's talk about enhancing merchant automation. Our new features are making it easier for merchants to run their businesses more efficiently. Because let's be honest, nobody starts a business with the goal of focusing their time on sales tax compliance or inventory management. These foundational tools make the nitty-gritty stuff automatic so merchants can focus on the reason they started a business in the first place, for the products they are selling. Let's start with Shopify Flow, a low-code workflow automation app that empowers merchants to build custom automations that help them run their businesses more efficiently. This includes a new automation trigger based on the merchant's custom data and newly completed admin API connector that provides an additional 304 new actions to use in their automations. And as a result, Flow has become a much more powerful tool, enabling merchants to update products, process customer form submissions, edit orders, and so much more. And within Shopify Inbox, this product now uses AI to suggest replies based on each merchant's unique store information, making it super easy for merchants to respond quickly and accurately to customer inquiries. In fact, on average, merchants are using the suggested replies for about half of their responses, edited or not, showing just how effective this feature has become. Replying can quickly boost conversion rates, which means more sales for our merchants, and in turn, for Shopify. And finally, within Shopify Tax, we started rolling out automated filing to eligible merchants. can now automate their preparation, filing, and remittance of their sales tax returns from within the Shopify admin. This saves time and simplifies one of the most complex parts of sales tax compliance. And, as we know, taxes do not get simpler just because you cross borders. That's exactly why, in our focus to make Shopify the best way to sell globally across all channels, we saw a clear opportunity to tackle the complexities of cross-border commerce head-on. And in Q3, we successfully extended our Shopify tax product to merchants in the UK and the entire EU. We've automated value-added tax calculations to make them more accurate. We introduced automated VAT invoices for easy compliance in cross-border commerce. And we've developed tax liability insights that track regional and national compliance. All of this ensures our merchants can focus on growing their business. Another product that continues to gain traction by helping our merchants sell globally is Managed Markets, which allows merchants to easily enter new countries and grow everywhere. For our merchants, it's proving to drive some pretty incredible results. In fact, EY recently analyzed the performance of a sample of our merchants after they adopted Managed Markets and found that 83% increased the number of countries they sold to, and of those merchants, their international sales growth after adoption was on average higher than 40%. Meanwhile, if you look at the top 100 merchants, they saw an increase of greater than 200%, which is truly incredible. Managed Markets is another example of a product that is yielding incredible results for our merchants globally. Moving to offline retail. In October, we expanded Tap2Pay across Shopify Point of Sale. Tap2Pay is now available in multiple countries, including Australia, Germany, and the Netherlands and the UK, as well as to merchants using Android devices. By utilizing the NFC chips and devices, Tap2Pay processes payments from contactless cards and digital wallets like Apple Pay via Shopify payments. So why does this actually matter? Because it enables our merchants to create a truly delightful in-person experience for consumers, all powered by Shopify. For merchants using the Point of Sale app, we made significant functionality and usability improvements. Notably, we introduced offline payment support, which ensures uninterrupted sales even during network disruptions. We also focused on personalizing the customer experience by enabling access to customer metafields and supporting Shopify bundles, which has seen encouraging adoption rates, especially among mid-market merchants. We also improved operational efficiency and optimized the Point of Sale app for tablet view, introducing a split-screen search view. In retail, every second in detail counts to drive sales, build customer affinity, and foster brand loyalty. And these updates, along with others like accepting unverified returns and expanding UI extension capabilities, reinforce our commitment to making in-person commerce easy and fast. At Shopify, we do more than just help merchants sell. We also ensure they have the financial tools needed to thrive. Recently, we launched our financial services suite, Shopify Finance, which is a comprehensive package that includes products like capital, balance, and bill pay, all integrated through the admin for quicker access. Each component of this suite is designed to offer unmatched financial control and efficiency, with features like higher APY and next-day payouts in balance for Shopify Plus merchants, and more flexible payment options and credit to better manage cash flow. Now, within Shopify payments, penetration grew to 62%, and Shop Pay facilitated $17 billion in GMV, which was up 42%, highlighting the power and strength of our payment product, which also unlocks a key gateway for merchants to leverage our other features and products only available when on Shopify payments, like the Shop app. And speaking of the Shop app, this quarter, the Shop app launched a new merchant-focused home feed, showcasing the diversity and the richness of brands on Shop. The experience uses new machine learning models to help buyers keep up with the brands they love and discover new brands based on their preferences. These changes have already led to early success, with an 18% increase in sessions where a buyer engaged with a recommendation. These enhancements, combined with our deep and seamless integration, help strive higher GMV and GPV and strengthen our overall ecosystem. On the topic of machine learning, I want to give a shout-out to Mikhail Parrikin, our new incredible CTO, who recently joined the Shopify team. Mikhail spent over a decade at Microsoft, where he spearheaded AI enhancements and products like Co-Pilot. He also served as CTO at Yandex, where he developed multiple search engines and cloud services. Mikhail brings a wealth of experience in AI and search technologies, and in just over two months since he joined us, he's already made a significant impact, enhancing our products and pushing us forward. I'm convinced that with Mikhail on board, Shopify is only going to get stronger. Building on that note of strengthening our bench, let's talk about our ecosystem. We are committed to creating an ecosystem where everybody thrives. Our partners, our merchants, and of course, Shopify itself. This collaborative success is by design, and as a result, we have earned the reputation as the preferred partner in the commerce world. This quarter, we became the first commerce integration partner for Roblox, which has on average over 88 million daily active users. We integrated with YouTube's Shopping Affiliate program, and we diversified our payments product offering through an expanded partnership with PayPal. We are increasingly close to a world where commerce flows seamlessly everywhere.",
+  "intro_text": "Good morning, and thank you for joining Shopify's third quarter 2024 conference call. I am Kerry Gillard, Director of Investor Relations, and joining us today are Harley Finkelstein, Shopify's President, and Jeff Hofmeister, our CFO. After their prepared remarks, we will open it up for your questions.",
+  "remarks_text": "We will make forward-looking statements on our call today that are based on assumptions and therefore subject to risks and uncertainties that could cause actual results to differ materially from those projected. Undo reliance should not be placed on these forward-looking statements. We undertake no obligation to update or revise these statements, except as required by law. You can read about these assumptions, risks, and uncertainties in our press release this morning, as well as in our filings with the U.S. and Canadian regulators. We will also speak to adjusted financial measures, which are non-GAAP and not a substitute for GAAP financial measures. Reconciliations between the two are in the tables at the end of our press release. And finally, we report in U.S. dollars, so all amounts discussed today are in U.S. dollars unless otherwise indicated. With that, I will turn the call over to Harley. Thanks, Kerry, and thank you all for joining us today. As we say each quarter, Shopify is building for the long term. Our consistent results, quarter after quarter, confirm that our strategy is working incredibly well. Q3 was another amazing quarter across the board. GMD was up 24%, marking our fifth consecutive quarter where GMD growth was greater than 20%. Revenue was up 26%, operating income more than doubled from last year, and free cash flow margin expanded to 19%. These are not just numbers. They reinforce that Shopify is an industry leader, delivering on both growth and margins, all while simultaneously creating and leaning into opportunities that bolster our growth. So before we dive in, let me start by saying this. If you walk away from this call with anything, it should be these three things. One, entrepreneurship and commerce are growing, and Shopify is capturing an increasing share of this vast and expanding market. Two, Shopify is increasingly the go-to platform of choice, not just for entrepreneurship, but for all of commerce. We are well positioned for extensive growth across different merchant segments, size, geographies, channels, and products. And three, as our merchants do better, Shopify does better. Our business model prioritizes merchant first, fueled by a high-velocity product innovation engine that makes the hard things easy and everything else possible. Now let's quickly dive into some of the key accomplishments in the quarter. Starting off with product. We build outstanding tools that work seamlessly together, creating a platform that is packed with value and, quite frankly, just works really, really well. This is why we invest so heavily in building the most integrated platform on the planet. And it's also why merchants come to Shopify and why they don't leave Shopify. We are shipping products and enhancements on a literal daily basis. So rather than give you a laundry list, I'd like to spend a few minutes now walking through some of the highlights from the quarter. First, let's talk about enhancing merchant automation. Our new features are making it easier for merchants to run their businesses more efficiently. Because let's be honest, nobody starts a business with the goal of focusing their time on sales tax compliance or inventory management. These foundational tools make the nitty-gritty stuff automatic so merchants can focus on the reason they started a business in the first place, for the products they are selling. Let's start with Shopify Flow, a low-code workflow automation app that empowers merchants to build custom automations that help them run their businesses more efficiently. This includes a new automation trigger based on the merchant's custom data and newly completed admin API connector that provides an additional 304 new actions to use in their automations. And as a result, Flow has become a much more powerful tool, enabling merchants to update products, process customer form submissions, edit orders, and so much more. And within Shopify Inbox, this product now uses AI to suggest replies based on each merchant's unique store information, making it super easy for merchants to respond quickly and accurately to customer inquiries. In fact, on average, merchants are using the suggested replies for about half of their responses, edited or not, showing just how effective this feature has become. Replying can quickly boost conversion rates, which means more sales for our merchants, and in turn, for Shopify. And finally, within Shopify Tax, we started rolling out automated filing to eligible merchants. can now automate their preparation, filing, and remittance of their sales tax returns from within the Shopify admin. This saves time and simplifies one of the most complex parts of sales tax compliance. And, as we know, taxes do not get simpler just because you cross borders. That's exactly why, in our focus to make Shopify the best way to sell globally across all channels, we saw a clear opportunity to tackle the complexities of cross-border commerce head-on. And in Q3, we successfully extended our Shopify tax product to merchants in the UK and the entire EU. We've automated value-added tax calculations to make them more accurate. We introduced automated VAT invoices for easy compliance in cross-border commerce. And we've developed tax liability insights that track regional and national compliance. All of this ensures our merchants can focus on growing their business. Another product that continues to gain traction by helping our merchants sell globally is Managed Markets, which allows merchants to easily enter new countries and grow everywhere. For our merchants, it's proving to drive some pretty incredible results. In fact, EY recently analyzed the performance of a sample of our merchants after they adopted Managed Markets and found that 83% increased the number of countries they sold to, and of those merchants, their international sales growth after adoption was on average higher than 40%. Meanwhile, if you look at the top 100 merchants, they saw an increase of greater than 200%, which is truly incredible. Managed Markets is another example of a product that is yielding incredible results for our merchants globally. Moving to offline retail. In October, we expanded Tap2Pay across Shopify Point of Sale. Tap2Pay is now available in multiple countries, including Australia, Germany, and the Netherlands and the UK, as well as to merchants using Android devices. By utilizing the NFC chips and devices, Tap2Pay processes payments from contactless cards and digital wallets like Apple Pay via Shopify payments. So why does this actually matter? Because it enables our merchants to create a truly delightful in-person experience for consumers, all powered by Shopify. For merchants using the Point of Sale app, we made significant functionality and usability improvements. Notably, we introduced offline payment support, which ensures uninterrupted sales even during network disruptions. We also focused on personalizing the customer experience by enabling access to customer metafields and supporting Shopify bundles, which has seen encouraging adoption rates, especially among mid-market merchants. We also improved operational efficiency and optimized the Point of Sale app for tablet view, introducing a split-screen search view. In retail, every second in detail counts to drive sales, build customer affinity, and foster brand loyalty. And these updates, along with others like accepting unverified returns and expanding UI extension capabilities, reinforce our commitment to making in-person commerce easy and fast. At Shopify, we do more than just help merchants sell. We also ensure they have the financial tools needed to thrive. Recently, we launched our financial services suite, Shopify Finance, which is a comprehensive package that includes products like capital, balance, and bill pay, all integrated through the admin for quicker access. Each component of this suite is designed to offer unmatched financial control and efficiency, with features like higher APY and next-day payouts in balance for Shopify Plus merchants, and more flexible payment options and credit to better manage cash flow. Now, within Shopify payments, penetration grew to 62%, and Shop Pay facilitated $17 billion in GMV, which was up 42%, highlighting the power and strength of our payment product, which also unlocks a key gateway for merchants to leverage our other features and products only available when on Shopify payments, like the Shop app. And speaking of the Shop app, this quarter, the Shop app launched a new merchant-focused home feed, showcasing the diversity and the richness of brands on Shop. The experience uses new machine learning models to help buyers keep up with the brands they love and discover new brands based on their preferences. These changes have already led to early success, with an 18% increase in sessions where a buyer engaged with a recommendation. These enhancements, combined with our deep and seamless integration, help strive higher GMV and GPV and strengthen our overall ecosystem. On the topic of machine learning, I want to give a shout-out to Mikhail Parrikin, our new incredible CTO, who recently joined the Shopify team. Mikhail spent over a decade at Microsoft, where he spearheaded AI enhancements and products like Co-Pilot. He also served as CTO at Yandex, where he developed multiple search engines and cloud services. Mikhail brings a wealth of experience in AI and search technologies, and in just over two months since he joined us, he's already made a significant impact, enhancing our products and pushing us forward. I'm convinced that with Mikhail on board, Shopify is only going to get stronger. Building on that note of strengthening our bench, let's talk about our ecosystem. We are committed to creating an ecosystem where everybody thrives. Our partners, our merchants, and of course, Shopify itself. This collaborative success is by design, and as a result, we have earned the reputation as the preferred partner in the commerce world. This quarter, we became the first commerce integration partner for Roblox, which has on average over 88 million daily active users. We integrated with YouTube's Shopping Affiliate program, and we diversified our payments product offering through an expanded partnership with PayPal. We are increasingly close to a world where commerce flows seamlessly everywhere.",
+  "qa_text": "",
   "speakers": [
-    "Conference Operator",
-    "Jeff Hoffmeister",
-    "Speaker S2",
-    "Conference Operator",
-    "Ken Wong",
-    "Jeff Hoffmeister",
-    "Conference Operator",
-    "Paul Treiber",
-    "Speaker S2",
-    "Conference Operator",
-    "Colin Sebastian",
-    "Jeff Hoffmeister"
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Kerry Gillard",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1"
   ],
   "segments": [
     {
+      "start": 0.78,
+      "end": 12.66,
       "speaker_id": "S0",
-      "text": "Good morning and welcome to Shopify's earnings conference call. Joining us are Harley Finkelstein, President, and Jeff Hoffmeister, CFO."
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Good morning, and thank you for joining Shopify's third quarter 2024 conference call. I am Kerry Gillard, Director of Investor Relations, and joining us today are Harley Finkelstein, Shopify's President, and Jeff Hofmeister, our CFO.",
+      "confidence": 0.879
     },
     {
+      "start": 13.32,
+      "end": 15.84,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "After their prepared remarks, we will open it up for your questions.",
+      "confidence": 0.879
+    },
+    {
+      "start": 16.54,
+      "end": 25.38,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "We will make forward-looking statements on our call today that are based on assumptions and therefore subject to risks and uncertainties that could cause actual results to differ materially from those projected.",
+      "confidence": 0.879
+    },
+    {
+      "start": 25.94,
+      "end": 33.62,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Undo reliance should not be placed on these forward-looking statements. We undertake no obligation to update or revise these statements, except as required by law.",
+      "confidence": 0.947
+    },
+    {
+      "start": 34.1,
+      "end": 40.18,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "You can read about these assumptions, risks, and uncertainties in our press release this morning, as well as in our filings with the U.S. and Canadian regulators.",
+      "confidence": 0.947
+    },
+    {
+      "start": 40.9,
+      "end": 46.32,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "We will also speak to adjusted financial measures, which are non-GAAP and not a substitute for GAAP financial measures.",
+      "confidence": 0.947
+    },
+    {
+      "start": 47.16,
+      "end": 50.02,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Reconciliations between the two are in the tables at the end of our press release.",
+      "confidence": 0.947
+    },
+    {
+      "start": 50.02,
+      "end": 58.38,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "And finally, we report in U.S. dollars, so all amounts discussed today are in U.S. dollars unless otherwise indicated. With that, I will turn the call over to Harley.",
+      "confidence": 0.945
+    },
+    {
+      "start": 59.04,
+      "end": 61.06,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Thanks, Kerry, and thank you all for joining us today.",
+      "confidence": 0.945
+    },
+    {
+      "start": 61.68,
+      "end": 65.14,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "As we say each quarter, Shopify is building for the long term.",
+      "confidence": 0.945
+    },
+    {
+      "start": 65.74,
+      "end": 70.96,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Our consistent results, quarter after quarter, confirm that our strategy is working incredibly well.",
+      "confidence": 0.945
+    },
+    {
+      "start": 71.8,
+      "end": 74.08,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Q3 was another amazing quarter across the board.",
+      "confidence": 0.945
+    },
+    {
+      "start": 74.08,
+      "end": 80.48,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "GMD was up 24%, marking our fifth consecutive quarter where GMD growth was greater than 20%.",
+      "confidence": 0.932
+    },
+    {
+      "start": 80.48,
+      "end": 88.8,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Revenue was up 26%, operating income more than doubled from last year, and free cash flow margin expanded to 19%.",
+      "confidence": 0.932
+    },
+    {
+      "start": 88.8,
+      "end": 100.5,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "These are not just numbers. They reinforce that Shopify is an industry leader, delivering on both growth and margins, all while simultaneously creating and leaning into opportunities that bolster our growth.",
+      "confidence": 0.932
+    },
+    {
+      "start": 100.5,
+      "end": 107.48,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "So before we dive in, let me start by saying this. If you walk away from this call with anything, it should be these three things.",
+      "confidence": 0.937
+    },
+    {
+      "start": 108.36,
+      "end": 115.64,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "One, entrepreneurship and commerce are growing, and Shopify is capturing an increasing share of this vast and expanding market.",
+      "confidence": 0.937
+    },
+    {
+      "start": 116.74,
+      "end": 123.06,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Two, Shopify is increasingly the go-to platform of choice, not just for entrepreneurship, but for all of commerce.",
+      "confidence": 0.937
+    },
+    {
+      "start": 123.06,
+      "end": 130.44,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "We are well positioned for extensive growth across different merchant segments, size, geographies, channels, and products.",
+      "confidence": 0.919
+    },
+    {
+      "start": 131.72,
+      "end": 134.96,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "And three, as our merchants do better, Shopify does better.",
+      "confidence": 0.919
+    },
+    {
+      "start": 135.36,
+      "end": 143.22,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Our business model prioritizes merchant first, fueled by a high-velocity product innovation engine that makes the hard things easy and everything else possible.",
+      "confidence": 0.919
+    },
+    {
+      "start": 144.58,
+      "end": 147.38,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Now let's quickly dive into some of the key accomplishments in the quarter.",
+      "confidence": 0.919
+    },
+    {
+      "start": 147.38,
+      "end": 157.62,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Starting off with product. We build outstanding tools that work seamlessly together, creating a platform that is packed with value and, quite frankly, just works really, really well.",
+      "confidence": 0.937
+    },
+    {
+      "start": 158.0,
+      "end": 162.08,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "This is why we invest so heavily in building the most integrated platform on the planet.",
+      "confidence": 0.937
+    },
+    {
+      "start": 162.5,
+      "end": 166.24,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "And it's also why merchants come to Shopify and why they don't leave Shopify.",
+      "confidence": 0.937
+    },
+    {
+      "start": 167.48,
+      "end": 170.84,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "We are shipping products and enhancements on a literal daily basis.",
+      "confidence": 0.937
+    },
+    {
+      "start": 171.24,
+      "end": 175.98,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "So rather than give you a laundry list, I'd like to spend a few minutes now walking through some of the highlights from the quarter.",
+      "confidence": 0.937
+    },
+    {
+      "start": 175.98,
+      "end": 178.86,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "First, let's talk about enhancing merchant automation.",
+      "confidence": 0.951
+    },
+    {
+      "start": 179.54,
+      "end": 183.36,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Our new features are making it easier for merchants to run their businesses more efficiently.",
+      "confidence": 0.951
+    },
+    {
+      "start": 184.06,
+      "end": 189.98,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Because let's be honest, nobody starts a business with the goal of focusing their time on sales tax compliance or inventory management.",
+      "confidence": 0.951
+    },
+    {
+      "start": 190.58,
+      "end": 198.76,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "These foundational tools make the nitty-gritty stuff automatic so merchants can focus on the reason they started a business in the first place, for the products they are selling.",
+      "confidence": 0.951
+    },
+    {
+      "start": 198.76,
+      "end": 207.84,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Let's start with Shopify Flow, a low-code workflow automation app that empowers merchants to build custom automations that help them run their businesses more efficiently.",
+      "confidence": 0.938
+    },
+    {
+      "start": 208.5,
+      "end": 218.62,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "This includes a new automation trigger based on the merchant's custom data and newly completed admin API connector that provides an additional 304 new actions to use in their automations.",
+      "confidence": 0.938
+    },
+    {
+      "start": 219.16,
+      "end": 227.44,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "And as a result, Flow has become a much more powerful tool, enabling merchants to update products, process customer form submissions, edit orders, and so much more.",
+      "confidence": 0.938
+    },
+    {
+      "start": 227.44,
+      "end": 239.9,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "And within Shopify Inbox, this product now uses AI to suggest replies based on each merchant's unique store information, making it super easy for merchants to respond quickly and accurately to customer inquiries.",
+      "confidence": 0.948
+    },
+    {
+      "start": 240.52,
+      "end": 249.04,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "In fact, on average, merchants are using the suggested replies for about half of their responses, edited or not, showing just how effective this feature has become.",
+      "confidence": 0.948
+    },
+    {
+      "start": 249.92,
+      "end": 255.08,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Replying can quickly boost conversion rates, which means more sales for our merchants, and in turn, for Shopify.",
+      "confidence": 0.948
+    },
+    {
+      "start": 255.92,
+      "end": 261.34,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "And finally, within Shopify Tax, we started rolling out automated filing to eligible merchants.",
+      "confidence": 0.951
+    },
+    {
+      "start": 262.06,
+      "end": 268.2,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "can now automate their preparation, filing, and remittance of their sales tax returns from within the Shopify admin.",
+      "confidence": 0.951
+    },
+    {
+      "start": 268.68,
+      "end": 273.2,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "This saves time and simplifies one of the most complex parts of sales tax compliance.",
+      "confidence": 0.951
+    },
+    {
+      "start": 274.72,
+      "end": 278.68,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "And, as we know, taxes do not get simpler just because you cross borders.",
+      "confidence": 0.951
+    },
+    {
+      "start": 278.68,
+      "end": 288.74,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "That's exactly why, in our focus to make Shopify the best way to sell globally across all channels, we saw a clear opportunity to tackle the complexities of cross-border commerce head-on.",
+      "confidence": 0.942
+    },
+    {
+      "start": 289.34,
+      "end": 295.6,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "And in Q3, we successfully extended our Shopify tax product to merchants in the UK and the entire EU.",
+      "confidence": 0.942
+    },
+    {
+      "start": 296.0,
+      "end": 299.08,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "We've automated value-added tax calculations to make them more accurate.",
+      "confidence": 0.942
+    },
+    {
+      "start": 299.46,
+      "end": 303.7,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "We introduced automated VAT invoices for easy compliance in cross-border commerce.",
+      "confidence": 0.942
+    },
+    {
+      "start": 303.7,
+      "end": 308.76,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "And we've developed tax liability insights that track regional and national compliance.",
+      "confidence": 0.951
+    },
+    {
+      "start": 309.36,
+      "end": 312.98,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "All of this ensures our merchants can focus on growing their business.",
+      "confidence": 0.951
+    },
+    {
+      "start": 314.52,
+      "end": 318.82,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Another product that continues to gain traction by helping our merchants sell globally is Managed Markets,",
+      "confidence": 0.951
+    },
+    {
+      "start": 319.26,
+      "end": 323.0,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "which allows merchants to easily enter new countries and grow everywhere.",
+      "confidence": 0.951
+    },
+    {
+      "start": 323.56,
+      "end": 327.04,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "For our merchants, it's proving to drive some pretty incredible results.",
+      "confidence": 0.951
+    },
+    {
+      "start": 327.04,
+      "end": 333.36,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "In fact, EY recently analyzed the performance of a sample of our merchants after they adopted Managed Markets",
+      "confidence": 0.936
+    },
+    {
+      "start": 333.36,
+      "end": 344.46,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "and found that 83% increased the number of countries they sold to, and of those merchants, their international sales growth after adoption was on average higher than 40%.",
+      "confidence": 0.936
+    },
+    {
+      "start": 344.46,
+      "end": 351.1,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Meanwhile, if you look at the top 100 merchants, they saw an increase of greater than 200%, which is truly incredible.",
+      "confidence": 0.936
+    },
+    {
+      "start": 351.1,
+      "end": 357.28,
+      "speaker_id": "S0",
+      "speaker_name": "Kerry Gillard",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Managed Markets is another example of a product that is yielding incredible results for our merchants globally.",
+      "confidence": 0.906
+    },
+    {
+      "start": 360.15,
+      "end": 361.13,
       "speaker_id": "S1",
-      "text": "Revenue for the quarter reached $2.05 billion, growing 21% year-over-year. Free cash flow margin was 16%."
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "Moving to offline retail.",
+      "confidence": 0.906
     },
     {
-      "speaker_id": "S2",
-      "text": "Gross Merchandise Volume expanded to $67.2 billion, up 22%, driven by merchant additions and same-store sales growth."
-    },
-    {
-      "speaker_id": "S0",
-      "text": "Operator, please open the lines for questions. Our first question comes from Ken Wong with Oppenheimer."
-    },
-    {
-      "speaker_id": "S3",
-      "text": "Harley, can you discuss enterprise merchant adoption and Shopify Plus momentum?"
-    },
-    {
+      "start": 361.71,
+      "end": 364.95,
       "speaker_id": "S1",
-      "text": "Enterprise brands are migrating to Shopify at an unprecedented rate, leveraging our commerce operating system."
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "In October, we expanded Tap2Pay across Shopify Point of Sale.",
+      "confidence": 0.906
     },
     {
-      "speaker_id": "S0",
-      "text": "Our next question comes from Paul Treiber with RBC Capital Markets."
-    },
-    {
-      "speaker_id": "S4",
-      "text": "Jeff, how should we think about international expansion and merchant solution attach rates?"
-    },
-    {
-      "speaker_id": "S2",
-      "text": "International GMV grew 30% as cross-border tools like Shopify Markets gain adoption."
-    },
-    {
-      "speaker_id": "S0",
-      "text": "Our next question comes from Colin Sebastian with Baird."
-    },
-    {
-      "speaker_id": "S5",
-      "text": "Harley, how are merchants utilizing Shopify Magic and AI sidekick tools?"
-    },
-    {
+      "start": 365.71,
+      "end": 373.05,
       "speaker_id": "S1",
-      "text": "Merchants using AI tools are saving hours each week on catalog generation and customer support."
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "Tap2Pay is now available in multiple countries, including Australia, Germany, and the Netherlands and the UK, as well as to merchants using Android devices.",
+      "confidence": 0.906
+    },
+    {
+      "start": 373.05,
+      "end": 382.73,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "By utilizing the NFC chips and devices, Tap2Pay processes payments from contactless cards and digital wallets like Apple Pay via Shopify payments.",
+      "confidence": 0.935
+    },
+    {
+      "start": 383.13,
+      "end": 391.47,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "So why does this actually matter? Because it enables our merchants to create a truly delightful in-person experience for consumers, all powered by Shopify.",
+      "confidence": 0.935
+    },
+    {
+      "start": 392.21,
+      "end": 397.15,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "For merchants using the Point of Sale app, we made significant functionality and usability improvements.",
+      "confidence": 0.935
+    },
+    {
+      "start": 397.15,
+      "end": 403.97,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "Notably, we introduced offline payment support, which ensures uninterrupted sales even during network disruptions.",
+      "confidence": 0.906
+    },
+    {
+      "start": 404.61,
+      "end": 415.69,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "We also focused on personalizing the customer experience by enabling access to customer metafields and supporting Shopify bundles, which has seen encouraging adoption rates, especially among mid-market merchants.",
+      "confidence": 0.906
+    },
+    {
+      "start": 416.21,
+      "end": 422.35,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "We also improved operational efficiency and optimized the Point of Sale app for tablet view, introducing a split-screen search view.",
+      "confidence": 0.906
+    },
+    {
+      "start": 422.35,
+      "end": 428.85,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "In retail, every second in detail counts to drive sales, build customer affinity, and foster brand loyalty.",
+      "confidence": 0.93
+    },
+    {
+      "start": 429.35,
+      "end": 439.41,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "And these updates, along with others like accepting unverified returns and expanding UI extension capabilities, reinforce our commitment to making in-person commerce easy and fast.",
+      "confidence": 0.93
+    },
+    {
+      "start": 440.37,
+      "end": 445.79,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "At Shopify, we do more than just help merchants sell. We also ensure they have the financial tools needed to thrive.",
+      "confidence": 0.93
+    },
+    {
+      "start": 446.5,
+      "end": 457.95,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "Recently, we launched our financial services suite, Shopify Finance, which is a comprehensive package that includes products like capital, balance, and bill pay, all integrated through the admin for quicker access.",
+      "confidence": 0.931
+    },
+    {
+      "start": 458.79,
+      "end": 472.99,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "Each component of this suite is designed to offer unmatched financial control and efficiency, with features like higher APY and next-day payouts in balance for Shopify Plus merchants, and more flexible payment options and credit to better manage cash flow.",
+      "confidence": 0.931
+    },
+    {
+      "start": 472.99,
+      "end": 493.81,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "Now, within Shopify payments, penetration grew to 62%, and Shop Pay facilitated $17 billion in GMV, which was up 42%, highlighting the power and strength of our payment product, which also unlocks a key gateway for merchants to leverage our other features and products only available when on Shopify payments, like the Shop app.",
+      "confidence": 0.889
+    },
+    {
+      "start": 493.81,
+      "end": 503.51,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "And speaking of the Shop app, this quarter, the Shop app launched a new merchant-focused home feed, showcasing the diversity and the richness of brands on Shop.",
+      "confidence": 0.925
+    },
+    {
+      "start": 504.11,
+      "end": 511.59,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "The experience uses new machine learning models to help buyers keep up with the brands they love and discover new brands based on their preferences.",
+      "confidence": 0.925
+    },
+    {
+      "start": 512.57,
+      "end": 519.11,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "These changes have already led to early success, with an 18% increase in sessions where a buyer engaged with a recommendation.",
+      "confidence": 0.925
+    },
+    {
+      "start": 519.11,
+      "end": 527.43,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "These enhancements, combined with our deep and seamless integration, help strive higher GMV and GPV and strengthen our overall ecosystem.",
+      "confidence": 0.9
+    },
+    {
+      "start": 527.89,
+      "end": 534.33,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "On the topic of machine learning, I want to give a shout-out to Mikhail Parrikin, our new incredible CTO, who recently joined the Shopify team.",
+      "confidence": 0.9
+    },
+    {
+      "start": 535.19,
+      "end": 540.39,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "Mikhail spent over a decade at Microsoft, where he spearheaded AI enhancements and products like Co-Pilot.",
+      "confidence": 0.9
+    },
+    {
+      "start": 540.95,
+      "end": 545.63,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "He also served as CTO at Yandex, where he developed multiple search engines and cloud services.",
+      "confidence": 0.9
+    },
+    {
+      "start": 545.63,
+      "end": 555.83,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "Mikhail brings a wealth of experience in AI and search technologies, and in just over two months since he joined us, he's already made a significant impact, enhancing our products and pushing us forward.",
+      "confidence": 0.937
+    },
+    {
+      "start": 556.37,
+      "end": 559.89,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "I'm convinced that with Mikhail on board, Shopify is only going to get stronger.",
+      "confidence": 0.937
+    },
+    {
+      "start": 560.71,
+      "end": 563.89,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "Building on that note of strengthening our bench, let's talk about our ecosystem.",
+      "confidence": 0.937
+    },
+    {
+      "start": 564.85,
+      "end": 571.69,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "We are committed to creating an ecosystem where everybody thrives. Our partners, our merchants, and of course, Shopify itself.",
+      "confidence": 0.937
+    },
+    {
+      "start": 572.53,
+      "end": 580.15,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "This collaborative success is by design, and as a result, we have earned the reputation as the preferred partner in the commerce world.",
+      "confidence": 0.935
+    },
+    {
+      "start": 580.89,
+      "end": 587.49,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "This quarter, we became the first commerce integration partner for Roblox, which has on average over 88 million daily active users.",
+      "confidence": 0.935
+    },
+    {
+      "start": 587.97,
+      "end": 594.55,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "We integrated with YouTube's Shopping Affiliate program, and we diversified our payments product offering through an expanded partnership with PayPal.",
+      "confidence": 0.935
+    },
+    {
+      "start": 595.31,
+      "end": 599.53,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Executive",
+      "text": "We are increasingly close to a world where commerce flows seamlessly everywhere.",
+      "confidence": 0.935
     }
   ]
 }

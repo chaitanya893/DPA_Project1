@@ -7,133 +7,192 @@
   "sections": [
     {
       "type": "operator_intro",
+      "start": 0.0,
+      "end": 27.98,
       "segments": [
         {
           "start": 0.0,
-          "end": 9.57,
+          "end": 3.12,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "Welcome to Enbridge's quarterly earnings conference call. Speaking today are Greg Ebel, President and CEO, and Patrick Murray, CFO.",
-          "confidence": 0.94
+          "text": "Welcome to Enbridge\ufffds quarterly earnings conference call.",
+          "confidence": 0.852
         },
         {
-          "start": 9.57,
-          "end": 17.12,
-          "speaker_id": "S1",
-          "speaker_name": "Greg Ebel",
-          "speaker_role": "President & CEO",
-          "text": "Enbridge delivered solid results with adjusted EBITDA of $4.3 billion, supported by record Mainline throughput.",
-          "confidence": 0.94
+          "start": 4.18,
+          "end": 9.62,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Speaking today are Greg Ebel, President and CEO, and Patrick Murray, CFO.",
+          "confidence": 0.852
+        },
+        {
+          "start": 10.38,
+          "end": 17.02,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Enbridge delivered solid results with adjusted EBITDA of $4.3 billion, supported by record",
+          "confidence": 0.852
+        },
+        {
+          "start": 17.02,
+          "end": 17.88,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "mainline throughput.",
+          "confidence": 0.852
+        },
+        {
+          "start": 19.4,
+          "end": 24.48,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Distributable cash flow was $2.8 billion, keeping us fully on track to achieve our full",
+          "confidence": 0.852
+        },
+        {
+          "start": 24.48,
+          "end": 25.72,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "year financial guidance.",
+          "confidence": 0.852
+        },
+        {
+          "start": 26.72,
+          "end": 27.98,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We will now take questions.",
+          "confidence": 0.852
         }
       ]
     },
     {
       "type": "prepared_remarks",
-      "segments": [
-        {
-          "start": 17.12,
-          "end": 25.68,
-          "speaker_id": "S2",
-          "speaker_name": "Patrick Murray",
-          "speaker_role": "CFO",
-          "text": "Distributable cash flow was $2.8 billion, keeping us fully on track to achieve our full-year financial guidance.",
-          "confidence": 0.94
-        }
-      ]
+      "start": 0.0,
+      "end": 0.0,
+      "segments": []
     },
     {
       "type": "qa",
+      "start": 28.74,
+      "end": 83.54,
       "segments": [
         {
-          "start": 25.68,
-          "end": 33.74,
+          "start": 28.74,
+          "end": 33.08,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "We will now take questions. Our first question comes from Robert Kwan with RBC Capital Markets.",
-          "confidence": 0.94
+          "text": "Our first question comes from Robert Kwan with RBC Capital Markets.",
+          "confidence": 0.777
         },
         {
-          "start": 33.74,
-          "end": 40.29,
-          "speaker_id": "S3",
-          "speaker_name": "Robert Kwan",
-          "speaker_role": "Analyst, RBC Capital Markets",
+          "start": 34.22,
+          "end": 40.0,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
           "text": "Greg, could you comment on gas utility acquisitions integration and organic expansion capital?",
-          "confidence": 0.94
+          "confidence": 0.777
         },
         {
-          "start": 40.29,
-          "end": 46.84,
-          "speaker_id": "S1",
-          "speaker_name": "Greg Ebel",
-          "speaker_role": "President & CEO",
-          "text": "The gas distribution acquisitions are performing exceptionally well, providing stable regulated cash flows.",
-          "confidence": 0.94
-        },
-        {
-          "start": 46.84,
-          "end": 51.88,
+          "start": 41.0,
+          "end": 46.46,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "Our next question comes from Linda Ezergailis with TD Cowen.",
-          "confidence": 0.94
+          "text": "The gas distribution acquisitions are performing exceptionally well, providing stable regulated",
+          "confidence": 0.777
         },
         {
-          "start": 51.88,
-          "end": 59.43,
-          "speaker_id": "S4",
-          "speaker_name": "Linda Ezergailis",
-          "speaker_role": "Analyst, TD Cowen",
+          "start": 46.46,
+          "end": 47.22,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "cash flows.",
+          "confidence": 0.777
+        },
+        {
+          "start": 48.36,
+          "end": 51.72,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Linda Izergalas with TD Cowan.",
+          "confidence": 0.777
+        },
+        {
+          "start": 52.72,
+          "end": 59.1,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
           "text": "Patrick, how is debt leverage progressing toward your target range of 4.5 to 5.0 times?",
-          "confidence": 0.94
+          "confidence": 0.883
         },
         {
-          "start": 59.43,
-          "end": 65.98,
-          "speaker_id": "S2",
-          "speaker_name": "Patrick Murray",
-          "speaker_role": "CFO",
+          "start": 60.04,
+          "end": 65.14,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
           "text": "Our balance sheet remains in great shape, supported by predictable utility cash flows.",
-          "confidence": 0.94
+          "confidence": 0.883
         },
         {
-          "start": 65.98,
-          "end": 71.52,
+          "start": 66.22,
+          "end": 70.46,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
           "text": "Our next question comes from Robert Catellier with CIBC World Markets.",
-          "confidence": 0.94
+          "confidence": 0.883
         },
         {
-          "start": 71.52,
-          "end": 78.07,
-          "speaker_id": "S5",
-          "speaker_name": "Robert Catellier",
-          "speaker_role": "Analyst, CIBC World Markets",
+          "start": 71.62,
+          "end": 76.36,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
           "text": "Greg, what are the growth opportunities in offshore Gulf Coast crude export terminals?",
-          "confidence": 0.94
+          "confidence": 0.883
         },
         {
-          "start": 78.07,
-          "end": 84.6,
-          "speaker_id": "S1",
-          "speaker_name": "Greg Ebel",
-          "speaker_role": "President & CEO",
-          "text": "Our Ingleside terminal achieved record loadings, solidifying our competitive advantage in energy infrastructure.",
-          "confidence": 0.94
+          "start": 77.08,
+          "end": 82.92,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our Ingleside terminal achieved record loadings, solidifying our competitive advantage in energy",
+          "confidence": 0.798
+        },
+        {
+          "start": 82.92,
+          "end": 83.54,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "infrastructure.",
+          "confidence": 0.798
         }
       ]
     }
   ],
   "pipeline": {
-    "asr_model": "faster-whisper-v3-large",
-    "diarizer": "pyannote.audio-3.1",
+    "asr_model": "faster-whisper-small.en (CTranslate2 int8)",
+    "diarizer": "energy-vad-diarizer-v1",
     "version": "1.0.0",
-    "rtf": 0.0014,
-    "5min_target_sla": "MET"
+    "rtf": 0.1414,
+    "5min_target_sla": "EXCEEDED"
   }
 }

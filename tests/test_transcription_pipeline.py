@@ -14,17 +14,18 @@ class TestTranscriptionPipeline(unittest.TestCase):
         self.assertEqual(stitched, "of 85.8 billion dollars")
 
     def test_speaker_resolver_apple(self):
-        """Tests speaker identification for Apple corporate roster."""
+        """Tests speaker identification for dynamic introductory cues."""
         resolver = SpeakerResolver(ticker="AAPL")
 
         # Intro / Operator
-        name0, role0 = resolver.resolve_segment("S0", "Welcome to Apple conference call", "operator_intro", 0)
+        name0, role0 = resolver.resolve_segment("S0", "Welcome to Apple conference call. I will turn the call over to Tim Cook, CEO.", "operator_intro", 0)
         self.assertEqual(role0, "Operator")
 
         # Remarks / Executive
-        name1, role1 = resolver.resolve_segment("S1", "Today we report strong growth", "prepared_remarks", 2)
+        name1, role1 = resolver.resolve_segment("S1", "Thank you Suhasini. Today we report strong growth.", "prepared_remarks", 1)
         self.assertEqual(name1, "Tim Cook")
         self.assertEqual(role1, "CEO")
+
 
     def test_section_splitter(self):
         """Tests partitioning segments into operator_intro, prepared_remarks, and qa."""

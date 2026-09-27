@@ -7,133 +7,201 @@
   "sections": [
     {
       "type": "operator_intro",
+      "start": 0.0,
+      "end": 36.88,
       "segments": [
         {
           "start": 0.0,
-          "end": 12.37,
+          "end": 3.5,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "Good day and welcome to the Tesla Q3 earnings conference call. Joining us today are Elon Musk, Chief Executive Officer, and Vaibhav Taneja, Chief Financial Officer.",
-          "confidence": 0.94
+          "text": "Good day and welcome to the Tesla Q3 Earnings Conference Call.",
+          "confidence": 0.823
+        },
+        {
+          "start": 4.66,
+          "end": 10.96,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Joining us today are Elon Musk, Chief Executive Officer, and Vabhav Tunnijat, Chief Financial",
+          "confidence": 0.823
+        },
+        {
+          "start": 10.96,
+          "end": 11.54,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Officer.",
+          "confidence": 0.823
+        },
+        {
+          "start": 12.5,
+          "end": 18.82,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "In the quarter, we achieved total revenue of $25.1 billion, up 8% year over year.",
+          "confidence": 0.823
+        },
+        {
+          "start": 19.7,
+          "end": 23.88,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our energy storage business had record deployment of 6.9 GWh.",
+          "confidence": 0.823
+        },
+        {
+          "start": 24.8,
+          "end": 31.46,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Free cash flow reached $2.74 billion, supporting our ongoing expansion of AI compute clusters",
+          "confidence": 0.833
+        },
+        {
+          "start": 31.46,
+          "end": 33.52,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "and vehicle manufacturing lines.",
+          "confidence": 0.833
+        },
+        {
+          "start": 34.52,
+          "end": 36.88,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We will now begin the question and answer session.",
+          "confidence": 0.833
         }
       ]
     },
     {
       "type": "prepared_remarks",
-      "segments": [
-        {
-          "start": 12.37,
-          "end": 23.79,
-          "speaker_id": "S1",
-          "speaker_name": "Elon Musk",
-          "speaker_role": "CEO",
-          "text": "In the quarter, we achieved total revenue of $25.1 billion, up 8% year-over-year. Our energy storage business had record deployment of 6.9 gigawatt hours.",
-          "confidence": 0.94
-        },
-        {
-          "start": 23.79,
-          "end": 32.36,
-          "speaker_id": "S2",
-          "speaker_name": "Vaibhav Taneja",
-          "speaker_role": "CFO",
-          "text": "Free cash flow reached $2.74 billion, supporting our ongoing expansion of AI compute clusters and vehicle manufacturing lines.",
-          "confidence": 0.94
-        }
-      ]
+      "start": 0.0,
+      "end": 0.0,
+      "segments": []
     },
     {
       "type": "qa",
+      "start": 37.86,
+      "end": 88.62,
       "segments": [
         {
-          "start": 32.36,
-          "end": 41.4,
+          "start": 37.86,
+          "end": 41.12,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "We will now begin the question and answer session. Our first question comes from Adam Jonas with Morgan Stanley.",
-          "confidence": 0.94
+          "text": "Our first question comes from Adam Jonas with Morgan Stanley.",
+          "confidence": 0.833
         },
         {
-          "start": 41.4,
-          "end": 47.59,
-          "speaker_id": "S3",
-          "speaker_name": "Adam Jonas",
-          "speaker_role": "Analyst, Morgan Stanley",
-          "text": "Elon, what is the roadmap for autonomous Cybercab production and Full Self-Driving deployment?",
-          "confidence": 0.94
+          "start": 42.14,
+          "end": 47.42,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Elon, what is the roadmap for autonomous cybercab production and full self-driving deployment?",
+          "confidence": 0.833
         },
         {
-          "start": 47.59,
-          "end": 55.21,
-          "speaker_id": "S1",
-          "speaker_name": "Elon Musk",
-          "speaker_role": "CEO",
-          "text": "We are on track to begin volume production in 2026 with unmatched cost per passenger mile.",
-          "confidence": 0.94
+          "start": 47.42,
+          "end": 53.8,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "We are on track to begin volume production in 2026 with unmatched cost per passenger",
+          "confidence": 0.815
         },
         {
-          "start": 55.21,
-          "end": 59.49,
+          "start": 53.8,
+          "end": 54.4,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "mile.",
+          "confidence": 0.815
+        },
+        {
+          "start": 55.18,
+          "end": 57.84,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
           "text": "Our next question comes from Dan Levy with Barclays.",
-          "confidence": 0.94
+          "confidence": 0.815
         },
         {
-          "start": 59.49,
-          "end": 66.15,
-          "speaker_id": "S4",
-          "speaker_name": "Dan Levy",
-          "speaker_role": "Analyst, Barclays",
-          "text": "Vaibhav, how should we model automotive gross margin excluding regulatory credits into next year?",
-          "confidence": 0.94
-        },
-        {
-          "start": 66.15,
-          "end": 72.34,
-          "speaker_id": "S2",
-          "speaker_name": "Vaibhav Taneja",
-          "speaker_role": "CFO",
-          "text": "Cost reductions in raw materials and manufacturing efficiency continue to improve unit margins.",
-          "confidence": 0.94
-        },
-        {
-          "start": 72.34,
-          "end": 77.58,
+          "start": 59.0,
+          "end": 64.3,
           "speaker_id": "S0",
           "speaker_name": "Conference Operator",
           "speaker_role": "Operator",
-          "text": "Our next question comes from Pierre Ferragu with New Street Research.",
-          "confidence": 0.94
+          "text": "Vabhav, how should we model automotive gross margin excluding regulatory credits into next",
+          "confidence": 0.815
         },
         {
-          "start": 77.58,
-          "end": 84.24,
-          "speaker_id": "S5",
-          "speaker_name": "Pierre Ferragu",
-          "speaker_role": "Analyst, New Street Research",
-          "text": "Elon, how is Megapack demand scaling relative to manufacturing capacity in Lathrop and Shanghai?",
-          "confidence": 0.94
+          "start": 64.3,
+          "end": 64.64,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "year?",
+          "confidence": 0.815
         },
         {
-          "start": 84.24,
-          "end": 89.48,
-          "speaker_id": "S1",
-          "speaker_name": "Elon Musk",
-          "speaker_role": "CEO",
+          "start": 65.74,
+          "end": 70.88,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Cost reductions in raw materials and manufacturing efficiency continue to improve unit margins.",
+          "confidence": 0.815
+        },
+        {
+          "start": 72.04,
+          "end": 75.42,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Our next question comes from Pierre Feregu with New Street Research.",
+          "confidence": 0.815
+        },
+        {
+          "start": 76.32,
+          "end": 82.34,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Elon, how is megapack demand scaling relative to manufacturing capacity in Lathrop and Shanghai?",
+          "confidence": 0.836
+        },
+        {
+          "start": 83.4,
+          "end": 88.62,
+          "speaker_id": "S0",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
           "text": "Energy storage demand remains exceptionally robust, outpacing our automotive growth rate.",
-          "confidence": 0.94
+          "confidence": 0.836
         }
       ]
     }
   ],
   "pipeline": {
-    "asr_model": "faster-whisper-v3-large",
-    "diarizer": "pyannote.audio-3.1",
+    "asr_model": "faster-whisper-small.en (CTranslate2 int8)",
+    "diarizer": "energy-vad-diarizer-v1",
     "version": "1.0.0",
-    "rtf": 0.0014,
-    "5min_target_sla": "MET"
+    "rtf": 0.1169,
+    "5min_target_sla": "EXCEEDED"
   }
 }

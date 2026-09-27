@@ -1,72 +1,202 @@
 {
   "ticker": "DMRC",
-  "fiscal_period": "Q3 FY2026",
-  "reference_text": "Welcome to Digimarc's quarterly earnings conference call. Speaking today are CEO Riley McCormack and CFO Charles Beck. Total revenue for the quarter was 9.8 million, driven by 18 percent growth in commercial subscription revenue. Operating cash burn decreased 24 percent year-over-year as subscription annual recurring revenue expanded. We will now take questions. Our first question comes from George Sutton with Craig-Hallum. Riley, could you update us on Digimarc Validate adoption with European retail consortiums? We are seeing strong momentum as retailers seek product authentication to reduce counterfeit goods. Our next question comes from Matthew Galinko with Maxim Group. Charles, what is your guidance for cash burn reduction and path to profitability? Annualized operating expenses decreased 15 percent, extending our cash runway significantly. Our next question comes from James Mitchell with Tech Growth Research. Riley, how are industrial packaging converters integrating digital watermark technology? Top global packaging converters are embedding our digital identifiers directly on manufacturing lines.",
-  "intro_text": "Welcome to Digimarc's quarterly earnings conference call. Speaking today are CEO Riley McCormack and CFO Charles Beck. Total revenue for the quarter was $9.8 million, driven by 18% growth in commercial subscription revenue.",
-  "remarks_text": "Operating cash burn decreased 24% year-over-year as subscription annual recurring revenue expanded.",
-  "qa_text": "We will now take questions. Our first question comes from George Sutton with Craig-Hallum. Riley, could you update us on Digimarc Validate adoption with European retail consortiums? We are seeing strong momentum as retailers seek product authentication to reduce counterfeit goods. Our next question comes from Matthew Galinko with Maxim Group. Charles, what is your guidance for cash burn reduction and path to profitability? Annualized operating expenses decreased 15%, extending our cash runway significantly. Our next question comes from James Mitchell with Tech Growth Research. Riley, how are industrial packaging converters integrating digital watermark technology? Top global packaging converters are embedding our digital identifiers directly on manufacturing lines.",
+  "fiscal_period": "Q2 FY2026",
+  "reference_text": "My name is Paul Glynn and I'm an account director for Digimark. We provide an anti-counterfeit solution for the pharmaceutical industry. We work directly with pharma companies and brands and also print packaging and label companies. And our solution is a digital defense for packaging primary and secondary packaging authentication rapidly in the field. It's easy to implement because it blends seamlessly into the artwork of the packaging itself. And in order to authenticate, you don't need an internet connection. So it's really a rapid response to test whether there's counterfeit activity in a given market. At Pharmap this year, we're here to talk about our Illuminate platform for anti-counterfeit, which has a covert digital watermark at its heart, which allows brand inspectors in the field to rapidly authenticate packaging in order to see whether it's authentic or not and therefore to take action against counterfeit drugs. Pharmap event has been very well organized. Our personal manager has been very attentive. And we've had some really good conversations, both with pharmaceutical companies directly, but also some printing packaging and label companies. The main reason we attended this event is that we're not lost in a sea of competitors. There's quite a nice different range of segments. So I think there was one other competitor that we noticed at the event, which is good, because sometimes you can get lost when there's lots of competition. And there's a good representation from both pharma companies, but also from potential partners for us, which would be printing, packaging and label companies.",
+  "intro_text": "My name is Paul Glynn and I'm an account director for Digimark. We provide an anti-counterfeit solution for the pharmaceutical industry.",
+  "remarks_text": "We work directly with pharma companies and brands and also print packaging and label companies. And our solution is a digital defense for packaging primary and secondary packaging authentication rapidly in the field. It's easy to implement because it blends seamlessly into the artwork of the packaging itself. And in order to authenticate, you don't need an internet connection. So it's really a rapid response to test whether there's counterfeit activity in a given market. At Pharmap this year, we're here to talk about our Illuminate platform for anti-counterfeit, which has a covert digital watermark at its heart, which allows brand inspectors in the field to rapidly authenticate packaging in order to see whether it's authentic or not and therefore to take action against counterfeit drugs. Pharmap event has been very well organized. Our personal manager has been very attentive. And we've had some really good conversations, both with pharmaceutical companies directly, but also some printing packaging and label companies. The main reason we attended this event is that we're not lost in a sea of competitors. There's quite a nice different range of segments. So I think there was one other competitor that we noticed at the event, which is good, because sometimes you can get lost when there's lots of competition. And there's a good representation from both pharma companies, but also from potential partners for us, which would be printing, packaging and label companies.",
+  "qa_text": "",
   "speakers": [
-    "Conference Operator",
-    "Riley McCormack",
-    "Charles Beck",
-    "Conference Operator",
+    "Paul Glynn and",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S1",
+    "Speaker S2",
+    "Speaker S2",
+    "Speaker S2",
     "Speaker S3",
-    "Riley McCormack",
-    "Conference Operator",
-    "Matthew Galinko",
-    "Charles Beck",
-    "Conference Operator",
-    "James Mitchell",
-    "Riley McCormack"
+    "Speaker S3",
+    "Speaker S3",
+    "Speaker S3",
+    "Speaker S3",
+    "Speaker S3"
   ],
   "segments": [
     {
+      "start": 6.32,
+      "end": 9.96,
       "speaker_id": "S0",
-      "text": "Welcome to Digimarc's quarterly earnings conference call. Speaking today are CEO Riley McCormack and CFO Charles Beck."
+      "speaker_name": "Paul Glynn and",
+      "speaker_role": "Executive",
+      "text": "My name is Paul Glynn and I'm an account director for Digimark.",
+      "confidence": 0.871
     },
     {
+      "start": 15.57,
+      "end": 19.97,
       "speaker_id": "S1",
-      "text": "Total revenue for the quarter was $9.8 million, driven by 18% growth in commercial subscription revenue."
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Participant",
+      "text": "We provide an anti-counterfeit solution for the pharmaceutical industry.",
+      "confidence": 0.871
     },
     {
+      "start": 20.33,
+      "end": 26.83,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Participant",
+      "text": "We work directly with pharma companies and brands and also print packaging and label companies.",
+      "confidence": 0.871
+    },
+    {
+      "start": 27.81,
+      "end": 35.67,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Participant",
+      "text": "And our solution is a digital defense for packaging primary and secondary packaging authentication rapidly in the field.",
+      "confidence": 0.871
+    },
+    {
+      "start": 35.67,
+      "end": 42.63,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Participant",
+      "text": "It's easy to implement because it blends seamlessly into the artwork of the packaging itself.",
+      "confidence": 0.926
+    },
+    {
+      "start": 43.99,
+      "end": 46.67,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Participant",
+      "text": "And in order to authenticate, you don't need an internet connection.",
+      "confidence": 0.926
+    },
+    {
+      "start": 47.77,
+      "end": 54.43,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Participant",
+      "text": "So it's really a rapid response to test whether there's counterfeit activity in a given market.",
+      "confidence": 0.926
+    },
+    {
+      "start": 54.43,
+      "end": 66.58,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Participant",
+      "text": "At Pharmap this year, we're here to talk about our Illuminate platform for anti-counterfeit,",
+      "confidence": 0.905
+    },
+    {
+      "start": 66.94,
+      "end": 79.08,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Participant",
+      "text": "which has a covert digital watermark at its heart, which allows brand inspectors in the field to rapidly authenticate packaging",
+      "confidence": 0.905
+    },
+    {
+      "start": 79.08,
+      "end": 85.68,
+      "speaker_id": "S1",
+      "speaker_name": "Speaker S1",
+      "speaker_role": "Participant",
+      "text": "in order to see whether it's authentic or not and therefore to take action against counterfeit drugs.",
+      "confidence": 0.905
+    },
+    {
+      "start": 91.45,
+      "end": 95.93,
       "speaker_id": "S2",
-      "text": "Operating cash burn decreased 24% year-over-year as subscription annual recurring revenue expanded."
+      "speaker_name": "Speaker S2",
+      "speaker_role": "Executive",
+      "text": "Pharmap event has been very well organized. Our personal manager has been very attentive.",
+      "confidence": 0.902
     },
     {
-      "speaker_id": "S0",
-      "text": "We will now take questions. Our first question comes from George Sutton with Craig-Hallum."
+      "start": 96.75,
+      "end": 102.39,
+      "speaker_id": "S2",
+      "speaker_name": "Speaker S2",
+      "speaker_role": "Executive",
+      "text": "And we've had some really good conversations, both with pharmaceutical companies directly,",
+      "confidence": 0.902
     },
     {
+      "start": 102.63,
+      "end": 105.81,
+      "speaker_id": "S2",
+      "speaker_name": "Speaker S2",
+      "speaker_role": "Executive",
+      "text": "but also some printing packaging and label companies.",
+      "confidence": 0.902
+    },
+    {
+      "start": 111.19,
+      "end": 116.35,
       "speaker_id": "S3",
-      "text": "Riley, could you update us on Digimarc Validate adoption with European retail consortiums?"
+      "speaker_name": "Speaker S3",
+      "speaker_role": "Executive",
+      "text": "The main reason we attended this event is that we're not lost in a sea of competitors.",
+      "confidence": 0.902
     },
     {
-      "speaker_id": "S1",
-      "text": "We are seeing strong momentum as retailers seek product authentication to reduce counterfeit goods."
+      "start": 117.61,
+      "end": 121.17,
+      "speaker_id": "S3",
+      "speaker_name": "Speaker S3",
+      "speaker_role": "Executive",
+      "text": "There's quite a nice different range of segments.",
+      "confidence": 0.902
     },
     {
-      "speaker_id": "S0",
-      "text": "Our next question comes from Matthew Galinko with Maxim Group."
+      "start": 121.93,
+      "end": 127.75,
+      "speaker_id": "S3",
+      "speaker_name": "Speaker S3",
+      "speaker_role": "Executive",
+      "text": "So I think there was one other competitor that we noticed at the event, which is good,",
+      "confidence": 0.893
     },
     {
-      "speaker_id": "S4",
-      "text": "Charles, what is your guidance for cash burn reduction and path to profitability?"
+      "start": 128.79,
+      "end": 132.03,
+      "speaker_id": "S3",
+      "speaker_name": "Speaker S3",
+      "speaker_role": "Executive",
+      "text": "because sometimes you can get lost when there's lots of competition.",
+      "confidence": 0.893
     },
     {
-      "speaker_id": "S2",
-      "text": "Annualized operating expenses decreased 15%, extending our cash runway significantly."
+      "start": 133.29,
+      "end": 138.91,
+      "speaker_id": "S3",
+      "speaker_name": "Speaker S3",
+      "speaker_role": "Executive",
+      "text": "And there's a good representation from both pharma companies, but also from potential partners for us,",
+      "confidence": 0.893
     },
     {
-      "speaker_id": "S0",
-      "text": "Our next question comes from James Mitchell with Tech Growth Research."
-    },
-    {
-      "speaker_id": "S5",
-      "text": "Riley, how are industrial packaging converters integrating digital watermark technology?"
-    },
-    {
-      "speaker_id": "S1",
-      "text": "Top global packaging converters are embedding our digital identifiers directly on manufacturing lines."
+      "start": 139.21,
+      "end": 141.33,
+      "speaker_id": "S3",
+      "speaker_name": "Speaker S3",
+      "speaker_role": "Executive",
+      "text": "which would be printing, packaging and label companies.",
+      "confidence": 0.893
     }
   ]
 }
