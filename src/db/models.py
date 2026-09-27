@@ -28,7 +28,7 @@ class CompanyUniverse(Base):
     ir_page_url = Column(String(500), nullable=False)
     market_cap_bucket = Column(String(50), nullable=False)
     expected_call_language = Column(String(50), nullable=False)
-    created_at = Column(DateTime, default=datetime.datetime.utcnow)
+    created_at = Column(DateTime, default=lambda: datetime.datetime.now(datetime.timezone.utc))
 
     # Relationships
     events = relationship("EventRegistry", back_populates="company", cascade="all, delete-orphan")
@@ -41,23 +41,20 @@ class EventRegistry(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     company_id = Column(Integer, ForeignKey("company_universe.id"), nullable=False)
     ticker = Column(String(20), nullable=False)
-    fiscal_period = Column(String(50), nullable=False)  # e.g., 'Q3 FY2026' or 'Q2 2026'
+    fiscal_period = Column(String(50), nullable=True)  # e.g., 'Q3 FY2024' or NULL if unannounced
     call_datetime_utc = Column(DateTime, nullable=True)
     timezone_as_published = Column(String(50), nullable=True)
     webcast_url = Column(Text, nullable=True)
-    dial_in_available = Column(Boolean, default=False)
+    dial_in_available = Column(Boolean, nullable=True, default=None)
     replay_url = Column(Text, nullable=True)
     replay_expiry_date = Column(DateTime, nullable=True)
-    registration_required = Column(Boolean, default=False)
+    registration_required = Column(Boolean, nullable=True, default=None)
     vendor = Column(String(100), nullable=True)  # Q4 Inc, Notified, Nasdaq IR, Investis, Kaltura, Zoom Events, Custom
     discovery_source = Column(String(100), nullable=False)  # SEC_EDGAR_8K, IR_PAGE, NEWSWIRE, VENDOR_PLATFORM
-    discovered_at = Column(DateTime, default=datetime.datetime.utcnow)
+    announced_at_utc = Column(DateTime, nullable=True)
+    lead_time_hours = Column(Float, nullable=True)
+    discovered_at = Column(DateTime, default=lambda: datetime.datetime.now(datetime.timezone.utc))
     confidence = Column(Float, nullable=False, default=1.0)  # 0.0 to 1.0
-
-    # Ensure idempotency per company and fiscal period
-    __table_args__ = (
-        UniqueConstraint("company_id", "fiscal_period", name="uq_company_fiscal_period"),
-    )
 
     company = relationship("CompanyUniverse", back_populates="events")
 
@@ -69,7 +66,7 @@ class CrawlLog(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     source = Column(String(255), nullable=False)
     target_url = Column(Text, nullable=False)
-    timestamp = Column(DateTime, default=datetime.datetime.utcnow)
+    timestamp = Column(DateTime, default=lambda: datetime.datetime.now(datetime.timezone.utc))
     http_status = Column(Integer, nullable=True)
     outcome = Column(String(50), nullable=False)  # SUCCESS, BLOCKED, FAILED, PARSE_ERROR
     duration_ms = Column(Integer, nullable=True)

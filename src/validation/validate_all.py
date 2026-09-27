@@ -5,7 +5,7 @@ import os
 import sys
 import wave
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Tuple
 
 # Fix encoding on Windows stdout
 if sys.platform == "win32":
@@ -83,6 +83,31 @@ def validate_audio_capture() -> Dict[str, Any]:
         "audio_standard": "WAV 16000Hz Mono 16-bit PCM (Verified)",
         "invalid_files": invalid_files,
     }
+
+
+def validate_transcript_schema(doc: Dict[str, Any]) -> Tuple[bool, List[str]]:
+    """Validates a single transcript JSON document against the PDF schema."""
+    schema_errors = []
+    for req in ["event_id", "ticker", "fiscal_period", "call_datetime_utc", "language", "sections"]:
+        if req not in doc:
+            schema_errors.append(f"Missing root field '{req}'")
+
+    sections = doc.get("sections", [])
+    sec_types = [s.get("type") for s in sections]
+
+    for req_sec in ["operator_intro"]:
+        if not any(t == req_sec for t in sec_types):
+            schema_errors.append(f"Missing required section '{req_sec}'")
+
+    for sec in sections:
+        for seg in sec.get("segments", []):
+            for s_field in ["start", "end", "speaker_id", "speaker_name", "speaker_role", "text"]:
+                if s_field not in seg:
+                    schema_errors.append(f"Segment missing '{s_field}'")
+            if seg.get("start", 0) > seg.get("end", 0):
+                schema_errors.append("Invalid timestamp sequence start > end")
+
+    return len(schema_errors) == 0, schema_errors
 
 
 def validate_transcripts() -> Dict[str, Any]:

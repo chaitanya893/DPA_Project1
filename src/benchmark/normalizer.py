@@ -102,3 +102,6 @@ def normalize_text(text: str) -> str:
     res = re.sub(r"\s+", " ", res).strip()
 
     return res
+
+
+normalize_financial_transcript = normalize_text

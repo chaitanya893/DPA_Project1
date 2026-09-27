@@ -45,6 +45,11 @@ def set_correlation_id(corr_id: Optional[str] = None) -> str:
     return new_id
 
 
+def get_correlation_id() -> str:
+    """Returns the current active correlation ID or 'GLOBAL'."""
+    return _correlation_filter.active_correlation_id or _correlation_filter.default_correlation_id
+
+
 def clear_correlation_id() -> None:
     """Clears the active correlation ID."""
     _correlation_filter.active_correlation_id = None

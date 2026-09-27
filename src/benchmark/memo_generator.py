@@ -43,7 +43,7 @@ def generate_final_memo() -> str:
 
 **Project**: Assignment 1 - Corporate Earnings Call Pipeline & Accuracy Benchmarking  
 **Evaluation Universe**: 25 US & Canadian Companies (NYSE, NASDAQ, TSX)  
-**Evaluated Dataset**: {len(calls)} Full Multi-Speaker Earnings Call Recordings (US Large Cap, US Small Cap, Canadian TSX, Bilingual)  
+**Evaluated Dataset**: {len(calls)} Multi-Cohort Earnings Call Webcast Replays (US Large Cap, US Small Cap, Canadian TSX, French/Bilingual)  
 **Date**: {time.strftime('%B %d, %Y')}  
 **Author**: Data Engineering & Financial Machine Learning Research Team  
 **Status**: Production-Prototype Verified & Fully Benchmarked  
@@ -52,7 +52,7 @@ def generate_final_memo() -> str:
 
 ## 1. Executive Summary & Objective
 
-The primary objective of this assignment is not to beat proprietary commercial vendors (e.g., Bloomberg, FactSet, S&P Capital IQ), but rather **to determine with precise, verifiable empirical numbers how close a pure open-source pipeline gets, and exactly where it fails.**
+The primary objective of this research is not to match commercial terminal providers (e.g. Bloomberg, FactSet, S&P Capital IQ), but rather **to determine with precise, verifiable empirical numbers how close a pure open-source pipeline gets, and exactly where it fails.**
 
 ### Key Benchmark Findings:
 1. **Word Error Rate (WER)**:

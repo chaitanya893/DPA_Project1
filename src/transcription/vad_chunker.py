@@ -12,10 +12,7 @@ def chunk_audio_stream(
     chunk_length_sec: float = 60.0,
     overlap_sec: float = 3.0,
 ) -> List[Dict[str, Any]]:
-    """Splits a 16kHz Mono 16-bit WAV file into 60s segments with 3s overlap.
-    
-    Implements Voice Activity Detection (VAD) windowing to prevent cutting mid-word.
-    """
+    """Splits a 16kHz Mono 16-bit WAV file into 60s segments with 3s overlap."""
     if not os.path.exists(wav_path):
         raise FileNotFoundError(f"Audio file not found: {wav_path}")
 
@@ -32,7 +29,6 @@ def chunk_audio_stream(
     current_start = 0.0
     chunk_idx = 0
 
-    # For shorter sample files (e.g. 15s to 60s), produce at least 1-2 chunks
     if duration_sec <= chunk_length_sec:
         chunks.append({
             "chunk_idx": 0,
@@ -75,7 +71,6 @@ def deduplicate_overlap_text(prev_text: str, current_text: str) -> str:
     prev_words = prev_text.strip().split()
     curr_words = current_text.strip().split()
 
-    # Check for suffix-prefix overlap between 1 and 8 words
     max_overlap = min(8, len(prev_words), len(curr_words))
     best_overlap_len = 0
 
@@ -89,3 +84,32 @@ def deduplicate_overlap_text(prev_text: str, current_text: str) -> str:
         return " ".join(curr_words[best_overlap_len:])
     
     return current_text
+
+
+def stitch_overlapping_segments(
+    prev_segments: List[Dict[str, Any]],
+    current_segments: List[Dict[str, Any]],
+    overlap_sec: float = 3.0
+) -> List[Dict[str, Any]]:
+    """Stitches two lists of consecutive chunk segments, deduplicating overlapping utterances."""
+    if not prev_segments:
+        return list(current_segments)
+    if not current_segments:
+        return list(prev_segments)
+
+    result = list(prev_segments)
+    prev_last_text = prev_segments[-1].get("text", "").strip().lower()
+
+    for seg in current_segments:
+        seg_text = seg.get("text", "").strip().lower()
+        # If identical text occurs within overlap boundary, skip duplicate
+        if seg_text == prev_last_text:
+            continue
+        # Also check if part of text overlaps with previous last
+        deduped = deduplicate_overlap_text(prev_last_text, seg.get("text", ""))
+        if deduped.strip():
+            new_seg = dict(seg)
+            new_seg["text"] = deduped
+            result.append(new_seg)
+
+    return result

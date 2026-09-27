@@ -27,11 +27,15 @@ wheels/
 .env
 
 # Data & Audio files (Exclude heavy WAV files, keep manifests & reference configs)
+data/_old_runs/
+data/cache/
 data/audio/*.wav
 *.wav
 *.mp3
 *.m4a
 *.mp4
+*.webm
+*.bin
 *.db
 *.sqlite3
 

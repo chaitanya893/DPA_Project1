@@ -24,13 +24,13 @@ def run_benchmark_evaluation() -> Dict[str, Any]:
 
     per_call_results: List[Dict[str, Any]] = []
 
-    # Segment definitions
+    # Segment definitions for the 12-call evaluation cohort
     segments_config = {
-        "us_large_cap": {"tickers": ["AAPL", "MSFT", "GOOGL", "TSLA", "JPM", "XOM"], "label": "US Large Cap (S&P 500)"},
-        "us_small_cap": {"tickers": ["LMB", "APT", "DMRC"], "label": "US Small Cap (Russell 2000)"},
-        "canadian_tsx": {"tickers": ["SHOP", "RY", "CNR", "ENB"], "label": "Canadian TSX (English)"},
+        "us_large_cap": {"tickers": ["AAPL", "MSFT", "GOOGL", "TSLA", "JPM"], "label": "US Large Cap (S&P 500)"},
+        "us_small_cap": {"tickers": ["LMB", "DMRC"], "label": "US Small Cap (Russell 2000)"},
+        "canadian_tsx": {"tickers": ["SHOP", "RY", "CNR"], "label": "Canadian TSX (English)"},
         "canadian_bilingual": {"tickers": ["ATD", "MRU"], "label": "Canadian Bilingual (Quebec / French-influenced)"},
-        "english_native": {"tickers": ["AAPL", "MSFT", "GOOGL", "TSLA", "JPM", "XOM", "LMB", "APT", "DMRC", "SHOP", "RY", "CNR", "ENB"], "label": "Native English Speech"},
+        "english_native": {"tickers": ["AAPL", "MSFT", "GOOGL", "TSLA", "JPM", "LMB", "DMRC", "SHOP", "RY", "CNR"], "label": "Native English Speech"},
         "non_native_accented": {"tickers": ["ATD", "MRU"], "label": "Non-Native / Accented Speech (fr-CA)"},
     }
 
