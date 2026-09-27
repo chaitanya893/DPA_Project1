@@ -1,0 +1,30 @@
+event_id,capture_mode,started_at,ended_at,duration_sec,sample_rate,file_size,sha256,failure_reason,ticker,source_url,replay_expiry_date,url_located_by
+2,direct_media_url,2026-09-27T07:16:56Z,2026-09-27T07:17:40Z,0.0,0,0,,no media stream found at https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast,MSFT,http://www.microsoft.com/en-us/investor,,auto_sniffer
+17,direct_media_url,2026-09-27T08:01:43Z,2026-09-27T08:02:04Z,0.0,0,0,,"Navigation failed at https://www.enbridge.com/~/media/Enb/Documents/Investor-Relations/2026/2026_Q2_Earnings_Presentation_Final.pdf?rev=d43eb8ba746f4e8e92907c86f0847ddc&hash=E32C55677C975BC176B013AF872988DC: Page.goto: Download is starting
+Call log:
+  - navigating to ""https://www.enbridg",ENB,https://events.q4inc.com/attendee/193728984,,auto_sniffer
+1,direct_media_url,2026-09-27T07:18:07Z,2026-09-27T07:18:19Z,0.0,0,0,,no media stream found at https://investor.apple.com,AAPL,https://investor.apple.com/events,,auto_sniffer
+3,direct_media_url,2026-09-27T07:18:19Z,2026-09-27T07:18:55Z,0.0,0,0,,no media stream found at https://www.jpmorganchase.com/ir,JPM,https://www.jpmorganchase.com/ir/events,,auto_sniffer
+4,direct_media_url,2026-09-27T07:59:19Z,2026-09-27T07:59:52Z,0.0,0,0,,no media stream found at https://investor.jnj.com,JNJ,https://investor.jnj.com/events,,auto_sniffer
+7,direct_media_url,2026-09-27T08:05:30Z,2026-09-27T08:06:09Z,0.0,0,0,,no media stream found at https://abc.xyz/investor,GOOGL,https://abc.xyz/investor/events,,auto_sniffer
+8,direct_media_url,2026-09-27T08:00:46Z,2026-09-27T08:00:58Z,0.0,0,0,,no media stream found at https://ir.tesla.com,TSLA,https://ir.tesla.com/events,,auto_sniffer
+10,direct_media_url,2026-09-27T07:59:52Z,2026-09-27T08:00:46Z,0.0,0,0,,"Navigation failed at https://investor.lilly.com: Page.goto: Timeout 20000ms exceeded.
+Call log:
+  - navigating to ""https://invest",LLY,https://investor.lilly.com/events,,auto_sniffer
+11,direct_media_url,2026-09-27T08:01:24Z,2026-09-27T08:01:43Z,0.0,0,0,,no media stream found at https://www.limbachinc.com,LMB,https://event.choruscall.com/mediaframe/webcast.html?webcastid=LYkmLAUY,,auto_sniffer
+14,direct_media_url,2026-09-27T08:00:58Z,2026-09-27T08:01:24Z,0.0,0,0,,no media stream found at https://rell.com/investor-relations,RELL,https://rell.com/investor-relations/events,,auto_sniffer
+16,direct_media_url,2026-09-27T07:20:28Z,2026-09-27T07:20:42Z,0.0,0,0,,no media stream found at https://www.rbc.com/investor-relations,RY,https://www.rbc.com/investor-relations/events,,auto_sniffer
+18,direct_media_url,2026-09-27T08:02:04Z,2026-09-27T08:02:44Z,0.0,0,0,,no media stream found at https://www.cn.ca/en/investors,CNR,https://event.webcasts.com/starthere.jsp?ei=1774946&tp_key=06654de884&tp_special=8,,auto_sniffer
+19,direct_media_url,2026-09-27T07:34:38Z,2026-09-27T07:36:31Z,3483.41,16000,111469304,c8d344b684f4557e616b50d7b44f3cbe316b23141889e5c534005d33ef69d3a1,,SHOP,https://stream.mux.com/2EqBx4eDq1Ji4vU6p9Yi6JuhqueS1V3L00LjvrCRyshY.m3u8?redundant_streams=true,,auto_sniffer
+23,direct_media_url,2026-09-27T08:02:44Z,2026-09-27T08:02:59Z,0.0,0,0,,no media stream found at https://corpo.couche-tard.com/en/investors,ATD,https://corpo.couche-tard.com/en/investors/events,,auto_sniffer
+24,direct_media_url,2026-09-27T08:02:59Z,2026-09-27T08:03:13Z,0.0,0,0,,no media stream found at https://corpo.metro.ca/en/investor-relations,MRU,https://corpo.metro.ca/en/investor-relations/events,,auto_sniffer
+25,direct_media_url,2026-09-27T08:03:13Z,2026-09-27T08:03:40Z,0.0,0,0,,no media stream found at https://www.saputo.com/en/investors,SAP,https://www.gowebcasting.com/13127,,auto_sniffer
+6,direct_media_url,2026-09-27T08:03:40Z,2026-09-27T08:04:10Z,0.0,0,0,,no media stream found at https://stock.walmart.com,WMT,https://stock.walmart.com/events,,auto_sniffer
+9,direct_media_url,2026-09-27T08:06:09Z,2026-09-27T08:06:50Z,0.0,0,0,,no media stream found at https://www.pginvestor.com,PG,https://www.pginvestor.com/events,,auto_sniffer
+12,direct_media_url,2026-09-27T08:05:08Z,2026-09-27T08:05:22Z,0.0,0,0,,no media stream found at https://alphaprotech.investorroom.com,APT,https://alphaprotech.investorroom.com/events,,auto_sniffer
+13,direct_media_url,2026-09-27T08:05:22Z,2026-09-27T08:05:29Z,0.0,0,0,,no media stream found at https://www.digimarc.com/company/investors,DMRC,https://www.digimarc.com/company/investors,,auto_sniffer
+15,direct_media_url,2026-09-27T08:04:47Z,2026-09-27T08:05:08Z,0.0,0,0,,no media stream found at https://ir.perma-fix.com,PESI,https://ir.perma-fix.com/events,,auto_sniffer
+20,direct_media_url,2026-09-27T08:06:50Z,2026-09-27T08:07:30Z,0.0,0,0,,no media stream found at https://www.barrick.com/English/investors,ABX,https://www.barrick.com/English/investors/events,,auto_sniffer
+21,direct_media_url,2026-09-27T08:04:34Z,2026-09-27T08:04:47Z,0.0,0,0,,no media stream found at https://www.telus.com/en/about/investor-relations,T,https://www.telus.com/en/about/investor-relations/events,,auto_sniffer
+22,direct_media_url,2026-09-27T08:04:10Z,2026-09-27T08:04:34Z,0.0,0,0,,no media stream found at https://www.nutrien.com/investors,NTR,https://www.nutrien.com/investors/events,,auto_sniffer
+5,direct_media_url,2026-09-27T08:20:56Z,2026-09-27T08:20:56Z,0.0,0,0,,no media stream found at https://investor.exxonmobil.com/events (call time unannounced in results filing),XOM,https://investor.exxonmobil.com/events,,auto_sniffer

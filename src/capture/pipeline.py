@@ -1,298 +1,491 @@
+import asyncio
 import csv
-import json
+import datetime
 import os
 import shutil
+import subprocess
 import time
-import queue
-import threading
+import urllib.parse
 from pathlib import Path
-from typing import List, Dict, Any, Optional
-from config.settings import AUDIO_DIR, TRANSCRIPTS_DIR, DOCS_DIR
+from typing import List, Dict, Any, Optional, Tuple, Set
+from bs4 import BeautifulSoup
+from playwright.async_api import async_playwright
+import yt_dlp
+
+from config.settings import AUDIO_DIR, DOCS_DIR
 from src.db.session import SessionLocal
 from src.db.models import CompanyUniverse, EventRegistry
 from src.utils.logger import setup_logger, set_correlation_id, clear_correlation_id
 from src.capture.audio_standardizer import convert_to_standard_wav, compute_sha256, get_wav_properties
-from src.transcription.asr_engine import transcribe_audio_pipeline
-from src.transcription.speaker_resolver import SpeakerResolver
-from src.transcription.section_splitter import classify_transcript_sections
-from src.transcription.benchmark_models import ModelBenchmarkRegistry
+from src.capture.stream_downloader import _enforce_rate_limit, USER_AGENT
 
-logger = setup_logger("pipelined_capture_transcription")
+logger = setup_logger("audio_capture_pipeline")
 
-# Exact 12 target companies meeting the PDF cohort mix: 5 US Large, 2 US Small, 3 TSX, 2 Bilingual
-CALLS_CONFIG = [
-    # US Large Cap (5)
-    {"ticker": "AAPL", "period": "Q3 FY2024", "mode": "archived_replay_download", "lang": "en"},
-    {"ticker": "MSFT", "period": "Q3 FY2024", "mode": "archived_replay_download", "lang": "en"},
-    {"ticker": "GOOGL", "period": "Q3 FY2024", "mode": "archived_replay_download", "lang": "en"},
-    {"ticker": "TSLA", "period": "Q3 FY2024", "mode": "archived_replay_download", "lang": "en"},
-    {"ticker": "JPM", "period": "Q3 FY2024", "mode": "archived_replay_download", "lang": "en"},
-    # US Small Cap (2)
-    {"ticker": "LMB", "period": "Q3 FY2024", "mode": "archived_replay_download", "lang": "en"},
-    {"ticker": "DMRC", "period": "Q3 FY2024", "mode": "archived_replay_download", "lang": "en"},
-    # Canadian TSX (3)
-    {"ticker": "SHOP", "period": "Q3 FY2024", "mode": "archived_replay_download", "lang": "en"},
-    {"ticker": "RY", "period": "Q3 FY2024", "mode": "archived_replay_download", "lang": "en"},
-    {"ticker": "CNR", "period": "Q3 FY2024", "mode": "archived_replay_download", "lang": "en"},
-    # Canadian Bilingual / French (2)
-    {"ticker": "ATD", "period": "Q3 FY2024", "mode": "direct_media_url", "lang": "fr-CA"},
-    {"ticker": "MRU", "period": "Q3 FY2024", "mode": "direct_media_url", "lang": "fr-CA"},
+TARGET_COMPANIES = [
+    "JNJ", "LLY", "TSLA", "RELL", "LMB", "ENB", "CNR",
+    "ATD", "MRU", "SAP", "WMT", "NTR", "T", "PESI",
+    "APT", "DMRC", "GOOGL", "PG", "ABX"
 ]
 
-UNATTEMPTED_COMPANIES = [
-    ("WMT", "NOT ATTEMPTED – Excluded to maintain exact 12-call cohort balance"),
-    ("JNJ", "NOT ATTEMPTED – Excluded to maintain exact 12-call cohort balance"),
-    ("PG", "NOT ATTEMPTED – Excluded to maintain exact 12-call cohort balance"),
-    ("LLY", "NOT ATTEMPTED – Excluded to maintain exact 12-call cohort balance"),
-    ("XOM", "NOT ATTEMPTED – Excluded to maintain exact 12-call cohort balance"),
-    ("RELL", "NOT ATTEMPTED – Excluded to maintain exact 12-call cohort balance"),
-    ("APT", "NOT ATTEMPTED – Excluded to maintain exact 12-call cohort balance"),
-    ("PESI", "NOT ATTEMPTED – Excluded to maintain exact 12-call cohort balance"),
-    ("ENB", "NOT ATTEMPTED – Excluded to maintain exact 12-call cohort balance"),
-    ("ABX", "NOT ATTEMPTED – Excluded to maintain exact 12-call cohort balance"),
-    ("T", "NOT ATTEMPTED – Excluded to maintain exact 12-call cohort balance"),
-    ("NTR", "NOT ATTEMPTED – Excluded to maintain exact 12-call cohort balance"),
-    ("SAP", "NOT ATTEMPTED – Excluded to maintain exact 12-call cohort balance"),
-]
+SKIPPED_COMPANIES = {"AAPL", "MSFT", "RY", "JPM"}
 
-
-def run_smoke_test() -> bool:
-    """Executes ONE smoke run on a 5-minute slice of one call to confirm end-to-end functionality."""
-    logger.info("=== RUNNING PRE-FLIGHT SMOKE TEST (5-min slice) ===")
-    smoke_wav = AUDIO_DIR / "smoke_test.wav"
-    
-    old_aapl = Path("data/_old_runs/AAPL_Q3_FY2024.wav")
-    old_aapl_alt = Path("data/_old_runs/AAPL_Q3_FY2026.wav")
-    source_wav = old_aapl if old_aapl.exists() else (old_aapl_alt if old_aapl_alt.exists() else None)
-    
-    if source_wav and source_wav.exists():
-        import subprocess
-        cmd = ["ffmpeg", "-y", "-i", str(source_wav), "-t", "300", "-c", "copy", str(smoke_wav)]
-        subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        
-        if smoke_wav.exists():
-            asr_res = transcribe_audio_pipeline(str(smoke_wav), ticker="SMOKE", model_name="small.en", language="en")
-            logger.info(f"Smoke test ASR completed: {len(asr_res['segments'])} segments transcribed, RTF={asr_res['rtf']}")
-            if smoke_wav.exists():
-                os.remove(smoke_wav)
-            return True
-            
-    logger.info("Smoke test passed.")
-    return True
-
-
-def run_pipelined_capture_and_transcription() -> None:
-    """Runs Stage 2 (Audio Capture) and Stage 3 (Streaming Transcription) concurrently via queue."""
-    AUDIO_DIR.mkdir(parents=True, exist_ok=True)
-    TRANSCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
-    DOCS_DIR.mkdir(parents=True, exist_ok=True)
-
-    manifest_csv = AUDIO_DIR / "capture_manifest.csv"
-    failures_log = AUDIO_DIR / "capture_failures.log"
-
-    manifest_records: List[Dict[str, Any]] = []
-    failure_records: List[str] = []
-    latencies: List[Dict[str, Any]] = []
-    call_summary_rows: List[Dict[str, Any]] = []
-
-    # 1. Run Pre-flight Smoke Test
-    run_smoke_test()
-
-    # 2. Worker Queue for Stage 2 -> Stage 3 Pipelining
-    work_queue: queue.Queue = queue.Queue()
-    transcription_done = threading.Event()
-
-    def transcription_worker():
-        db = SessionLocal()
+OLD_RUN_DIR = Path("data/_old_runs")
+OLD_HASHES: Set[str] = set()
+if OLD_RUN_DIR.exists():
+    for f in OLD_RUN_DIR.glob("*.wav"):
         try:
-            while True:
+            OLD_HASHES.add(compute_sha256(str(f)))
+        except Exception:
+            pass
+
+
+def probe_media_duration_ffprobe(media_url: str, timeout_sec: int = 15) -> float:
+    """Uses ffprobe to inspect remote media duration without full download."""
+    try:
+        cmd = [
+            "ffprobe",
+            "-v", "error",
+            "-user_agent", USER_AGENT,
+            "-show_entries", "format=duration",
+            "-of", "default=noprint_wrappers=1:nokey=1",
+            media_url
+        ]
+        res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=timeout_sec)
+        if res.returncode == 0 and res.stdout.strip():
+            return float(res.stdout.strip())
+    except Exception:
+        pass
+    return 0.0
+
+
+def extract_quarter_keywords(fiscal_period: str) -> List[str]:
+    """Generates keywords matching the target earnings call quarter."""
+    fp = fiscal_period.lower()
+    q_num = "2"
+    if "q1" in fp or "first" in fp:
+        q_num = "1"
+    elif "q3" in fp or "third" in fp:
+        q_num = "3"
+    elif "q4" in fp or "fourth" in fp:
+        q_num = "4"
+
+    q_word = {"1": "first", "2": "second", "3": "third", "4": "fourth"}[q_num]
+    return [
+        f"q{q_num}",
+        f"quarter {q_num}",
+        f"{q_word} quarter",
+        f"q{q_num} 202",
+        f"q{q_num} fy",
+        f"q{q_num} results",
+        f"q{q_num} earnings",
+        f"quarter_{q_num}",
+    ]
+
+
+async def sniff_media_url_playwright(
+    start_url: str,
+    fiscal_period: str,
+    page_timeout_sec: int = 25,
+) -> Tuple[Optional[str], Optional[str], str]:
+    """
+    Opens starting webcast / IR URL in Playwright, follows links matching the SAME call
+    up to 2 hops, clicks playback controls, and captures direct media streams.
+    """
+    if not start_url or not start_url.startswith("http"):
+        return None, None, "Invalid or missing URL"
+
+    domain = urllib.parse.urlparse(start_url).netloc.lower()
+    if "youtube.com" in domain or "youtu.be" in domain:
+        return None, None, "YouTube is forbidden by compliance policy (ToS Section 5.B)"
+
+    _enforce_rate_limit(start_url)
+    discovered_media: List[str] = []
+    q_keywords = extract_quarter_keywords(fiscal_period)
+
+    async with async_playwright() as p:
+        browser = None
+        try:
+            browser = await p.chromium.launch(
+                headless=True,
+                args=["--disable-http2", "--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
+            )
+            context = await browser.new_context(
+                user_agent=f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 ({USER_AGENT})"
+            )
+            page = await context.new_page()
+
+            def on_response(response):
+                u = response.url
+                ct = response.headers.get("content-type", "").lower()
+                if "youtube.com" in u.lower() or "youtu.be" in u.lower():
+                    return
+                if any(t in ct for t in ["audio/", "video/", "application/x-mpegurl", "application/vnd.apple.mpegurl"]):
+                    if not any(x in u.lower() for x in [".js", ".css", ".png", ".jpg", ".svg", "beacon", "telemetry", "analytics", "tracking", "icon"]):
+                        discovered_media.append(u)
+                elif any(u.lower().endswith(ext) or ext in u.lower() for ext in [".m3u8", ".mp3", ".mp4", ".m4a", ".aac", ".wav"]):
+                    if not any(x in u.lower() for x in [".js", ".css", ".png", ".jpg", ".svg", "beacon", "telemetry", "analytics"]):
+                        discovered_media.append(u)
+
+            page.on("response", on_response)
+
+            visited_urls: Set[str] = set()
+            queue: List[Tuple[str, int]] = [(start_url, 0)]
+            last_reason = f"no media stream found at {start_url}"
+
+            while queue and len(visited_urls) < 4:
+                curr_url, hop = queue.pop(0)
+                if curr_url in visited_urls:
+                    continue
+                visited_urls.add(curr_url)
+
+                _enforce_rate_limit(curr_url)
                 try:
-                    item = work_queue.get(timeout=3.0)
-                except queue.Empty:
-                    if transcription_done.is_set():
-                        break
+                    await page.goto(curr_url, wait_until="domcontentloaded", timeout=page_timeout_sec * 1000)
+                except Exception as e:
+                    last_reason = f"Navigation failed at {curr_url}: {str(e)[:80]}"
                     continue
 
-                if item is None:
-                    break
+                await page.wait_for_timeout(2500)
 
-                ticker = item["ticker"]
-                wav_path = item["wav_path"]
-                fiscal_period = item["period"]
-                lang = item["lang"]
-                event_id = item["event_id"]
-                call_dt_str = item.get("call_dt_str", "2024-10-30T21:00:00Z")
+                # Check for mandatory registration forms
+                content = await page.content()
+                content_lower = content.lower()
+                if any(term in content_lower for term in ["please register", "registration required", "sign in to view", "register to attend", "register for webcast"]):
+                    inputs = await page.query_selector_all("input[type='text'], input[type='email'], input[type='password']")
+                    if len(inputs) >= 2:
+                        return None, None, f"registration form required at {curr_url}"
 
-                set_correlation_id(f"TX-{ticker}")
-                t0 = time.time()
-                logger.info(f"Streaming consumer picked up {ticker} ({wav_path})...")
+                # Check direct DOM media tags
+                soup = BeautifulSoup(content, "html.parser")
+                for tag in soup.find_all(["audio", "video", "source", "a"]):
+                    src = tag.get("src") or tag.get("href")
+                    if src:
+                        full_src = urllib.parse.urljoin(curr_url, src)
+                        if any(full_src.lower().endswith(ext) for ext in [".m3u8", ".mp3", ".mp4", ".m4a", ".aac", ".wav"]):
+                            if "youtube" not in full_src.lower():
+                                discovered_media.append(full_src)
 
-                # Transcribe
-                asr_res = transcribe_audio_pipeline(
-                    wav_path=wav_path,
-                    ticker=ticker,
-                    model_name="small",
-                    language=lang,
+                # Click play / listen / webcast buttons
+                play_buttons = await page.query_selector_all(
+                    "button[aria-label*='play' i], button[aria-label*='listen' i], button[aria-label*='replay' i], button[aria-label*='webcast' i], .vjs-big-play-button, .play-button, .vjs-play-control, button.play, a[href*='webcast'], a[aria-label*='play' i]"
                 )
-                raw_segs = asr_res["segments"]
+                for b in play_buttons[:2]:
+                    try:
+                        if await b.is_visible():
+                            await b.click(timeout=1500)
+                            await page.wait_for_timeout(3000)
+                    except Exception:
+                        pass
 
-                # Section split
-                sections = classify_transcript_sections(raw_segs)
+                # Inspect discovered media
+                valid_candidates = []
+                for m in discovered_media:
+                    if any(x in m.lower() for x in ["brochure", "promo", "teaser", "preview", "banner"]):
+                        continue
+                    if any(m.lower().endswith(ext) for ext in [".mp3", ".mp4", ".m4a", ".wav"]):
+                        dur = probe_media_duration_ffprobe(m)
+                        if 0 < dur < 1200.0:
+                            continue
+                    valid_candidates.append(m)
 
-                # Speaker resolution
-                resolver = SpeakerResolver(ticker=ticker)
-                resolved_segs = []
-                for idx, seg in enumerate(raw_segs):
-                    sec_type = "prepared_remarks"
-                    for s in sections:
-                        if any(x.get("start") == seg["start"] for x in s["segments"]):
-                            sec_type = s["type"]
+                if valid_candidates:
+                    best_url = valid_candidates[0]
+                    for m in valid_candidates:
+                        if ".m3u8" in m.lower() or ".mp3" in m.lower():
+                            best_url = m
                             break
-                    spk_name, spk_role = resolver.resolve_segment(
-                        seg["speaker_id"], seg["text"], sec_type, idx
-                    )
-                    resolved_segs.append({
-                        "start": seg["start"],
-                        "end": seg["end"],
-                        "speaker_id": seg["speaker_id"],
-                        "speaker_name": spk_name,
-                        "speaker_role": spk_role,
-                        "text": seg["text"],
-                        "confidence": seg.get("confidence", 0.90),
-                    })
+                    mode = "direct_media_url" if (".m3u8" in best_url or ".mp3" in best_url or ".mp4" in best_url) else "archived_replay_download"
+                    return best_url, mode, "SUCCESS"
 
-                final_sections = classify_transcript_sections(resolved_segs)
-                proc_time = round(time.time() - t0, 3)
-                rtf = asr_res["rtf"]
-                post_call_latency = round(proc_time, 2)
-                sla_met = post_call_latency <= 300.0
+                if any(term in content_lower for term in ["replay has expired", "webcast is no longer available", "event has concluded"]):
+                    last_reason = f"replay expired at {curr_url}"
 
-                qa_count = 0
-                for sec in final_sections:
-                    if sec.get("type") == "qa":
-                        qa_count += len(sec.get("segments", []))
+                # If hop < 2, look for sub-links matching the target quarter call
+                if hop < 2:
+                    for a in soup.find_all("a"):
+                        txt = a.get_text(separator=" ", strip=True).lower()
+                        href = a.get("href", "")
+                        if not href or href.startswith("#") or href.startswith("javascript:"):
+                            continue
+                        if any(k in txt or k in href.lower() for k in q_keywords) and any(
+                            k in txt or k in href.lower() for k in ["webcast", "listen", "replay", "call", "earnings", "audio", "event"]
+                        ):
+                            full_child = urllib.parse.urljoin(curr_url, href)
+                            if not any(full_child.lower().endswith(ext) for ext in [".pdf", ".xlsx", ".zip"]):
+                                if full_child not in visited_urls and len(queue) < 3:
+                                    queue.append((full_child, hop + 1))
 
-                latencies.append({
-                    "ticker": ticker,
-                    "audio_duration_sec": asr_res["audio_duration_sec"],
-                    "asr_infer_time_sec": asr_res["inference_duration_sec"],
-                    "total_pipeline_time_sec": proc_time,
-                    "rtf": rtf,
-                    "chunk_timings": asr_res.get("chunk_timings", []),
-                    "sla_status": "PASS" if sla_met else "FAIL",
-                    "qa_count": qa_count,
-                })
+            return None, None, last_reason
 
-                tx_doc = {
-                    "event_id": event_id,
-                    "ticker": ticker,
-                    "fiscal_period": fiscal_period,
-                    "call_datetime_utc": call_dt_str,
-                    "language": "en" if "fr" not in lang.lower() else "fr-CA",
-                    "sections": final_sections,
-                    "pipeline": {
-                        "asr_model": asr_res["model_name"],
-                        "diarizer": "energy-vad-diarizer-v1",
-                        "version": "1.0.0",
-                        "rtf": rtf,
-                        "post_call_latency_sec": post_call_latency,
-                        "5min_target_sla": "PASS" if sla_met else "FAIL",
-                    },
-                }
-
-                out_json = TRANSCRIPTS_DIR / f"{ticker}_{fiscal_period.replace(' ', '_')}.json"
-                with open(out_json, "w", encoding="utf-8") as jf:
-                    json.dump(tx_doc, jf, indent=2)
-
-                logger.info(f"Published deliverable JSON: {out_json} (SLA: {'PASS' if sla_met else 'FAIL'})")
-                work_queue.task_done()
-
+        except Exception as e:
+            return None, None, f"error at {start_url}: {str(e)[:80]}"
         finally:
-            db.close()
-            clear_correlation_id()
+            if browser:
+                try:
+                    await browser.close()
+                except Exception:
+                    pass
 
-    # Start consumer thread
-    worker_thread = threading.Thread(target=transcription_worker, daemon=True)
-    worker_thread.start()
 
-    # Producer: Capture / Standardize each of the 12 calls
-    db = SessionLocal()
+def download_and_standardize(
+    media_url: str,
+    output_wav_path: str,
+    timeout_sec: int = 150,
+) -> Dict[str, Any]:
+    """Downloads audio from direct media URL via FFmpeg or yt-dlp and standardizes to 16kHz mono 16-bit PCM WAV."""
+    output_dir = Path(output_wav_path).parent
+    output_dir.mkdir(parents=True, exist_ok=True)
+    _enforce_rate_limit(media_url)
+
+    # 1. If .m3u8 HLS stream, use yt-dlp
+    if ".m3u8" in media_url.lower():
+        temp_raw = str(output_dir / f"temp_{Path(output_wav_path).stem}.m4a")
+        ydl_opts = {
+            "format": "bestaudio/best",
+            "outtmpl": temp_raw,
+            "quiet": True,
+            "no_warnings": True,
+            "user_agent": USER_AGENT,
+        }
+        try:
+            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                ydl.download([media_url])
+            if os.path.exists(temp_raw):
+                convert_to_standard_wav(temp_raw, output_wav_path)
+                try:
+                    os.remove(temp_raw)
+                except OSError:
+                    pass
+                duration_sec, sample_rate, channels, bit_depth = get_wav_properties(output_wav_path)
+                file_size = os.path.getsize(output_wav_path)
+                sha256 = compute_sha256(output_wav_path)
+                return {
+                    "file_path": output_wav_path,
+                    "duration_sec": duration_sec,
+                    "sample_rate": sample_rate,
+                    "channels": channels,
+                    "bit_depth": bit_depth,
+                    "file_size": file_size,
+                    "sha256": sha256,
+                }
+        except Exception as e:
+            logger.warning(f"yt-dlp download failed for {media_url}: {e}; falling back to ffmpeg")
+
+    # 2. Direct FFmpeg conversion
+    cmd = [
+        "ffmpeg", "-y",
+        "-user_agent", USER_AGENT,
+        "-reconnect", "1",
+        "-reconnect_streamed", "1",
+        "-reconnect_delay_max", "5",
+        "-i", media_url,
+        "-vn",
+        "-ar", "16000",
+        "-ac", "1",
+        "-c:a", "pcm_s16le",
+        output_wav_path,
+    ]
+    res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout_sec)
+    if res.returncode != 0:
+        raise RuntimeError(f"FFmpeg failed (code {res.returncode}): {res.stderr.decode('utf-8', errors='ignore')[:250]}")
+
+    duration_sec, sample_rate, channels, bit_depth = get_wav_properties(output_wav_path)
+    file_size = os.path.getsize(output_wav_path)
+    sha256 = compute_sha256(output_wav_path)
+
+    return {
+        "file_path": output_wav_path,
+        "duration_sec": duration_sec,
+        "sample_rate": sample_rate,
+        "channels": channels,
+        "bit_depth": bit_depth,
+        "file_size": file_size,
+        "sha256": sha256,
+    }
+
+
+def validate_captured_audio(
+    wav_path: str,
+    media_url: str,
+    props: Dict[str, Any],
+) -> Tuple[bool, str]:
+    """Validates audio file against all Phase 2 acceptance criteria."""
+    domain = urllib.parse.urlparse(media_url).netloc.lower()
+    if "youtube.com" in domain or "youtu.be" in domain:
+        return False, "Forbidden source domain: youtube"
+
+    if props.get("sample_rate") != 16000:
+        return False, f"Sample rate {props.get('sample_rate')} != 16000"
+    if props.get("channels") != 1:
+        return False, f"Channels {props.get('channels')} != 1 (mono)"
+    if props.get("bit_depth") != 16:
+        return False, f"Bit depth {props.get('bit_depth')} != 16"
+
+    sha = props.get("sha256", "")
+    if sha in OLD_HASHES:
+        return False, f"SHA256 {sha} matches an old synthetic/cached run"
+
+    duration = props.get("duration_sec", 0.0)
+    if duration < 1200.0:
+        return False, f"Audio duration {duration:.1f}s is less than full call requirement (1200s)"
+
+    return True, "VALID"
+
+
+def load_replay_sources() -> Dict[str, Dict[str, Any]]:
+    """Loads optional config/replay_sources.csv if present."""
+    csv_path = Path("config/replay_sources.csv")
+    sources: Dict[str, Dict[str, Any]] = {}
+    if csv_path.exists():
+        try:
+            with open(csv_path, "r", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    t = row.get("ticker", "").strip().upper()
+                    if t:
+                        sources[t] = {
+                            "replay_page_url": row.get("replay_page_url", "").strip(),
+                            "media_url": row.get("media_url", "").strip(),
+                            "registration_required": row.get("registration_required", "").strip().lower() in ("true", "1", "yes"),
+                        }
+        except Exception as e:
+            logger.warning(f"Error loading replay_sources.csv: {e}")
+    return sources
+
+
+async def capture_single_company(
+    ticker: str,
+    ev: Dict[str, Any],
+    replay_sources: Dict[str, Dict[str, Any]],
+    output_wav: str,
+    rejected_dir: Path,
+) -> Dict[str, Any]:
+    """Orchestrates capture for a single company asynchronously."""
+    event_id = ev["id"]
+    fiscal_period = ev["fiscal_period"] or "Q2 FY2026"
+    primary_url = ev["webcast_url"] or ev["ir_page_url"]
+    ir_page_url = ev["ir_page_url"]
+
+    # Check replay_sources.csv if available
+    rs = replay_sources.get(ticker)
+    if rs:
+        if rs.get("registration_required"):
+            src_dom = urllib.parse.urlparse(rs.get("replay_page_url") or primary_url).netloc
+            return {
+                "ticker": ticker,
+                "event_id": event_id,
+                "result": "registration form required",
+                "duration_min": "N/A",
+                "source_domain": src_dom,
+                "is_valid": False,
+                "manifest_row": {
+                    "event_id": event_id,
+                    "capture_mode": "direct_media_url",
+                    "started_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                    "ended_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                    "duration_sec": 0.0,
+                    "sample_rate": 0,
+                    "file_size": 0,
+                    "sha256": "",
+                    "failure_reason": f"registration form required at {rs.get('replay_page_url') or primary_url}",
+                    "ticker": ticker,
+                    "source_url": primary_url,
+                    "replay_expiry_date": "",
+                },
+                "failure_entry": f"{ticker}, {primary_url}, registration form required",
+            }
+        if rs.get("media_url"):
+            primary_url = rs["media_url"]
+        elif rs.get("replay_page_url"):
+            primary_url = rs["replay_page_url"]
+
+    started_at = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    # 1. Determine media URL
+    media_url: Optional[str] = None
+    mode: Optional[str] = None
+    status: str = ""
+
+    if primary_url and any(primary_url.lower().endswith(ext) for ext in [".m3u8", ".mp3", ".mp4", ".m4a", ".aac"]):
+        media_url = primary_url
+        mode = "direct_media_url"
+        status = "SUCCESS"
+    else:
+        media_url, mode, status = await sniff_media_url_playwright(primary_url, fiscal_period=fiscal_period, page_timeout_sec=25)
+        if not media_url and ir_page_url and ir_page_url != primary_url:
+            media_url, mode, status = await sniff_media_url_playwright(ir_page_url, fiscal_period=fiscal_period, page_timeout_sec=20)
+
+    domain_for_log = urllib.parse.urlparse(media_url or primary_url).netloc
+    ended_at = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    if not media_url:
+        res_label = "registration form required" if "registration" in status.lower() else ("replay expired" if "expired" in status.lower() else "no media stream")
+        return {
+            "ticker": ticker,
+            "event_id": event_id,
+            "result": res_label,
+            "duration_min": "N/A",
+            "source_domain": domain_for_log,
+            "is_valid": False,
+            "manifest_row": {
+                "event_id": event_id,
+                "capture_mode": mode or "direct_media_url",
+                "started_at": started_at,
+                "ended_at": ended_at,
+                "duration_sec": 0.0,
+                "sample_rate": 0,
+                "file_size": 0,
+                "sha256": "",
+                "failure_reason": status,
+                "ticker": ticker,
+                "source_url": primary_url,
+                "replay_expiry_date": ev["replay_expiry_date"].strftime("%Y-%m-%d") if ev["replay_expiry_date"] else "",
+            },
+            "failure_entry": f"{ticker}, {primary_url}, {status}",
+        }
+
+    # 2. Download and Standardize
     try:
-        for item in CALLS_CONFIG:
-            ticker = item["ticker"]
-            period = item["period"]
-            mode = item["mode"]
-            lang = item["lang"]
+        props = download_and_standardize(media_url, output_wav, timeout_sec=150)
+        is_valid, val_msg = validate_captured_audio(output_wav, media_url, props)
+        ended_at = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-            # Lookup event from database if available
-            reg_ev = db.query(EventRegistry).filter_by(ticker=ticker).first()
-            call_dt_str = reg_ev.call_datetime_utc.strftime("%Y-%m-%dT%H:%M:%SZ") if (reg_ev and reg_ev.call_datetime_utc) else "2024-10-30T21:00:00Z"
-            event_id = f"EVT_{ticker}_{period.replace(' ', '_')}"
-            source_url = (reg_ev.webcast_url if reg_ev else None) or f"https://investor.{ticker.lower()}.com/events"
-
-            set_correlation_id(f"CAP-{ticker}")
-            wav_name = f"{ticker}_{period.replace(' ', '_')}.wav"
-            target_wav = AUDIO_DIR / wav_name
-            started_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-
-            # Check if file exists in data/_old_runs
-            old_p1 = Path(f"data/_old_runs/{ticker}_{period.replace(' ', '_')}.wav")
-            old_p2 = Path(f"data/_old_runs/{ticker}_Q3_FY2024.wav")
-            old_p3 = Path(f"data/_old_runs/{ticker}_Q3_FY2026.wav")
-            old_p4 = Path(f"data/_old_runs/{ticker}_Q4_FY2024.wav")
-            old_p5 = Path(f"data/_old_runs/{ticker}_Q2_FY2026.wav")
-
-            src_file = None
-            for cand in [old_p1, old_p2, old_p3, old_p4, old_p5]:
-                if cand.exists():
-                    src_file = cand
-                    break
-
-            try:
-                if src_file and src_file.exists():
-                    convert_to_standard_wav(str(src_file), str(target_wav))
-                else:
-                    raise FileNotFoundError(f"Source audio stream for {ticker} unavailable")
-
-                dur, sr, ch, bd = get_wav_properties(str(target_wav))
-                fsize = os.path.getsize(str(target_wav))
-                fhash = compute_sha256(str(target_wav))
-                ended_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-
-                manifest_records.append({
+        if is_valid:
+            dur_min = round(props["duration_sec"] / 60.0, 1)
+            return {
+                "ticker": ticker,
+                "event_id": event_id,
+                "result": "captured",
+                "duration_min": f"{dur_min}m",
+                "source_domain": domain_for_log,
+                "is_valid": True,
+                "manifest_row": {
                     "event_id": event_id,
                     "capture_mode": mode,
                     "started_at": started_at,
                     "ended_at": ended_at,
-                    "duration_sec": dur,
-                    "sample_rate": sr,
-                    "file_size": fsize,
-                    "sha256": fhash,
+                    "duration_sec": props["duration_sec"],
+                    "sample_rate": props["sample_rate"],
+                    "file_size": props["file_size"],
+                    "sha256": props["sha256"],
                     "failure_reason": "",
-                })
-
-                call_summary_rows.append({
                     "ticker": ticker,
-                    "source_url": source_url,
-                    "capture_mode": mode,
-                    "duration": f"{dur:.1f}s",
-                })
-
-                # Enqueue for transcription
-                work_queue.put({
-                    "ticker": ticker,
-                    "wav_path": str(target_wav),
-                    "period": period,
-                    "lang": lang,
-                    "event_id": event_id,
-                    "call_dt_str": call_dt_str,
-                })
-                logger.info(f"Captured & enqueued {ticker} ({dur}s) for immediate transcription.")
-
-            except Exception as e:
-                ended_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-                err_str = str(e)
-                manifest_records.append({
+                    "source_url": media_url,
+                    "replay_expiry_date": ev["replay_expiry_date"].strftime("%Y-%m-%d") if ev["replay_expiry_date"] else "",
+                },
+                "failure_entry": None,
+            }
+        else:
+            if os.path.exists(output_wav):
+                shutil.move(output_wav, str(rejected_dir / Path(output_wav).name))
+            return {
+                "ticker": ticker,
+                "event_id": event_id,
+                "result": f"rejected ({val_msg[:16]})",
+                "duration_min": "N/A",
+                "source_domain": domain_for_log,
+                "is_valid": False,
+                "manifest_row": {
                     "event_id": event_id,
                     "capture_mode": mode,
                     "started_at": started_at,
@@ -301,138 +494,204 @@ def run_pipelined_capture_and_transcription() -> None:
                     "sample_rate": 0,
                     "file_size": 0,
                     "sha256": "",
-                    "failure_reason": err_str,
-                })
-                failure_records.append(f"[{started_at}] {ticker}: {err_str}")
+                    "failure_reason": val_msg,
+                    "ticker": ticker,
+                    "source_url": media_url,
+                    "replay_expiry_date": "",
+                },
+                "failure_entry": f"{ticker}, {media_url}, Validation failed: {val_msg}",
+            }
+    except Exception as e:
+        err_msg = str(e)[:100]
+        return {
+            "ticker": ticker,
+            "event_id": event_id,
+            "result": f"error ({err_msg[:16]})",
+            "duration_min": "N/A",
+            "source_domain": domain_for_log,
+            "is_valid": False,
+            "manifest_row": {
+                "event_id": event_id,
+                "capture_mode": mode,
+                "started_at": started_at,
+                "ended_at": ended_at,
+                "duration_sec": 0.0,
+                "sample_rate": 0,
+                "file_size": 0,
+                "sha256": "",
+                "failure_reason": err_msg,
+                "ticker": ticker,
+                "source_url": media_url,
+                "replay_expiry_date": "",
+            },
+            "failure_entry": f"{ticker}, {media_url}, {err_msg}",
+        }
 
-        # Add unattempted companies to failure log
-        for ut_ticker, reason in UNATTEMPTED_COMPANIES:
-            failure_records.append(f"[{time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}] {ut_ticker}: {reason}")
 
-        # Signal transcription done and wait for queue to drain
-        transcription_done.set()
-        worker_thread.join()
+def run_phase2_capture(target_limit: int = 7, per_company_timeout_sec: int = 180) -> None:
+    """
+    Executes Phase 2 Audio Capture with a hard per-company timeout (default 180s).
+    Merges capture_manifest.csv and capture_failures.log without overwriting existing valid rows.
+    """
+    AUDIO_DIR.mkdir(parents=True, exist_ok=True)
+    DOCS_DIR.mkdir(parents=True, exist_ok=True)
+    rejected_dir = AUDIO_DIR / "rejected"
+    rejected_dir.mkdir(parents=True, exist_ok=True)
 
-        # Write capture_manifest.csv with EXACT required columns
-        fields = [
-            "event_id", "capture_mode", "started_at", "ended_at", "duration_sec",
-            "sample_rate", "file_size", "sha256", "failure_reason"
-        ]
-        with open(manifest_csv, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=fields)
-            writer.writeheader()
-            writer.writerows(manifest_records)
+    manifest_csv = AUDIO_DIR / "capture_manifest.csv"
+    failures_log = AUDIO_DIR / "capture_failures.log"
 
-        with open(failures_log, "w", encoding="utf-8") as f:
-            f.write("# Corporate Earnings Call Capture Failure & Unattempted Log\n\n")
-            for fr in failure_records:
-                f.write(f"{fr}\n")
+    # Load existing manifest rows
+    manifest_by_ticker: Dict[str, Dict[str, Any]] = {}
+    fieldnames = [
+        "event_id", "capture_mode", "started_at", "ended_at",
+        "duration_sec", "sample_rate", "file_size", "sha256",
+        "failure_reason", "ticker", "source_url", "replay_expiry_date"
+    ]
+    if manifest_csv.exists():
+        try:
+            with open(manifest_csv, "r", newline="", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    if row.get("ticker"):
+                        manifest_by_ticker[row["ticker"]] = row
+        except Exception:
+            pass
 
-        # Generate docs/latency_report.md
-        _write_latency_report(latencies)
+    replay_sources = load_replay_sources()
 
-        # Generate docs/asr_model_benchmark.md on first audio
-        bench_data = None
-        if CALLS_CONFIG:
-            first_wav = str(AUDIO_DIR / f"{CALLS_CONFIG[0]['ticker']}_{CALLS_CONFIG[0]['period'].replace(' ', '_')}.wav")
-            if os.path.exists(first_wav):
-                bench_data = ModelBenchmarkRegistry.run_live_benchmark(first_wav, max_duration_sec=600.0)
-                _write_asr_benchmark_report(bench_data)
-
-        # Print the 12-call summary table
-        print("\n" + "=" * 120)
-        print("PHASE 2 & 3: 12 CAPTURED & TRANSCRIBED CALLS SUMMARY TABLE")
-        print("=" * 120)
-        hdr = f"| {'Ticker':<6} | {'Source URL':<35} | {'Capture Mode':<26} | {'Duration':<10} | {'RTF':<8} | {'Post-Call Latency':<18} | {'SLA Status':<10} | {'Q&A Segments':<12} |"
-        print(hdr)
-        print("|" + "-" * 8 + "|" + "-" * 37 + "|" + "-" * 28 + "|" + "-" * 12 + "|" + "-" * 10 + "|" + "-" * 20 + "|" + "-" * 12 + "|" + "-" * 14 + "|")
-
-        lat_map = {l["ticker"]: l for l in latencies}
-        for row in call_summary_rows:
-            t = row["ticker"]
-            lat_info = lat_map.get(t, {})
-            rtf_str = f"{lat_info.get('rtf', 0.0):.4f}"
-            lat_str = f"{lat_info.get('total_pipeline_time_sec', 0.0):.2f}s"
-            sla_str = lat_info.get("sla_status", "PASS")
-            qa_str = str(lat_info.get("qa_count", 0))
-            print(f"| {t:<6} | {row['source_url'][:35]:<35} | {row['capture_mode']:<26} | {row['duration']:<10} | {rtf_str:<8} | {lat_str:<18} | {sla_str:<10} | {qa_str:<12} |")
-        print("=" * 120 + "\n")
-
-        # Print Failed & Unattempted Companies
-        print("=" * 120)
-        print("FAILED / UNATTEMPTED COMPANIES LOG")
-        print("=" * 120)
-        for fr in failure_records:
-            print(f"- {fr}")
-        print("=" * 120 + "\n")
-
-        # Print 3-Library Benchmark Table
-        if bench_data and bench_data.get("benchmarks"):
-            print("=" * 120)
-            print("3-LIBRARY ASR MODEL BENCHMARK COMPARISON TABLE")
-            print("=" * 120)
-            b_hdr = f"| {'Model / Engine':<38} | {'Framework':<22} | {'Quantization':<14} | {'Eval (s)':<10} | {'Inference (s)':<14} | {'RAM (MB)':<10} | {'RTF':<8} | {'5-Min SLA':<10} | {'Status':<10} |"
-            print(b_hdr)
-            print("|" + "-" * 40 + "|" + "-" * 24 + "|" + "-" * 16 + "|" + "-" * 12 + "|" + "-" * 16 + "|" + "-" * 12 + "|" + "-" * 10 + "|" + "-" * 12 + "|" + "-" * 12 + "|")
-            for b in bench_data["benchmarks"]:
-                mname = b.get("model_name", "")[:38]
-                fw = b.get("framework", "N/A")[:22]
-                qz = b.get("quantization", "N/A")[:14]
-                esec = str(b.get("measured_eval_sec", "-"))
-                isec = str(b.get("inference_time_sec", "-"))
-                ram = str(b.get("peak_ram_mb", "-"))
-                mrtf = str(b.get("measured_rtf", "-"))
-                msla = str(b.get("5min_target_sla", "-"))
-                mstat = b.get("status", "OK")[:10]
-                print(f"| {mname:<38} | {fw:<22} | {qz:<14} | {esec:<10} | {isec:<14} | {ram:<10} | {mrtf:<8} | {msla:<10} | {mstat:<10} |")
-            print("=" * 120 + "\n")
-
+    db = SessionLocal()
+    try:
+        events = db.query(EventRegistry).join(CompanyUniverse).all()
+        event_data_by_ticker = {}
+        for e in events:
+            event_data_by_ticker[e.ticker] = {
+                "id": e.id,
+                "ticker": e.ticker,
+                "fiscal_period": e.fiscal_period,
+                "webcast_url": e.webcast_url,
+                "ir_page_url": e.company.ir_page_url if e.company else None,
+                "replay_expiry_date": e.replay_expiry_date,
+            }
     finally:
         db.close()
-        clear_correlation_id()
 
+    newly_captured_count = 0
+    failure_entries: List[str] = []
 
-def _write_latency_report(latencies: List[Dict[str, Any]]) -> None:
-    doc_path = DOCS_DIR / "latency_report.md"
-    with open(doc_path, "w", encoding="utf-8") as f:
-        f.write("# Corporate Earnings Call Pipeline – Latency & RTF Report\n\n")
-        f.write(f"**Measurement Date:** {time.strftime('%Y-%m-%d %H:%M:%S UTC', time.gmtime())}  \n")
-        f.write("**Environment:** Windows 11 x64 | Python 3.14 | CPU Execution (CTranslate2 int8, 4 worker threads)  \n")
-        f.write("**Target SLA:** Publication of complete structured transcript within **5 minutes (300 seconds)** of call conclusion.  \n\n")
-        f.write("## 1. Measured Call-by-Call Latency Summary\n\n")
-        f.write("| Ticker | Audio Duration (s) | ASR Inference (s) | Post-Call Latency (s) | Measured RTF | 5-Min Target SLA |\n")
-        f.write("| :--- | :---: | :---: | :---: | :---: | :---: |\n")
+    print("\n" + "=" * 90)
+    print(f"PHASE 2 AUTOMATIC AUDIO CAPTURE (Target: {target_limit} new full calls, Timeout: {per_company_timeout_sec}s/company)")
+    print("=" * 90)
 
-        for l in latencies:
-            f.write(
-                f"| **{l['ticker']}** | {l['audio_duration_sec']:.1f}s | {l['asr_infer_time_sec']:.2f}s | "
-                f"{l['total_pipeline_time_sec']:.2f}s | {l['rtf']:.4f} | **{l['sla_status']}** |\n"
+    for ticker in TARGET_COMPANIES:
+        if ticker in SKIPPED_COMPANIES:
+            continue
+
+        if newly_captured_count >= target_limit:
+            print(f"Reached target of {target_limit} newly captured calls. Stopping.")
+            break
+
+        if ticker not in event_data_by_ticker:
+            continue
+
+        ev = event_data_by_ticker[ticker]
+        fiscal_period = ev["fiscal_period"] or "Q2 FY2026"
+        clean_period = fiscal_period.replace(" ", "_")
+        output_wav = str(AUDIO_DIR / f"{ticker}_{clean_period}.wav")
+        primary_url = ev["webcast_url"] or ev["ir_page_url"]
+        domain_for_log = urllib.parse.urlparse(primary_url).netloc
+
+        set_correlation_id(f"CAP-{ticker}")
+
+        try:
+            res = asyncio.run(
+                asyncio.wait_for(
+                    capture_single_company(
+                        ticker=ticker,
+                        ev=ev,
+                        replay_sources=replay_sources,
+                        output_wav=output_wav,
+                        rejected_dir=rejected_dir,
+                    ),
+                    timeout=float(per_company_timeout_sec)
+                )
             )
 
-        f.write("\n## 2. SLA Compliance Verification\n\n")
-        f.write("All streaming chunks are processed with measured RTF < 0.15 on CPU, ensuring immediate post-call publishing.\n")
+            manifest_by_ticker[ticker] = res["manifest_row"]
+            if res.get("failure_entry"):
+                failure_entries.append(res["failure_entry"])
+            if res.get("is_valid"):
+                newly_captured_count += 1
 
+            print(f"{ticker:<6} | {res['result']:<26} | {res['duration_min']:<12} | {res['source_domain']}")
 
-def _write_asr_benchmark_report(bench_data: Dict[str, Any]) -> None:
-    doc_path = DOCS_DIR / "asr_model_benchmark.md"
-    with open(doc_path, "w", encoding="utf-8") as f:
-        f.write("# ASR Model Comparative Benchmark Report\n\n")
-        f.write(f"**Generated:** {time.strftime('%Y-%m-%d %H:%M:%S UTC', time.gmtime())}  \n")
-        f.write(f"**Sample Audio Tested:** `{bench_data.get('sample_audio')}` ({bench_data.get('audio_duration_sec', 0):.1f}s)  \n\n")
-        f.write("## 1. Engine & Model Benchmark Results (3 Libraries Evaluated)\n\n")
-        f.write("| Model / Engine | Framework | Quantization | Eval Duration (s) | Inference Time (s) | Peak RAM (MB) | Measured RTF | 5-Min SLA | Status |\n")
-        f.write("| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |\n")
+        except asyncio.TimeoutError:
+            started_at = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            manifest_by_ticker[ticker] = {
+                "event_id": ev["id"],
+                "capture_mode": "direct_media_url",
+                "started_at": started_at,
+                "ended_at": started_at,
+                "duration_sec": 0.0,
+                "sample_rate": 0,
+                "file_size": 0,
+                "sha256": "",
+                "failure_reason": f"timeout after {per_company_timeout_sec}s",
+                "ticker": ticker,
+                "source_url": primary_url,
+                "replay_expiry_date": "",
+            }
+            failure_entries.append(f"{ticker}, {primary_url}, timeout after {per_company_timeout_sec}s")
+            print(f"{ticker:<6} | timeout                    | N/A          | {domain_for_log}")
 
-        for b in bench_data.get("benchmarks", []):
-            f.write(
-                f"| **{b['model_name']}** | {b.get('framework', 'N/A')} | {b.get('quantization', 'N/A')} | "
-                f"{b.get('measured_eval_sec', '-')}s | {b.get('inference_time_sec', '-')}s | {b.get('peak_ram_mb', '-')} MB | "
-                f"{b.get('measured_rtf', '-')} | **{b.get('5min_target_sla', '-')}** | {b.get('status', 'OK')} |\n"
-            )
+        except Exception as e:
+            err_msg = str(e)[:100]
+            started_at = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            manifest_by_ticker[ticker] = {
+                "event_id": ev["id"],
+                "capture_mode": "direct_media_url",
+                "started_at": started_at,
+                "ended_at": started_at,
+                "duration_sec": 0.0,
+                "sample_rate": 0,
+                "file_size": 0,
+                "sha256": "",
+                "failure_reason": err_msg,
+                "ticker": ticker,
+                "source_url": primary_url,
+                "replay_expiry_date": "",
+            }
+            failure_entries.append(f"{ticker}, {primary_url}, {err_msg}")
+            print(f"{ticker:<6} | error                      | N/A          | {domain_for_log}")
 
-        f.write("\n## 2. Recommendation\n\n")
-        f.write(f"> {bench_data.get('hardware_recommendation')}\n")
+    # Write merged manifest
+    with open(manifest_csv, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for r in manifest_by_ticker.values():
+            writer.writerow(r)
+
+    # Append to failure log
+    with open(failures_log, "a", encoding="utf-8") as f:
+        for entry in failure_entries:
+            f.write(entry + "\n")
+
+    # Count total valid captured across all files
+    total_valid = sum(
+        1 for r in manifest_by_ticker.values()
+        if float(r.get("duration_sec", 0.0) or 0.0) >= 1200.0 and r.get("sha256")
+    )
+
+    print("=" * 90)
+    print(f"RUN SUMMARY: {newly_captured_count} new call(s) captured in this run.")
+    print(f"TOTAL VALID CAPTURES IN MANIFEST: {total_valid}")
+    print("=" * 90 + "\n")
 
 
 if __name__ == "__main__":
-    run_pipelined_capture_and_transcription()
+    import argparse
+    parser = argparse.ArgumentParser(description="Phase 2 Audio Capture Pipeline")
+    parser.add_argument("--limit", type=int, default=7, help="Maximum new captures before stopping")
+    parser.add_argument("--timeout", type=int, default=180, help="Per-company hard timeout in seconds")
+    args = parser.parse_args()
+    run_phase2_capture(target_limit=args.limit, per_company_timeout_sec=args.timeout)

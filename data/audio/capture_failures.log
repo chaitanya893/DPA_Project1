@@ -1,0 +1,54 @@
+MSFT, http://www.microsoft.com/en-us/investor, no media stream found at https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast
+ENB, https://events.q4inc.com/attendee/193728984, no media stream found at https://www.enbridge.com/investment-center
+AAPL, https://investor.apple.com/events, no media stream found at https://investor.apple.com
+JPM, https://www.jpmorganchase.com/ir/events, no media stream found at https://www.jpmorganchase.com/ir
+JNJ, https://investor.jnj.com/events, no media stream found at https://investor.jnj.com
+GOOGL, https://abc.xyz/investor/events, registration form required at https://abc.xyz/investor
+TSLA, https://ir.tesla.com/events, no media stream found at https://ir.tesla.com
+LLY, https://investor.lilly.com/events, Navigation failed: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://investor.lilly.com/
+Call log:
+  - navigating to 
+LMB, https://investors.limbachinc.com/events, Navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://investors.limbachinc.com/
+Call log:
+  - navigating 
+RELL, https://rell.com/investor-relations/events, no media stream found at https://rell.com/investor-relations
+RY, https://www.rbc.com/investor-relations/events, no media stream found at https://www.rbc.com/investor-relations
+CNR, https://event.webcasts.com/starthere.jsp?ei=1774946&tp_key=06654de884&tp_special=8, no media stream found at https://www.cn.ca/en/investors
+SHOP, https://stream.mux.com/2EqBx4eDq1Ji4vU6p9Yi6JuhqueS1V3L00LjvrCRyshY.m3u8?redundant_streams=true, Validation failed: Bit depth None != 16
+ATD, https://corpo.couche-tard.com/en/investors/events, no media stream found at https://corpo.couche-tard.com/en/investors
+MRU, https://corpo.metro.ca/en/investor-relations/events, no media stream found at https://corpo.metro.ca/en/investor-relations
+SAP, https://www.gowebcasting.com/13127, no media stream found at https://www.saputo.com/en/investors
+WMT, https://stock.walmart.com/events, no media stream found at https://stock.walmart.com
+PG, https://www.pginvestor.com/events, registration form required at https://www.pginvestor.com
+APT, https://alphaprotech.investorroom.com/events, no media stream found at https://alphaprotech.investorroom.com
+DMRC, https://investors.digimarc.com/events, Navigation failed: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://investors.digimarc.com/
+Call log:
+  - navigating to
+PESI, https://ir.perma-fix.com/events, no media stream found at https://ir.perma-fix.com
+ABX, https://www.barrick.com/English/investors/events, registration form required at https://www.barrick.com/English/investors
+T, https://www.telus.com/en/about/investor-relations/events, no media stream found at https://www.telus.com/en/about/investor-relations
+NTR, https://www.nutrien.com/investors/events, no media stream found at https://www.nutrien.com/investors
+JNJ, https://investor.jnj.com/events, no media stream found at https://investor.jnj.com
+LLY, https://investor.lilly.com/events, Navigation failed at https://investor.lilly.com: Page.goto: Timeout 20000ms exceeded.
+Call log:
+  - navigating to "https://invest
+TSLA, https://ir.tesla.com/events, no media stream found at https://ir.tesla.com
+RELL, https://rell.com/investor-relations/events, no media stream found at https://rell.com/investor-relations
+LMB, https://event.choruscall.com/mediaframe/webcast.html?webcastid=LYkmLAUY, no media stream found at https://www.limbachinc.com
+ENB, https://events.q4inc.com/attendee/193728984, Navigation failed at https://www.enbridge.com/~/media/Enb/Documents/Investor-Relations/2026/2026_Q2_Earnings_Presentation_Final.pdf?rev=d43eb8ba746f4e8e92907c86f0847ddc&hash=E32C55677C975BC176B013AF872988DC: Page.goto: Download is starting
+Call log:
+  - navigating to "https://www.enbridg
+CNR, https://event.webcasts.com/starthere.jsp?ei=1774946&tp_key=06654de884&tp_special=8, no media stream found at https://www.cn.ca/en/investors
+ATD, https://corpo.couche-tard.com/en/investors/events, no media stream found at https://corpo.couche-tard.com/en/investors
+MRU, https://corpo.metro.ca/en/investor-relations/events, no media stream found at https://corpo.metro.ca/en/investor-relations
+SAP, https://www.gowebcasting.com/13127, no media stream found at https://www.saputo.com/en/investors
+WMT, https://stock.walmart.com/events, no media stream found at https://stock.walmart.com
+NTR, https://www.nutrien.com/investors/events, no media stream found at https://www.nutrien.com/investors
+T, https://www.telus.com/en/about/investor-relations/events, no media stream found at https://www.telus.com/en/about/investor-relations
+PESI, https://ir.perma-fix.com/events, no media stream found at https://ir.perma-fix.com
+APT, https://alphaprotech.investorroom.com/events, no media stream found at https://alphaprotech.investorroom.com
+DMRC, https://www.digimarc.com/company/investors, no media stream found at https://www.digimarc.com/company/investors
+GOOGL, https://abc.xyz/investor/events, no media stream found at https://abc.xyz/investor
+PG, https://www.pginvestor.com/events, no media stream found at https://www.pginvestor.com
+ABX, https://www.barrick.com/English/investors/events, no media stream found at https://www.barrick.com/English/investors
+XOM, https://investor.exxonmobil.com/events, no media stream found at https://investor.exxonmobil.com/events (call time unannounced in results filing)

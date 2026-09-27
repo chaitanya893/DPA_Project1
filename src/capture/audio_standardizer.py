@@ -73,6 +73,7 @@ def convert_to_standard_wav(input_path: str, output_path: str) -> Dict[str, Any]
         "duration_sec": duration_sec,
         "sample_rate": sample_rate,
         "channels": channels,
+        "bit_depth": bit_depth,
         "file_size": file_size,
         "sha256": sha256_hash,
     }
