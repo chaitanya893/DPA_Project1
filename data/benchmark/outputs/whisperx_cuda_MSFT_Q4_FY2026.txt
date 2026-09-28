@@ -1,0 +1,82 @@
+[2.00 --> 8.05]  Greetings, and welcome to the Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call.
+[9.11 --> 12.47] At this time, all participants are in a listen-only mode.
+[13.55 --> 16.42] A question and answer session will follow the formal presentation.
+[17.74 --> 23.10] If anyone should require operator assistance, please press star zero on your telephone keypad.
+[24.26 --> 26.48] As a reminder, this conference is being recorded.
+[26.50 --> 30.37] It is now my pleasure to introduce Jonathan Nielsen,
+[30.86 --> 32.43]  Vice President of Investor Relations.
+[32.99 --> 33.45] Please go ahead.
+[35.15 --> 37.53] Good afternoon, and thank you for joining us today.
+[38.43 --> 51.12] On the call with me are Satya Nadella, Chairman and Chief Executive Officer, Amy Hood, Chief Financial Officer, Alice Jolla, Chief Accounting Officer, and Brian Dafoe, Deputy General Counsel and Corporate Secretary.
+[52.11 --> 66.23]  On the Microsoft Investor Relations website, you can find our earnings press release and financial summary slide deck, which is intended to supplement our prepared remarks during today's call and provides the reconciliation of differences between GAAP and non-GAAP financial measures.
+[67.65 --> 74.78] More detailed outlook slides will be available on the Microsoft Investor Relations website when we provide outlook commentary on today's call.
+[75.94 --> 78.64]  On this call, we will discuss certain non-GAAP items.
+[79.26 --> 87.75] The non-GAAP financial measures provided should not be considered as a substitute for or superior to the measures of financial performance prepared in accordance with GAAP.
+[88.51 --> 98.89] They are included as additional clarifying items to aid investors in further understanding the company's fourth quarter performance in addition to the impact these items and events have on the financial results.
+[100.41 --> 102.71] All growth comparisons we make on the call today
+[103.41 --> 107.19]  relates to the corresponding period of last year unless otherwise noted.
+[108.29 --> 118.80] We will also provide growth rates in constant currency when available as a framework for assessing how our underlying businesses performed, excluding the effect of foreign currency rate fluctuations.
+[119.86 --> 124.28] Where growth rates are the same in constant currency, we will refer to the growth rate only.
+[125.88 --> 131.79] We will post our prepared remarks to our website immediately following the call until the complete transcript is available.
+[133.14 --> 135.82]  Today's call is being webcast live and recorded.
+[136.56 --> 143.77] If you ask a question, it will be included in our live transmission in the transcript and in any future use of the recording.
+[144.59 --> 148.95] You can replay the call and view the transcript on the Microsoft Investor Relations website.
+[151.39 --> 158.53] During this call, we will be making forward looking statements which are predictions, projections or other statements about future events.
+[159.47 --> 164.59]  These statements are based on current expectations and assumptions that are subject to risks and uncertainties.
+[165.67 --> 180.94] Actual results could materially differ because of factors discussed in today's earnings press release, in the comments made during this conference call, and in the risk factors section of our Form 10K, Forms 10Q, and other reports and filings with the Securities and Exchange Commission.
+[182.20 --> 185.94] We do not undertake any duty to update any forward-looking statement.
+[187.40 --> 189.74]  And with that, I'll turn the call over to Satya.
+[190.28 --> 191.68] Thank you very much, Jonathan.
+[191.92 --> 195.76] It was a very strong close to what was a record fiscal year for us.
+[196.40 --> 199.28] All up, our annual revenue surpassed $331 billion, up 18%.
+[199.32 --> 201.47] Microsoft Cloud surpassed $214 billion, up 27.
+[201.59 --> 203.59] And Azure surpassed $100 billion, up 41.
+[211.46 --> 213.44]  Going forward, we have two goals.
+[214.00 --> 227.21] First, ensuring AI empowers every person, amplifying their agency and ambition, and second, empowering every organization to build their own continuous learning loop and ensuring that they don't outsource their core IP.
+[227.79 --> 233.46] Now, let's talk about how we're delivering this across our stack, starting with our AI platform and infrastructure.
+[234.04 --> 240.02] We added 31 new data centers across five continents this quarter, bringing the total to 88 this year,
+[241.12 --> 244.38]  as we expand our footprint in response to accelerating demand.
+[244.93 --> 247.81] We are also bringing capacity online faster than ever.
+[248.07 --> 254.93] Over the last fiscal year, we have reduced doctor lifetimes for new GPUs in our largest regions by nearly 50%.
+[255.83 --> 263.76] All up we added another gigawatt of capacity this quarter and remain on track to roughly double our overall capacity in just two years.
+[264.58 --> 271.17]  We're also getting more from the infrastructure we already have by optimizing across silicon systems and software.
+[271.75 --> 276.94] For example, we increased the throughput for copilot workloads 4x since the start of the year.
+[277.53 --> 284.01]  AI sovereignty is increasingly top of mind for our customers and we are expanding our offerings to meet that need.
+[284.31 --> 296.05] Just last week, we announced a partnership with Mistral to bring its models to Microsoft sovereign cloud, enabling customers to run them across public customer controlled and fully disconnected environments.
+[296.77 --> 303.88] We also continue to modernize our fleet with our own silicon innovation alongside the latest from Nvidia and AMD.
+[304.62 --> 306.91]  Maya 200 continues to scale.
+[307.45 --> 315.94] It delivers 30% better performance per dollar than the latest generation hardware in our fleet and is now supporting both OpenAI and MAI models.
+[316.70 --> 325.19] And we will be among the first cloud providers to deploy next generation rack scale AI infrastructure based on AMD Helios and NVIDIA Vira Rubin.
+[326.19 --> 330.63]  When it comes to running agents, CPUs are just as important as GPUs.
+[330.93 --> 340.54] Our Cobalt VMs are powering both our own first-party workloads as well as workloads for customers including Adobe, ARM, Elastic, OpenAI, Sprinkler, and TomTom.
+[340.83 --> 349.48] And by the end of this month, we expect to have our Cobalt 200 racks in over 25 data centers around the world as we rapidly expand capacity.
+[350.40 --> 357.55]  Now let me turn to the end-to-end platform we're building on this infrastructure to run, govern, and distribute apps and agents.
+[358.11 --> 360.07] It starts with model choice.
+[360.35 --> 365.92] Every customer wants the right model for each task based on quality, latency, cost, and compliance.
+[366.52 --> 376.43] We offer the broadest model catalog in the cloud with over 11,000 models, including the latest from OpenAI, Anthropic, Mistral, XAI, as well as our own MAI family.
+[377.30 --> 384.62]  Since the start of the year, we have seen 5x increase in the number of customers building with models from multiple providers.
+[385.02 --> 397.23] Levi-Strauss & Co, for example, is using models from OpenAI and Anthropic on Foundry as it brings more than 1,000 domain-specific agents into a unified enterprise AI platform.
+[398.07 --> 400.71]  We're also accelerating our own model development.
+[400.75 --> 414.89] We announced more than a dozen new models across image, voice, transcription, coding, security, including our first reasoning model MAI Thinking 1, all with cost-efficient inference at the core for the enterprise use cases.
+[415.72 --> 424.34]  We are co-designing these models with our silicon and we are seeing 40% better performance per watt when running MAI models on Maya 200.
+[424.76 --> 439.65] But more importantly, we are building a new model system where the harness, context, memory and action space are separate from any one model family, thereby moving the frontier on the cost to outcome curve.
+[440.35 --> 448.91]  And it's not just about cost, it also has the added benefit of business continuity and resilience because every model is substitutable.
+[449.57 --> 452.59] This is the system we're using in our products with great results.
+[452.67 --> 466.48] For example, millions of developers have used MAI Code One Flash on GitHub Copilot, achieving higher code acceptance rates and 10% lower median token usage while still having access to frontier capabilities from OpenAI and Anthropic.
+[467.05 --> 476.21]  In Excel, MAI Code One Flash is delivering comparable quality to GPT-5.6 for the most common tasks while operating at significantly lower costs.
+[476.68 --> 487.62] In Security, MAI Cyber One Flash achieves better performance than much larger mythos model, but at half the cost when combined with our multi-agent security harness.
+[488.18 --> 496.41] More broadly, across our model implementations, we are seeing significant efficiency gains, including 89% reduction of GPU costs
+[496.81 --> 505.25]  in Dynamics 365 with MAI Voice 2 Flash and up to 84% reduced GPU costs in PowerPoint with MAI Image 2.5.
+[505.97 --> 509.91] And this system is available to any company to use as part of Foundry.
+[510.77 --> 513.39] The next layer is the enterprise data and context.
+[513.67 --> 518.96] The data estate is evolving from primarily supporting apps used by people to supporting agents.
+[519.30 --> 524.54] Customers are rapidly adopting our AI optimized databases like Cosmos DB and PostgreSQL
+[525.22 --> 530.71]  to give agents fast, secure access to real-time data and context they need for memory and retrieval.
+[531.35 --> 536.27] PostgreSQL revenue was up 55% accelerating for the third consecutive quarter.
+[536.55 --> 545.70] Also, the number of PostgreSQL customers also using Foundry increased 80% as customers increasingly choose it as the database for AI workloads.
+[546.68 --> 556.23]  And we are going further with Horizon DB, our new fully managed Postgres SQL service on Azure, which delivers three times the throughput of self-managed deployments.
+[556.93 --> 564.49] When it comes to analytics, we now have over 40,000 paid fabric customers up more than 60% year over year.
+[565.68 --> 577.72]  And over 17,000 customers now use Foundry and Fabric, up 60% year over year, as enterprises connect agents to real-time operational, analytical, and unstructured data in Fabric.
+[578.28 --> 586.12] This quarter, we also introduced Rayfin, the agent-first SDK that delivers a backend-as-a-service for building apps in Fabric.
+[587.04 --> 594.80] More than 2,500 customers have already used Rayfin and is now powering the backends for apps created with Repla2.
+[595.99 --> 599.93]  On top of this data estate we are building an IQ layer that combines data

@@ -1,0 +1,243 @@
+(upbeat music)
+- Good morning, and thank you for joining Shopify's
+second quarter, 2026 conference call.
+I'm Shane Kleinstein, Director of Investor Relations,
+and joining us today are Harley Finkelstein,
+Shopify's President, and Jeff Hofmeister, our CFO.
+After their prepared remarks,
+we will open it up for your questions.
+Today's call will include certain forward-looking statements
+that are based on assumptions,
+and therefore subject to risks and uncertainties
+that could cause actual results to differ materially
+from those projected.
+Under-reliance should not be placed
+on these forward-looking statements.
+We undertake no obligation to update
+or revise these statements, except as required by law.
+You can read about these assumptions, risks,
+and uncertainties in our press release this morning,
+as well as in our filings
+with the US and Canadian regulators.
+We'll also speak to adjusted financial measures
+and other non-GAAP measures,
+which are not a substitute for GAAP financial measures.
+Reconciliation is between the two are provided
+in our press release.
+And finally, we report in US dollars,
+so all amounts discussed today are in US dollars,
+unless otherwise indicated.
+With that, I'll turn the call over to Harley.
+- Good morning, and thanks everyone for joining us today.
+We've got another exceptional quarter
+to talk about here at Shopify.
+Here's what that looks like in the numbers.
+GMV was up 32% to $116 billion,
+with broad growth across our merchant sizes,
+geographies, and sales channels.
+Our revenue was up 34% to $3.6 billion,
+and our free cash-in margin was 18%.
+That's a growth rate of 30% or more across every metric.
+And this marks our fifth straight quarter
+of GMV growth above 30%.
+Now of all the numbers, our GMV is the one worth repeating.
+Our merchants processed $116 billion this quarter.
+This is commerce at an extraordinary scale
+flowing through the platform.
+And it also tells us that our merchants are thriving.
+Okay, now for the story behind those numbers.
+Since day one, our operating principle
+has been simple and consistent.
+Shopify creates what most merchants need most of the time.
+And for everything else,
+we empower our incredible ecosystem of partners.
+Now, I know you've all heard that before,
+but here's why it matters now.
+The principle that got us here also explains
+why we're able to deliver durable growth
+quarter after quarter.
+And it perfectly captures how we are building to win
+in this new era of commerce.
+Let me explain.
+First, our addressable market of most merchants
+is now a very large pool.
+Because we made it easier to start,
+there are now simply more merchants to serve.
+And the breadth of our capabilities has expanded
+so that merchants of all sizes now run on Shopify.
+Second, the range of those most of the time merchant needs
+is expanding quickly.
+They need access to new and emerging surface areas.
+They need best-in-class tools
+that will allow them to keep pace
+with the rate of change in commerce.
+And they need it all in one place.
+Added complexity only reinforces the demand
+for a simple unified platform that they can rely on.
+And that is Shopify.
+And here's the third critical piece.
+Our open ecosystem model is uniquely well-suited
+to this agentic era.
+We have always focused on most merchant needs
+while making the platform extensible for everything else.
+We build the primitives, we open them up,
+and we let the best developers and the best companies
+in the world build on top of us.
+In the last year,
+we kicked that model into a whole new gear.
+Some of the largest technology companies in the world,
+like OpenAI, Google, Meta, and Microsoft,
+have chosen to partner with us
+to open more front doors for commerce.
+Every new surface area they build
+is another place our merchants can sell
+all because they're on Shopify.
+And on top of this,
+thousands of developers all over the world
+are embedding commerce into their own applications
+using the same primitives we built.
+Thousands of new front doors
+all built on one unified foundation,
+the Shopify platform.
+Now, as commerce continues to fragment,
+Shopify becomes an even more critical partner
+because we provide consistent and reliable infrastructure
+that makes every shopping experience feel seamless.
+Now, whether commerce is handled by humans or agents,
+whether stores are built by people or AI,
+Shopify runs underneath it all.
+For 20 years, we've built the commerce operating system
+that takes merchants from first sale to full scale
+by using our partner ecosystem
+as an extension of our platform.
+That is our muscle memory.
+And this model will continue to service even better
+in this new agentic era of commerce.
+So let's talk more about Shopify's infrastructure,
+specifically what we've been building
+and why it matters so much.
+We have a very strong conviction that commerce experiences
+will soon be built in
+to everywhere people are spending their time.
+And that is why our latest product drop
+was called the Everywhere Edition.
+We are building now
+so our merchants are ready for the future.
+So let's talk about that infrastructure
+that unlocks commerce everywhere.
+First, our catalog,
+which you can think of as the authoritative source of truth
+for AI product discovery of the world's best products
+and best brands.
+For nearly two years,
+we've been investing in the search index
+ensuring over a billion products
+and 20 years of commerce experience
+is distilled for agents.
+It structures merchants' product data
+so every and any AI partner can access it directly,
+giving agents the ability to discover, understand,
+and recommend our merchants' products.
+And let me say this,
+catalog will be one of Shopify's most important assets
+for years to come.
+And here's why.
+We're seeing that AI searches powered by catalog
+convert at twice the rate of those using scraped data.
+That is because with catalog,
+merchants' products show up complete, accurate,
+and with the right context when someone is ready to buy.
+Put simply, catalog is the discovery engine for the future
+and Shopify built it and owns it.
+Next, let's talk about the Universal Commerce Protocol,
+or UCP.
+We introduced UCP at the start of 2026
+and already industry players across the commerce stack
+and beyond are converging on this unified protocol
+with dozens of retailers and platforms adopting it to date.
+And because we co-built the protocol,
+partners look to us to make sure it evolves
+in ways that represent the full diversity of commerce.
+So, first we built the infrastructure
+to unlock commerce everywhere,
+and then we opened it up for everyone.
+Every Shopify merchant is UCP ready.
+Agents and builders can access the product data,
+create carts, and even checkout using the protocol.
+Everything flows through Shopify,
+so their checkout logic and fulfillment rules
+are perfectly preserved.
+Their products are also automatically listed in catalog.
+And every builder can now access UCP and the catalog API
+across millions of merchants
+so they can build commerce experiences
+with the same infrastructure as our major AI partners.
+Plus, we built our catalog the way only Shopify could,
+integrated with shop sign-in
+so agents can recognize returning buyers
+and surface personalized recommendations
+based on their purchase history.
+No other catalog API can do this.
+And we're not just putting merchants in AI channels,
+we're also showing them how to win in them.
+In May of this year,
+we rolled out our new agentic section in the admin,
+the first cross-channel attribution for agentic selling.
+Merchants can manage AI channels,
+they can track performance,
+and they can get specific recommendations
+on what to improve, all from a single interface.
+Now, while the volume of magenta commerce
+is still small relative to our massive GMV,
+the growth trends are impressive.
+Both AI-driven traffic and also orders to Shopify stores
+tripled year over year in the second quarter.
+New buyer orders are coming in
+at nearly twice the rate of other channels.
+And this is not just AI taking share of search.
+In fact, search remains one of our largest sources
+of buyer traffic to our merchants,
+and it's still growing.
+Traditional search sessions are up 1.3X
+over the past two years,
+holding roughly a third of all storefront sessions.
+That is AI as a compliment to search
+rather than a substitute for it.
+Okay, now let's talk about agentic building.
+AI is not just opening up new surface areas for discovery,
+it is also democratizing code and software development,
+lowering the barriers to starting a business even further.
+The way entrepreneurs are pursuing new ideas,
+the way developers are building software,
+the way merchants are running their businesses,
+they're all being rewritten.
+So naturally, the tools we're arming our merchants with
+are also evolving at an incredible pace.
+And Sidekick is the prime example of this.
+In the second quarter, daily active merchants using Sidekick
+were up 3.6X year on year,
+and daily sessions were up 4.8X.
+It handled nearly 34 million conversations,
+and it was used to create more than 36,000 custom apps,
+up from 12,000 in Q1.
+More merchants are using Sidekick,
+and they're using it far more often.
+That's because it's driving real value.
+Getting new merchants to their first sale faster
+and helping established merchants run smarter.
+Sidekick's personalized guidance
+for new merchants during onboarding
+led to an 8% increase in merchants
+reaching five orders within 15 days.
+And it's getting more intelligent all the time.
+It can now access data and take action through extensions
+to third-party apps like Klaviyo
+without the merchant ever leaving Sidekick.
+Now, adoption is widespread across merchants of all sizes,
+but what's really interesting
+is how the value evolves as merchants grow.
+In a merchant's first 30 days,
+roughly half of their conversations with Sidekick
+are about store setup, design, and theme configuration.
+Now, for merchants five years in,
+that drops to about 8%

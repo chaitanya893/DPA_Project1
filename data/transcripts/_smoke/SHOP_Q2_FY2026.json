@@ -14,8 +14,8 @@
           "start": 9.46,
           "end": 13.84,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "Good morning, and thank you for joining Shopify's second quarter 2026 conference call.",
           "confidence": 0.843
         },
@@ -23,8 +23,8 @@
           "start": 14.46,
           "end": 18.04,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "I'm Shane Kleinstein, Director of Investor Relations, and joining us today are Harley",
           "confidence": 0.843
         }
@@ -39,17 +39,17 @@
           "start": 18.04,
           "end": 21.52,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "Finkelstein, Shopify's President, and Jeff Hofmeister, our CFO.",
           "confidence": 0.843
         },
         {
           "start": 22.32,
-          "end": 24.82,
+          "end": 24.8,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "After their prepared remarks, we will open it up for your questions.",
           "confidence": 0.843
         },
@@ -57,484 +57,484 @@
           "start": 25.9,
           "end": 29.44,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
-          "text": "Today's call will include certain forward-looking statements that are based on assumptions",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
+          "text": "Today's call will include certain forward-looking statements that are based on assumptions,",
           "confidence": 0.843
         },
         {
-          "start": 29.95,
+          "start": 30.02,
           "end": 33.98,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "and therefore subject to risks and uncertainties that could cause actual results to differ",
           "confidence": 0.843
         },
         {
           "start": 33.98,
-          "end": 35.28,
+          "end": 35.26,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "materially from those projected.",
           "confidence": 0.843
         },
         {
-          "start": 36.12,
-          "end": 38.4,
+          "start": 36.08,
+          "end": 38.36,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "Under-reliance should not be placed on these forward-looking statements.",
           "confidence": 0.843
         },
         {
-          "start": 38.4,
+          "start": 38.82,
           "end": 43.08,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "We undertake no obligation to update or revise these statements, except as required by law.",
-          "confidence": 0.838
+          "confidence": 0.854
         },
         {
           "start": 43.66,
           "end": 47.0,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "You can read about these assumptions, risks, and uncertainties in our press release this",
-          "confidence": 0.838
+          "confidence": 0.854
         },
         {
           "start": 47.0,
           "end": 49.9,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
-          "text": "morning, as well as in our filings with the U.S. and Canadian regulators.",
-          "confidence": 0.838
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
+          "text": "morning, as well as in our filings with the US and Canadian regulators.",
+          "confidence": 0.854
         },
         {
           "start": 50.74,
           "end": 54.56,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "We'll also speak to adjusted financial measures and other non-GAAP measures, which are not",
-          "confidence": 0.838
+          "confidence": 0.854
         },
         {
           "start": 54.56,
-          "end": 56.26,
+          "end": 56.28,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "a substitute for GAAP financial measures.",
-          "confidence": 0.838
+          "confidence": 0.854
         },
         {
           "start": 57.06,
           "end": 59.3,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "Reconciliation between the two are provided in our press release.",
-          "confidence": 0.838
+          "confidence": 0.854
         },
         {
           "start": 57.0,
           "end": 59.32,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "conciliations between the two are provided in our press release.",
-          "confidence": 0.854
+          "confidence": 0.856
         },
         {
           "start": 60.08,
           "end": 64.18,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "And finally, we report in US dollars, so all amounts discussed today are in US dollars",
-          "confidence": 0.854
+          "confidence": 0.856
         },
         {
           "start": 64.18,
-          "end": 65.2,
+          "end": 65.18,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "unless otherwise indicated.",
-          "confidence": 0.854
+          "confidence": 0.856
         },
         {
-          "start": 65.88,
+          "start": 65.9,
           "end": 67.48,
           "speaker_id": "SPEAKER_00",
-          "speaker_name": "Speaker SPEAKER_00",
-          "speaker_role": "Participant",
+          "speaker_name": "Shane Kleinstein",
+          "speaker_role": "Director of Investor Relations",
           "text": "With that, I'll turn the call over to Harley.",
-          "confidence": 0.854
+          "confidence": 0.856
         },
         {
           "start": 68.56,
           "end": 70.5,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Good morning and thanks everyone for joining us today.",
-          "confidence": 0.854
+          "confidence": 0.856
         },
         {
           "start": 70.68,
           "end": 73.26,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "We've got another exceptional quarter to talk about here at Shopify.",
-          "confidence": 0.854
+          "confidence": 0.856
         },
         {
           "start": 73.72,
           "end": 75.74,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Here's what that looks like in the numbers.",
-          "confidence": 0.854
+          "confidence": 0.856
         },
         {
           "start": 76.46,
           "end": 82.92,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "GMD was up 32% to $116 billion with broad growth across our merchant sizes, geographies,",
-          "confidence": 0.854
+          "confidence": 0.856
         },
         {
-          "start": 83.24,
+          "start": 83.26,
           "end": 84.04,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "and sales channels.",
-          "confidence": 0.854
+          "confidence": 0.856
         },
         {
           "start": 84.64,
           "end": 92.12,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Our revenue was up 34% to $3.6 billion and our free cash-in margin was 18%.",
-          "confidence": 0.848
+          "confidence": 0.853
         },
         {
           "start": 92.12,
-          "end": 96.28,
+          "end": 96.3,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "That's a growth rate of 30% or more across every metric.",
-          "confidence": 0.848
+          "confidence": 0.853
         },
         {
-          "start": 96.8,
-          "end": 101.42,
+          "start": 96.82,
+          "end": 101.44,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "And this marks our fifth straight quarter of GMD growth above 30%.",
-          "confidence": 0.848
+          "confidence": 0.853
         },
         {
-          "start": 101.42,
+          "start": 101.44,
           "end": 104.48,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Now of all the numbers, our GMD is the one worth repeating.",
-          "confidence": 0.848
+          "confidence": 0.853
         },
         {
           "start": 105.12,
           "end": 108.36,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Our merchants processed $116 billion this quarter.",
-          "confidence": 0.848
+          "confidence": 0.853
         },
         {
           "start": 109.0,
           "end": 112.26,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "This is commerce at an extraordinary scale flowing through the platform.",
-          "confidence": 0.848
+          "confidence": 0.853
         },
         {
           "start": 112.68,
           "end": 115.64,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "And it also tells us that our merchants are thriving.",
-          "confidence": 0.719
+          "confidence": 0.715
         },
         {
           "start": 116.56,
           "end": 116.98,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Okay, now for",
-          "confidence": 0.719
+          "confidence": 0.715
         },
         {
           "start": 114.0,
-          "end": 115.62,
+          "end": 115.64,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "that our merchants are thriving.",
-          "confidence": 0.845
+          "confidence": 0.846
         },
         {
           "start": 116.52,
           "end": 117.96,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Okay, now for the story behind those numbers.",
-          "confidence": 0.845
+          "confidence": 0.846
         },
         {
           "start": 118.56,
           "end": 120.36,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Since day one, our operating principle",
-          "confidence": 0.845
+          "confidence": 0.846
         },
         {
           "start": 120.36,
           "end": 122.2,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "has been simple and consistent.",
-          "confidence": 0.845
+          "confidence": 0.846
         },
         {
           "start": 123.14,
-          "end": 125.02,
+          "end": 125.04,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Shoplight creates what most merchants need",
-          "confidence": 0.845
+          "confidence": 0.846
         },
         {
-          "start": 125.02,
+          "start": 125.04,
           "end": 126.96,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "most of the time, and for everything else,",
-          "confidence": 0.845
+          "confidence": 0.846
         },
         {
           "start": 127.18,
           "end": 129.72,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "we empower our incredible ecosystem of partners.",
-          "confidence": 0.845
+          "confidence": 0.846
         },
         {
           "start": 130.46,
           "end": 131.78,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Now, I know you've all heard that before,",
-          "confidence": 0.845
+          "confidence": 0.846
         },
         {
           "start": 131.96,
           "end": 133.22,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "but here's why it matters now.",
-          "confidence": 0.845
+          "confidence": 0.846
         },
         {
           "start": 133.96,
           "end": 136.4,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "The principle that got us here also explains",
-          "confidence": 0.845
+          "confidence": 0.846
         },
         {
           "start": 136.4,
           "end": 138.52,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "why we're able to deliver durable growth",
-          "confidence": 0.845
+          "confidence": 0.846
         },
         {
           "start": 138.52,
           "end": 139.94,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "quarter after quarter,",
-          "confidence": 0.845
+          "confidence": 0.846
         },
         {
-          "start": 140.04,
+          "start": 140.06,
           "end": 143.54,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "and it perfectly captures how we are building to win",
-          "confidence": 0.845
+          "confidence": 0.846
         },
         {
           "start": 143.54,
           "end": 145.0,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "in this new era of commerce.",
-          "confidence": 0.876
+          "confidence": 0.887
         },
         {
           "start": 145.58,
           "end": 145.98,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Let me explain.",
-          "confidence": 0.876
+          "confidence": 0.887
         },
         {
           "start": 147.14,
           "end": 149.5,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "First, our addressable market of most merchants",
-          "confidence": 0.876
+          "confidence": 0.887
         },
         {
           "start": 149.5,
           "end": 151.9,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "is now a very large pool.",
-          "confidence": 0.876
+          "confidence": 0.887
         },
         {
-          "start": 152.56,
+          "start": 152.58,
           "end": 153.84,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Because we've made it easier to start,",
-          "confidence": 0.876
+          "confidence": 0.887
         },
         {
           "start": 154.14,
           "end": 156.14,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "there are now simply more merchants to serve,",
-          "confidence": 0.876
+          "confidence": 0.887
         },
         {
-          "start": 156.46,
+          "start": 156.48,
           "end": 158.8,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
-          "text": "and the breadth of our capabilities has expanded,",
-          "confidence": 0.876
+          "text": "and the breadth of our capabilities has expanded",
+          "confidence": 0.887
         },
         {
-          "start": 158.98,
+          "start": 158.8,
           "end": 162.06,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "so that merchants of all sizes now run on Shopify.",
-          "confidence": 0.876
+          "confidence": 0.887
         },
         {
-          "start": 162.86,
+          "start": 162.88,
           "end": 165.18,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Second, the range of those, most of the time,",
-          "confidence": 0.876
+          "confidence": 0.887
         },
         {
           "start": 165.28,
-          "end": 167.18,
+          "end": 167.2,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "merchant needs is expanding quickly.",
-          "confidence": 0.876
+          "confidence": 0.887
         },
         {
-          "start": 167.88,
+          "start": 167.9,
           "end": 170.16,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "They need access to new and emerging surface areas.",
-          "confidence": 0.876
+          "confidence": 0.887
         },
         {
-          "start": 170.52,
+          "start": 170.54,
           "end": 171.9,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "They need best-in-class tools",
-          "confidence": 0.876
+          "confidence": 0.887
         },
         {
           "start": 171.9,
           "end": 173.92,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "that will allow them to keep pace with the rate of change.",
-          "confidence": 0.682
+          "confidence": 0.683
         },
         {
           "start": 171.0,
           "end": 173.28,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "best-in-class tools that will allow them to keep pace",
           "confidence": 0.856
@@ -543,16 +543,16 @@
           "start": 173.28,
           "end": 174.42,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "with the rate of change in commerce.",
           "confidence": 0.856
         },
         {
           "start": 175.0,
-          "end": 177.0,
+          "end": 176.98,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "And they need it all in one place.",
           "confidence": 0.856
@@ -561,7 +561,7 @@
           "start": 177.8,
           "end": 180.48,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Added complexity only reinforces the demand",
           "confidence": 0.856
@@ -570,16 +570,16 @@
           "start": 180.48,
           "end": 183.64,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "for a simple unified platform that they can rely on.",
           "confidence": 0.856
         },
         {
           "start": 184.0,
-          "end": 185.54,
+          "end": 185.56,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "And that is Shopify.",
           "confidence": 0.856
@@ -588,16 +588,16 @@
           "start": 186.24,
           "end": 187.72,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "And here's the third critical piece.",
           "confidence": 0.856
         },
         {
-          "start": 188.24,
+          "start": 188.22,
           "end": 190.88,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Our open ecosystem model is uniquely well-suited",
           "confidence": 0.856
@@ -606,25 +606,25 @@
           "start": 190.88,
           "end": 192.1,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "to the Sygantic era.",
           "confidence": 0.856
         },
         {
           "start": 192.6,
-          "end": 195.26,
+          "end": 195.28,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "We have always focused on most merchant needs",
           "confidence": 0.856
         },
         {
-          "start": 195.26,
-          "end": 198.38,
+          "start": 195.28,
+          "end": 198.36,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "while making the platform extensible for everything else.",
           "confidence": 0.856
@@ -633,133 +633,133 @@
           "start": 198.9,
           "end": 200.88,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "We build the primitives, we open them up,",
-          "confidence": 0.918
+          "confidence": 0.901
         },
         {
           "start": 201.08,
           "end": 203.56,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "and we let the best developers and the best companies",
-          "confidence": 0.918
+          "confidence": 0.901
         },
         {
           "start": 203.56,
           "end": 205.86,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "in the world build on top of us.",
-          "confidence": 0.918
+          "confidence": 0.901
         },
         {
           "start": 206.44,
           "end": 208.46,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "In the last year, we kicked that model",
-          "confidence": 0.918
+          "confidence": 0.901
         },
         {
           "start": 208.46,
           "end": 209.82,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "into a whole new gear.",
-          "confidence": 0.918
+          "confidence": 0.901
         },
         {
           "start": 210.56,
           "end": 212.86,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Some of the largest technology companies in the world,",
-          "confidence": 0.918
+          "confidence": 0.901
         },
         {
           "start": 213.04,
           "end": 215.18,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "like OpenAI, Google, Meta, and Microsoft,",
-          "confidence": 0.918
+          "confidence": 0.901
         },
         {
           "start": 215.46,
-          "end": 216.96,
+          "end": 216.98,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "have chosen to partner with us",
-          "confidence": 0.918
+          "confidence": 0.901
         },
         {
-          "start": 216.96,
-          "end": 219.18,
+          "start": 216.98,
+          "end": 219.16,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "to open more front doors for commerce.",
-          "confidence": 0.918
+          "confidence": 0.901
         },
         {
           "start": 220.0,
           "end": 221.64,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Every new surface area they build",
-          "confidence": 0.918
+          "confidence": 0.901
         },
         {
           "start": 221.64,
           "end": 224.12,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "is another place our merchants can sell",
-          "confidence": 0.918
+          "confidence": 0.901
         },
         {
           "start": 224.12,
-          "end": 226.24,
+          "end": 226.26,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "all because they're on Shopify.",
-          "confidence": 0.918
+          "confidence": 0.901
         },
         {
           "start": 226.87,
-          "end": 229.16,
+          "end": 229.18,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "And on top of this, thousands of developers",
-          "confidence": 0.72
+          "confidence": 0.742
         },
         {
-          "start": 229.16,
+          "start": 229.18,
           "end": 230.9,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "all over the world are embedding.",
-          "confidence": 0.72
+          "confidence": 0.742
         },
         {
           "start": 228.0,
           "end": 232.38,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Thousands of developers all over the world are embedding commerce into their own applications",
           "confidence": 0.856
@@ -768,25 +768,25 @@
           "start": 232.38,
           "end": 234.32,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "using the same primitives we built.",
           "confidence": 0.856
         },
         {
-          "start": 235.4,
+          "start": 235.42,
           "end": 240.74,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Thousands of new front doors all built on one unified foundation, the Shopify platform.",
           "confidence": 0.856
         },
         {
-          "start": 241.58,
+          "start": 241.6,
           "end": 245.56,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Now, as commerce continues to fragment, Shopify becomes an even more critical partner",
           "confidence": 0.856
@@ -795,7 +795,7 @@
           "start": 245.56,
           "end": 248.68,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "because we provide consistent and reliable infrastructure",
           "confidence": 0.856
@@ -804,7 +804,7 @@
           "start": 248.68,
           "end": 251.62,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "that makes every shopping experience feel seamless.",
           "confidence": 0.856
@@ -813,7 +813,7 @@
           "start": 252.54,
           "end": 254.66,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Now, whether commerce is handled by humans or agents,",
           "confidence": 0.856
@@ -822,7 +822,7 @@
           "start": 255.06,
           "end": 257.16,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "whether stores are built by people or AI,",
           "confidence": 0.856
@@ -831,127 +831,127 @@
           "start": 257.16,
           "end": 259.94,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "Shopify runs underneath it all.",
-          "confidence": 0.868
+          "confidence": 0.86
         },
         {
           "start": 260.72,
           "end": 263.64,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "For 20 years, we've built the commerce operating system",
-          "confidence": 0.868
+          "confidence": 0.86
         },
         {
           "start": 263.64,
           "end": 266.26,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "that takes merchants from first sale to full scale",
-          "confidence": 0.868
+          "confidence": 0.86
         },
         {
           "start": 266.26,
           "end": 269.76,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "by using our partner ecosystem as an extension of our platform.",
-          "confidence": 0.868
+          "confidence": 0.86
         },
         {
           "start": 270.28,
           "end": 272.16,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "That is our muscle memory.",
-          "confidence": 0.868
+          "confidence": 0.86
         },
         {
           "start": 272.64,
           "end": 277.26,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "And this model will continue to service even better in this new agentic era of commerce.",
-          "confidence": 0.868
+          "confidence": 0.86
         },
         {
           "start": 277.88,
-          "end": 279.82,
+          "end": 279.84,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "So let's talk more about Shopify's infrastructure,",
-          "confidence": 0.868
+          "confidence": 0.86
         },
         {
           "start": 280.24,
           "end": 283.76,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "specifically what we've been building and why it matters so much.",
-          "confidence": 0.868
+          "confidence": 0.86
         },
         {
           "start": 283.76,
           "end": 287.98,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "We have a very strong conviction that commerce experiences will soon...",
-          "confidence": 0.688
+          "confidence": 0.686
         },
         {
           "start": 285.0,
           "end": 289.16,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "be built in to",
-          "confidence": 0.772
+          "confidence": 0.764
         },
         {
           "start": 289.16,
           "end": 290.78,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "everywhere people are spending their time.",
-          "confidence": 0.772
+          "confidence": 0.764
         },
         {
           "start": 291.34,
           "end": 294.66,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "And that is why our latest product drop was called the Everywhere Edition.",
-          "confidence": 0.772
+          "confidence": 0.764
         },
         {
-          "start": 295.4,
+          "start": 295.38,
           "end": 297.9,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "We are building now so our merchants are ready for the future.",
-          "confidence": 0.772
+          "confidence": 0.764
         },
         {
-          "start": 298.54,
+          "start": 298.52,
           "end": 299.98,
           "speaker_id": "SPEAKER_01",
-          "speaker_name": "Speaker SPEAKER_01",
+          "speaker_name": "commerce at an extraordinary scale flowing through the platform",
           "speaker_role": "Executive",
           "text": "So let's talk about that infrastructure that on-",
-          "confidence": 0.772
+          "confidence": 0.764
         }
       ]
     },
@@ -967,8 +967,8 @@
       "start": 9.46,
       "end": 13.84,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "Good morning, and thank you for joining Shopify's second quarter 2026 conference call.",
       "confidence": 0.843
     },
@@ -976,8 +976,8 @@
       "start": 14.46,
       "end": 18.04,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "I'm Shane Kleinstein, Director of Investor Relations, and joining us today are Harley",
       "confidence": 0.843
     },
@@ -985,17 +985,17 @@
       "start": 18.04,
       "end": 21.52,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "Finkelstein, Shopify's President, and Jeff Hofmeister, our CFO.",
       "confidence": 0.843
     },
     {
       "start": 22.32,
-      "end": 24.82,
+      "end": 24.8,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "After their prepared remarks, we will open it up for your questions.",
       "confidence": 0.843
     },
@@ -1003,484 +1003,484 @@
       "start": 25.9,
       "end": 29.44,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
-      "text": "Today's call will include certain forward-looking statements that are based on assumptions",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
+      "text": "Today's call will include certain forward-looking statements that are based on assumptions,",
       "confidence": 0.843
     },
     {
-      "start": 29.95,
+      "start": 30.02,
       "end": 33.98,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "and therefore subject to risks and uncertainties that could cause actual results to differ",
       "confidence": 0.843
     },
     {
       "start": 33.98,
-      "end": 35.28,
+      "end": 35.26,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "materially from those projected.",
       "confidence": 0.843
     },
     {
-      "start": 36.12,
-      "end": 38.4,
+      "start": 36.08,
+      "end": 38.36,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "Under-reliance should not be placed on these forward-looking statements.",
       "confidence": 0.843
     },
     {
-      "start": 38.4,
+      "start": 38.82,
       "end": 43.08,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "We undertake no obligation to update or revise these statements, except as required by law.",
-      "confidence": 0.838
+      "confidence": 0.854
     },
     {
       "start": 43.66,
       "end": 47.0,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "You can read about these assumptions, risks, and uncertainties in our press release this",
-      "confidence": 0.838
+      "confidence": 0.854
     },
     {
       "start": 47.0,
       "end": 49.9,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
-      "text": "morning, as well as in our filings with the U.S. and Canadian regulators.",
-      "confidence": 0.838
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
+      "text": "morning, as well as in our filings with the US and Canadian regulators.",
+      "confidence": 0.854
     },
     {
       "start": 50.74,
       "end": 54.56,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "We'll also speak to adjusted financial measures and other non-GAAP measures, which are not",
-      "confidence": 0.838
+      "confidence": 0.854
     },
     {
       "start": 54.56,
-      "end": 56.26,
+      "end": 56.28,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "a substitute for GAAP financial measures.",
-      "confidence": 0.838
+      "confidence": 0.854
     },
     {
       "start": 57.06,
       "end": 59.3,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "Reconciliation between the two are provided in our press release.",
-      "confidence": 0.838
+      "confidence": 0.854
     },
     {
       "start": 57.0,
       "end": 59.32,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "conciliations between the two are provided in our press release.",
-      "confidence": 0.854
+      "confidence": 0.856
     },
     {
       "start": 60.08,
       "end": 64.18,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "And finally, we report in US dollars, so all amounts discussed today are in US dollars",
-      "confidence": 0.854
+      "confidence": 0.856
     },
     {
       "start": 64.18,
-      "end": 65.2,
+      "end": 65.18,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "unless otherwise indicated.",
-      "confidence": 0.854
+      "confidence": 0.856
     },
     {
-      "start": 65.88,
+      "start": 65.9,
       "end": 67.48,
       "speaker_id": "SPEAKER_00",
-      "speaker_name": "Speaker SPEAKER_00",
-      "speaker_role": "Participant",
+      "speaker_name": "Shane Kleinstein",
+      "speaker_role": "Director of Investor Relations",
       "text": "With that, I'll turn the call over to Harley.",
-      "confidence": 0.854
+      "confidence": 0.856
     },
     {
       "start": 68.56,
       "end": 70.5,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Good morning and thanks everyone for joining us today.",
-      "confidence": 0.854
+      "confidence": 0.856
     },
     {
       "start": 70.68,
       "end": 73.26,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "We've got another exceptional quarter to talk about here at Shopify.",
-      "confidence": 0.854
+      "confidence": 0.856
     },
     {
       "start": 73.72,
       "end": 75.74,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Here's what that looks like in the numbers.",
-      "confidence": 0.854
+      "confidence": 0.856
     },
     {
       "start": 76.46,
       "end": 82.92,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "GMD was up 32% to $116 billion with broad growth across our merchant sizes, geographies,",
-      "confidence": 0.854
+      "confidence": 0.856
     },
     {
-      "start": 83.24,
+      "start": 83.26,
       "end": 84.04,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "and sales channels.",
-      "confidence": 0.854
+      "confidence": 0.856
     },
     {
       "start": 84.64,
       "end": 92.12,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Our revenue was up 34% to $3.6 billion and our free cash-in margin was 18%.",
-      "confidence": 0.848
+      "confidence": 0.853
     },
     {
       "start": 92.12,
-      "end": 96.28,
+      "end": 96.3,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "That's a growth rate of 30% or more across every metric.",
-      "confidence": 0.848
+      "confidence": 0.853
     },
     {
-      "start": 96.8,
-      "end": 101.42,
+      "start": 96.82,
+      "end": 101.44,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "And this marks our fifth straight quarter of GMD growth above 30%.",
-      "confidence": 0.848
+      "confidence": 0.853
     },
     {
-      "start": 101.42,
+      "start": 101.44,
       "end": 104.48,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Now of all the numbers, our GMD is the one worth repeating.",
-      "confidence": 0.848
+      "confidence": 0.853
     },
     {
       "start": 105.12,
       "end": 108.36,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Our merchants processed $116 billion this quarter.",
-      "confidence": 0.848
+      "confidence": 0.853
     },
     {
       "start": 109.0,
       "end": 112.26,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "This is commerce at an extraordinary scale flowing through the platform.",
-      "confidence": 0.848
+      "confidence": 0.853
     },
     {
       "start": 112.68,
       "end": 115.64,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "And it also tells us that our merchants are thriving.",
-      "confidence": 0.719
+      "confidence": 0.715
     },
     {
       "start": 116.56,
       "end": 116.98,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Okay, now for",
-      "confidence": 0.719
+      "confidence": 0.715
     },
     {
       "start": 114.0,
-      "end": 115.62,
+      "end": 115.64,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "that our merchants are thriving.",
-      "confidence": 0.845
+      "confidence": 0.846
     },
     {
       "start": 116.52,
       "end": 117.96,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Okay, now for the story behind those numbers.",
-      "confidence": 0.845
+      "confidence": 0.846
     },
     {
       "start": 118.56,
       "end": 120.36,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Since day one, our operating principle",
-      "confidence": 0.845
+      "confidence": 0.846
     },
     {
       "start": 120.36,
       "end": 122.2,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "has been simple and consistent.",
-      "confidence": 0.845
+      "confidence": 0.846
     },
     {
       "start": 123.14,
-      "end": 125.02,
+      "end": 125.04,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Shoplight creates what most merchants need",
-      "confidence": 0.845
+      "confidence": 0.846
     },
     {
-      "start": 125.02,
+      "start": 125.04,
       "end": 126.96,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "most of the time, and for everything else,",
-      "confidence": 0.845
+      "confidence": 0.846
     },
     {
       "start": 127.18,
       "end": 129.72,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "we empower our incredible ecosystem of partners.",
-      "confidence": 0.845
+      "confidence": 0.846
     },
     {
       "start": 130.46,
       "end": 131.78,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Now, I know you've all heard that before,",
-      "confidence": 0.845
+      "confidence": 0.846
     },
     {
       "start": 131.96,
       "end": 133.22,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "but here's why it matters now.",
-      "confidence": 0.845
+      "confidence": 0.846
     },
     {
       "start": 133.96,
       "end": 136.4,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "The principle that got us here also explains",
-      "confidence": 0.845
+      "confidence": 0.846
     },
     {
       "start": 136.4,
       "end": 138.52,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "why we're able to deliver durable growth",
-      "confidence": 0.845
+      "confidence": 0.846
     },
     {
       "start": 138.52,
       "end": 139.94,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "quarter after quarter,",
-      "confidence": 0.845
+      "confidence": 0.846
     },
     {
-      "start": 140.04,
+      "start": 140.06,
       "end": 143.54,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "and it perfectly captures how we are building to win",
-      "confidence": 0.845
+      "confidence": 0.846
     },
     {
       "start": 143.54,
       "end": 145.0,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "in this new era of commerce.",
-      "confidence": 0.876
+      "confidence": 0.887
     },
     {
       "start": 145.58,
       "end": 145.98,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Let me explain.",
-      "confidence": 0.876
+      "confidence": 0.887
     },
     {
       "start": 147.14,
       "end": 149.5,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "First, our addressable market of most merchants",
-      "confidence": 0.876
+      "confidence": 0.887
     },
     {
       "start": 149.5,
       "end": 151.9,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "is now a very large pool.",
-      "confidence": 0.876
+      "confidence": 0.887
     },
     {
-      "start": 152.56,
+      "start": 152.58,
       "end": 153.84,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Because we've made it easier to start,",
-      "confidence": 0.876
+      "confidence": 0.887
     },
     {
       "start": 154.14,
       "end": 156.14,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "there are now simply more merchants to serve,",
-      "confidence": 0.876
+      "confidence": 0.887
     },
     {
-      "start": 156.46,
+      "start": 156.48,
       "end": 158.8,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
-      "text": "and the breadth of our capabilities has expanded,",
-      "confidence": 0.876
+      "text": "and the breadth of our capabilities has expanded",
+      "confidence": 0.887
     },
     {
-      "start": 158.98,
+      "start": 158.8,
       "end": 162.06,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "so that merchants of all sizes now run on Shopify.",
-      "confidence": 0.876
+      "confidence": 0.887
     },
     {
-      "start": 162.86,
+      "start": 162.88,
       "end": 165.18,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Second, the range of those, most of the time,",
-      "confidence": 0.876
+      "confidence": 0.887
     },
     {
       "start": 165.28,
-      "end": 167.18,
+      "end": 167.2,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "merchant needs is expanding quickly.",
-      "confidence": 0.876
+      "confidence": 0.887
     },
     {
-      "start": 167.88,
+      "start": 167.9,
       "end": 170.16,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "They need access to new and emerging surface areas.",
-      "confidence": 0.876
+      "confidence": 0.887
     },
     {
-      "start": 170.52,
+      "start": 170.54,
       "end": 171.9,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "They need best-in-class tools",
-      "confidence": 0.876
+      "confidence": 0.887
     },
     {
       "start": 171.9,
       "end": 173.92,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "that will allow them to keep pace with the rate of change.",
-      "confidence": 0.682
+      "confidence": 0.683
     },
     {
       "start": 171.0,
       "end": 173.28,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "best-in-class tools that will allow them to keep pace",
       "confidence": 0.856
@@ -1489,16 +1489,16 @@
       "start": 173.28,
       "end": 174.42,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "with the rate of change in commerce.",
       "confidence": 0.856
     },
     {
       "start": 175.0,
-      "end": 177.0,
+      "end": 176.98,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "And they need it all in one place.",
       "confidence": 0.856
@@ -1507,7 +1507,7 @@
       "start": 177.8,
       "end": 180.48,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Added complexity only reinforces the demand",
       "confidence": 0.856
@@ -1516,16 +1516,16 @@
       "start": 180.48,
       "end": 183.64,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "for a simple unified platform that they can rely on.",
       "confidence": 0.856
     },
     {
       "start": 184.0,
-      "end": 185.54,
+      "end": 185.56,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "And that is Shopify.",
       "confidence": 0.856
@@ -1534,16 +1534,16 @@
       "start": 186.24,
       "end": 187.72,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "And here's the third critical piece.",
       "confidence": 0.856
     },
     {
-      "start": 188.24,
+      "start": 188.22,
       "end": 190.88,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Our open ecosystem model is uniquely well-suited",
       "confidence": 0.856
@@ -1552,25 +1552,25 @@
       "start": 190.88,
       "end": 192.1,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "to the Sygantic era.",
       "confidence": 0.856
     },
     {
       "start": 192.6,
-      "end": 195.26,
+      "end": 195.28,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "We have always focused on most merchant needs",
       "confidence": 0.856
     },
     {
-      "start": 195.26,
-      "end": 198.38,
+      "start": 195.28,
+      "end": 198.36,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "while making the platform extensible for everything else.",
       "confidence": 0.856
@@ -1579,133 +1579,133 @@
       "start": 198.9,
       "end": 200.88,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "We build the primitives, we open them up,",
-      "confidence": 0.918
+      "confidence": 0.901
     },
     {
       "start": 201.08,
       "end": 203.56,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "and we let the best developers and the best companies",
-      "confidence": 0.918
+      "confidence": 0.901
     },
     {
       "start": 203.56,
       "end": 205.86,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "in the world build on top of us.",
-      "confidence": 0.918
+      "confidence": 0.901
     },
     {
       "start": 206.44,
       "end": 208.46,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "In the last year, we kicked that model",
-      "confidence": 0.918
+      "confidence": 0.901
     },
     {
       "start": 208.46,
       "end": 209.82,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "into a whole new gear.",
-      "confidence": 0.918
+      "confidence": 0.901
     },
     {
       "start": 210.56,
       "end": 212.86,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Some of the largest technology companies in the world,",
-      "confidence": 0.918
+      "confidence": 0.901
     },
     {
       "start": 213.04,
       "end": 215.18,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "like OpenAI, Google, Meta, and Microsoft,",
-      "confidence": 0.918
+      "confidence": 0.901
     },
     {
       "start": 215.46,
-      "end": 216.96,
+      "end": 216.98,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "have chosen to partner with us",
-      "confidence": 0.918
+      "confidence": 0.901
     },
     {
-      "start": 216.96,
-      "end": 219.18,
+      "start": 216.98,
+      "end": 219.16,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "to open more front doors for commerce.",
-      "confidence": 0.918
+      "confidence": 0.901
     },
     {
       "start": 220.0,
       "end": 221.64,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Every new surface area they build",
-      "confidence": 0.918
+      "confidence": 0.901
     },
     {
       "start": 221.64,
       "end": 224.12,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "is another place our merchants can sell",
-      "confidence": 0.918
+      "confidence": 0.901
     },
     {
       "start": 224.12,
-      "end": 226.24,
+      "end": 226.26,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "all because they're on Shopify.",
-      "confidence": 0.918
+      "confidence": 0.901
     },
     {
       "start": 226.87,
-      "end": 229.16,
+      "end": 229.18,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "And on top of this, thousands of developers",
-      "confidence": 0.72
+      "confidence": 0.742
     },
     {
-      "start": 229.16,
+      "start": 229.18,
       "end": 230.9,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "all over the world are embedding.",
-      "confidence": 0.72
+      "confidence": 0.742
     },
     {
       "start": 228.0,
       "end": 232.38,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Thousands of developers all over the world are embedding commerce into their own applications",
       "confidence": 0.856
@@ -1714,25 +1714,25 @@
       "start": 232.38,
       "end": 234.32,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "using the same primitives we built.",
       "confidence": 0.856
     },
     {
-      "start": 235.4,
+      "start": 235.42,
       "end": 240.74,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Thousands of new front doors all built on one unified foundation, the Shopify platform.",
       "confidence": 0.856
     },
     {
-      "start": 241.58,
+      "start": 241.6,
       "end": 245.56,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Now, as commerce continues to fragment, Shopify becomes an even more critical partner",
       "confidence": 0.856
@@ -1741,7 +1741,7 @@
       "start": 245.56,
       "end": 248.68,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "because we provide consistent and reliable infrastructure",
       "confidence": 0.856
@@ -1750,7 +1750,7 @@
       "start": 248.68,
       "end": 251.62,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "that makes every shopping experience feel seamless.",
       "confidence": 0.856
@@ -1759,7 +1759,7 @@
       "start": 252.54,
       "end": 254.66,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Now, whether commerce is handled by humans or agents,",
       "confidence": 0.856
@@ -1768,7 +1768,7 @@
       "start": 255.06,
       "end": 257.16,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "whether stores are built by people or AI,",
       "confidence": 0.856
@@ -1777,127 +1777,127 @@
       "start": 257.16,
       "end": 259.94,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "Shopify runs underneath it all.",
-      "confidence": 0.868
+      "confidence": 0.86
     },
     {
       "start": 260.72,
       "end": 263.64,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "For 20 years, we've built the commerce operating system",
-      "confidence": 0.868
+      "confidence": 0.86
     },
     {
       "start": 263.64,
       "end": 266.26,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "that takes merchants from first sale to full scale",
-      "confidence": 0.868
+      "confidence": 0.86
     },
     {
       "start": 266.26,
       "end": 269.76,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "by using our partner ecosystem as an extension of our platform.",
-      "confidence": 0.868
+      "confidence": 0.86
     },
     {
       "start": 270.28,
       "end": 272.16,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "That is our muscle memory.",
-      "confidence": 0.868
+      "confidence": 0.86
     },
     {
       "start": 272.64,
       "end": 277.26,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "And this model will continue to service even better in this new agentic era of commerce.",
-      "confidence": 0.868
+      "confidence": 0.86
     },
     {
       "start": 277.88,
-      "end": 279.82,
+      "end": 279.84,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "So let's talk more about Shopify's infrastructure,",
-      "confidence": 0.868
+      "confidence": 0.86
     },
     {
       "start": 280.24,
       "end": 283.76,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "specifically what we've been building and why it matters so much.",
-      "confidence": 0.868
+      "confidence": 0.86
     },
     {
       "start": 283.76,
       "end": 287.98,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "We have a very strong conviction that commerce experiences will soon...",
-      "confidence": 0.688
+      "confidence": 0.686
     },
     {
       "start": 285.0,
       "end": 289.16,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "be built in to",
-      "confidence": 0.772
+      "confidence": 0.764
     },
     {
       "start": 289.16,
       "end": 290.78,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "everywhere people are spending their time.",
-      "confidence": 0.772
+      "confidence": 0.764
     },
     {
       "start": 291.34,
       "end": 294.66,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "And that is why our latest product drop was called the Everywhere Edition.",
-      "confidence": 0.772
+      "confidence": 0.764
     },
     {
-      "start": 295.4,
+      "start": 295.38,
       "end": 297.9,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "We are building now so our merchants are ready for the future.",
-      "confidence": 0.772
+      "confidence": 0.764
     },
     {
-      "start": 298.54,
+      "start": 298.52,
       "end": 299.98,
       "speaker_id": "SPEAKER_01",
-      "speaker_name": "Speaker SPEAKER_01",
+      "speaker_name": "commerce at an extraordinary scale flowing through the platform",
       "speaker_role": "Executive",
       "text": "So let's talk about that infrastructure that on-",
-      "confidence": 0.772
+      "confidence": 0.764
     }
   ],
   "pipeline": {

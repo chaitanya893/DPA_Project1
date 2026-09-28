@@ -1,0 +1,107 @@
+[0.00 --> 14.72]  Good morning and thank you for joining Shopify's second quarter 2026 conference call. I'm Shane
+[14.72 --> 18.64]  Kleinstein, Director of Investor Relations, and joining us today are Harley Finkelstein,
+[18.64 --> 24.08]  Shopify's President, and Jeff Hofmeister, our CFO. After their prepared remarks, we will open it up
+[24.08 --> 28.88]  for your questions. Today's call will include certain forward-looking statements that are based
+[28.88 --> 33.68]  on assumptions and therefore subject to risks and uncertainties that could cause actual results to
+[33.68 --> 38.00]  differ materially from those projected. Under-reliance should not be placed on these forward-looking
+[38.00 --> 42.88]  statements. We undertake no obligation to update or revise these statements, except as required by
+[42.88 --> 46.96]  law. You can read about these assumptions, risks, and uncertainties in our press release this
+[46.96 --> 51.52]  morning, as well as in our filings with the US and Canadian regulators. We'll also speak to
+[51.52 --> 55.44]  adjusted financial measures and other non-GAAP measures, which are not a substitute for GAAP
+[55.44 --> 59.84]  financial measures. Reconciliation is between the two are provided in our press release.
+[59.84 --> 64.40]  And finally, we report in US dollars, so all amounts discussed today are in US dollars unless
+[64.40 --> 69.20]  otherwise indicated. With that, I'll turn the call over to Harley. Good morning and thanks
+[69.20 --> 73.76]  everyone for joining us today. We've got another exceptional quarter to talk about here at Shopify.
+[73.76 --> 80.96]  Here's what that looks like in the numbers. GMD was up 32% to $116 billion with broad growth
+[80.96 --> 88.40]  across our merchant sizes, geographies, and sales channels. Our revenue was up 34% to $3.6 billion,
+[88.40 --> 96.72]  and our free cash-in margin was 18%. That's a growth rate of 30% or more across every metric.
+[96.72 --> 102.80]  And this marks our fifth straight quarter of GMD growth above 30%. Now of all the numbers,
+[102.80 --> 108.48]  our GMD is the one worth repeating. Our merchants processed $116 billion this quarter.
+[109.12 --> 114.24]  This is commerce at an extraordinary scale flowing through the platform. And it also tells us that
+[114.24 --> 119.28]  our merchants are thriving. Okay, now for the story behind those numbers. Since day one,
+[119.28 --> 124.72]  our operating principle has been simple and consistent. Shopify creates what most merchants
+[124.72 --> 129.76]  need most of the time, and for everything else, we empower our incredible ecosystem of partners.
+[130.32 --> 134.64]  Now I know you've all heard that before, but here's why it matters now. The principle that
+[134.64 --> 140.16]  got us here also explains why we're able to deliver durable growth quarter after quarter,
+[140.16 --> 146.00]  and it perfectly captures how we are building to win in this new era of commerce. Let me explain.
+[146.80 --> 153.04]  First, our addressable market of most merchants is now a very large pool. Because we've made it
+[153.04 --> 157.20]  easier to start, there are now simply more merchants to serve, and the breadth of our
+[157.20 --> 163.92]  capabilities has expanded so that merchants of all sizes now run on Shopify. Second, the range
+[163.92 --> 169.04]  of those most of the time merchant needs is expanding quickly. They need access to new and
+[169.04 --> 173.36]  emerging surface areas. They need best in class tools that will allow them to keep pace with the
+[173.36 --> 179.92]  rate of change in commerce, and they need it all in one place. Added complexity only reinforces
+[179.92 --> 186.56]  the demand for a simple unified platform that they can rely on, and that is Shopify. And here's
+[186.56 --> 192.56]  the third critical piece. Our open ecosystem model is uniquely well suited to the Sygentsic era.
+[192.56 --> 198.08]  We have always focused on most merchant needs while making the platform extensible for everything
+[198.08 --> 203.68]  else. We build the primitives, we open them up, and we let the best developers and the best companies
+[203.68 --> 209.84]  in the world build on top of us. In the last year, we kicked that model into a whole new gear.
+[210.56 --> 214.24]  Some of the largest technology companies in the world like OpenAI, Google,
+[214.24 --> 219.28]  Meta, and Microsoft have chosen to partner with us to open more front doors for commerce.
+[219.92 --> 225.76]  Every new surface area they build is another place our merchants can sell all because they're on
+[225.76 --> 231.44]  Shopify. And on top of this, thousands of developers all over the world are embedding commerce into
+[231.44 --> 237.44]  their own applications using the same primitives we built. Thousands of new front doors all built on
+[237.44 --> 243.12]  one unified foundation, the Shopify platform. Now, as commerce continues to fragment,
+[243.12 --> 248.24]  Shopify becomes an even more critical partner because we provide consistent and reliable
+[248.24 --> 253.28]  infrastructure that makes every shopping experience feel seamless. Now, whether commerce is
+[253.28 --> 259.36]  handled by humans or agents, whether stores are built by people or AI, Shopify runs underneath
+[259.36 --> 265.04]  it all. For 20 years, we've built the commerce operating system that takes merchants from first
+[265.04 --> 269.84]  sale to full scale by using our partner ecosystem as an extension of our platform.
+[270.56 --> 275.76]  That is our muscle memory. And this model will continue to service even better in this
+[275.76 --> 280.16]  new agentic era of commerce. So let's talk more about Shopify's infrastructure,
+[280.16 --> 286.00]  specifically what we've been building and why it matters so much. We have a very strong conviction
+[286.00 --> 291.12]  that commerce experiences will soon be built in to everywhere people are spending their time.
+[291.12 --> 295.92]  And that is why our latest product drop was called the Everywhere Edition. We are building
+[295.92 --> 299.76]  now so our merchants are ready for the future. So let's talk about that infrastructure that
+[299.76 --> 306.08]  unlocks commerce everywhere. First, our catalog, which you can think of as the authoritative source
+[306.08 --> 312.48]  of truth for AI product discovery of the world's best products and best brands. For nearly two
+[312.48 --> 317.60]  years, we've been investing in the search index, ensuring over a billion products and 20 years of
+[317.60 --> 323.92]  commerce experience is distilled for agents. It structures merchants' product data so every and
+[323.92 --> 329.44]  any AI partner can access it directly, giving agents the ability to discover, understand,
+[329.44 --> 333.28]  and recommend our merchants' products. And let me say this,
+[333.28 --> 338.96]  Catalog will be one of Shopify's most important assets for years to come. And here's why.
+[338.96 --> 344.32]  We're seeing that AI searches powered by Catalog convert at twice the rate of those using scraped
+[344.32 --> 349.68]  data. That is because with Catalog, merchants' products show up complete, accurate, and with
+[349.68 --> 356.08]  the right context when someone is ready to buy. Put simply, Catalog is the discovery engine for
+[356.08 --> 362.32]  the future, and Shopify built it and owns it. Next, let's talk about the Universal Commerce
+[362.32 --> 369.84]  Protocol, or UCP. We introduced UCP at the start of 2026, and already industry players across the
+[369.84 --> 375.04]  commerce stack and beyond are converging on this unified protocol with dozens of retailers
+[375.04 --> 380.96]  and platforms adopting it to date. And because we co-built the protocol, partners look to us to
+[380.96 --> 386.80]  make sure it evolves in ways that represent the full diversity of commerce. So, first we built the
+[386.80 --> 393.44]  infrastructure to unlock commerce everywhere, and then we opened it up for everyone. Every Shopify
+[393.44 --> 399.44]  merchant is UCP ready. Agents and builders can access their product data, create carts,
+[399.44 --> 405.12]  and even check out using the protocol. Everything flows through Shopify, so their checkout logic
+[405.12 --> 410.32]  and fulfillment rules are perfectly preserved. Their products are also automatically listed
+[410.32 --> 417.92]  in Catalog. And every builder can now access UCP and the Catalog API across millions of merchants
+[417.92 --> 423.04]  so they can build commerce experiences with the same infrastructure as our major AI partners.
+[423.84 --> 430.08]  Plus, we built our Catalog the way only Shopify could, integrated with ShopSign in so agents can
+[430.08 --> 435.20]  recognize returning buyers and surface personalized recommendations based on their purchase history.
+[435.92 --> 442.88]  No other Catalog API can do this. And we're not just putting merchants in AI channels,
+[442.88 --> 447.92]  we're also showing them how to win in them. In May of this year, we rolled out our new
+[447.92 --> 452.80]  AgenteX section in the admin, the first cross-channel attribution for AgenteX selling.
+[453.36 --> 457.36]  Merchants can manage AI channels, they can track performance, and they can get specific
+[457.36 --> 463.60]  recommendations on what to improve, all from a single interface. Now, while the volume from
+[463.60 --> 469.60]  Agente Commerce is still small relative to our massive GMV, the growth trends are impressive.
+[470.24 --> 476.16]  Both AI-driven traffic and also orders to Shopify stores tripled year over year in the second
+[476.16 --> 480.80]  quarter. New buyer orders are coming in at nearly twice the rate of other channels.
+[481.44 --> 486.72]  And this is not just AI taking share of search. In fact, search remains one of our largest sources
+[486.72 --> 492.08]  of buyer traffic to our merchants, and it's still growing. Traditional search sessions are
+[492.08 --> 496.72]  up 1.3x over the past two years, holding roughly a third of all storefront sessions.
+[497.36 --> 501.12]  That is AI as a complement to search rather than a substitute for it.
+[502.48 --> 507.52]  Okay, now let's talk about AgenteX building. AI is not just opening up new surface areas for
+[507.52 --> 512.96]  discovery, it is also democratizing code and software development, lowering the barriers to
+[512.96 --> 517.36]  starting a business even further. The way entrepreneurs are pursuing new ideas, the
+[517.36 --> 521.04]  way developers are building software, the way merchants are running their businesses,
+[521.04 --> 525.60]  they're all being rewritten. So naturally, the tools we're arming our merchants with
+[525.60 --> 531.20]  are also evolving at an incredible pace. And Sidekick is the prime example of this.
+[531.20 --> 537.04]  In the second quarter, daily active merchants using Sidekick were up 3.6x year on year,
+[537.04 --> 543.52]  and daily sessions were up 4.8x. It handled nearly 34 million conversations, and it was used to
+[543.52 --> 551.36]  create more than 36,000 custom apps, up from 12,000 in Q1. More merchants are using Sidekick,
+[551.36 --> 556.16]  and they're using it far more often. That's because it's driving real value.
+[556.16 --> 560.80]  Getting new merchants to their first sale faster and helping established merchants run smarter.
+[561.36 --> 566.32]  Sidekick's personalized guidance for new merchants during onboarding led to an 8%
+[566.32 --> 571.76]  increase in merchants reaching five orders within 15 days. And it's getting more intelligent all
+[571.76 --> 577.28]  the time. It can now access data and take action through extensions to third-party apps like Klaviyo
+[577.28 --> 582.80]  without the merchant ever leaving Sidekick. Now adoption is widespread across merchants of all
+[582.80 --> 587.44]  sizes, but what's really interesting is how the value evolves as merchants grow.
+[588.16 --> 593.44]  In a merchant's first 30 days, roughly half of their conversations with Sidekick are about store
+[593.44 --> 599.28]  setup, design, and theme configuration. Now for merchants five years in, that drops to about 8%

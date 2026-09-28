@@ -1,158 +1,118 @@
 import os
 import time
-import tracemalloc
-from typing import Dict, List, Any, Optional
+import subprocess
+import psutil
+import torch
+from pathlib import Path
+from typing import Dict, List, Any
 from faster_whisper import WhisperModel
 from src.utils.logger import setup_logger
-from src.capture.audio_standardizer import get_wav_properties
 
 logger = setup_logger("benchmark_models")
 
 
 class ModelBenchmarkRegistry:
-    """Evaluates and benchmarks at least 3 ASR engines on the first 10 minutes of captured calls."""
+    """Evaluates and benchmarks ASR engines on standard 10-minute audio clips."""
 
     @classmethod
-    def run_live_benchmark(cls, sample_wav_path: str, max_duration_sec: float = 600.0) -> Dict[str, Any]:
-        """Executes live benchmarks across faster-whisper, whisper.cpp (pywhispercpp), and WhisperX.
+    def benchmark_faster_whisper(
+        cls,
+        clip_path: str,
+        device: str = "cpu",
+        compute_type: str = "int8",
+        threads: int = 8
+    ) -> Dict[str, Any]:
+        """Runs measured benchmark for faster-whisper."""
+        model = WhisperModel("small.en", device=device, compute_type=compute_type, cpu_threads=threads)
         
-        Records measured RTF, runtime, peak RAM, and installation/runtime errors accurately.
-        """
-        if not os.path.exists(sample_wav_path):
-            raise FileNotFoundError(f"Sample WAV not found: {sample_wav_path}")
-
-        audio_dur, sr, ch, bd = get_wav_properties(sample_wav_path)
-        eval_dur = min(audio_dur, max_duration_sec)
-        logger.info(f"Running 3-library ASR benchmark on {os.path.basename(sample_wav_path)} (evaluating {eval_dur:.1f}s)...")
-
-        results: List[Dict[str, Any]] = []
-
-        # 1. Engine 1: faster-whisper (CTranslate2 int8)
-        try:
-            tracemalloc.start()
-            t0 = time.time()
-            m = WhisperModel("small.en", device="cpu", compute_type="int8", cpu_threads=4)
-            segments, info = m.transcribe(sample_wav_path, beam_size=1, clip_timestamps=[0.0, eval_dur])
-            seg_list = list(segments)
-            infer_time = time.time() - t0
-            current_mem, peak_mem = tracemalloc.get_traced_memory()
-            tracemalloc.stop()
+        # Warmup
+        segs, _ = model.transcribe(clip_path, beam_size=1)
+        _ = list(segs)
+        
+        # Measured run
+        if device == "cuda":
+            torch.cuda.reset_peak_memory_stats()
+            torch.cuda.synchronize()
             
-            peak_ram = round(peak_mem / (1024 * 1024) + 450.0, 1)  # base process overhead + allocated
-            rtf = round(infer_time / max(1.0, eval_dur), 4)
-            word_count = sum(len(s.text.split()) for s in seg_list)
-
-            results.append({
-                "model_name": "faster-whisper (small.en, int8)",
-                "framework": "CTranslate2",
-                "quantization": "int8",
-                "measured_eval_sec": round(eval_dur, 2),
-                "inference_time_sec": round(infer_time, 2),
-                "peak_ram_mb": peak_ram,
-                "measured_rtf": rtf,
-                "words_transcribed": word_count,
-                "post_call_latency_60min_call": f"{round(rtf * 60, 2)} min",
-                "5min_target_sla": "PASS" if (rtf * 60) <= 5.0 else "FAIL",
-                "status": "SUCCESS",
-            })
-        except Exception as e:
-            results.append({
-                "model_name": "faster-whisper (small.en, int8)",
-                "framework": "CTranslate2",
-                "quantization": "int8",
-                "status": f"FAILED: {e}",
-            })
-
-        # 2. Engine 2: whisper.cpp (pywhispercpp / GGML)
-        try:
-            import pywhispercpp.model as pw_model
-            t0 = time.time()
-            pw = pw_model.Model("small.en", n_threads=4)
-            pw_segs = pw.transcribe(sample_wav_path)
-            infer_time = time.time() - t0
-            rtf = round(infer_time / max(1.0, eval_dur), 4)
-            results.append({
-                "model_name": "whisper.cpp (pywhispercpp)",
-                "framework": "GGML C/C++",
-                "quantization": "q5_0 / q8_0",
-                "measured_eval_sec": round(eval_dur, 2),
-                "inference_time_sec": round(infer_time, 2),
-                "peak_ram_mb": 780.0,
-                "measured_rtf": rtf,
-                "post_call_latency_60min_call": f"{round(rtf * 60, 2)} min",
-                "5min_target_sla": "PASS" if (rtf * 60) <= 5.0 else "FAIL",
-                "status": "SUCCESS",
-            })
-        except ImportError:
-            results.append({
-                "model_name": "whisper.cpp (pywhispercpp)",
-                "framework": "GGML C/C++",
-                "quantization": "q5_0 / q8_0",
-                "measured_eval_sec": round(eval_dur, 2),
-                "inference_time_sec": round(eval_dur * 0.09, 2),
-                "peak_ram_mb": 780.0,
-                "measured_rtf": 0.09,
-                "post_call_latency_60min_call": "5.4 min",
-                "5min_target_sla": "FAIL",
-                "status": "NOT INSTALLED (pywhispercpp requires MSVC compiler on Windows x64)",
-            })
-        except Exception as e:
-            results.append({
-                "model_name": "whisper.cpp (pywhispercpp)",
-                "framework": "GGML C/C++",
-                "status": f"FAILED: {e}",
-            })
-
-        # 3. Engine 3: WhisperX (PyTorch + Wav2Vec2 Alignment)
-        try:
-            import whisperx
-            t0 = time.time()
-            wx_model = whisperx.load_model("small.en", device="cpu", compute_type="int8")
-            wx_audio = whisperx.load_audio(sample_wav_path)
-            wx_result = wx_model.transcribe(wx_audio, batch_size=4)
-            infer_time = time.time() - t0
-            rtf = round(infer_time / max(1.0, eval_dur), 4)
-            results.append({
-                "model_name": "WhisperX (PyTorch + Wav2Vec2 Alignment)",
-                "framework": "PyTorch / Wav2Vec2",
-                "quantization": "float32 / int8",
-                "measured_eval_sec": round(eval_dur, 2),
-                "inference_time_sec": round(infer_time, 2),
-                "peak_ram_mb": 2400.0,
-                "measured_rtf": rtf,
-                "post_call_latency_60min_call": f"{round(rtf * 60, 2)} min",
-                "5min_target_sla": "PASS" if (rtf * 60) <= 5.0 else "FAIL",
-                "status": "SUCCESS",
-            })
-        except ImportError:
-            results.append({
-                "model_name": "WhisperX (PyTorch + Wav2Vec2 Alignment)",
-                "framework": "PyTorch / Wav2Vec2",
-                "quantization": "float32 (CPU)",
-                "measured_eval_sec": round(eval_dur, 2),
-                "inference_time_sec": round(eval_dur * 0.16, 2),
-                "peak_ram_mb": 2600.0,
-                "measured_rtf": 0.16,
-                "post_call_latency_60min_call": "9.6 min (CPU)",
-                "5min_target_sla": "FAIL on CPU alone (Requires NVIDIA GPU for <5min SLA)",
-                "status": "NOT INSTALLED (WhisperX requires CUDA PyTorch and torchaudio on Linux/Windows)",
-            })
-        except Exception as e:
-            results.append({
-                "model_name": "WhisperX",
-                "framework": "PyTorch / Wav2Vec2",
-                "status": f"FAILED: {e}",
-            })
-
+        process = psutil.Process(os.getpid())
+        ram_before = process.memory_info().rss
+        
+        t0 = time.perf_counter()
+        segs, info = model.transcribe(clip_path, beam_size=1)
+        seg_list = list(segs)
+        if device == "cuda":
+            torch.cuda.synchronize()
+        t1 = time.perf_counter()
+        
+        wall_time = t1 - t0
+        rtf = wall_time / 600.0
+        ram_after = process.memory_info().rss
+        peak_ram_mb = max(ram_before, ram_after) / (1024 * 1024)
+        peak_vram_mb = (torch.cuda.max_memory_allocated() / (1024 * 1024)) if device == "cuda" else 0.0
+        
         return {
-            "sample_audio": os.path.basename(sample_wav_path),
-            "audio_duration_sec": eval_dur,
-            "benchmarks": results,
-            "recommended_default": "faster-whisper (small.en, int8)",
-            "hardware_recommendation": (
-                "On standard modern CPU (4-8 cores), faster-whisper (int8) achieves RTF ~0.04-0.08, "
-                "allowing a 60-minute earnings call to be published in ~2.5 to 4.5 minutes (< 5 min SLA). "
-                "For forced phoneme alignment (WhisperX) or low-latency streaming diarization at scale, "
-                "an NVIDIA GPU (CUDA compute >= 7.5) with 8-16 GB VRAM is recommended."
-            ),
+            "library": "faster-whisper",
+            "device": device,
+            "compute_type": compute_type,
+            "wall_time_sec": round(wall_time, 2),
+            "rtf": round(rtf, 4),
+            "peak_ram_mb": round(peak_ram_mb, 1),
+            "peak_vram_mb": round(peak_vram_mb, 1),
+            "segments": seg_list
+        }
+
+    @classmethod
+    def benchmark_whisper_cpp(
+        cls,
+        clip_path: str,
+        device: str = "cpu",
+        binary_path: str = "data/benchmark/whisper_cpp/cpu/Release/whisper-cli.exe",
+        model_path: str = "data/benchmark/whisper_cpp/ggml-small.en.bin",
+        output_prefix: str = "data/benchmark/outputs/temp"
+    ) -> Dict[str, Any]:
+        """Runs measured benchmark for whisper.cpp binary."""
+        cmd = [
+            binary_path,
+            "-m", model_path,
+            "-f", clip_path,
+            "-l", "en",
+            "-otxt",
+            "-of", output_prefix
+        ]
+        if device == "cpu":
+            cmd.extend(["-t", "8", "-ng"])
+        else:
+            cmd.extend(["-t", "4"])
+            
+        # Warmup
+        subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+        
+        # Measured run
+        t0 = time.perf_counter()
+        proc = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        p = psutil.Process(proc.pid)
+        peak_ram = 0
+        while proc.poll() is None:
+            try:
+                mem = p.memory_info().rss
+                if mem > peak_ram:
+                    peak_ram = mem
+            except Exception:
+                pass
+            time.sleep(0.05)
+        t1 = time.perf_counter()
+        proc.wait()
+        
+        wall_time = t1 - t0
+        rtf = wall_time / 600.0
+        peak_ram_mb = round(peak_ram / (1024 * 1024), 1)
+        
+        return {
+            "library": "whisper.cpp",
+            "device": device,
+            "compute_type": "ggml-small.en",
+            "wall_time_sec": round(wall_time, 2),
+            "rtf": round(rtf, 4),
+            "peak_ram_mb": peak_ram_mb,
+            "peak_vram_mb": 0.0
         }

@@ -1,0 +1,13 @@
+ticker,fiscal_period,call_datetime_utc,source_type,source_url
+SHOP,Q2 FY2026,2026-08-05T12:30:00Z,SEC_EDGAR_8-K,https://www.sec.gov/Archives/edgar/data/1594805/000159480526000046/exhibit991pressreleaseq220.htm
+SHOP,Q1 FY2026,2026-05-05T12:30:00Z,SEC_EDGAR_8-K,https://www.sec.gov/Archives/edgar/data/1594805/000159480526000018/exhibit991pressreleaseq120.htm
+MSFT,Q4 FY2026,2026-07-29T21:30:00Z,SEC_EDGAR_8-K,https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm
+MSFT,Q3 FY2026,2026-04-29T21:30:00Z,SEC_EDGAR_8-K,https://www.sec.gov/Archives/edgar/data/789019/000119312526191457/msft-ex99_1.htm
+MSFT,Q2 FY2026,2026-01-28T22:30:00Z,SEC_EDGAR_8-K,https://www.sec.gov/Archives/edgar/data/789019/000119312526027198/msft-ex99_1.htm
+MSFT,Q1 FY2026,2025-10-29T21:30:00Z,SEC_EDGAR_8-K,https://www.sec.gov/Archives/edgar/data/789019/000119312525256310/msft-ex99_1.htm
+MSFT,Q4 FY2025,2025-07-30T21:30:00Z,SEC_EDGAR_8-K,https://www.sec.gov/Archives/edgar/data/789019/000095017025100226/msft-ex99_1.htm
+MSFT,Q3 FY2025,2025-04-30T21:30:00Z,SEC_EDGAR_8-K,https://www.sec.gov/Archives/edgar/data/789019/000095017025061032/msft-ex99_1.htm
+MSFT,Q2 FY2025,2025-01-29T22:30:00Z,SEC_EDGAR_8-K,https://www.sec.gov/Archives/edgar/data/789019/000095017025010484/msft-ex99_1.htm
+MSFT,Q1 FY2025,2024-10-30T21:30:00Z,SEC_EDGAR_8-K,https://www.sec.gov/Archives/edgar/data/789019/000095017024118955/msft-ex99_1.htm
+MSFT,Q3 FY2024,2024-04-25T21:30:00Z,SEC_EDGAR_8-K,https://www.sec.gov/Archives/edgar/data/789019/000095017024048268/msft-ex99_1.htm
+MSFT,Q2 FY2024,2024-01-30T22:30:00Z,SEC_EDGAR_8-K,https://www.sec.gov/Archives/edgar/data/789019/000095017024008809/msft-ex99_1.htm

@@ -1,24 +1,41 @@
-# Legitimate Reference Transcript Sources & Licensing Registry
+# Reference Sources and Terms of Use
 
-**Project:** Corporate Earnings Call Capture & Accuracy Benchmarking  
-**Evaluation Scope:** 12 Multi-Cohort Earnings Calls  
-**Date:** September 2026  
+This document details the source origin, retrieval method, and licensing/terms conditions for reference transcripts used strictly for accuracy benchmarking and evaluation in Phase 4.
+
+> [!NOTE]
+> Reference transcripts are utilized **strictly offline for scoring and accuracy evaluation**. In compliance with data governance and copyright policies, reference text is never published to client databases, copied into public JSON deliverables, or redistributed.
 
 ---
 
-## Reference Transcript Catalog
+## 1. Summary of Reference Sources
 
-| Ticker | Company Name | Fiscal Period | Primary Reference Source | Retrieval Date | Licensing & Access Terms |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **AAPL** | Apple Inc. | Q3 FY2024 | Apple Investor Relations (investor.apple.com) | 2024-08-02 | Public Corporate Release (Free Public Access) |
-| **MSFT** | Microsoft Corporation | Q3 FY2024 | Microsoft IR Portal (microsoft.com/investor) | 2024-07-31 | Public Corporate Release (Free Public Access) |
-| **GOOGL** | Alphabet Inc. | Q3 FY2024 | Alphabet Investor Relations (abc.xyz/investor) | 2024-07-24 | Public Corporate Release (Free Public Access) |
-| **TSLA** | Tesla Inc. | Q3 FY2024 | Tesla IR Webcast Replay (ir.tesla.com) | 2024-10-24 | Public Corporate Release (Free Public Access) |
-| **JPM** | JPMorgan Chase & Co. | Q3 FY2024 | JPMorgan Chase IR (jpmorganchase.com/ir) | 2024-10-12 | Public Corporate Release (Free Public Access) |
-| **LMB** | Limbach Holdings Inc. | Q3 FY2024 | Limbach IR Portal (investors.limbachinc.com) | 2024-11-08 | Public Corporate Release (Free Public Access) |
-| **DMRC** | Digimarc Corporation | Q3 FY2024 | Digimarc IR Events (investors.digimarc.com) | 2024-11-08 | Public Corporate Release (Free Public Access) |
-| **SHOP** | Shopify Inc. | Q3 FY2024 | Shopify Investor Relations (investors.shopify.com) | 2024-11-13 | Public Corporate Release (Free Public Access) |
-| **RY** | Royal Bank of Canada | Q3 FY2024 | RBC Investor Relations (rbc.com/investor-relations) | 2024-08-29 | Public Corporate Release (Free Public Access) |
-| **CNR** | Canadian National Railway | Q3 FY2024 | CN Investor Relations (cn.ca/investors) | 2024-10-23 | Public Corporate Release (Free Public Access) |
-| **ATD** | Alimentation Couche-Tard | Q3 FY2024 | Couche-Tard IR (corpo.couche-tard.com) | 2024-09-05 | Public Corporate Release (Free Public Access) |
-| **MRU** | Metro Inc. | Q3 FY2024 | Metro IR Events (corpo.metro.ca) | 2024-08-15 | Public Corporate Release (Free Public Access) |
+| Call Identifier | Publisher / Source | Direct Source URL / Origin | Status / Availability |
+| :--- | :--- | :--- | :--- |
+| **MSFT_Q2_FY2024** | Microsoft Investor Relations | `https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/TranscriptFY24Q2.docx` | Available (Official Word Transcript) |
+| **MSFT_Q3_FY2024** | Microsoft Investor Relations | `https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/TranscriptFY24Q3.docx` | Available (Official Word Transcript) |
+| **MSFT_Q4_FY2024** | Microsoft Investor Relations | `https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/TranscriptFY24Q4.docx` | Available (Official Word Transcript) |
+| **MSFT_Q1_FY2025** | Microsoft Investor Relations | `https://aka.ms/transcriptfy25q1` (`TranscriptFY25Q1.docx`) | Available (Official Word Transcript) |
+| **MSFT_Q2_FY2025** | Microsoft Investor Relations | `https://aka.ms/transcriptfy-25q2` (`TranscriptFY25Q2.docx`) | Available (Official Word Transcript) |
+| **MSFT_Q3_FY2025** | Microsoft Investor Relations | `https://aka.ms/transcriptfy25q3` (`TranscriptFY25Q3.docx`) | Available (Official Word Transcript) |
+| **MSFT_Q4_FY2025** | Microsoft Investor Relations | `https://aka.ms/transcriptfy25q4` (`TranscriptQandAFY25q4.docx`) | Available (Official Word Transcript) |
+| **MSFT_Q1_FY2026** | Microsoft Investor Relations | `https://aka.ms/transcriptfy26q1` (`TranscriptFY26Q1.docx`) | Available (Official Word Transcript) |
+| **MSFT_Q2_FY2026** | Microsoft Investor Relations | `https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/TranscriptQandAFY26q2.docx` | Available (Official Word Transcript) |
+| **MSFT_Q3_FY2026** | Microsoft Investor Relations | `https://aka.ms/transcriptfy26q3` (`TranscriptFY26Q3.docx`) | Available (Official Word Transcript) |
+| **MSFT_Q4_FY2026** | Microsoft Investor Relations | `https://aka.ms/transcriptfy26q4` (`TranscriptFY26Q4.docx`) | Available (Official Word Transcript) |
+| **SHOP_Q1_FY2026** | Shopify Investor Relations | `https://investors.shopify.com` | **No public reference** (Shopify publishes webcasts & press releases only; no official written transcript) |
+| **SHOP_Q2_FY2026** | Shopify Investor Relations | `https://investors.shopify.com` | **No public reference** (Shopify publishes webcasts & press releases only; no official written transcript) |
+
+---
+
+## 2. Licensing & Terms of Use Clauses
+
+### Microsoft Corporation (Investor Relations)
+- **Source**: Microsoft Corporation Investor Relations portal (`microsoft.com/investor`).
+- **Access Method**: Direct document fetch respecting standard HTTP headers, rate limits (2–3s delay), and public access.
+- **Terms Clause**: Materials on Microsoft Investor Relations are provided for informational and investor assessment purposes under standard Microsoft Terms of Use:
+  > *"Microsoft grants permission to use Documents (such as white papers, press releases, datasheets and FAQs) from the Services, provided that (1) the below copyright notice appears in all copies and that both the copyright notice and this permission notice appear, (2) use of such Documents from the Services is for informational and non-commercial or personal use only and will not be copied or posted on any network computer or broadcast in any media, and (3) no modifications of any Documents are made."*
+- **Compliance Action**: Transcripts are stored locally in plain text format (`data/reference/transcripts/`, which is gitignored) solely to compute objective benchmark error rates (WER, CER, Entity Recall).
+
+### Shopify Inc. (Investor Relations)
+- **Source**: Shopify Inc. Investor Relations portal (`investors.shopify.com`).
+- **Availability Status**: **No public reference**. Shopify does not distribute official verbatim text transcripts on its investor relations portal (only financial tables, press releases, and webcast audio streams). In accordance with benchmark compliance policies, no third-party copyrighted paywalled transcripts (such as SeekingAlpha, Bloomberg, or FactSet) are scraped or used.

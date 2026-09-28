@@ -39,6 +39,9 @@ data/audio/*.wav
 *.zip
 *.db
 *.sqlite3
+*.exe
+*.dll
+data/benchmark/whisper_cpp/
 
 # Testing & Coverage
 .pytest_cache/
@@ -49,3 +52,11 @@ htmlcov/
 .vscode/
 .idea/
 *.swp
+
+# Virtualenvs & Cache
+.venv*/
+data/transcripts/_cache/
+data/transcripts/v1_before_fix/_cache/
+data/reference/transcripts/
+data/benchmark/clips/
+scratch/

@@ -2,9 +2,13 @@
   "ticker": "SHOP",
   "fiscal_period": "Q2 FY2026",
   "audio_duration_sec": 300.0,
-  "total_pipeline_time_sec": 318.46,
-  "post_call_latency_sec": 258.426,
-  "rtf": 1.0615,
+  "asr_infer_time_sec": 146.098,
+  "asr_rtf": 0.487,
+  "diarization_time_before_sec": 254.9,
+  "diarization_time_sec": 558.906,
+  "diarization_rtf": 1.863,
+  "total_pipeline_time_sec": 711.132,
+  "total_rtf": 2.3704,
   "chunk_count": 6,
   "chunk_metrics": [
     {
@@ -12,8 +16,8 @@
       "start_sec": 0.0,
       "end_sec": 60.0,
       "duration_sec": 60.0,
-      "proc_time_sec": 9.077,
-      "rtf": 0.1513,
+      "proc_time_sec": 23.216,
+      "rtf": 0.3869,
       "num_segments": 14
     },
     {
@@ -21,8 +25,8 @@
       "start_sec": 57.0,
       "end_sec": 117.0,
       "duration_sec": 60.0,
-      "proc_time_sec": 11.426,
-      "rtf": 0.1904,
+      "proc_time_sec": 29.123,
+      "rtf": 0.4854,
       "num_segments": 17
     },
     {
@@ -30,8 +34,8 @@
       "start_sec": 114.0,
       "end_sec": 174.0,
       "duration_sec": 60.0,
-      "proc_time_sec": 12.225,
-      "rtf": 0.2037,
+      "proc_time_sec": 32.322,
+      "rtf": 0.5387,
       "num_segments": 26
     },
     {
@@ -39,8 +43,8 @@
       "start_sec": 171.0,
       "end_sec": 231.0,
       "duration_sec": 60.0,
-      "proc_time_sec": 11.998,
-      "rtf": 0.2,
+      "proc_time_sec": 22.168,
+      "rtf": 0.3695,
       "num_segments": 25
     },
     {
@@ -48,8 +52,8 @@
       "start_sec": 228.0,
       "end_sec": 288.0,
       "duration_sec": 60.0,
-      "proc_time_sec": 11.256,
-      "rtf": 0.1876,
+      "proc_time_sec": 30.807,
+      "rtf": 0.5134,
       "num_segments": 17
     },
     {
@@ -57,8 +61,8 @@
       "start_sec": 285.0,
       "end_sec": 300.0,
       "duration_sec": 15.0,
-      "proc_time_sec": 3.503,
-      "rtf": 0.2335,
+      "proc_time_sec": 8.462,
+      "rtf": 0.5641,
       "num_segments": 5
     }
   ],
@@ -71,5 +75,11 @@
     "operator_intro": 2,
     "prepared_remarks": 102,
     "qa": 0
+  },
+  "all_12_calls_estimate": {
+    "total_audio_duration_sec": 43118.7,
+    "total_audio_duration_hours": 11.98,
+    "estimated_total_time_sec": 102208.6,
+    "estimated_total_time_hours": 28.39
   }
 }
