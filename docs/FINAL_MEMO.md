@@ -116,7 +116,7 @@ Audio capture was executed using Playwright headless browser automation, standar
 #### Generic Sniffer vs. Vendor Parsers ("One Parser per Vendor" Finding)
 * **Generic Network Sniffing Failure**: A generic media sniffer listening for `.mp3`, `.m4a`, or `.m3u8` network responses captured only **1 out of 20** target streams on its first pass. Enterprise webcast players embed media inside nested iframes, WebSockets, or multi-step tokenized JSON payloads.
 * **Vendor-Specific Parsers**: Building dedicated extraction parsers for Microsoft (Medius and Mediastream platforms) and Shopify (Mux Video CDN) achieved **12/12 (100%)** reliable capture.
-* **Archived Replay Ingestion & Expiry Details**: All 12 captured earnings calls were ingested from official archived webcast replays (HLS VOD master `.m3u8` playlists), as no live webcast for these companies occurred during the active execution window. Where recorded, webcast replay expiry dates range from 90 to 365 days (Microsoft Medius replays are maintained for ~12 months; Shopify Mux streams typically expire after 1 year).
+* **Archived Replay Ingestion & Expiry Details**: All 12 captured earnings calls were ingested from official archived webcast replays (HLS VOD master `.m3u8` playlists), as no live webcast for these companies occurred during the active execution window. Neither vendor publishes a replay expiry date (replay_expiry_date is NULL in event_registry). Observed availability: the Microsoft Q2 FY2024 replay (call 2024-01-30) was still downloadable in September 2026 (~32 months); Shopify Q1 FY2026 (call 2026-05-05) was downloadable ~5 months later.
 * **25-Company Webcast Platform Audit**:
   * **Registration Wall (10)**: `JPM`, `XOM`, `PG`, `LMB`, `DMRC`, `PESI`, `ENB`, `CNR`, `ATD`, `SAP`
   * **Bot-Blocked / WAF HTTP 403 (5)**: `JNJ`, `TSLA`, `LLY`, `ABX`, `T`
@@ -259,7 +259,7 @@ This section documents the primary engineering challenges, regressions, and syst
 
 ## 10. Speech Recognition Accuracy & Financial Entity Recall
 
-Accuracy was benchmarked across all 10 Microsoft calls using our standalone normalizer ([`src/evaluation/normalizer.py`](src/evaluation/normalizer.py)). Shopify calls are omitted from WER scoring due to the lack of an official written transcript on Shopify's IR site.
+Accuracy was benchmarked across all 10 Microsoft calls using our standalone normalizer ([`src/evaluation/normalizer.py`](src/evaluation/normalizer.py)). Shopify calls are marked N/A in WER/DER scoring because Shopify does not publish official written transcripts on its IR portal, and third-party commercial transcript sites (such as The Motley Fool `fool.com`) explicitly prohibit automated scraping in their Terms of Use (Sections 7 & 8 of *The Motley Fool's Rules*, updated January 29, 2026).
 
 ### Table 5: Call-Level Word & Character Error Rates across 10 Microsoft Calls
 
