@@ -1,0 +1,362 @@
+{
+  "event_id": "MSFT_SAMPLE_120S",
+  "ticker": "MSFT",
+  "fiscal_period": "Sample 120s",
+  "audio_source": "MSFT_Q1_FY2025.wav",
+  "duration_sec": 120.0,
+  "sections": [
+    {
+      "type": "operator_intro",
+      "start": 1.1,
+      "end": 32.1,
+      "segments": [
+        {
+          "start": 1.1,
+          "end": 6.94,
+          "speaker_id": "SPEAKER_00",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Greetings and welcome to the Microsoft Fiscal Year 2025 First Quarter Earnings Conference Call.",
+          "confidence": 0.874
+        },
+        {
+          "start": 7.54,
+          "end": 10.06,
+          "speaker_id": "SPEAKER_00",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "At this time, all participants are in a listen -only mode.",
+          "confidence": 0.92
+        },
+        {
+          "start": 10.9,
+          "end": 13.62,
+          "speaker_id": "SPEAKER_00",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "A question -and -answer session will follow the formal presentation.",
+          "confidence": 0.939
+        },
+        {
+          "start": 14.8,
+          "end": 20.98,
+          "speaker_id": "SPEAKER_00",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "If anyone should require operator assistance during the conference, please press star -zero on your telephone keypad.",
+          "confidence": 0.925
+        },
+        {
+          "start": 22.14,
+          "end": 30.98,
+          "speaker_id": "SPEAKER_00",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "As a reminder, this conference is being recorded. It is now my pleasure to introduce your host, Brett Iverson, Vice President of Investor Relations.",
+          "confidence": 0.887
+        },
+        {
+          "start": 31.58,
+          "end": 32.1,
+          "speaker_id": "SPEAKER_00",
+          "speaker_name": "Conference Operator",
+          "speaker_role": "Operator",
+          "text": "Please go ahead.",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "type": "prepared_remarks",
+      "start": 33.3,
+      "end": 119.92,
+      "segments": [
+        {
+          "start": 33.3,
+          "end": 35.48,
+          "speaker_id": "SPEAKER_01",
+          "speaker_name": "Jonathan Nielsen",
+          "speaker_role": "Vice President of Investor Relations",
+          "text": "Good afternoon, and thank you for joining us today.",
+          "confidence": 0.943
+        },
+        {
+          "start": 36.14,
+          "end": 45.94,
+          "speaker_id": "SPEAKER_01",
+          "speaker_name": "Jonathan Nielsen",
+          "speaker_role": "Vice President of Investor Relations",
+          "text": "On the call with me are Satya Nadella, Chairman and Chief Executive Officer, Amy Hood, Chief Financial Officer, Alice Jala, Chief Accounting Officer, and Keith",
+          "confidence": 0.961
+        },
+        {
+          "start": 45.94,
+          "end": 48.84,
+          "speaker_id": "SPEAKER_01",
+          "speaker_name": "Jonathan Nielsen",
+          "speaker_role": "Vice President of Investor Relations",
+          "text": "D 'Oliver, Corporate Secretary and Deputy General Counsel.",
+          "confidence": 0.854
+        },
+        {
+          "start": 49.54,
+          "end": 58.44,
+          "speaker_id": "SPEAKER_01",
+          "speaker_name": "Jonathan Nielsen",
+          "speaker_role": "Vice President of Investor Relations",
+          "text": "On the Microsoft Invest Relations website, you can find our earnings press release and financial summary slide deck, which is intended to supplement our prepared",
+          "confidence": 0.947
+        },
+        {
+          "start": 58.44,
+          "end": 65.68,
+          "speaker_id": "SPEAKER_01",
+          "speaker_name": "Jonathan Nielsen",
+          "speaker_role": "Vice President of Investor Relations",
+          "text": "remarks during today's call and provides the reconciliation of differences between GAAP and non -GAAP financial measures.",
+          "confidence": 0.945
+        },
+        {
+          "start": 66.32,
+          "end": 78.24,
+          "speaker_id": "SPEAKER_01",
+          "speaker_name": "Jonathan Nielsen",
+          "speaker_role": "Vice President of Investor Relations",
+          "text": "We have recast certain prior period amounts to reflect the FY25 changes to the composition of our segments announced in August 2024. Additional details, including",
+          "confidence": 0.953
+        },
+        {
+          "start": 78.24,
+          "end": 89.7,
+          "speaker_id": "SPEAKER_01",
+          "speaker_name": "Jonathan Nielsen",
+          "speaker_role": "Vice President of Investor Relations",
+          "text": "FY23 and FY24 recast segment revenue, operating income, and product and service level revenue, can be found in the financial statements file on the investor",
+          "confidence": 0.921
+        },
+        {
+          "start": 89.7,
+          "end": 90.48,
+          "speaker_id": "SPEAKER_01",
+          "speaker_name": "Jonathan Nielsen",
+          "speaker_role": "Vice President of Investor Relations",
+          "text": "relations website.",
+          "confidence": 0.986
+        },
+        {
+          "start": 91.74,
+          "end": 99.94,
+          "speaker_id": "SPEAKER_01",
+          "speaker_name": "Jonathan Nielsen",
+          "speaker_role": "Vice President of Investor Relations",
+          "text": "More detailed outlook slides will also be available on the Microsoft investor relations website when we provide outlook commentary on today's call.",
+          "confidence": 0.959
+        },
+        {
+          "start": 100.66,
+          "end": 110.26,
+          "speaker_id": "SPEAKER_01",
+          "speaker_name": "Jonathan Nielsen",
+          "speaker_role": "Vice President of Investor Relations",
+          "text": "On this call, we will discuss certain non -GAAP items. The non -GAAP financial measures provided should not be considered as a substitute for or",
+          "confidence": 0.915
+        },
+        {
+          "start": 110.26,
+          "end": 114.36,
+          "speaker_id": "SPEAKER_01",
+          "speaker_name": "Jonathan Nielsen",
+          "speaker_role": "Vice President of Investor Relations",
+          "text": "superior to the measures of financial performance prepared in accordance with GAAP.",
+          "confidence": 0.979
+        },
+        {
+          "start": 115.16,
+          "end": 119.92,
+          "speaker_id": "SPEAKER_01",
+          "speaker_name": "Jonathan Nielsen",
+          "speaker_role": "Vice President of Investor Relations",
+          "text": "They are included as additional clarifying items to aid investors and further understand",
+          "confidence": 0.948
+        }
+      ]
+    },
+    {
+      "type": "qa",
+      "start": 0.0,
+      "end": 0.0,
+      "segments": []
+    }
+  ],
+  "segments": [
+    {
+      "start": 1.1,
+      "end": 6.94,
+      "speaker_id": "SPEAKER_00",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Greetings and welcome to the Microsoft Fiscal Year 2025 First Quarter Earnings Conference Call.",
+      "confidence": 0.874
+    },
+    {
+      "start": 7.54,
+      "end": 10.06,
+      "speaker_id": "SPEAKER_00",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "At this time, all participants are in a listen -only mode.",
+      "confidence": 0.92
+    },
+    {
+      "start": 10.9,
+      "end": 13.62,
+      "speaker_id": "SPEAKER_00",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "A question -and -answer session will follow the formal presentation.",
+      "confidence": 0.939
+    },
+    {
+      "start": 14.8,
+      "end": 20.98,
+      "speaker_id": "SPEAKER_00",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "If anyone should require operator assistance during the conference, please press star -zero on your telephone keypad.",
+      "confidence": 0.925
+    },
+    {
+      "start": 22.14,
+      "end": 30.98,
+      "speaker_id": "SPEAKER_00",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "As a reminder, this conference is being recorded. It is now my pleasure to introduce your host, Brett Iverson, Vice President of Investor Relations.",
+      "confidence": 0.887
+    },
+    {
+      "start": 31.58,
+      "end": 32.1,
+      "speaker_id": "SPEAKER_00",
+      "speaker_name": "Conference Operator",
+      "speaker_role": "Operator",
+      "text": "Please go ahead.",
+      "confidence": 0.96
+    },
+    {
+      "start": 33.3,
+      "end": 35.48,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Jonathan Nielsen",
+      "speaker_role": "Vice President of Investor Relations",
+      "text": "Good afternoon, and thank you for joining us today.",
+      "confidence": 0.943
+    },
+    {
+      "start": 36.14,
+      "end": 45.94,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Jonathan Nielsen",
+      "speaker_role": "Vice President of Investor Relations",
+      "text": "On the call with me are Satya Nadella, Chairman and Chief Executive Officer, Amy Hood, Chief Financial Officer, Alice Jala, Chief Accounting Officer, and Keith",
+      "confidence": 0.961
+    },
+    {
+      "start": 45.94,
+      "end": 48.84,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Jonathan Nielsen",
+      "speaker_role": "Vice President of Investor Relations",
+      "text": "D 'Oliver, Corporate Secretary and Deputy General Counsel.",
+      "confidence": 0.854
+    },
+    {
+      "start": 49.54,
+      "end": 58.44,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Jonathan Nielsen",
+      "speaker_role": "Vice President of Investor Relations",
+      "text": "On the Microsoft Invest Relations website, you can find our earnings press release and financial summary slide deck, which is intended to supplement our prepared",
+      "confidence": 0.947
+    },
+    {
+      "start": 58.44,
+      "end": 65.68,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Jonathan Nielsen",
+      "speaker_role": "Vice President of Investor Relations",
+      "text": "remarks during today's call and provides the reconciliation of differences between GAAP and non -GAAP financial measures.",
+      "confidence": 0.945
+    },
+    {
+      "start": 66.32,
+      "end": 78.24,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Jonathan Nielsen",
+      "speaker_role": "Vice President of Investor Relations",
+      "text": "We have recast certain prior period amounts to reflect the FY25 changes to the composition of our segments announced in August 2024. Additional details, including",
+      "confidence": 0.953
+    },
+    {
+      "start": 78.24,
+      "end": 89.7,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Jonathan Nielsen",
+      "speaker_role": "Vice President of Investor Relations",
+      "text": "FY23 and FY24 recast segment revenue, operating income, and product and service level revenue, can be found in the financial statements file on the investor",
+      "confidence": 0.921
+    },
+    {
+      "start": 89.7,
+      "end": 90.48,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Jonathan Nielsen",
+      "speaker_role": "Vice President of Investor Relations",
+      "text": "relations website.",
+      "confidence": 0.986
+    },
+    {
+      "start": 91.74,
+      "end": 99.94,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Jonathan Nielsen",
+      "speaker_role": "Vice President of Investor Relations",
+      "text": "More detailed outlook slides will also be available on the Microsoft investor relations website when we provide outlook commentary on today's call.",
+      "confidence": 0.959
+    },
+    {
+      "start": 100.66,
+      "end": 110.26,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Jonathan Nielsen",
+      "speaker_role": "Vice President of Investor Relations",
+      "text": "On this call, we will discuss certain non -GAAP items. The non -GAAP financial measures provided should not be considered as a substitute for or",
+      "confidence": 0.915
+    },
+    {
+      "start": 110.26,
+      "end": 114.36,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Jonathan Nielsen",
+      "speaker_role": "Vice President of Investor Relations",
+      "text": "superior to the measures of financial performance prepared in accordance with GAAP.",
+      "confidence": 0.979
+    },
+    {
+      "start": 115.16,
+      "end": 119.92,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Jonathan Nielsen",
+      "speaker_role": "Vice President of Investor Relations",
+      "text": "They are included as additional clarifying items to aid investors and further understand",
+      "confidence": 0.948
+    }
+  ],
+  "pipeline": {
+    "device": "cuda",
+    "asr_model": "faster-whisper small.en",
+    "asr_infer_time_sec": 120.0,
+    "diarization_time_sec": 10.43,
+    "total_elapsed_sec": 24.14
+  }
+}

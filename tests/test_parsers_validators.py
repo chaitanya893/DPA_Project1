@@ -1,5 +1,5 @@
 import datetime
-import pytest
+import unittest
 from src.utils.date_parser import parse_call_datetime_to_utc
 from src.discovery.vendor_classifier import classify_vendor_from_url, classify_vendor_from_html
 from src.discovery.sec_edgar import extract_fiscal_period_from_text, extract_call_datetime_from_text
@@ -9,7 +9,7 @@ from src.transcription.vad_chunker import stitch_overlapping_segments
 from src.validation.validate_all import validate_transcript_schema
 
 
-class TestParsersAndValidators:
+class TestParsersAndValidators(unittest.TestCase):
     """Meaningful test coverage for parsers and validators as strictly specified by Assignment 1 PDF."""
 
     # 1. Date / Time / Timezone Parser Tests & Real Press Release Phrase Examples

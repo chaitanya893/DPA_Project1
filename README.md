@@ -1,122 +1,136 @@
-# Earnings Call Capture & Transcription Pipeline (Assignment 1)
+# Financial Earnings Audio Transcription & Diarization Pipeline
 
-An automated, open-source data engineering and ASR pipeline designed to discover corporate earnings calls, capture live/replay audio streams, produce speaker-labelled timestamped transcripts within a 5-minute post-call window, and benchmark transcription accuracy against official ground-truth references.
+> **Core Project Deliverables & Audit Guides**:
+> - 📄 **[Technical Research Memo (14 Sections)](docs/FINAL_MEMO.md)**: Complete architectural, quantitative, and cost analysis memo.
+> - 🔍 **[Senior Reviewer & Audit Guide](docs/REVIEWER_GUIDE.md)**: 5-minute overview, PDF compliance matrix, 15-minute verification steps, spot checks, and repository map.
+> - 🗄️ **[Database & Discovery Report](docs/DATABASE_REPORT.md)**: Schema inspection, SQLite vs PostgreSQL rationale, SEC EDGAR discovery logs, and query audit.
+
+An end-to-end data engineering, streaming speech recognition (ASR), and speaker diarization pipeline designed for corporate earnings calls. The system discovers quarterly earnings events from SEC EDGAR and investor relations sites, captures audio streams to standardized 16 kHz Mono WAV format, transcribes speech with word-level overlap stitching and hallucination filtering, diarizes and resolves speakers into executive roles and analysts, and programmatically benchmarks latency, accuracy, and production economics.
 
 ---
 
-## 📁 Repository Structure
+## 🚀 One-Command Execution
 
-```text
-DPA_Project1/
-├── config/
-│   ├── universe.csv             # 25 Curated US/Canadian target companies
-│   └── settings.py              # Centralized configuration & rate limits
-├── data/
-│   ├── audio/                   # Standardized 16 kHz Mono WAV audio files
-│   │   ├── capture_manifest.csv # Metadata manifest for captured calls
-│   │   └── capture_failures.log # Transparent capture failure log
-│   ├── transcripts/             # Structured deliverable JSON transcripts
-│   ├── reference/               # Ground-truth reference transcripts for benchmarking
-│   └── samples/                 # Sample data
-├── docs/
-│   ├── SOURCE_COMPLIANCE.md     # Scraper ToS & legal compliance audit log
-│   ├── DIAL_IN_EXCLUSION.md     # Paragraph memo on why telephone dial-in is out of scope
-│   ├── EVENT_DISCOVERY_MEMO.md  # 1-page memo on event discovery routes & vendor analysis
-│   └── FINAL_MEMO.md            # Comprehensive 5-8 page benchmark report & 500-company cost model
-├── src/
-│   ├── db/                      # Database schema models (SQLAlchemy) & session manager
-│   │   ├── models.py
-│   │   └── session.py
-│   ├── discovery/               # SEC EDGAR 8-K, IR scrapers, Webcast Vendor classifier
-│   │   ├── sec_edgar.py
-│   │   ├── vendor_classifier.py
-│   │   ├── ir_scraper.py
-│   │   └── pipeline.py
-│   ├── capture/                 # Stream downloading & 16 kHz Mono WAV standardizer
-│   │   ├── audio_standardizer.py
-│   │   ├── speech_synthesizer.py
-│   │   ├── stream_downloader.py
-│   │   └── pipeline.py
-│   ├── transcription/           # Streaming VAD chunker, ASR pool, Diarizer & Speaker Resolver
-│   │   ├── vad_chunker.py
-│   │   ├── benchmark_models.py
-│   │   ├── asr_engine.py
-│   │   ├── speaker_resolver.py
-│   │   ├── section_splitter.py
-│   │   └── pipeline.py
-│   ├── benchmark/               # Custom financial normalizer, WER/CER/Entity evaluator
-│   │   ├── normalizer.py
-│   │   ├── metrics.py
-│   │   ├── populate_reference.py
-│   │   ├── evaluator.py
-│   │   └── memo_generator.py
-│   ├── utils/                   # Rate limiter, correlation-ID structured logger, DB viewer
-│   │   ├── logger.py
-│   │   ├── rate_limiter.py
-│   │   ├── view_db.py
-│   │   └── view_transcripts.py
-│   ├── transcribe_file.py       # Single-command CLI tool to transcribe ANY custom audio file
-│   └── run_all.py               # Master script running full pipeline end-to-end with 1 command
-├── tests/                       # Automated unit test suite (100% passing)
-│   ├── test_universe.py
-│   ├── test_sec_edgar.py
-│   ├── test_vendor_classifier.py
-│   ├── test_audio_standardizer.py
-│   ├── test_transcription_pipeline.py
-│   └── test_benchmark_metrics.py
-├── run_tests.py                 # Instant test runner script
-├── requirements.txt             # Pinned project dependencies
-└── README.md
+Run the complete end-to-end pipeline (Discovery → Capture → Transcription → Evaluation → Verification) with a single command:
+
+```bash
+# Full pipeline on GPU (skips already captured/transcribed calls)
+python run_all.py --device cuda
+
+# Or on CPU
+python run_all.py --device cpu
 ```
 
+### 120-Second Verification Sample
+To test the full streaming ASR, PyAnnote diarization, speaker resolution, and section classification pipeline on a short sample:
+
+```bash
+python run_all.py --sample --device cuda
+```
+* **Output Path**: `data/samples/sample_120s.json`
+* **Measured Sample Runtime**: ~24.1s (RTF 0.20 on RTX 4050 Laptop GPU / CUDA)
+
 ---
 
-## ⚡ Quickstart Guide
+## 🛠️ Setup & Installation
 
-### Environment Setup (Python 3.11+ Virtual Environment)
-The pipeline is optimized for CPU execution using CTranslate2 and PyTorch CPU wheels in a Python 3.11 virtual environment:
+### 1. Prerequisites
+* **Python**: Version `3.11` recommended (3.11.x or 3.12.x supported)
+* **FFmpeg**: Must be installed and available in system `PATH` (for audio standardization).
+
+### 2. Virtual Environment Setup
 ```bash
-# Create and activate Python 3.11 virtual environment
-py -3.11 -m venv .venv
-.\.venv\Scripts\activate
+# Create and activate virtual environment
+python -m venv .venv
 
-# Install pinned dependencies
+# Windows PowerShell:
+.venv\Scripts\Activate.ps1
+
+# Linux / macOS:
+source .venv/bin/activate
+```
+
+### 3. Install PyTorch & Dependencies
+For **GPU Acceleration (CUDA 12.1)**:
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 pip install -r requirements.txt
 ```
 
-### 1. Run All Tests
-Verify unit tests across all pipeline components:
+For **CPU-Only Execution**:
 ```bash
-python run_tests.py
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+pip install -r requirements.txt
 ```
 
-### 2. Execute Entire Pipeline (One Single Command)
-Runs Phase 1 (Discovery) $\rightarrow$ Phase 2 (Audio Capture) $\rightarrow$ Phase 3 (Transcription) $\rightarrow$ Phase 4 (Benchmarking & Final Memo):
-```bash
-python -m src.run_all
-```
+*(Note: WhisperX is maintained separately in `.venv_whisperx` for isolated ASR benchmark comparisons.)*
 
-### 3. Inspect Database Tables
-```bash
-python -m src.utils.view_db
-```
-
-### 4. Inspect Generated JSON Transcripts
-```bash
-python -m src.utils.view_transcripts
-```
-
-### 5. Transcribe Any Custom Audio File (MP3/MP4/WAV of Any Length)
-```bash
-python -m src.transcribe_file "path/to/any_audio.mp3" --ticker AAPL
+### 4. Hugging Face Access & Environment Configuration
+1. Accept the user conditions on Hugging Face for the following models:
+   * [`pyannote/speaker-diarization-3.1`](https://huggingface.co/pyannote/speaker-diarization-3.1)
+   * [`pyannote/segmentation-3.0`](https://huggingface.co/pyannote/segmentation-3.0)
+2. Create a `.env` file in the project root:
+```ini
+HF_TOKEN=your_huggingface_token_here
+CONTACT_EMAIL=your_email@domain.com
+# Database URL (defaults to SQLite earnings_call.db if omitted)
+# DATABASE_URL=postgresql://user:password@localhost:5432/earnings_call
 ```
 
 ---
 
-## 📊 Deliverables Summary
+## 📊 Measured Performance & Pipeline Metrics
 
-1. **Phase 0 Deliverable**: [config/universe.csv](config/universe.csv) & [docs/SOURCE_COMPLIANCE.md](docs/SOURCE_COMPLIANCE.md)
-2. **Phase 1 Deliverable**: Populated `event_registry` database table & [docs/EVENT_DISCOVERY_MEMO.md](docs/EVENT_DISCOVERY_MEMO.md)
-3. **Phase 2 Deliverable**: 15 Standardized 16 kHz Mono WAV audios, `data/audio/capture_manifest.csv`, and [docs/DIAL_IN_EXCLUSION.md](docs/DIAL_IN_EXCLUSION.md)
-4. **Phase 3 Deliverable**: 15 Structured JSON Transcripts in `data/transcripts/` with `prepared_remarks` vs `qa` split
-5. **Phase 4 Deliverable**: Full Benchmarking Report & 5-8 Page Research Memo in [docs/FINAL_MEMO.md](docs/FINAL_MEMO.md)
+All figures below are drawn directly from the automated metrics files and verified reports:
+
+| Metric Category | Measured Pipeline Value | Primary Report Source |
+| :--- | :--- | :--- |
+| **Processed Dataset** | 12 calls (10 Microsoft, 2 Shopify) = **11.98 audio hours** ($43,115.6\text{s}$) | `docs/latency_report.md` |
+| **Total Pipeline RTF (GPU)** | **0.0973 RTF** (Average total processing time = $350.2\text{s}$ per audio hour) | `docs/latency_report.md` |
+| **ASR Inference Time (GPU)** | **150.7s / audio hour** (RTF 0.0419, `faster-whisper small.en float16`) | `docs/latency_report.md` |
+| **Diarization Time (GPU)** | **199.4s / audio hour** (RTF 0.0554, `pyannote/speaker-diarization-3.1`) | `docs/latency_report.md` |
+| **Streaming Post-Call Latency** | **179.38s – 232.35s** (100% PASS on the 300s SLA, queue drained) | `docs/latency_report.md` |
+| **Word Error Rate (Normalized WER)** | **7.62%** average across 10 MSFT calls (Raw WER 18.06%, CER 5.16%) | `docs/accuracy_report.md` |
+| **Non-Operator Spoken WER** | **5.26%** (excluding operator conference greetings) | `docs/accuracy_report.md` |
+| **Financial Entity Recall** | **88.94%** overall count-limited recall (Dates: 96.88%, %: 94.12%, \$: 83.73%) | `docs/accuracy_report.md` |
+| **Approximate DER (MSFT)** | **29.05%** macro average (FY24–25 average: **18.05%**, Missed: 7.17%, FA: 3.53%) | `docs/benchmark_part_b.md` |
+| **Executive Speaker Accuracy** | **73.07%** pooled / **85.78%** in FY24–25 (Satya Nadella, Amy Hood, IR) | `docs/benchmark_part_b.md` |
+| **GPU Cost per Audio Hour** | **$0.0512 / audio hour** (AWS EC2 `g4dn.xlarge` NVIDIA T4 @ $0.526/hr) | `docs/benchmark_part_b.md` |
+| **Annual 500-Company Cost** | **$102.40 / year** for 2,000 audio hours ($834.40 on CPU) | `docs/benchmark_part_b.md` |
+
+---
+
+## 📁 Artifact Locations & Deliverables
+
+* **Structured Transcript Outputs**: [`data/transcripts/`](file:///c:/Users/chait/Desktop/DPA_Project1/data/transcripts)
+  * `MSFT_Q*.json` (10 calls)
+  * `SHOP_Q*.json` (2 calls)
+* **Call Metrics JSON**: [`data/transcripts/metrics/`](file:///c:/Users/chait/Desktop/DPA_Project1/data/transcripts/metrics) (`*_metrics.json`)
+* **Audio Capture Manifest**: [`data/audio/capture_manifest.csv`](file:///c:/Users/chait/Desktop/DPA_Project1/data/audio/capture_manifest.csv)
+* **Published Reports & Benchmarks**:
+  * [`docs/latency_report.md`](file:///c:/Users/chait/Desktop/DPA_Project1/docs/latency_report.md): 12-call latency, RTF breakdown, queue drain verification, and 300s SLA status.
+  * [`docs/accuracy_report.md`](file:///c:/Users/chait/Desktop/DPA_Project1/docs/accuracy_report.md): Word/character error rates, jiwer breakdown, operator greeting impact, and financial entity recall.
+  * [`docs/benchmark_part_b.md`](file:///c:/Users/chait/Desktop/DPA_Project1/docs/benchmark_part_b.md): Approximate DER, speaker-name identification accuracy, cloud GPU/CPU cost modeling, and subgroup analysis.
+  * [`docs/asr_benchmark.md`](file:///c:/Users/chait/Desktop/DPA_Project1/docs/asr_benchmark.md): ASR engine comparison (`faster-whisper`, `whisper.cpp`, `WhisperX`).
+
+---
+
+## 🗄️ Database Configuration
+
+The pipeline supports both SQLite and PostgreSQL via SQLAlchemy:
+* **Default (SQLite)**: Automatically initializes `earnings_call.db` in the repository root.
+* **PostgreSQL**: Set `DATABASE_URL=postgresql://user:password@host:port/dbname` in `.env`.
+* **Schema**:
+  * `company_universe`: 25 curated US and Canadian public corporations.
+  * `event_registry`: Discovered earnings dates, webcast URLs, and filing sources.
+  * `crawl_log`: Discovery and capture crawler audit logs.
+
+---
+
+## ⚠️ Limitations & Methodological Disclosures
+
+1. **Event Discovery Coverage**: 13 of 25 universe companies had active SEC EDGAR 8-K/10-Q earnings event dates available during crawling.
+2. **Captured Audio Corpus**: 12 complete quarterly earnings calls (10 Microsoft, 2 Shopify) were captured and processed end-to-end.
+3. **Shopify Reference Data**: Shopify does not publish written transcripts on its IR site; Canadian calls are marked N/A in WER and DER accuracy scoring to avoid unverified synthetic assumptions.
+4. **Residual ASR Drop**: MSFT Q4 FY2025 has 1 residual ASR drop of 22.6s (597–620s, garbled speech during rapid sentence transition). All other 11 calls have 0 gaps >10s.
+5. **Audio Files**: Audio WAV files (~4.2 GB) are managed locally and in `data/audio/capture_manifest.csv` and are gitignored to preserve repository compactness.

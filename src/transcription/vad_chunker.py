@@ -123,3 +123,31 @@ def deduplicate_overlap_words(prev_text: str, current_text: str) -> str:
         return " ".join(curr_words[best_overlap:]).strip()
 
     return current_text.strip()
+
+
+def stitch_overlapping_segments(
+    prev_segments: List[Dict[str, Any]],
+    curr_segments: List[Dict[str, Any]],
+    overlap_sec: float = 3.0
+) -> List[Dict[str, Any]]:
+    """Deduplicates and stitches segment lists across chunk boundaries."""
+    if not prev_segments:
+        return list(curr_segments)
+    if not curr_segments:
+        return list(prev_segments)
+
+    # Avoid adding duplicate segments from the overlap region
+    prev_end = prev_segments[-1]["end"]
+    cutoff = prev_end - overlap_sec + 0.1
+
+    filtered_curr = []
+    for s in curr_segments:
+        # If segment text exactly matches last segment of prev or occurs entirely before cutoff, skip
+        if any(p.get("text", "").strip() == s.get("text", "").strip() and abs(p.get("end", 0) - s.get("end", 0)) < 2.0 for p in prev_segments):
+            continue
+        if s.get("start", 0) < cutoff and any(p.get("text", "").strip() == s.get("text", "").strip() for p in prev_segments):
+            continue
+        filtered_curr.append(s)
+
+    return list(prev_segments) + filtered_curr
+

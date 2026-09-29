@@ -97,6 +97,7 @@ Each company's latest quarterly earnings webcast URL was opened in headless Play
 ### Key Finding: Public vs. Gated Webcasts
 - **Company-Hosted Custom Players Are Ungated**: Only Microsoft (Medius and Mediastream platforms hosted on `stream.event.microsoft.com`) and Shopify (Mux Video CDN on `stream.mux.com`) provide fully ungated public HLS streams (`.m3u8`) without requiring attendee registration, logins, or interactive session handshakes.
 - **Third-Party Webcast Vendors Require Registration**: All major third-party investor relations platforms (GlobalMeet / Webcasts.com, Chorus Call, Webinar.net, GoWebcasting) enforce attendee registration forms collecting user email and company details. In strict compliance with project ethics and terms of service, these forms were **never filled**.
+- **RY and MRU Manual Browser Observation**: RY and MRU: registration wall observed manually in the browser on 2026-09-27; the automated checker did not reach the webcast page (evidence screenshots from automated checker: [RY 404](evidence/RY_404.png) and [MRU No Webcast Link Found](evidence/MRU_no_webcast_link_found.png)).
 
 ### Dataset Limitations
 - **Company Concentration**: All 12 valid audio calls originate from 2 enterprise software companies (`MSFT` and `SHOP`).
@@ -104,3 +105,4 @@ Each company's latest quarterly earnings webcast URL was opened in headless Play
   - **Market Cap**: All 12 calls belong to the `large_cap` bucket (no small-cap representation in the captured audio set).
   - **Language**: All 12 calls are in English (the bilingual French/English Canadian calls from `ATD`, `MRU`, and `SAP` could not be captured due to registration walls and 404s).
 - **Temporal Span**: The captured Microsoft calls span across 3 fiscal years (FY2026, FY2025, FY2024), providing comprehensive temporal continuity for acoustic and speech recognition benchmarking.
+- **Dial-in Exclusion**: Telephone dial-in numbers were excluded from scope due to credential-generation compliance requirements and audio quality degradation (see [`docs/DIAL_IN_EXCLUSION.md`](DIAL_IN_EXCLUSION.md)).
