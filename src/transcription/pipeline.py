@@ -266,6 +266,7 @@ def process_single_call(
         json.dump(transcript_doc, f, indent=2)
 
     # Structure Metrics Document
+    all_dropped_segs = [seg for c in chunk_metrics for seg in c.get("dropped_segments", [])]
     metrics_doc = {
         "ticker": call["ticker"],
         "fiscal_period": call["fiscal_period"],
@@ -287,6 +288,7 @@ def process_single_call(
         "qa_warning": "NO_QA_DETECTED" if qa_count == 0 else None,
         "section_counts": sec_counts,
         "pyannote_speakers": sorted(list(set(d["speaker_id"] for d in diar_segments))),
+        "dropped_segments": all_dropped_segs,
         "chunk_metrics": chunk_metrics
     }
 

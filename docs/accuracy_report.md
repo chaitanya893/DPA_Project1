@@ -43,7 +43,7 @@ Microsoft's official Investor Relations written transcripts are lightly edited f
 | **MSFT_Q4_FY2026** | 6.52% | **5.56%** | −0.96% |
 | **Average (Mean)** | **7.62%** | **5.26%** | **−2.36%** |
 
-Excluding the operator greeting confirms an average acoustic Word Error Rate of **5.26%**, proving that 2.36% of the measured 7.62% WER stems directly from spoken dialogue omitted from written reference documents.
+Excluding the operator greeting confirms an average acoustic Word Error Rate of **5.26%**, indicating that 2.36% of the measured 7.62% WER stems directly from spoken dialogue omitted from written reference documents.
 
 ---
 
@@ -125,25 +125,9 @@ Comparison between the v1 baseline (prior to gap fix and boundary slicing) and t
 
 ---
 
-## 6. Hallucination Segments Filtered per Call
+## 6. Hallucination Filtering
 
-Segments dropped due to low confidence (`no_speech_prob > 0.6 AND avg_logprob < -0.6` or `avg_logprob < -1.2`) and hallucination phrases:
-
-| Call Identifier | Filtered Segments | Exact Dropped Segment Text / Reason | Filter Rule Triggered |
-| :--- | :--- | :--- | :--- |
-| **SHOP_Q2_FY2026** | 1 | `"Thanks for watching!"` (0.0s – 2.8s) | `phrase ('thanks for watching')` & `avg_logprob (-1.03 < -0.4)` |
-| **SHOP_Q1_FY2026** | 1 | Webcast pre-call hold music (0.0s – 3.2s) | `no_speech_prob (0.81 > 0.6)` & `avg_logprob (-0.89 < -0.6)` |
-| **MSFT_Q4_FY2026** | 2 | Post-call operator disconnection tone (3862s – 3867s) | `avg_logprob (-1.35 < -1.2)` & `no_speech_prob (0.74 > 0.6)` |
-| **MSFT_Q3_FY2026** | 0 | *None* | No filter triggered |
-| **MSFT_Q2_FY2026** | 1 | Operator line tone artifact (3450s – 3456s) | `avg_logprob (-1.28 < -1.2)` |
-| **MSFT_Q1_FY2026** | 0 | *None* | No filter triggered |
-| **MSFT_Q4_FY2025** | 0 | *None* | No filter triggered |
-| **MSFT_Q3_FY2025** | 1 | Mid-call line glitch artifact (3380s – 3385s) | `avg_logprob (-1.41 < -1.2)` |
-| **MSFT_Q2_FY2025** | 0 | *None* | No filter triggered |
-| **MSFT_Q1_FY2025** | 3 | `"Thank you for watching!"` & pre-call hold music (0.0s – 6.0s) | `phrase ('thank you for watching')` & `no_speech_prob (> 0.6)` |
-| **MSFT_Q3_FY2024** | 0 | *None* | No filter triggered |
-| **MSFT_Q2_FY2024** | 0 | *None* | No filter triggered |
-| **Total Filtered** | **9** | **0 valid spoken speech segments dropped** | **100% precision on noise/hallucination suppression** |
+A hallucination filter (no_speech_prob / avg_logprob / known phrases) is active; dropped segments were not logged in this run.
 
 ---
 

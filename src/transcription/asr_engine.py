@@ -87,21 +87,27 @@ def get_whisper_model(
     return _MODEL_CACHE[key]
 
 
-def is_hallucination(text: str, avg_logprob: float, no_speech_prob: float) -> bool:
-    """Detects Whisper hallucinations, music artifacts, or very low-confidence noise."""
+def check_hallucination(text: str, avg_logprob: float, no_speech_prob: float) -> Tuple[bool, Optional[str]]:
+    """Detects Whisper hallucinations, music artifacts, or very low-confidence noise and returns rule."""
     clean = text.lower().strip()
     # 1. Drop known hallucination phrases
     for phrase in HALLUCINATION_PHRASES:
         if phrase in clean:
             if len(clean.split()) <= 6 or avg_logprob < -0.4:
-                return True
+                return True, f"phrase ('{phrase}')"
     # 2. Drop segments that are silence/noise (high no_speech_prob AND low speech logprob)
     if no_speech_prob > 0.6 and avg_logprob < -0.6:
-        return True
+        return True, f"no_speech_prob ({no_speech_prob:.2f} > 0.6) & avg_logprob ({avg_logprob:.2f} < -0.6)"
     # 3. Drop severely degenerate speech
     if avg_logprob < -1.2:
-        return True
-    return False
+        return True, f"avg_logprob ({avg_logprob:.2f} < -1.2)"
+    return False, None
+
+
+def is_hallucination(text: str, avg_logprob: float, no_speech_prob: float) -> bool:
+    """Detects Whisper hallucinations, music artifacts, or very low-confidence noise."""
+    is_h, _ = check_hallucination(text, avg_logprob, no_speech_prob)
+    return is_h
 
 
 def join_words_clean(words_list: List[Dict[str, Any]]) -> str:
@@ -189,10 +195,20 @@ def transcribe_live_stream_chunks(
 
         # Filter hallucinations on chunk segments
         valid_chunk_segs = []
+        chunk_dropped_segs = []
         for seg in chunk_segs:
             no_speech = getattr(seg, "no_speech_prob", 0.0)
-            if is_hallucination(seg.text, seg.avg_logprob, no_speech):
+            is_h, rule = check_hallucination(seg.text, seg.avg_logprob, no_speech)
+            if is_h:
                 dropped_hallucinations += 1
+                chunk_dropped_segs.append({
+                    "text": seg.text.strip(),
+                    "start": round(ch["start_sec"] + seg.start, 2),
+                    "end": round(ch["start_sec"] + seg.end, 2),
+                    "rule": rule,
+                    "avg_logprob": round(seg.avg_logprob, 3),
+                    "no_speech_prob": round(no_speech, 3)
+                })
                 continue
             valid_chunk_segs.append(seg)
 
@@ -222,8 +238,18 @@ def transcribe_live_stream_chunks(
                         )
                         for r_seg in repass_segs:
                             no_sp = getattr(r_seg, "no_speech_prob", 0.0)
-                            if not is_hallucination(r_seg.text, r_seg.avg_logprob, no_sp):
+                            is_h_r, rule_r = check_hallucination(r_seg.text, r_seg.avg_logprob, no_sp)
+                            if not is_h_r:
                                 refined_segs.append((r_seg, w_start))
+                            else:
+                                chunk_dropped_segs.append({
+                                    "text": r_seg.text.strip(),
+                                    "start": round(ch["start_sec"] + w_start + r_seg.start, 2),
+                                    "end": round(ch["start_sec"] + w_start + r_seg.end, 2),
+                                    "rule": rule_r,
+                                    "avg_logprob": round(r_seg.avg_logprob, 3),
+                                    "no_speech_prob": round(no_sp, 3)
+                                })
 
         # Check start gap
         if valid_chunk_segs and valid_chunk_segs[0].start > 5.0:
@@ -242,8 +268,18 @@ def transcribe_live_stream_chunks(
                 )
                 for r_seg in repass_segs:
                     no_sp = getattr(r_seg, "no_speech_prob", 0.0)
-                    if not is_hallucination(r_seg.text, r_seg.avg_logprob, no_sp):
+                    is_h_r, rule_r = check_hallucination(r_seg.text, r_seg.avg_logprob, no_sp)
+                    if not is_h_r:
                         refined_segs.insert(0, (r_seg, 0.0))
+                    else:
+                        chunk_dropped_segs.append({
+                            "text": r_seg.text.strip(),
+                            "start": round(ch["start_sec"] + r_seg.start, 2),
+                            "end": round(ch["start_sec"] + r_seg.end, 2),
+                            "rule": rule_r,
+                            "avg_logprob": round(r_seg.avg_logprob, 3),
+                            "no_speech_prob": round(no_sp, 3)
+                        })
 
         # Extract words with boundary filtering
         for seg_item, offset in refined_segs:
@@ -293,6 +329,7 @@ def transcribe_live_stream_chunks(
             "duration_sec": ch["duration_sec"],
             "proc_time_sec": t_proc,
             "rtf": round(t_proc / max(0.001, ch["duration_sec"]), 4),
+            "dropped_segments": chunk_dropped_segs,
         })
 
     # Sort words chronologically

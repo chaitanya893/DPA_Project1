@@ -13,29 +13,29 @@
 
 | Ticker | Fiscal Period | Audio Duration | ASR Time | ASR RTF | Diarization Time | Diar RTF | Total RTF | Post-Call Latency | Queue Drained | Q&A Segments | 5-Min SLA |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **SHOP** | Q2 FY2026 | 58.1 min | 115.2s | 0.0331 | 205.2s | 0.0589 | 0.0920 | 208.33s | YES | 306 | **PASS** |
-| **SHOP** | Q1 FY2026 | 63.0 min | 95.8s | 0.0253 | 227.6s | 0.0602 | 0.0855 | 232.35s | YES | 334 | **PASS** |
-| **MSFT** | Q4 FY2026 | 64.5 min | 156.8s | 0.0405 | 215.1s | 0.0556 | 0.0961 | 220.33s | YES | 252 | **PASS** |
-| **MSFT** | Q3 FY2026 | 62.4 min | 127.1s | 0.0340 | 208.7s | 0.0558 | 0.0898 | 212.97s | YES | 266 | **PASS** |
-| **MSFT** | Q2 FY2026 | 57.7 min | 118.8s | 0.0343 | 182.5s | 0.0527 | 0.0870 | 187.21s | YES | 224 | **PASS** |
-| **MSFT** | Q1 FY2026 | 58.6 min | 119.5s | 0.0340 | 186.2s | 0.0530 | 0.0870 | 190.61s | YES | 274 | **PASS** |
-| **MSFT** | Q4 FY2025 | 55.1 min | 113.6s | 0.0344 | 175.1s | 0.0530 | 0.0873 | 179.38s | YES | 219 | **PASS** |
-| **MSFT** | Q3 FY2025 | 56.5 min | 111.4s | 0.0329 | 183.6s | 0.0542 | 0.0870 | 186.87s | YES | 227 | **PASS** |
-| **MSFT** | Q2 FY2025 | 58.2 min | 119.8s | 0.0343 | 185.2s | 0.0530 | 0.0873 | 188.03s | YES | 249 | **PASS** |
-| **MSFT** | Q1 FY2025 | 63.0 min | 134.4s | 0.0355 | 198.8s | 0.0526 | 0.0881 | 204.07s | YES | 258 | **PASS** |
-| **MSFT** | Q3 FY2024 | 60.2 min | 133.5s | 0.0370 | 190.4s | 0.0527 | 0.0897 | 195.29s | YES | 256 | **PASS** |
-| **MSFT** | Q2 FY2024 | 61.3 min | 116.1s | 0.0316 | 196.6s | 0.0535 | 0.0851 | 199.35s | YES | 260 | **PASS** |
+| **SHOP** | Q2 FY2026 | 58.1 min | 173.2s | 0.0497 | 207.6s | 0.0596 | 0.1093 | 208.33s | YES | 306 | **PASS** |
+| **SHOP** | Q1 FY2026 | 63.0 min | 181.2s | 0.0480 | 231.6s | 0.0613 | 0.1092 | 232.35s | YES | 334 | **PASS** |
+| **MSFT** | Q4 FY2026 | 64.5 min | 177.1s | 0.0458 | 218.3s | 0.0564 | 0.1022 | 220.33s | YES | 252 | **PASS** |
+| **MSFT** | Q3 FY2026 | 62.4 min | 155.0s | 0.0414 | 211.5s | 0.0565 | 0.0979 | 212.97s | YES | 266 | **PASS** |
+| **MSFT** | Q2 FY2026 | 57.7 min | 140.5s | 0.0406 | 185.6s | 0.0536 | 0.0943 | 187.21s | YES | 224 | **PASS** |
+| **MSFT** | Q1 FY2026 | 58.6 min | 140.4s | 0.0399 | 188.9s | 0.0537 | 0.0937 | 190.61s | YES | 274 | **PASS** |
+| **MSFT** | Q4 FY2025 | 55.1 min | 132.3s | 0.0400 | 177.1s | 0.0535 | 0.0935 | 179.38s | YES | 219 | **PASS** |
+| **MSFT** | Q3 FY2025 | 56.5 min | 128.8s | 0.0380 | 185.6s | 0.0547 | 0.0927 | 186.87s | YES | 227 | **PASS** |
+| **MSFT** | Q2 FY2025 | 58.2 min | 136.0s | 0.0389 | 187.1s | 0.0536 | 0.0925 | 188.03s | YES | 249 | **PASS** |
+| **MSFT** | Q1 FY2025 | 63.0 min | 151.8s | 0.0401 | 203.1s | 0.0537 | 0.0938 | 204.07s | YES | 258 | **PASS** |
+| **MSFT** | Q3 FY2024 | 60.2 min | 144.4s | 0.0400 | 194.1s | 0.0537 | 0.0937 | 195.29s | YES | 256 | **PASS** |
+| **MSFT** | Q2 FY2024 | 61.3 min | 144.8s | 0.0394 | 198.0s | 0.0539 | 0.0932 | 199.35s | YES | 260 | **PASS** |
 
 ---
 
 ## 2. Streaming Real-Time Factor (RTF) & Buffer Queue Analysis
 
-- **Total Audio Ingested:** 43,267.3s (12.02 hours) across 12 calls.
-- **Total ASR Inference Time:** 1,462.0s.
-- **Measured ASR RTF on GPU:** Min = `0.0253`, Max = `0.0405`, Average = `0.0339`.
+- **Total Audio Ingested:** 43,118.7s (11.98 hours) across 12 calls.
+- **Total ASR Inference Time:** 1,805.6s.
+- **Measured ASR RTF on GPU:** Min = `0.0380`, Max = `0.0497`, Average = `0.0418`.
 - **Per-Chunk Processing Time (60s chunks):** Min = `0.56s`, Max = `8.38s`, Mean = `2.37s`.
 - **Buffer Queue Draining:** 12/12 calls maintained 100% queue draining (`proc_time_sec < 60.0s` for every single chunk).
-- **Measured Post-Call Latency:** Min = `179.38s`, Max = `232.35s`, Average = `200.43s` (~3.34 minutes).
+- **Measured Post-Call Latency:** Min = `179.38s`, Max = `232.35s`, Average = `200.40s` (~3.34 minutes).
 - **5-Minute SLA Compliance:** 12/12 calls satisfied the post-call SLA deadline ($\le 300.0\text{s}$).
 - **Q&A Detection Integrity:** 100% of calls verified with active Q&A sections (`qa_segments > 0`).
 
@@ -43,8 +43,9 @@
 
 ## 3. Measured GPU Diarization Performance
 
-- **Total GPU Diarization Time:** 2,355.0s across all 12 calls.
-- **Measured Diarization RTF on GPU:** Min = `0.0526`, Max = `0.0602`, Average = `0.0548`.
+- **Total GPU Diarization Time:** 2,388.5s across all 12 calls.
+- **Measured Diarization RTF on GPU:** Min = `0.0535`, Max = `0.0613`, Average = `0.0553`.
+- **Total Pipeline RTF on GPU:** Min = `0.0925`, Max = `0.1093`, Average = `0.0972`.
 - **End-to-End Post-Call Latency:** Includes final 60s chunk ASR inference + full pyannote diarization + speaker name resolution + section classification + publish.
 
 ---
