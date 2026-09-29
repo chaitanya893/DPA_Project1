@@ -3,7 +3,7 @@
 **Project**: Financial Audio Transcription & Diarization Pipeline (Assignment 1)  
 **Date**: September 2026  
 **Target Hardware**: 8-Core Intel/AMD CPU & NVIDIA GeForce RTX 4050 Laptop GPU (6 GB VRAM) / AWS EC2 `g4dn.xlarge` (NVIDIA T4)  
-**Evaluation Scope**: 25 Curated US & Canadian Universe Companies | 12 Full Production Earnings Calls (11.98 audio hours / 43,115.6 seconds)  
+**Evaluation Scope**: 25 Curated US & Canadian Universe Companies | 12 Full Production Earnings Calls (11.98 audio hours / 43,118.7 seconds)  
 **Integrity Guarantee**: Every table, number, and metric in this memo is verified programmatically by `scripts/verify_reports.py` (0 mismatches).
 
 ---
@@ -22,7 +22,7 @@ This engineering memorandum documents the design, empirical benchmarking, error 
 | 5-Minute Post-Call SLA (CPU)       | 1,314.6s ASR + ~51 min Diarize    | FAIL (Queue Not Drained)  |
 | Pipeline Real-Time Factor (GPU)    | Total RTF: 0.0973 (ASR 0.0419)    | 1h audio in 5.84 minutes  |
 | Full-Call Normalized WER (v1 -> v2)| 17.03% -> 7.62% (Delta: -9.41 pts)| Recovered 45 min speech   |
-| Spoken Financial Entity Recall     | 88.94% overall count-limited      | Dates 96.9%, % 94.1%      |
+| Spoken Financial Entity Recall     | 87.96% overall count-limited      | Dates 96.9%, % 94.1%      |
 | Approximate Diarization Error Rate | 29.05% Mean (FY24-25: 18.05%)     | PyAnnote 3.1 (250ms collar)|
 | Executive Speaker-Name Accuracy    | 73.07% Pooled / 85.78% FY24-25    | Satya Nadella, Amy Hood   |
 | Cloud Compute Cost per Audio Hour  | $0.0512 / hr (AWS T4 GPU)         | $102.40/yr (500 Co, 2000h)|
@@ -55,7 +55,7 @@ All automated ingestion in this project was conducted under strict compliance wi
 
 ## 3. Phase 0: Target Company Universe
 
-The target universe comprises **25 public companies** configured in [`config/universe.csv`](file:///c:/Users/chait/Desktop/DPA_Project1/config/universe.csv), strategically divided across four corporate archetypes to evaluate market capitalization, geographic disclosure, and multi-lingual acoustic properties:
+The target universe comprises **25 public companies** configured in [`config/universe.csv`](config/universe.csv), strategically divided across four corporate archetypes to evaluate market capitalization, geographic disclosure, and multi-lingual acoustic properties:
 
 ### Table 1: Universe Company Breakdown (25 Companies)
 
@@ -74,7 +74,9 @@ Event discovery was conducted across SEC EDGAR submissions, company investor rel
 
 ### Verified Discovery Results
 * **Verified Call Dates (13 / 25 Companies)**: 13 companies had active quarterly earnings conference call dates and times published in SEC Form 8-K / 6-K filings or IR calendars.
-* **Unpublished / NULL Dates (12 / 25 Companies)**: 12 companies had no forward-looking or recent quarterly earnings call date announced in SEC filings or public IR headers at the time of crawling.
+* **Unpublished / NULL Dates (12 / 25 Companies)**: Real reasons logged per company from `event_registry` and `docs/EVENT_DISCOVERY_MEMO.md`:
+  * **9 Companies (`XOM`, `WMT`, `PG`, `APT`, `DMRC`, `PESI`, `ABX`, `T`, `NTR`)**: Earnings press release exhibits were filed on EDGAR, but the exact teleconference call date/time was omitted from the exhibit body.
+  * **3 TSX Companies (`ATD`, `MRU`, `SAP`)**: TSX-only issuers with no SEC filings; no upcoming earnings conference call announced on official IR events pages at crawl time.
 * **Captured Call Dates**: All 12 captured earnings calls had their exact call dates, UTC start times, and filing sources independently verified against SEC EDGAR Item 2.02 Form 8-K filings (`config/call_dates.csv`).
 
 ### Discovery Route Comparison
@@ -85,7 +87,7 @@ Event discovery was conducted across SEC EDGAR submissions, company investor rel
 | **2. Company IR Calendar Pages** | 14–30 days prior | Medium-High | Variable | Dynamic JavaScript rendering (Q4 Inc, React) requires headless DOM inspection. |
 | **3. Press Release Aggregators** | 10–21 days prior | High | Medium | Inconsistent schema markup; varied date formatting across wire providers. |
 
-*Methodological Disclosure*: The project acceptance criteria specifies 25/25 discovery coverage. We honestly report **PARTIAL (13/25)** because 12 companies had not published earnings dates at crawl time. Synthetic dates were strictly rejected to preserve database integrity.
+*Methodological Disclosure*: The project acceptance criteria specifies 25/25 discovery coverage. We honestly report **PARTIAL (13/25)** because 12 companies had omitted call dates or had no announced calls at crawl time. Synthetic dates were strictly rejected to preserve database integrity.
 
 ---
 
@@ -111,9 +113,10 @@ Audio capture was executed using Playwright headless browser automation, standar
 | **MSFT_Q2_FY2024** | 61.3 min (3,675.9s) | 112.2 MB | `f3152d192c01...` | `stream.event.microsoft.com` | Microsoft Medius Player Parser |
 | **Total Corpus** | **11.98 hrs (43,118.7s)**| **1.32 GB** | — | — | — |
 
-### Generic Sniffer vs. Vendor Parsers ("One Parser per Vendor" Finding)
+#### Generic Sniffer vs. Vendor Parsers ("One Parser per Vendor" Finding)
 * **Generic Network Sniffing Failure**: A generic media sniffer listening for `.mp3`, `.m4a`, or `.m3u8` network responses captured only **1 out of 20** target streams on its first pass. Enterprise webcast players embed media inside nested iframes, WebSockets, or multi-step tokenized JSON payloads.
 * **Vendor-Specific Parsers**: Building dedicated extraction parsers for Microsoft (Medius and Mediastream platforms) and Shopify (Mux Video CDN) achieved **12/12 (100%)** reliable capture.
+* **Archived Replay Ingestion & Expiry Details**: All 12 captured earnings calls were ingested from official archived webcast replays (HLS VOD master `.m3u8` playlists), as no live webcast for these companies occurred during the active execution window. Where recorded, webcast replay expiry dates range from 90 to 365 days (Microsoft Medius replays are maintained for ~12 months; Shopify Mux streams typically expire after 1 year).
 * **25-Company Webcast Platform Audit**:
   * **Registration Wall (10)**: `JPM`, `XOM`, `PG`, `LMB`, `DMRC`, `PESI`, `ENB`, `CNR`, `ATD`, `SAP`
   * **Bot-Blocked / WAF HTTP 403 (5)**: `JNJ`, `TSLA`, `LLY`, `ABX`, `T`
@@ -157,7 +160,7 @@ The pipeline was benchmarked under identical production workloads on both CPU an
 ### Table 2: Full 12-Call Measured Latency & SLA Performance (GPU vs. CPU)
 
 | Call Identifier | Audio Duration | ASR Time (GPU) | ASR RTF | Diarization Time (GPU) | Diar RTF | Total RTF | Post-Call Latency | Queue Drained? | SLA Status |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **SHOP_Q2_FY2026** | 58.1 min (3,485.6s) | 173.2s | 0.0497 | 207.6s | 0.0596 | 0.1093 | **208.33s** | YES | **PASS** |
 | **SHOP_Q1_FY2026** | 63.0 min (3,780.0s) | 181.2s | 0.0480 | 231.6s | 0.0613 | 0.1092 | **232.35s** | YES | **PASS** |
 | **MSFT_Q4_FY2026** | 64.5 min (3,868.0s) | 177.1s | 0.0458 | 218.3s | 0.0564 | 0.1022 | **220.33s** | YES | **PASS** |
@@ -189,14 +192,15 @@ To evaluate alternative speech engines, a standardized benchmark was executed on
 
 | Library & Engine | Device | Wall Time (2nd Run) | Real-Time Factor (RTF) | Total Peak VRAM | Measured Clip WER | Operational Role |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **faster-whisper 1.1.1** (beam 1) | GPU (float16) | **20.47s** | **0.0341** | **840 MB** | **8.71%** | **Primary Streaming Engine** (Chunked 60s) |
-| **faster-whisper 1.1.1** (beam 1) | CPU (int8, 8 threads)| **226.43s** | **0.3774** | — | **8.84%** | CPU Fallback Engine |
-| **whisper.cpp v1.7.4** (beam 5) | CPU (8 threads) | **247.92s** | **0.4132** | — | **9.12%** | Lightweight Embedded Binary |
-| **WhisperX 3.3.1** (beam 5, batched) | GPU (float16) | **8.32s** (+ 3.8s align) | **0.0139** | **2,450 MB** | **8.69%** | **Post-Call Batch Re-Pass Candidate** |
+| **faster-whisper 1.1.1** (beam 1) | GPU (float16) | **16.59s / 17.38s** | **0.0277 / 0.0290** | **739.0 MB** | **8.83%** | **Primary Streaming Engine** (Chunked 60s) |
+| **faster-whisper 1.1.1** (beam 1) | CPU (int8, 8 threads)| **101.75s / 104.05s**| **0.1696 / 0.1734** | — | **9.03%** | CPU Fallback Engine |
+| **whisper.cpp b5130** (beam 5) | GPU (cuBLAS) | **27.57s / 31.75s** | **0.0459 / 0.0529** | **1,606.0 MB** | **8.69%** | Lightweight Embedded GPU Binary |
+| **whisper.cpp b5130** (beam 5) | CPU (8 threads) | **166.99s / 171.06s**| **0.2783 / 0.2851** | — | **9.10%** | Lightweight Embedded CPU Binary |
+| **WhisperX 3.8.6** (beam 5, batched) | GPU (float16) | **17.96s / 18.31s** | **0.0299 / 0.0305** | **3,515 / 3,703 MB** | **8.89%** | **Post-Call Batch Re-Pass Candidate** |
 
 ### Benchmark Takeaways:
 1. **Accuracy Parity**: Word error rates across all three engines are virtually identical (**~8.7%–9.1%**), confirming that the acoustic models are equivalent and speed differences stem from runtime execution backends.
-2. **Streaming vs. Batching**: WhisperX achieves high throughput by batching the entire audio file into large parallel tensors (requiring 2.45 GB VRAM). Because a live call arrives in sequential 60s chunks, `faster-whisper` remains the optimal low-overhead streaming engine, while WhisperX represents an ideal candidate for offline post-call re-processing.
+2. **Streaming vs. Batching**: WhisperX achieves high throughput by batching the entire audio file into large parallel tensors (requiring 3,515–3,703 MB Total Peak VRAM). Because a live call arrives in sequential 60s chunks, `faster-whisper` remains the optimal low-overhead streaming engine, while WhisperX represents an ideal candidate for offline post-call re-processing.
 3. **Environment Isolation**: WhisperX was isolated in `.venv_whisperx` to prevent dependency conflicts with PyTorch CUDA runtime libraries.
 
 ---
@@ -230,7 +234,7 @@ This section documents the primary engineering challenges, regressions, and syst
 | **MSFT_Q2_FY2024** | 162.4s | **0.0s** | 17.96% | **8.62%** | 13.75% | **5.33%** | 85.57% | **88.81%** |
 | **SHOP_Q2_FY2026** | 402.1s | **0.0s** | N/A | **N/A** | N/A | **N/A** | N/A | **N/A** |
 | **SHOP_Q1_FY2026** | 605.8s | **0.0s** | N/A | **N/A** | N/A | **N/A** | N/A | **N/A** |
-| **Total / Mean** | **2,708.4s (45.1m)**| **22.6s** | **17.03%** | **7.62%** | **14.25%** | **5.16%** | **81.36%** | **88.01%** |
+| **Total / Mean** | **2,708.4s (45.1m)**| **22.6s** | **17.03%** | **7.62%** | **14.25%** | **5.14%** | **80.89%** | **87.96%** |
 
 *\*Note: MSFT Q4 FY2025 contains 1 residual 22.6s drop (597–620s) where rapid spoken dialogue was garbled. All other 11 calls achieved 0.0s missing audio.*
 
@@ -255,7 +259,7 @@ This section documents the primary engineering challenges, regressions, and syst
 
 ## 10. Speech Recognition Accuracy & Financial Entity Recall
 
-Accuracy was benchmarked across all 10 Microsoft calls using our standalone normalizer ([`src/evaluation/normalizer.py`](file:///c:/Users/chait/Desktop/DPA_Project1/src/evaluation/normalizer.py)). Shopify calls are omitted from WER scoring due to the lack of an official written transcript on Shopify's IR site.
+Accuracy was benchmarked across all 10 Microsoft calls using our standalone normalizer ([`src/evaluation/normalizer.py`](src/evaluation/normalizer.py)). Shopify calls are omitted from WER scoring due to the lack of an official written transcript on Shopify's IR site.
 
 ### Table 5: Call-Level Word & Character Error Rates across 10 Microsoft Calls
 
@@ -271,7 +275,7 @@ Accuracy was benchmarked across all 10 Microsoft calls using our standalone norm
 | **MSFT_Q1_FY2025** | 9,556 | 18.18% | **7.83%** | 7.47% | 5.23% | **5.28%** |
 | **MSFT_Q3_FY2024** | 9,120 | 17.18% | **7.03%** | 6.63% | 4.69% | **4.35%** |
 | **MSFT_Q2_FY2024** | 9,301 | 19.23% | **8.62%** | 7.47% | 5.33% | **6.06%** |
-| **Macro Average** | **9,052.8** | **18.16%** | **7.62%** | **7.28%** | **5.16%** | **5.26%** |
+| **Macro Average** | **9,052.8** | **18.16%** | **7.62%** | **7.28%** | **5.14%** | **5.26%** |
 
 ### Table 6: Word Error Breakdown (Substitutions, Deletions, Insertions)
 
@@ -299,7 +303,7 @@ Accuracy was benchmarked across all 10 Microsoft calls using our standalone norm
    * **Money Amounts**: **83.73%** (278 / 332 matched)
    * **Person Names (Spoken)**: **42.86%** (45 / 105 matched)
    * **Stock Tickers**: **N/A** (0 spoken references in the audio)
-   * **Overall Entity Recall**: **88.94%** (2,885 / 3,244 non-ticker entities matched)
+   * **Overall Entity Recall**: **87.96%** (2,885 / 3,280 non-ticker entities matched)
 
 ---
 
@@ -335,7 +339,7 @@ Speaker diarization was evaluated by mapping reference speaker turns onto hypoth
 ## 12. Cost & Production Economics
 
 ### Measured Compute Profile & Public Cloud Pricing
-* **Ingested Audio**: 12 calls = **11.98 audio hours** ($43,115.6\text{ seconds}$).
+* **Ingested Audio**: 12 calls = **11.98 audio hours** ($43,118.7\text{ seconds}$).
 * **GPU Compute Runtime**: $4,194.0\text{ seconds}$ total GPU compute ($1,805.6\text{s}$ ASR + $2,388.5\text{s}$ Diarization) = **350.2s / audio hour** (RTF 0.0973).
 * **AWS GPU Instance**: EC2 `g4dn.xlarge` (1x NVIDIA T4 GPU, 4 vCPUs, 16 GiB RAM) at **$0.526 per on-demand hour** in `us-east-1` ([AWS Pricing](https://aws.amazon.com/ec2/pricing/on-demand/), September 2026).
 * **AWS CPU Instance**: EC2 `c6i.2xlarge` (8 vCPUs, 16 GiB RAM) at **$0.340 per hour**; CPU RTF is **1.2271** ($4,417.6\text{s}$ compute / audio hour).
@@ -363,7 +367,7 @@ Speaker diarization was evaluated by mapping reference speaker turns onto hypoth
 ### What Works Reliably in Production:
 * **Ungated HLS Capture**: Reliable 100% extraction for custom players (Microsoft Azure CDN, Shopify Mux).
 * **Streaming ASR Under SLA**: Sub-6-minute GPU processing for 60-minute calls (**179–232s latency**, passing the 300s SLA).
-* **Financial Entity Extraction**: 88.94% recall across numbers, percentages, currencies, and dates.
+* **Financial Entity Extraction**: 87.96% recall across numbers, percentages, currencies, and dates.
 * **Executive Identification**: 73.07% pooled (85.78% in FY24–25) recognition of core leadership.
 
 ### Current Limitations:
@@ -373,7 +377,7 @@ Speaker diarization was evaluated by mapping reference speaker turns onto hypoth
 4. **Single Residual ASR Drop**: MSFT Q4 FY2025 has 1 residual 22.6s drop (597–620s) during rapid sentence delivery.
 
 ### Recommended Next Steps:
-1. **Online Streaming Diarization**: Integrate streaming speaker embedding extraction during live chunking to reduce post-call latency from $\sim 200\text{s}$ to $< 30\text{s}$.
+1. **Online Streaming Diarization**: Integrate streaming speaker embedding extraction during live chunking, which is expected to reduce (not measured) post-call latency from $\sim 200\text{s}$ to $< 30\text{s}$.
 2. **IR CRM Phonetic Dictionary**: Integrate Double Metaphone / Soundex matching against Wall Street sell-side analyst directories.
 3. **Post-Call WhisperX Re-Pass**: Use WhisperX batched phoneme alignment as an optional high-precision post-call second pass.
 4. **Commercial Capture Connectors**: Negotiate authorized enterprise webhooks or API feeds for GlobalMeet and Chorus Call platforms.
@@ -386,21 +390,21 @@ This matrix maps each requirement from the PDF Assignment-1 Specification to its
 
 | Requirement / Criterion | Status | Empirical Value / Finding | Primary Codebase & Document Evidence |
 | :--- | :---: | :--- | :--- |
-| **Phase 0: 25-Company Universe** | **MET** | 25 companies configured (10 US Large, 5 US Small, 7 TSX, 3 Bilingual) | [`config/universe.csv`](file:///c:/Users/chait/Desktop/DPA_Project1/config/universe.csv) |
-| **Phase 1: Event Discovery** | **PARTIAL** | 13/25 verified call dates; 12 NULL (not published at crawl time) | [`docs/EVENT_DISCOVERY_MEMO.md`](EVENT_DISCOVERY_MEMO.md), `earnings_call.db` |
-| **Phase 2: Audio Capture** | **MET** | 12 full calls captured, 16 kHz Mono 16-bit WAV, 11.98h total duration | [`data/audio/capture_manifest.csv`](file:///c:/Users/chait/Desktop/DPA_Project1/data/audio/capture_manifest.csv), [`docs/CAPTURE_REPORT.md`](CAPTURE_REPORT.md) |
+| **Phase 0: 25-Company Universe** | **MET** | 25 companies configured (10 US Large, 5 US Small, 7 TSX, 3 Bilingual) | [`config/universe.csv`](config/universe.csv) |
+| **Phase 1: Event Discovery** | **PARTIAL** | 13/25 verified call dates; 12 NULL (real reasons logged in registry) | [`docs/EVENT_DISCOVERY_MEMO.md`](EVENT_DISCOVERY_MEMO.md), `earnings_call.db` |
+| **Phase 2: Audio Capture** | **MET** | 12 full calls captured, 16 kHz Mono 16-bit WAV, 11.98h total duration | [`data/audio/capture_manifest.csv`](data/audio/capture_manifest.csv), [`docs/CAPTURE_REPORT.md`](CAPTURE_REPORT.md) |
 | **Webcast Platform Audit** | **MET** | 25/25 classified (10 reg wall, 5 bot-blocked, 6 no link, 1 YT, 1 404, 2 media) | [`docs/CAPTURE_REPORT.md`](CAPTURE_REPORT.md), [`docs/evidence/`](evidence/) |
 | **Telephone Dial-In Exclusion** | **MET** | Paragraph memo justifying dial-in exclusion on legal & quality grounds | [`docs/DIAL_IN_EXCLUSION.md`](DIAL_IN_EXCLUSION.md) |
 | **Phase 3: 5-Minute Post-Call SLA** | **MET (GPU)** | Post-call latency 179.38s–232.35s (Mean 200.41s); Queue Drained 12/12 | [`docs/latency_report.md`](latency_report.md) |
-| **Phase 3: Word Stitching & VAD** | **MET** | 60s chunks, 3s overlap, midpoint word stitching, hallucination filter | [`src/transcription/asr_engine.py`](file:///c:/Users/chait/Desktop/DPA_Project1/src/transcription/asr_engine.py) |
-| **Phase 3: Speaker Diarization** | **MET** | PyAnnote 3.1 neural diarization, executive roster & role resolution | [`src/transcription/diarizer.py`](file:///c:/Users/chait/Desktop/DPA_Project1/src/transcription/diarizer.py), [`src/transcription/speaker_resolver.py`](file:///c:/Users/chait/Desktop/DPA_Project1/src/transcription/speaker_resolver.py) |
-| **Phase 3: JSON Deliverables** | **MET** | 12 structured JSON transcripts with sections, timestamps, confidence | [`data/transcripts/`](file:///c:/Users/chait/Desktop/DPA_Project1/data/transcripts) (`MSFT_*.json`, `SHOP_*.json`) |
+| **Phase 3: Word Stitching & VAD** | **MET** | 60s chunks, 3s overlap, midpoint word stitching, hallucination filter | [`src/transcription/asr_engine.py`](src/transcription/asr_engine.py) |
+| **Phase 3: Speaker Diarization** | **MET** | PyAnnote 3.1 neural diarization, executive roster & role resolution | [`src/transcription/diarizer.py`](src/transcription/diarizer.py), [`src/transcription/speaker_resolver.py`](src/transcription/speaker_resolver.py) |
+| **Phase 3: JSON Deliverables** | **MET** | 12 structured JSON transcripts with sections, timestamps, confidence | [`data/transcripts/`](data/transcripts/) (`MSFT_*.json`, `SHOP_*.json`) |
 | **Phase 4A: 3-Library ASR Benchmark** | **MET** | Benchmark on 10-min clips: faster-whisper, whisper.cpp, WhisperX | [`docs/asr_benchmark.md`](asr_benchmark.md) |
-| **Phase 4A: Accuracy & Entity Recall** | **MET** | Full-call normalized WER 7.62%, CER 5.16%, Entity Recall 88.94% | [`docs/accuracy_report.md`](accuracy_report.md) |
+| **Phase 4A: Accuracy & Entity Recall** | **MET** | Full-call normalized WER 7.62%, CER 5.14%, Entity Recall 87.96% | [`docs/accuracy_report.md`](accuracy_report.md) |
 | **Phase 4B: Diarization Error Rate** | **MET** | Approximate DER evaluated across 10 MSFT calls (Mean 29.05%) | [`docs/benchmark_part_b.md`](benchmark_part_b.md) |
 | **Phase 4B: Cost per Audio Hour** | **MET** | Measured GPU $0.0512/hr ($102.40/yr for 2,000h) vs CPU $0.4172/hr | [`docs/benchmark_part_b.md`](benchmark_part_b.md) |
-| **Automated Verification** | **MET** | 0 mismatches across all latency, accuracy, and benchmark tables | [`scripts/verify_reports.py`](file:///c:/Users/chait/Desktop/DPA_Project1/scripts/verify_reports.py) |
-| **One-Command Pipeline** | **MET** | `python run_all.py` executes discovery -> capture -> transcribe -> verify | [`run_all.py`](file:///c:/Users/chait/Desktop/DPA_Project1/run_all.py) (`--sample`, `--device`) |
+| **Automated Verification** | **MET** | 0 mismatches across all latency, accuracy, and benchmark tables | [`scripts/verify_reports.py`](scripts/verify_reports.py) |
+| **One-Command Pipeline** | **MET** | `python run_all.py` executes discovery -> capture -> transcribe -> verify | [`run_all.py`](run_all.py) (`--sample`, `--device`) |
 
 ---
 

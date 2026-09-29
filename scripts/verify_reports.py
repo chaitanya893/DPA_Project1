@@ -469,7 +469,7 @@ def verify_benchmark_part_b() -> int:
 
 def verify_final_memo() -> int:
     print("\n========================================================")
-    print("VERIFYING: docs/FINAL_MEMO.md (Key Quantitative Claims)")
+    print("VERIFYING: docs/FINAL_MEMO.md (Key Quantitative Claims & Links)")
     print("========================================================")
     mismatches = 0
     with open("docs/FINAL_MEMO.md", "r", encoding="utf-8") as f:
@@ -477,7 +477,7 @@ def verify_final_memo() -> int:
 
     expected_strings = [
         "11.98 audio hours",
-        "43,115.6 seconds",
+        "43,118.7 seconds",
         "0.0418",
         "0.0553",
         "0.0973",
@@ -485,12 +485,12 @@ def verify_final_memo() -> int:
         "232.35",
         "200.41",
         "7.62%",
-        "5.16%",
+        "5.14%",
         "18.16%",
         "5.26%",
         "7.44%",
         "9.33%",
-        "88.94%",
+        "87.96%",
         "96.88%",
         "94.12%",
         "83.73%",
@@ -507,6 +507,8 @@ def verify_final_memo() -> int:
         "$102.40",
         "$0.4172",
         "$834.40",
+        "3,515 / 3,703 MB",
+        "expected to reduce (not measured)"
     ]
 
     for s in expected_strings:
@@ -515,6 +517,21 @@ def verify_final_memo() -> int:
         else:
             print(f"[MISMATCH] FINAL_MEMO | Metric not found in memo: '{s}'")
             mismatches += 1
+
+    forbidden_strings = [
+        "file:///c:/Users",
+        "43,115.6",
+        "88.94%",
+        "2.45 GB",
+        "2,450 MB"
+    ]
+
+    for fs in forbidden_strings:
+        if fs in memo:
+            print(f"[MISMATCH] FINAL_MEMO | Found forbidden legacy/inconsistent string: '{fs}'")
+            mismatches += 1
+        else:
+            print(f"[OK] FINAL_MEMO | Verified absence of legacy string: '{fs}'")
 
     return mismatches
 

@@ -3,7 +3,7 @@
 **Project**: Real-Time Multi-Speaker Earnings Call Transcription & Diarization Pipeline  
 **Repository**: `https://github.com/chaitanya893/DPA_Project1.git`  
 **Target Environment**: Python 3.11+, NVIDIA RTX GPU with CUDA 12.1+ (or CPU fallback mode)  
-**Total Audio Transcribed**: 12 calls (10 MSFT, 2 SHOP) | **11.98 audio hours** (43,115.6 seconds)
+**Total Audio Transcribed**: 12 calls (10 MSFT, 2 SHOP) | **11.98 audio hours** (43,118.7 seconds)
 
 ---
 
@@ -20,11 +20,11 @@ This repository provides an enterprise-grade, end-to-end system for discovering,
   - **Streaming Queue SLA**: **12 / 12 calls** drained the 60-second audio chunk queue in `< 60 s` (100% SLA PASS; zero buffer overflow).
   - **CPU Baseline**: Post-call latency ~2,968.4 s (49.5 min), failing the 5-minute SLA.
 - **Transcription Accuracy**:
-  - **Normalized WER**: **7.62%** across 10 official Microsoft calls (CER **5.16%**).
+  - **Normalized WER**: **7.62%** across 10 official Microsoft calls (CER **5.14%**).
   - **Non-Operator WER**: **5.26%** (2.36 percentage points lower than overall WER, reflecting that official Microsoft reference transcripts omit operator boilerplate).
   - **Prepared Remarks vs. Q&A**: Prepared remarks WER is **7.44%** vs. Q&A WER of **9.33%** (+1.89 percentage points due to conversational overlap).
 - **Financial Entity Recall**:
-  - **Overall Spoken Recall**: **88.94%** count-limited matching on spoken text (Dates: **96.88%**, Percentages: **94.12%**, Dollar Amounts: **83.73%**, Executive/Speaker Names: **42.86%**, Tickers: **N/A** due to 0 reference mentions).
+  - **Overall Spoken Recall**: **87.96%** count-limited matching on spoken text (Dates: **96.88%**, Percentages: **94.12%**, Dollar Amounts: **83.73%**, Executive/Speaker Names: **42.86%**, Tickers: **N/A** due to 0 reference mentions).
 - **Diarization & Speaker Attribution**:
   - **Diarization Error Rate (DER)**: Mean approximate DER **29.05%** with collar 0.25 s (FY24–FY25 clean audio subset mean **18.05%**; Missed Speech: **7.17%**, False Alarm: **3.53%**, Confusion: **18.35%**).
   - **Executive Speaker Attribution**: **73.07%** overall pooled word-level accuracy (**85.78%** on clean FY24–FY25 calls).

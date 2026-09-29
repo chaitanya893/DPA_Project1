@@ -85,14 +85,14 @@ All figures below are drawn directly from the automated metrics files and verifi
 
 | Metric Category | Measured Pipeline Value | Primary Report Source |
 | :--- | :--- | :--- |
-| **Processed Dataset** | 12 calls (10 Microsoft, 2 Shopify) = **11.98 audio hours** ($43,115.6\text{s}$) | `docs/latency_report.md` |
+| **Processed Dataset** | 12 calls (10 Microsoft, 2 Shopify) = **11.98 audio hours** ($43,118.7\text{s}$) | `docs/latency_report.md` |
 | **Total Pipeline RTF (GPU)** | **0.0973 RTF** (Average total processing time = $350.2\text{s}$ per audio hour) | `docs/latency_report.md` |
-| **ASR Inference Time (GPU)** | **150.7s / audio hour** (RTF 0.0419, `faster-whisper small.en float16`) | `docs/latency_report.md` |
-| **Diarization Time (GPU)** | **199.4s / audio hour** (RTF 0.0554, `pyannote/speaker-diarization-3.1`) | `docs/latency_report.md` |
+| **ASR Inference Time (GPU)** | **150.5s / audio hour** (RTF 0.0418, `faster-whisper small.en float16`) | `docs/latency_report.md` |
+| **Diarization Time (GPU)** | **199.0s / audio hour** (RTF 0.0553, `pyannote/speaker-diarization-3.1`) | `docs/latency_report.md` |
 | **Streaming Post-Call Latency** | **179.38s – 232.35s** (100% PASS on the 300s SLA, queue drained) | `docs/latency_report.md` |
-| **Word Error Rate (Normalized WER)** | **7.62%** average across 10 MSFT calls (Raw WER 18.06%, CER 5.16%) | `docs/accuracy_report.md` |
+| **Word Error Rate (Normalized WER)** | **7.62%** average across 10 MSFT calls (Raw WER 18.16%, CER 5.14%) | `docs/accuracy_report.md` |
 | **Non-Operator Spoken WER** | **5.26%** (excluding operator conference greetings) | `docs/accuracy_report.md` |
-| **Financial Entity Recall** | **88.94%** overall count-limited recall (Dates: 96.88%, %: 94.12%, \$: 83.73%) | `docs/accuracy_report.md` |
+| **Financial Entity Recall** | **87.96%** overall count-limited recall (Dates: 96.88%, %: 94.12%, \$: 83.73%) | `docs/accuracy_report.md` |
 | **Approximate DER (MSFT)** | **29.05%** macro average (FY24–25 average: **18.05%**, Missed: 7.17%, FA: 3.53%) | `docs/benchmark_part_b.md` |
 | **Executive Speaker Accuracy** | **73.07%** pooled / **85.78%** in FY24–25 (Satya Nadella, Amy Hood, IR) | `docs/benchmark_part_b.md` |
 | **GPU Cost per Audio Hour** | **$0.0512 / audio hour** (AWS EC2 `g4dn.xlarge` NVIDIA T4 @ $0.526/hr) | `docs/benchmark_part_b.md` |
@@ -102,16 +102,16 @@ All figures below are drawn directly from the automated metrics files and verifi
 
 ## 📁 Artifact Locations & Deliverables
 
-* **Structured Transcript Outputs**: [`data/transcripts/`](file:///c:/Users/chait/Desktop/DPA_Project1/data/transcripts)
+* **Structured Transcript Outputs**: [`data/transcripts/`](data/transcripts/)
   * `MSFT_Q*.json` (10 calls)
   * `SHOP_Q*.json` (2 calls)
-* **Call Metrics JSON**: [`data/transcripts/metrics/`](file:///c:/Users/chait/Desktop/DPA_Project1/data/transcripts/metrics) (`*_metrics.json`)
-* **Audio Capture Manifest**: [`data/audio/capture_manifest.csv`](file:///c:/Users/chait/Desktop/DPA_Project1/data/audio/capture_manifest.csv)
+* **Call Metrics JSON**: [`data/transcripts/metrics/`](data/transcripts/metrics/) (`*_metrics.json`)
+* **Audio Capture Manifest**: [`data/audio/capture_manifest.csv`](data/audio/capture_manifest.csv)
 * **Published Reports & Benchmarks**:
-  * [`docs/latency_report.md`](file:///c:/Users/chait/Desktop/DPA_Project1/docs/latency_report.md): 12-call latency, RTF breakdown, queue drain verification, and 300s SLA status.
-  * [`docs/accuracy_report.md`](file:///c:/Users/chait/Desktop/DPA_Project1/docs/accuracy_report.md): Word/character error rates, jiwer breakdown, operator greeting impact, and financial entity recall.
-  * [`docs/benchmark_part_b.md`](file:///c:/Users/chait/Desktop/DPA_Project1/docs/benchmark_part_b.md): Approximate DER, speaker-name identification accuracy, cloud GPU/CPU cost modeling, and subgroup analysis.
-  * [`docs/asr_benchmark.md`](file:///c:/Users/chait/Desktop/DPA_Project1/docs/asr_benchmark.md): ASR engine comparison (`faster-whisper`, `whisper.cpp`, `WhisperX`).
+  * [`docs/latency_report.md`](docs/latency_report.md): 12-call latency, RTF breakdown, queue drain verification, and 300s SLA status.
+  * [`docs/accuracy_report.md`](docs/accuracy_report.md): Word/character error rates, jiwer breakdown, operator greeting impact, and financial entity recall.
+  * [`docs/benchmark_part_b.md`](docs/benchmark_part_b.md): Approximate DER, speaker-name identification accuracy, cloud GPU/CPU cost modeling, and subgroup analysis.
+  * [`docs/asr_benchmark.md`](docs/asr_benchmark.md): ASR engine comparison (`faster-whisper`, `whisper.cpp`, `WhisperX`).
 
 ---
 
