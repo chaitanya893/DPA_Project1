@@ -369,6 +369,7 @@ Speaker diarization was evaluated by mapping reference speaker turns onto hypoth
 * **Streaming ASR Under SLA**: Sub-6-minute GPU processing for 60-minute calls (**179–232s latency**, passing the 300s SLA).
 * **Financial Entity Extraction**: 87.96% recall across numbers, percentages, currencies, and dates.
 * **Executive Identification**: 73.07% pooled (85.78% in FY24–25) recognition of core leadership.
+* **Storage**: SQLite by default (`earnings_call.db`); PostgreSQL (the PDF stack) is supported via `DATABASE_URL` – see [`docs/DATABASE_REPORT.md`](DATABASE_REPORT.md).
 
 ### Current Limitations:
 1. **Third-Party Registration Walls**: 10 of 25 universe webcasts require attendee registration forms.
