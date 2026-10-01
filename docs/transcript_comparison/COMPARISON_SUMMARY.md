@@ -19,9 +19,9 @@ This document summarizes the 10-quarter comparative alignment between official M
 | **MSFT_Q2_FY2026** | 2026-01-28 | 8,737 | 9,030 | 184 | 67 | 360 | **6.99%** | **4.57%** | **88.99%** |
 | **MSFT_Q3_FY2026** | 2026-04-29 | 9,407 | 9,718 | 234 | 109 | 420 | **8.11%** | **5.61%** | **82.78%** |
 | **MSFT_Q4_FY2026** | 2026-07-29 | 9,869 | 10,081 | 215 | 108 | 320 | **6.52%** | **5.56%** | **86.08%** |
-| **Total / Mean** | **10 Quarters** | **90,528** | **93,446** | **2,060** | **954** | **3,872** | **7.62%** | **5.26%** | **88.01%** |
+| **Total / Mean** | **10 Quarters** | **90,528** | **93,446** | **2,060** | **954** | **3,872** | **7.62%** | **5.26%** | **88.01% (mean of 10 calls)** (pooled: 87.96%) |
 
 ### Key Findings:
-1. **Editorial Divergence (Operator Lines)**: Full normalized WER is **7.62%** across 90,528 reference words. Removing teleconference operator lines (`speaker_role == "Operator"`) lowers WER to **5.26%**, confirming that 2.36% of measured error represents editorial omissions in Microsoft's written transcripts rather than acoustic ASR mistakes.
+1. **Editorial Divergence (Operator Lines)**: Full normalized WER is **7.62%** across 90,528 reference words. Removing teleconference operator lines (`speaker_role == "Operator"`) lowers WER to **5.26%**, indicating that about 2.36 points come from operator lines that Microsoft's edited transcript omits.
 2. **Financial Entity Precision**: Count-limited financial entity recall averages **87.96%** (94.12% for percentages, 96.88% for dates/fiscal periods, 83.73% for money amounts).
-3. **Common Substitutions**: The majority of substitutions stem from minor phonetic formatting variations (e.g. *percent* vs *%*, *year over year* vs *yoy*).
+3. **Common Substitutions**: Real top substitutions across the calls include compounding, digit, and acoustic phonetic variations (e.g. *copilot → co pilot*, *1 → one*, *datacenter → data center*, *maia → maya*).

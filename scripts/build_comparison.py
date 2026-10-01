@@ -1194,12 +1194,12 @@ This document summarizes the 10-quarter comparative alignment between official M
 | Call Identifier | Call Date | Ref Words | Our Words | Subs (S) | Dels (D) | Ins (I) | Normalized WER (%) | Non-Operator WER (%) | Entity Recall (%) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 {rows_joined}
-| **Total / Mean** | **10 Quarters** | **{tot_ref_words:,}** | **{tot_our_words:,}** | **{tot_subs:,}** | **{tot_dels:,}** | **{tot_ins:,}** | **{mean_wer:.2f}%** | **{mean_non_op:.2f}%** | **{mean_recall:.2f}%** |
+| **Total / Mean** | **10 Quarters** | **{tot_ref_words:,}** | **{tot_our_words:,}** | **{tot_subs:,}** | **{tot_dels:,}** | **{tot_ins:,}** | **{mean_wer:.2f}%** | **{mean_non_op:.2f}%** | **{mean_recall:.2f}% (mean of 10 calls)** (pooled: 87.96%) |
 
 ### Key Findings:
-1. **Editorial Divergence (Operator Lines)**: Full normalized WER is **7.62%** across 90,528 reference words. Removing teleconference operator lines (`speaker_role == "Operator"`) lowers WER to **5.26%**, confirming that 2.36% of measured error represents editorial omissions in Microsoft's written transcripts rather than acoustic ASR mistakes.
+1. **Editorial Divergence (Operator Lines)**: Full normalized WER is **7.62%** across 90,528 reference words. Removing teleconference operator lines (`speaker_role == "Operator"`) lowers WER to **5.26%**, indicating that about 2.36 points come from operator lines that Microsoft's edited transcript omits.
 2. **Financial Entity Precision**: Count-limited financial entity recall averages **87.96%** (94.12% for percentages, 96.88% for dates/fiscal periods, 83.73% for money amounts).
-3. **Common Substitutions**: The majority of substitutions stem from minor phonetic formatting variations (e.g. *percent* vs *%*, *year over year* vs *yoy*).
+3. **Common Substitutions**: Real top substitutions across the calls include compounding, digit, and acoustic phonetic variations (e.g. *copilot → co pilot*, *1 → one*, *datacenter → data center*, *maia → maya*).
 """
     return md
 
