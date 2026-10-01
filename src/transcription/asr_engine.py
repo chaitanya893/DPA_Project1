@@ -128,7 +128,8 @@ def transcribe_live_stream_chunks(
     wav_path: str,
     max_duration_sec: Optional[float] = None,
     language: str = "en",
-    initial_prompt: Optional[str] = None
+    initial_prompt: Optional[str] = None,
+    progress_callback: Optional[Any] = None
 ) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], float]:
     """Simulates live-call streaming ASR with word-level boundary stitching & hallucination filter:
     
@@ -322,15 +323,21 @@ def transcribe_live_stream_chunks(
                             })
 
         t_proc = round(time.perf_counter() - t0, 3)
+        chunk_rtf = round(t_proc / max(0.001, ch["duration_sec"]), 4)
         chunk_metrics.append({
             "chunk_idx": ch["chunk_idx"],
             "start_sec": ch["start_sec"],
             "end_sec": ch["end_sec"],
             "duration_sec": ch["duration_sec"],
             "proc_time_sec": t_proc,
-            "rtf": round(t_proc / max(0.001, ch["duration_sec"]), 4),
+            "rtf": chunk_rtf,
             "dropped_segments": chunk_dropped_segs,
         })
+        if progress_callback:
+            try:
+                progress_callback(k + 1, len(chunks), ch["start_sec"], ch["end_sec"], t_proc, chunk_rtf)
+            except Exception:
+                pass
 
     # Sort words chronologically
     all_words.sort(key=lambda w: w["start"])

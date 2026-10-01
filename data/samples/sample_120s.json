@@ -355,8 +355,8 @@
   "pipeline": {
     "device": "cuda",
     "asr_model": "faster-whisper small.en",
-    "asr_infer_time_sec": 120.0,
-    "diarization_time_sec": 10.43,
-    "total_elapsed_sec": 24.14
+    "asr_infer_time_sec": 5.44,
+    "diarization_time_sec": 11.69,
+    "total_elapsed_sec": 27.28
   }
 }
